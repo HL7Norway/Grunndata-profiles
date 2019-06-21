@@ -2,6 +2,11 @@
 	<meta>
 		<profile value="http://ehelse.no/fhir/StructureDefinition/gd-Person"/>
 	</meta>
+	<extension url="http://ehelse.no/fhir/StructureDefinition/gd-deceased">
+		<extension url="deceasedDate">
+			<valueDate value="1992"/>
+		</extension>
+	</extension>
 	<extension url="http://ehelse.no/fhir/StructureDefinition/gd-person-citizenship">
 		<extension url="code">
 			<valueCodeableConcept>
@@ -10,11 +15,6 @@
                     <code value="NO" />
 				</coding>
 			</valueCodeableConcept>
-		</extension>
-	</extension>
-	<extension url="http://ehelse.no/fhir/StructureDefinition/gd-deceased">
-		<extension url="deceasedDate">
-			<valueDate value="1992"/>
 		</extension>
 	</extension>
 	<identifier><!-- Fødselnummeret til brukeren -->
