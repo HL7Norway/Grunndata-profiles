@@ -1,0 +1,50 @@
+<CodeSystem>
+    <id value="gd-person-personstatus-v05.codesystem" />
+    <meta>
+        <versionId value="1" />
+        <lastUpdated value="2018-10-17T00:00:00.000+00:00" />
+    </meta>
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-personstatus-v05.codesystem" />
+    <version value="5.0.0" />
+    <name value="gd-person-personstatus-v05.codesystem" />
+    <status value="draft" />
+    <date value="2018-10-17T00:00:00.000+00:00" />
+    <publisher value="Skatteetaten" />
+    <content value="complete" />
+    <concept>
+        <code value="bosatt" />
+        <display value="Bosatt" />
+    </concept>
+    <concept>
+        <code value="utflyttet" />
+        <display value="Utflyttet" />
+    </concept>
+    <concept>
+        <code value="forsvunnet" />
+        <display value="Forsvunnet" />
+    </concept>
+    <concept>
+        <code value="død" />
+        <display value="Død" />
+    </concept>
+    <concept>
+        <code value="opphørt" />
+        <display value="Opphørt" />
+    </concept>
+    <concept>
+        <code value="fødselsregistrert" />
+        <display value="Fødselsregistrert" />
+    </concept>
+    <concept>
+        <code value="midlertidig" />
+        <display value="Midlertidig" />
+    </concept>
+    <concept>
+        <code value="ikkeBosatt" />
+        <display value="Ikke bosatt" />
+    </concept>
+        <concept>
+        <code value="inaktiv" />
+        <display value="Inaktiv" />
+    </concept>
+</CodeSystem>

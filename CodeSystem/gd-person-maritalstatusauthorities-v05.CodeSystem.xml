@@ -1,0 +1,70 @@
+<CodeSystem>
+    <id value="gd-person-maritalstatusauthorities-v05.codesystem" />
+    <meta>
+        <versionId value="1" />
+        <lastUpdated value="2018-10-17T00:00:00.000+00:00" />
+    </meta>
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-maritalstatusauthorities-v05.codesystem" />
+    <version value="5.0.0" />
+    <name value="gd-person-maritalstatusauthorities-v05.codesystem" />
+    <status value="draft" />
+    <date value="2018-10-17T00:00:00.000+00:00" />
+    <publisher value="Skatteetaten" />
+    <content value="complete" />
+    <concept>
+        <code value="folkeregistermyndigheten" />
+        <display value="Folkeregistermyndigheten" />
+    </concept>
+    <concept>
+        <code value="barneUngdomsOgFamilieforvaltningen" />
+        <display value="Barne-, ungdoms og  familieforvaltningen" />
+    </concept>
+    <concept>
+        <code value="bidragsfogden" />
+        <display value="Bidragsfogden" />
+    </concept>
+    <concept>
+        <code value="domstolen" />
+        <display value="Domstolen" />
+    </concept>
+    <concept>
+        <code value="denNorskeKirke" />
+        <display value="Den Norske Kirke" />
+    </concept>
+    <concept>
+        <code value="prestEllerForstanderIRegistrertTrossamfunnMedVigselsrett" />
+        <display value="Prest eller forstander i registrert trossamfunn med vigselsrett" />
+    </concept>
+    <concept>
+        <code value="livssynssamfunnMedVigselsrett" />
+        <display value="Livssynssamfunn med vigselsrett" />
+    </concept>
+    <concept>
+        <code value="særskiltOppnevntVigsler" />
+        <display value="Særskilt oppnevnt vigsler" />
+    </concept>
+    <concept>
+        <code value="kommunen" />
+        <display value="Kommunen" />
+    </concept>
+    <concept>
+        <code value="fylkesmannen" />
+        <display value="Fylkesmannen" />
+    </concept>
+    <concept>
+        <code value="utlendingsmyndigheten" />
+        <display value="Utlendingsmyndigheten" />
+    </concept>
+    <concept>
+        <code value="legeMedMeldeplikt" />
+        <display value="Lege med meldeplikt" />
+    </concept>
+    <concept>
+        <code value="utenladskMyndighet" />
+        <display value="Utenladsk myndighet" />
+    </concept>
+    <concept>
+        <code value="annen" />
+        <display value="Annen" />
+    </concept>
+</CodeSystem>

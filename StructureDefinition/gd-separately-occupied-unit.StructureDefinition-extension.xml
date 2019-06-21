@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/GitRepo/R4/fhir-all-xsd/fhir-single.xsd">
+  <id value="gd-separately-occupied-unit" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/gd-separately-occupied-unit" />
+  <version value="2.0.0" />
+  <name value="SeparatelyOccupiedUnit" />
+  <status value="draft" />
+  <date value="2019-03-27" />
+  <description value="Identifies the number and type of a separately occupied unit as registered in the Norwegian Master Person Index." />
+  <fhirVersion value="4.0.0" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Address" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="Extension" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="bruksenhetstype og bruksenhetsnummer fra FREG" />
+      <definition value="Includes the identification and type of a separately occupied unit as registered in the Norwegian Master Person Index." />
+      <alias value="bruksenhet" />
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:separatelyOccupiedUnitType">
+      <path value="Extension.extension" />
+      <sliceName value="separatelyOccupiedUnitType" />
+      <short value="bruksenhetstype fra FREG" />
+      <definition value="The type of separatelyOccupiedUnit from Norwegian Master Person Index (FREG).&#xD;&#xA;&#xD;&#xA;bolig&#xD;&#xA;annetEnnBolig&#xD;&#xA;fritidsbolig&#xD;&#xA;ikkeGodkjentBolig&#xD;&#xA;unummerertBruksenhet&#xD;&#xA;" />
+      <alias value="bruksenhetstype " />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:separatelyOccupiedUnitType.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="separatelyOccupiedUnitType" />
+    </element>
+    <element id="Extension.extension:separatelyOccupiedUnitType.value[x]:valueCode">
+      <path value="Extension.extension.valueCode" />
+      <sliceName value="valueCode" />
+      <type>
+        <code value="code" />
+      </type>
+    </element>
+    <element id="Extension.extension:separatelyOccupiedUnitNumber">
+      <path value="Extension.extension" />
+      <sliceName value="separatelyOccupiedUnitNumber" />
+      <short value="bruksenhetsnummer fra FREG" />
+      <definition value="The identification of separatelyOccupiedUnit from Norwegian Master Person Index (FREG).&#xD;&#xA;&#xD;&#xA;en bokstav og fire siffer som entydig identifiserer den enkelte bruksenheten innenfor en adresserbar bygning eller bygningsdel" />
+      <alias value="bruksenhetsnummer" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:separatelyOccupiedUnitNumber.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="separatelyOccupiedUnitNumber" />
+    </element>
+    <element id="Extension.extension:separatelyOccupiedUnitNumber.value[x]:valueString">
+      <path value="Extension.extension.valueString" />
+      <sliceName value="valueString" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/gd-separately-occupied-unit" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

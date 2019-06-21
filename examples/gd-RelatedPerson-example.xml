@@ -1,0 +1,48 @@
+<RelatedPerson xmlns="http://hl7.org/fhir">
+	<meta>
+		<profile value="http://ehelse.no/fhir/StructureDefinition/gd-RelatedPerson"/>
+	</meta>
+	<extension url="http://hl7.no/fhir/StructureDefinition/no-basis-person-nationality">
+		<extension url="code">
+			<valueCodeableConcept>
+				<coding>
+					<system value="urn:iso:std:iso:3166" />
+                    <code value="NO" />
+				</coding>
+			</valueCodeableConcept>
+		</extension>
+		<extension url="period">
+			<valuePeriod>
+				<start value="2019-05-03T09:50:05+02:00"/>
+				<end value="2019-05-03T09:50:06+02:00"/>
+			</valuePeriod>
+		</extension>
+		<extension url="fregMetadata">
+			<extension url="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata">
+			<extension url="registeredTimestamp">
+                <valueDateTime value="2019-05-03T09:50:05+02:00" />
+            </extension>
+            <extension url="currentInfo">
+                <valueBoolean value="true" />
+            </extension>
+            <extension url="reason">
+                <valueString value="Første gangs navnevalg" />
+            </extension>
+            <extension url="validFrom">
+                <valueDateTime value="2019-07-03T00:00:00+02:00" />
+            </extension>
+			</extension>
+		</extension>
+	</extension>
+	<identifier>
+		<system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
+		<value value="05073500186"/>
+	</identifier>
+	<patient>
+		<identifier>
+			<system value="urn:oid:2.16.578.1.12.4.1.4.1" />
+			<value value="04021950128" />
+		</identifier>
+		<display value="AKTVERDIG MANDAGSBIL" />
+	</patient>
+</RelatedPerson>

@@ -1,0 +1,22 @@
+<CodeSystem>
+    <id value="gd-person-identityresasonunique-v05.codesystem" />
+    <meta>
+        <versionId value="1" />
+        <lastUpdated value="2018-10-17T00:00:00.000+00:00" />
+    </meta>
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-identityresasonunique-v05.codesystem" />
+    <version value="5.0.0" />
+    <name value="gd-person-identityresasonunique-v05.codesystem" />
+    <status value="draft" />
+    <date value="2018-10-17T00:00:00.000+00:00" />
+    <publisher value="Skatteetaten" />
+    <content value="complete" />
+    <concept>
+        <code value="ikkeUnik" />
+        <display value="Ikke unik" />
+    </concept>
+    <concept>
+        <code value="unik" />
+        <display value="Unik" />
+    </concept>
+</CodeSystem>

@@ -1,0 +1,30 @@
+<CodeSystem>
+    <id value="gd-person-identificationnumbertype-v05.codesystem" />
+    <meta>
+        <versionId value="1" />
+        <lastUpdated value="2018-10-17T00:00:00.000+00:00" />
+    </meta>
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-identificationnumbertype-v05" />
+    <version value="5.0.0" />
+    <name value="gd-person-identificationnumbertype-v05.codesystem" />
+    <status value="draft" />
+    <date value="2018-10-17T00:00:00.000+00:00" />
+    <publisher value="Skatteetaten" />
+    <content value="complete" />
+    <concept>
+        <code value="utlendingsmyndighetenesIdentifikasjonsnummer" />
+        <display value="utlendingsmyndighetenesIdentifikasjonsnummer" />
+    </concept>
+    <concept>
+        <code value="taxIdentificationNumber" />
+        <display value="taxIdentificationNumber" />
+    </concept>
+    <concept>
+        <code value="socialSecurityNumber" />
+        <display value="socialSecurityNumber" />
+    </concept>
+    <concept>
+        <code value="utenlandskIdentifikasjonsnummer" />
+        <display value="utenlandskIdentifikasjonsnummer" />
+    </concept>
+</CodeSystem>

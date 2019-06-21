@@ -1,0 +1,46 @@
+<CodeSystem>
+    <id value="gd-person-guardiantype-v05.codesystem" />
+    <meta>
+        <versionId value="1" />
+        <lastUpdated value="2019-06-11T00:00:00.000+00:00" />
+    </meta>
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-guardiantype-v05" />
+    <version value="5.0.0" />
+    <name value="gd-person-guardiantype-v05.codesystem" />
+    <status value="draft" />
+    <date value="2019-06-11T00:00:00.000+00:00" />
+    <publisher value="Skatteetaten" />
+    <content value="complete" />
+    <concept>
+        <code value="ensligMindreaarigAsylsoeker" />
+        <display value="Enslig mindreårig asylsøker" />
+    </concept>
+    <concept>
+        <code value="ensligMindreaarigFlyktning" />
+        <display value="Enslig mindreårig flyktning inklusive midlertidige saker for denne gruppen" />
+    </concept>
+    <concept>
+        <code value="voksen" />
+        <display value="Voksen" />
+    </concept>
+    <concept>
+        <code value="midlertidigForVoksen" />
+        <display value="Voksen midlertidig" />
+    </concept>
+    <concept>
+        <code value="mindreaarig" />
+        <display value="Mindreårig unntatt EMF" />
+    </concept>
+    <concept>
+        <code value="midlertidigForMindreaarig" />
+        <display value="Mindreårig midlertidig" />
+    </concept>
+    <concept>
+        <code value="forvaltningUtenforVergemaal" />
+        <display value="Forvaltning utenfor vergemål" />
+    </concept>
+	<concept>
+        <code value="stadfestetFremtidsfullmakt" />
+        <display value="Fremtidsfullmakt" />
+    </concept>
+</CodeSystem>

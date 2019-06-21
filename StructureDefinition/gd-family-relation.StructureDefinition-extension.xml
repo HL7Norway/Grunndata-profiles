@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/GitRepo/R4/fhir-all-xsd/fhir-single.xsd">
+  <id value="gd-family-relation" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/gd-family-relation" />
+  <version value="2.0.0" />
+  <name value="FamilyRelation" />
+  <status value="draft" />
+  <date value="2019-05-07" />
+  <description value="Extension for representing information regarding family relations. Represents the same information awailable in the Norwegian Folkeregister." />
+  <fhirVersion value="4.0.0" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="RelatedPerson" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="RelatedPerson.relationship" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Optional Extensions Element" />
+      <definition value="Optional Extension Element - found in all resources." />
+      <base>
+        <path value="Element" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:roleOfPersonInstance">
+      <path value="Extension.extension" />
+      <sliceName value="roleOfPersonInstance" />
+      <short value="Family relationship from Norwegian Person Index" />
+      <definition value="Family relationship from Norwegian Person Index. &#xD;&#xA;This is the role of the Person/Patient instance in a familyrelation to the RelatedPerson instance(minRolleForPerson).&#xD;&#xA;&#xD;&#xA;mor&#xD;&#xA;far&#xD;&#xA;medmor&#xD;&#xA;barn&#xD;&#xA;søsken&#xD;&#xA;ektefelleEllerPartner&#xD;&#xA;dødfødtBarn" />
+      <alias value="minRolleForPerson" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://hl7.no/fhir/ValueSet/no-basis-family-relation" />
+      </binding>
+    </element>
+    <element id="Extension.extension:roleOfPersonInstance.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="roleOfPersonInstance" />
+    </element>
+    <element id="Extension.extension:roleOfPersonInstance.value[x]:valueCode">
+      <path value="Extension.extension.valueCode" />
+      <sliceName value="valueCode" />
+      <type>
+        <code value="code" />
+      </type>
+    </element>
+    <element id="Extension.extension:fregMetadata">
+      <path value="Extension.extension" />
+      <sliceName value="fregMetadata" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:fregMetadata.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="fregMetadata" />
+    </element>
+    <element id="Extension.extension:fregMetadata.value[x].extension">
+      <path value="Extension.extension.value[x].extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:fregMetadata.value[x].extension:metadata">
+      <path value="Extension.extension.value[x].extension" />
+      <sliceName value="metadata" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata" />
+      </type>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/gd-family-relation" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,30 @@
+<CodeSystem>
+    <id value="gd-address-confidentiality-v05.codesystem" />
+    <meta>
+        <versionId value="1" />
+        <lastUpdated value="2019-04-24T00:00:00.000+00:00" />
+    </meta>
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-address-confidentiality-v05" />
+    <version value="5.0.0" />
+    <name value="gd-address-confidentiality-v05.codesystem" />
+    <status value="draft" />
+    <date value="2019-04-24T00:00:00.000+00:00" />
+    <publisher value="Skatteetaten" />
+    <content value="complete" />
+    <concept>
+        <code value="ugradert" />
+        <display value="Ugradert" />
+    </concept>
+    <concept>
+        <code value="klientadresse" />
+        <display value="Klientadresse" />
+    </concept>
+    <concept>
+        <code value="fortrolig" />
+        <display value="Fortrolig" />
+    </concept>
+    <concept>
+        <code value="strengtFortrolig" />
+        <display value="Strengt fortrolig" />
+    </concept>
+</CodeSystem>

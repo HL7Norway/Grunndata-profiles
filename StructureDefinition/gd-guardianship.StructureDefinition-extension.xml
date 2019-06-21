@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/GitRepo/R4/fhir-all-xsd/fhir-single.xsd">
+  <id value="gd-guardianship" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/gd-guardianship" />
+  <version value="2.0.0" />
+  <name value="GdGuardianship" />
+  <status value="draft" />
+  <date value="2019-06-11" />
+  <description value="Informasjon om Vergemaal eller fremtidsfullmakt fra FREG.&#xD;&#xA;&#xD;&#xA;vergemål: forpliktelse og myndighet som en verge har til å handle på vegne av en person som mangler evnen til selv å dra omsorg for seg og det vedkommende eier&#xD;&#xA;representant for enslig mindreårig asylsøker: en juridisk erstatter for foreldrene&#xD;&#xA;stadfestet fremtidsfullmakt: en fremtidsfullmakt som er stadfestet til å trå i kraft fra et ikrafttredelsestidspunkt&#xD;&#xA;Folkeregisteret skal ha løsning for å motta opplysninger om omsorgsovertagelse og vergemål fra relevante offentlige virksomheter, samt videre distribuere til aktører med tillatelse.&#xD;&#xA;Folkeregisteret skal gjøre det enklere enn i dag å identifisere relasjoner mellom verge og person som har fått oppnevnt verge.&#xD;&#xA;Egenskapen gyldighetstidspunkt angir ikrafttredelsestidspunktet (vedtaksdato i meldingen fra Statens Sivilrettsforvaltning).&#xD;&#xA;Egenskapen opphørstidspunkt angir når vergemålet ble opphørt/skal opphøres. &#xD;&#xA;Folkeregisteret benytter verge og vergehaver som felles overordnet begrepsnavn ifm. vergemål, representasjon for enslig mindreårig flyktning og fremtidsfullmakt selv om begrepsnavnene i de to sistnevnte er representant – enslig mindreårig flyktning og fullmektig – fullmaktsgiver." />
+  <fhirVersion value="4.0.0" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Patient" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="Person" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="RelatedPerson" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="RelatedPerson.relationship" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <definition value="Informasjon om Vergemaal eller fremtidsfullmakt fra FREG.&#xD;&#xA;&#xD;&#xA;vergemål: forpliktelse og myndighet som en verge har til å handle på vegne av en person som mangler evnen til selv å dra omsorg for seg og det vedkommende eier&#xD;&#xA;representant for enslig mindreårig asylsøker: en juridisk erstatter for foreldrene&#xD;&#xA;stadfestet fremtidsfullmakt: en fremtidsfullmakt som er stadfestet til å trå i kraft fra et ikrafttredelsestidspunkt&#xD;&#xA;Folkeregisteret skal ha løsning for å motta opplysninger om omsorgsovertagelse og vergemål fra relevante offentlige virksomheter, samt videre distribuere til aktører med tillatelse.&#xD;&#xA;Folkeregisteret skal gjøre det enklere enn i dag å identifisere relasjoner mellom verge og person som har fått oppnevnt verge.&#xD;&#xA;Egenskapen gyldighetstidspunkt angir ikrafttredelsestidspunktet (vedtaksdato i meldingen fra Statens Sivilrettsforvaltning).&#xD;&#xA;Egenskapen opphørstidspunkt angir når vergemålet ble opphørt/skal opphøres. &#xD;&#xA;Folkeregisteret benytter verge og vergehaver som felles overordnet begrepsnavn ifm. vergemål, representasjon for enslig mindreårig flyktning og fremtidsfullmakt selv om begrepsnavnene i de to sistnevnte er representant – enslig mindreårig flyktning og fullmektig – fullmaktsgiver." />
+      <alias value="Vergemaal eller fremtidsfullmakt" />
+      <alias value="VergemaalRepresentasjonEllerFremtidsfullmakt" />
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:office">
+      <path value="Extension.extension" />
+      <sliceName value="office" />
+      <short value="embete som gjordet vedtaket fra FREG" />
+      <definition value="Name of the office that made approval in the case, from FREG.&#xD;&#xA;&#xD;&#xA;opplysning om hvilket embete som har gjort vedtak i vergemålssaken eller har stadfestet fremtidsfullmakten&#xD;&#xA;Verdi fra kodeliste over fylkesmannsembeter, f.eks. fylkesmannenITrøndelag" />
+      <alias value="embete" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:office.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="office" />
+    </element>
+    <element id="Extension.extension:office.value[x]:valueString">
+      <path value="Extension.extension.valueString" />
+      <sliceName value="valueString" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.extension:scope">
+      <path value="Extension.extension" />
+      <sliceName value="scope" />
+      <short value="vergemålets omfangsområde for representasjon for vergehaver" />
+      <definition value="vergemålets omfangsområde for representasjon for vergehaver" />
+      <alias value="(vergemåls)omfang" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-guardianscope-v05" />
+      </binding>
+    </element>
+    <element id="Extension.extension:scope.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="scope" />
+    </element>
+    <element id="Extension.extension:scope.value[x]:valueCoding">
+      <path value="Extension.extension.valueCoding" />
+      <sliceName value="valueCoding" />
+      <type>
+        <code value="Coding" />
+      </type>
+    </element>
+    <element id="Extension.extension:fregMetadata">
+      <path value="Extension.extension" />
+      <sliceName value="fregMetadata" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:fregMetadata.extension">
+      <path value="Extension.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:fregMetadata.extension:metadata">
+      <path value="Extension.extension.extension" />
+      <sliceName value="metadata" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata" />
+      </type>
+    </element>
+    <element id="Extension.extension:fregMetadata.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="fregMetadata" />
+    </element>
+    <element id="Extension.extension:fregMetadata.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <max value="0" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/gd-guardianship" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

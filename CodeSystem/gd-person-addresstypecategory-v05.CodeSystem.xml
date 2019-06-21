@@ -1,0 +1,42 @@
+<CodeSystem>
+    <id value="gd-person-addresstypecategory-v05.codesystem" />
+    <meta>
+        <versionId value="1" />
+        <lastUpdated value="2018-10-17T00:00:00.000+00:00" />
+    </meta>
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-addresstypecategory-v05.codesystem" />
+    <version value="5.0.0" />
+    <name value="gd-person-addresstypecategory-v05.codesystem" />
+    <status value="draft" />
+    <date value="2018-10-17T00:00:00.000+00:00" />
+    <publisher value="Skatteetaten" />
+    <content value="complete" />
+    <concept>
+        <code value="offisiellForreting" />
+        <display value="Offisiell forreting" />
+    </concept>
+    <concept>
+        <code value="offisiellPost" />
+        <display value="Offisiell post" />
+    </concept>
+    <concept>
+        <code value="virksomhet" />
+        <display value="Virksomhet" />
+    </concept>
+    <concept>
+        <code value="bosted" />
+        <display value="Bosted" />
+    </concept>
+    <concept>
+        <code value="post" />
+        <display value="Post" />
+    </concept>
+    <concept>
+        <code value="leveranse" />
+        <display value="Leveranse" />
+    </concept>
+    <concept>
+        <code value="ukjent" />
+        <display value="Ukjent" />
+    </concept>
+</CodeSystem>

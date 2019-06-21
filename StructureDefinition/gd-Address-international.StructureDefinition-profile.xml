@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/GitRepo/R4/fhir-all-xsd/fhir-single.xsd">
+  <id value="gd-Address-international" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/gd-Address-international" />
+  <version value="2.0.0" />
+  <name value="AddressInternational" />
+  <status value="draft" />
+  <date value="2019-04-05" />
+  <description value="Contains information and metadata for addresses defined in Norwegian Master Person Index (FREG) and Norwegian Directorate of e-Health's health related Master Person Index.&#xD;&#xA;&#xD;&#xA;The profile defines information structure of a structured interntional street address (internasjonalAdresse), as defined by FREG.&#xD;&#xA;&#xD;&#xA;noe en person eller virksomhet bruker for å identifisere og stedfeste et objekt på en geografisk lokasjon i et hvilket som helst land" />
+  <purpose value="internasjonalAdresse&#xD;&#xA;&#xD;&#xA;noe en person eller virksomhet bruker for å identifisere og stedfeste et objekt på en geografisk lokasjon i et hvilket som helst land" />
+  <fhirVersion value="4.0.0" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Address" />
+  <baseDefinition value="http://ehelse.no/fhir/StructureDefinition/gd-Address" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Address">
+      <path value="Address" />
+      <alias value="internasjonalAdresse" />
+    </element>
+    <element id="Address.line.extension">
+      <path value="Address.line.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Address.line.extension:streetName">
+      <path value="Address.line.extension" />
+      <sliceName value="streetName" />
+      <short value="adressenavn fra FREG" />
+      <definition value="adressenavn fra FREG, navn på gate, veg, sti, plass eller område, brukt som del av den offisielle adressen" />
+      <alias value="adressenavn" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName" />
+      </type>
+    </element>
+    <element id="Address.line.extension:streetName.valueString:valueString">
+      <path value="Address.line.extension.valueString" />
+      <sliceName value="valueString" />
+    </element>
+    <element id="Address.line.extension:coName">
+      <path value="Address.line.extension" />
+      <sliceName value="coName" />
+      <short value="coAdressenavn fra FREG" />
+      <definition value="coAdressenavn fra FREG, beskrivelse av enten hvem mottakeren er i &quot;omsorg&quot; hos (C/O=&quot;care of&quot;) eller hvem som er mottaker innen en organisasjon (v/=ved eller Att:=&quot;attention&quot;)" />
+      <alias value="coAdressenavn" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-careOf" />
+      </type>
+    </element>
+    <element id="Address.line.extension:coName.valueString:valueString">
+      <path value="Address.line.extension.valueString" />
+      <sliceName value="valueString" />
+    </element>
+    <element id="Address.line.extension:floor">
+      <path value="Address.line.extension" />
+      <sliceName value="floor" />
+      <short value="etasjenummer fra FREG" />
+      <definition value="etasjenummer fra FREG, adresseegenskap som beskriver hvilken etasje en person eller virksomhet har sitt registrerte tilholdssted" />
+      <alias value="etasjenummer" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator" />
+      </type>
+    </element>
+    <element id="Address.line.extension:floor.valueString:valueString">
+      <path value="Address.line.extension.valueString" />
+      <sliceName value="valueString" />
+    </element>
+    <element id="Address.line.extension:unitID">
+      <path value="Address.line.extension" />
+      <sliceName value="unitID" />
+      <short value="boenhet fra FREG" />
+      <definition value="boenhet fra FREG, adresseegenskap som beskriver hva slags tilholdssted en person eller virksomhet er registrert på, samt unik identifikator innen bygningen/etasjen" />
+      <alias value="boenhet" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID" />
+      </type>
+    </element>
+    <element id="Address.line.extension:unitID.valueString:valueString">
+      <path value="Address.line.extension.valueString" />
+      <sliceName value="valueString" />
+    </element>
+    <element id="Address.line.extension:postBox">
+      <path value="Address.line.extension" />
+      <sliceName value="postBox" />
+      <short value="postboks fra FREG" />
+      <definition value="postboks fra FREG, identifikator på postboks som består av landets betegnelse for postboks samt den alfanumeriske identifikatoren til denne og eventuell tilleggsinformasjon" />
+      <alias value="postboks" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox" />
+      </type>
+    </element>
+    <element id="Address.line.extension:postBox.valueString:valueString">
+      <path value="Address.line.extension.valueString" />
+      <sliceName value="valueString" />
+    </element>
+    <element id="Address.line.extension:fregBuilding">
+      <path value="Address.line.extension" />
+      <sliceName value="fregBuilding" />
+      <short value="bygning fra FREG" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-building" />
+      </type>
+    </element>
+    <element id="Address.city">
+      <path value="Address.city" />
+      <short value="byEllerStedsnavn fra FREG" />
+      <definition value="byEllerStedsnavn fra FREG&#xD;&#xA;&#xD;&#xA;The name of the poststed or city. When a postalcode is given the name of the city must be according to the official list of postalcodes used in Norway. &#xD;&#xA;&#xD;&#xA;The name of the city, town, village or other community or delivery center." />
+      <alias value="byEllerStedsnavn" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Address.district">
+      <path value="Address.district" />
+      <short value="distriktsnavn fra FREG" />
+      <definition value="distriktsnavn fra FREG&#xD;&#xA;&#xD;&#xA;Name of the county (norwegian &quot;kommune&quot;). If kommune number is required &quot;eiendomsinformasjon&quot; should be used.&#xD;&#xA;&#xD;&#xA;The name of the administrative area (county)." />
+      <alias value="distriktsnavn" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Address.state">
+      <path value="Address.state" />
+      <short value="region fra FREG" />
+      <definition value="region fra FREG&#xD;&#xA;adresseegenskap som beskriver et større geografisk avgrenset område innenfor et land&#xD;&#xA;&#xD;&#xA;Sub-unit of a country with limited sovereignty in a federally organized country. A code may be used if codes are in common use (i.e. US 2 letter state codes)." />
+      <alias value="region" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Address.postalCode">
+      <path value="Address.postalCode" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Address.country">
+      <path value="Address.country" />
+      <short value="landkode fra FREG" />
+      <definition value="landkode fra FREG, kommer fra FREG i form av ISO 3166 - alpha 3&#xD;&#xA;&#xD;&#xA;Country - a nation as commonly understood or generally accepted." />
+      <comment value="ISO 3166 3 letter codes" />
+      <alias value="landkode" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,50 @@
+<CodeSystem>
+    <id value="gd-address-postaltype-v01.codesystem" />
+    <meta>
+        <versionId value="1" />
+        <lastUpdated value="2018-10-17T00:00:00.000+00:00" />
+    </meta>
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-address-postaltype-v01.codesystem" />
+    <version value="0.1" />
+    <name value="gd-address-postaltype-v01.codesystem" />
+    <status value="draft" />
+    <date value="2018-10-17T00:00:00.000+00:00" />
+    <publisher value="Skatteetaten" />
+    <content value="complete" />
+    <concept>
+        <code value="0" />
+        <display value="Vanlig bosatt" />
+    </concept>
+    <concept>
+        <code value="1" />
+        <display value="Utenriks" />
+    </concept>
+    <concept>
+        <code value="2" />
+        <display value="Militær" />
+    </concept>
+    <concept>
+        <code value="3" />
+        <display value="Svalbard" />
+    </concept>
+    <concept>
+        <code value="4" />
+        <display value="Klientadresse" />
+    </concept>
+    <concept>
+        <code value="5" />
+        <display value="Uten fast bopel" />
+    </concept>
+    <concept>
+        <code value="6" />
+        <display value="Sperret adresse, strengt fortrolig" />
+    </concept>
+    <concept>
+        <code value="7" />
+        <display value="Sperret adresse, fortrolig" />
+    </concept>
+    <concept>
+        <code value="8" />
+        <display value="Pendler" />
+    </concept>
+</CodeSystem>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/GitRepo/R4/fhir-all-xsd/fhir-single.xsd">
+  <id value="gd-residence-permit" />
+  <url value="http://ehelse.nofhir/StructureDefinition/gd-residence-permit" />
+  <version value="2.0.0" />
+  <name value="ResidencePermit" />
+  <status value="draft" />
+  <date value="2019-06-12" />
+  <description value="Information registered in FREG regarding the residence permit of the person.&#xD;&#xA;&#xD;&#xA;Informasjonen innen opphold beskriver opplysninger i Registeret som omfatter oppholdstillatelse, oppholdsrett og arbeidstillatelse." />
+  <fhirVersion value="4.0.0" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Person" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="Patient" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="RelatedPerson" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Information registered in FREG regarding the resident permit of the person" />
+      <definition value="Information registered in FREG regarding the resident permit of the person.&#xD;&#xA;&#xD;&#xA;Informasjonen innen opphold beskriver opplysninger i Registeret som omfatter oppholdstillatelse, oppholdsrett og arbeidstillatelse." />
+      <alias value="opphold" />
+      <alias value="oppholdstillatelse" />
+      <base>
+        <path value="Element" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:residencePermitType">
+      <path value="Extension.extension" />
+      <sliceName value="residencePermitType" />
+      <short value="Information about the kind of residence permit" />
+      <definition value="Information about the kind of residence permit as registered in FREG&#xD;&#xA;&#xD;&#xA;rett til å oppholde seg i Norge basert på godkjennelse av et eller flere grunnlag&#xD;&#xA;Kodeliste med typer av oppholdstillatelser:&#xD;&#xA;• midlertidig (kode i DSF: O)&#xD;&#xA;• permanent (kode i DSF: B)&#xD;&#xA;• opplysningMangler (opplysning mangler) (kode i DSF: M)&#xD;&#xA;Kode for oppholdstillatelse skal fylles ut for alle ikke-EØS borgere.&#xD;&#xA;" />
+      <alias value="oppholdstillatelse" />
+      <min value="1" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-residencepermittype-v05" />
+      </binding>
+    </element>
+    <element id="Extension.extension:residencePermitType.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="residencePermitType" />
+    </element>
+    <element id="Extension.extension:residencePermitType.value[x]:valueCoding">
+      <path value="Extension.extension.valueCoding" />
+      <sliceName value="valueCoding" />
+      <type>
+        <code value="Coding" />
+      </type>
+    </element>
+    <element id="Extension.extension:period">
+      <path value="Extension.extension" />
+      <sliceName value="period" />
+      <alias value="oppholdFra" />
+      <alias value="oppholdTil" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:period.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="period" />
+    </element>
+    <element id="Extension.extension:period.value[x]:valuePeriod">
+      <path value="Extension.extension.valuePeriod" />
+      <sliceName value="valuePeriod" />
+      <type>
+        <code value="Period" />
+      </type>
+    </element>
+    <element id="Extension.extension:fregMetadata">
+      <path value="Extension.extension" />
+      <sliceName value="fregMetadata" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:fregMetadata.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="fregMetadata" />
+    </element>
+    <element id="Extension.extension:fregMetadata.value[x].extension">
+      <path value="Extension.extension.value[x].extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:fregMetadata.value[x].extension:metadata">
+      <path value="Extension.extension.value[x].extension" />
+      <sliceName value="metadata" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata" />
+      </type>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.nofhir/StructureDefinition/gd-residence-permit" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

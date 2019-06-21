@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/GitRepo/R4/fhir-all-xsd/fhir-single.xsd">
+  <id value="gd-person-identifier-status" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/gd-person-identifier-status" />
+  <version value="2.0.0" />
+  <name value="PersonIdentifierStatus" />
+  <status value="draft" />
+  <date value="2019-04-23" />
+  <description value="The status of a person identifier from FREG" />
+  <fhirVersion value="4.0.0" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Identifier" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="The status of a person identifier from FREG" />
+      <definition value="The status of a person identifier from FREG" />
+      <alias value="Identifikatorstatuskode" />
+      <alias value="status" />
+      <max value="1" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/gd-person-identifier-status" />
+    </element>
+    <element id="Extension.value[x]:valueCode">
+      <path value="Extension.valueCode" />
+      <sliceName value="valueCode" />
+      <short value="iBruk | opphørt" />
+      <alias value="Identifikatorstatuskode" />
+      <type>
+        <code value="code" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-identifierstatus-v05" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

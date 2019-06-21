@@ -1,0 +1,30 @@
+<CodeSystem>
+    <id value="gd-person-alternativeresidence-v05.codesystem" />
+    <meta>
+        <versionId value="1" />
+        <lastUpdated value="2018-10-17T00:00:00.000+00:00" />
+    </meta>
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-alternativeresidence-v05.codesystem" />
+    <version value="5.0.0" />
+    <name value="gd-person-alternativeresidence-v05.codesystem" />
+    <status value="draft" />
+    <date value="2018-10-17T00:00:00.000+00:00" />
+    <publisher value="Skatteetaten" />
+    <content value="complete" />
+    <concept>
+        <code value="militær" />
+        <display value="Militær" />
+    </concept>
+    <concept>
+        <code value="utenriks" />
+        <display value="Utenriks" />
+    </concept>
+    <concept>
+        <code value="påSvalbard" />
+        <display value="På Svalbard" />
+    </concept>
+    <concept>
+        <code value="pendler" />
+        <display value="Pendler" />
+    </concept>
+</CodeSystem>

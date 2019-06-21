@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/GitRepo/R4/fhir-all-xsd/fhir-single.xsd">
+  <id value="gd-Address-street" />
+  <url value="http://example.org/fhir/StructureDefinition/gd-Address-street" />
+  <version value="2.0.0" />
+  <name value="AddressStreet" />
+  <status value="draft" />
+  <date value="2019-04-04" />
+  <description value="Contains information and metadata for addresses defined in Norwegian Master Person Index (FREG) and Norwegian Directorate of e-Health's health related Master Person Index.&#xD;&#xA;&#xD;&#xA;The profile defines information structure of a Norwegian street address (vegadresse, vegadresseforpost), as defined by FREG.&#xD;&#xA;&#xD;&#xA;adresse for en bygning, bruksenhet, eiendom eller annet objekt som er registrert med adresse i matrikkelen&#xD;&#xA;Denne entitetstypen for norsk strukturert vegadresse er fullt kompatibel med strukturen i matrikkelen mht. egenskapsnavn." />
+  <purpose value="vegadresse&#xD;&#xA;vegadresseforpost" />
+  <fhirVersion value="4.0.0" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Address" />
+  <baseDefinition value="http://ehelse.no/fhir/StructureDefinition/gd-Address" />
+  <derivation value="constraint" />
+
+  <differential>
+    <element id="Address.extension:propertyinformation">
+      <path value="Address.extension" />
+      <sliceName value="propertyinformation" />
+      <definition value="gd-Address-street uses property information to contain the municipality code from FREG. no other part of propertyinformation is used by this profile.&#xD;&#xA;&#xD;&#xA;Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer." />
+    </element>
+    <element id="Address.extension:propertyinformation.extension:cadastralUnitNumber">
+      <path value="Address.extension.extension" />
+      <sliceName value="cadastralUnitNumber" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Address.extension:propertyinformation.extension:propertyUnitNumber">
+      <path value="Address.extension.extension" />
+      <sliceName value="propertyUnitNumber" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Address.extension:propertyinformation.extension:leaseholdNumber">
+      <path value="Address.extension.extension" />
+      <sliceName value="leaseholdNumber" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Address.extension:propertyinformation.extension:condominiumUnitNumber">
+      <path value="Address.extension.extension" />
+      <sliceName value="condominiumUnitNumber" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Address.extension:propertyinformation.extension:municipality">
+      <path value="Address.extension.extension" />
+      <sliceName value="municipality" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Address.extension:streetAddress">
+      <path value="Address.extension" />
+      <sliceName value="streetAddress" />
+      <short value="Information specific to the street address from FREG" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-street-address" />
+      </type>
+    </element>
+    <element id="Address.extension:separatelyOccupiedUnit">
+      <path value="Address.extension" />
+      <sliceName value="separatelyOccupiedUnit" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-separately-occupied-unit" />
+      </type>
+    </element>
+    <element id="Address.line.extension">
+      <path value="Address.line.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Address.line.extension:streetName">
+      <path value="Address.line.extension" />
+      <sliceName value="streetName" />
+      <short value="adressenavn fra FREG" />
+      <definition value="adressenavn fra FREG, navn på gate, veg, sti, plass eller område, brukt som del av den offisielle adressen" />
+      <alias value="adressenavn" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName" />
+      </type>
+    </element>
+    <element id="Address.line.extension:streetName.valueString:valueString">
+      <path value="Address.line.extension.valueString" />
+      <sliceName value="valueString" />
+    </element>
+    <element id="Address.line.extension:houseNumberNumeric">
+      <path value="Address.line.extension" />
+      <sliceName value="houseNumberNumeric" />
+      <short value="husnummer fra FREG" />
+      <definition value="husnummer fra FREG, nummer som entydig identifiserer eiendommer, anlegg, bygninger eller innganger til bygninger innenfor en adresserbar gate, veg, sti, plass eller område" />
+      <alias value="husnummer" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumberNumeric" />
+      </type>
+    </element>
+    <element id="Address.line.extension:houseNumberNumeric.valueString:valueString">
+      <path value="Address.line.extension.valueString" />
+      <sliceName value="valueString" />
+    </element>
+    <element id="Address.line.extension:buildingNumberSuffix">
+      <path value="Address.line.extension" />
+      <sliceName value="buildingNumberSuffix" />
+      <short value="husbokstav fra FREG" />
+      <definition value="husbokstav fra FREG, bokstav som sammen med husnummer entydig identifiserer eiendommer, anlegg, bygninger eller innganger til bygninger innenfor en adresserbar gate, veg, sti, plass eller område" />
+      <alias value="husbokstav" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix" />
+      </type>
+    </element>
+    <element id="Address.line.extension:buildingNumberSuffix.valueString:valueString">
+      <path value="Address.line.extension.valueString" />
+      <sliceName value="valueString" />
+    </element>
+    <element id="Address.line.extension:coName">
+      <path value="Address.line.extension" />
+      <sliceName value="coName" />
+      <short value="coAdressenavn fra FREG" />
+      <definition value="coAdressenavn fra FREG, beskrivelse av enten hvem mottakeren er i &quot;omsorg&quot; hos (C/O=&quot;care of&quot;) eller hvem som er mottaker innen en organisasjon (v/=ved eller Att:=&quot;attention&quot;)" />
+      <alias value="coAdressenavn" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-careOf" />
+      </type>
+    </element>
+    <element id="Address.line.extension:coName.valueString:valueString">
+      <path value="Address.line.extension.valueString" />
+      <sliceName value="valueString" />
+    </element>
+  </differential>
+</StructureDefinition>

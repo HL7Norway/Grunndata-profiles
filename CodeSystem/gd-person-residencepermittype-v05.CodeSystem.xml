@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="gd-person-residencepermittype-v05.codesystem" />
+    <meta>
+        <versionId value="1" />
+        <lastUpdated value="2019-06-11T00:00:00.000+00:00" />
+    </meta>
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-residencepermittype-v05"/>
+    <version value="5.0.0" />
+    <name value="gd-person-residencepermittype-v05.codesystem" />
+    <status value="draft" />
+    <date value="2019-06-11T00:00:00.000+00:00" />
+    <publisher value="Skatteetaten" />
+    <content value="complete" />
+    <concept>
+        <code value="midlertidig" />
+        <display value="Midlertidig oppholdstillatelse" />
+		<definition value="Midlertidig oppholdstillatelse: rett til å oppholde seg i Norge i en begrenset periode"/>
+    </concept>
+    <concept>
+        <code value="permanent" />
+        <display value="Permanent oppholdstillatelse" />
+		<definition value="permanent oppholdstillatelse: rett til opphold i riket uten tidsbegrensning og som gir et utvidet vern mot utvisning"/>
+    </concept>
+    <concept>
+        <code value="opplysningMangler" />
+        <display value="Kode som benyttes for utenlandske barn som trenger oppholdstillatelse og som blir registrert bosatt ved fødsel og således uten at oppholdstillatelse foreligger" />
+		<definition value="Kode som benyttes for utenlandske barn som trenger oppholdstillatelse og som blir registrert bosatt ved fødsel og således uten at oppholdstillatelse foreligger"/>
+    </concept>
+</CodeSystem>

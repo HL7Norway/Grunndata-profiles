@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/GitRepo/R4/fhir-all-xsd/fhir-single.xsd">
+  <id value="gd-Identifier-freg" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/gd-Identifier-freg" />
+  <version value="2.0.0" />
+  <name value="IdentifierFreg" />
+  <status value="draft" />
+  <date value="2019-04-23" />
+  <description value="Person Identifier containing metadata from FREG" />
+  <purpose value="Folkeregisteridentifikator identifikasjonsnummer" />
+  <fhirVersion value="4.0.0" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Identifier" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Identifier" />
+  <derivation value="constraint" />
+
+  <differential>
+    <element id="Identifier.extension">
+      <path value="Identifier.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Identifier.extension:fregMetadata">
+      <path value="Identifier.extension" />
+      <sliceName value="fregMetadata" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Identifier.extension:fregStatus">
+      <path value="Identifier.extension" />
+      <sliceName value="fregStatus" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-person-identifier-status" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Identifier.use">
+      <path value="Identifier.use" />
+      <definition value="All Person identifiers from FREG will be of use &quot;official&quot;. This element is not used by gd-Identifier." />
+      <mustSupport value="false" />
+    </element>
+    <element id="Identifier.type">
+      <path value="Identifier.type" />
+      <definition value="gd-Idenfitier don't use this element" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Identifier.system">
+      <path value="Identifier.system" />
+      <definition value="gd-Identifier can be either Fødselsnummer or D-nummer" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Identifier.value">
+      <path value="Identifier.value" />
+      <short value="The identifier value from FREG" />
+      <definition value="The identifier value from FREG" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Identifier.period">
+      <path value="Identifier.period" />
+      <definition value="gd-Idenfitier don't use this element&#xD;&#xA;&#xD;&#xA;Time period during which identifier is/was valid for use." />
+      <mustSupport value="false" />
+    </element>
+    <element id="Identifier.assigner">
+      <path value="Identifier.assigner" />
+      <definition value="gd-Idenfitier don't use this element&#xD;&#xA;&#xD;&#xA;Organization that issued/manages the identifier." />
+      <mustSupport value="false" />
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/GitRepo/R4/fhir-all-xsd/fhir-single.xsd">
+  <id value="gd-Address-cadastral" />
+  <url value="http://example.org/fhir/StructureDefinition/gd-Address-cadastral" />
+  <version value="2.0.0" />
+  <name value="AddressCadastral" />
+  <status value="draft" />
+  <date value="2019-04-03" />
+  <description value="Contains information and metadata for addresses defined in Norwegian Master Person Index (FREG) and Norwegian Directorate of e-Health's health related Master Person Index.&#xD;&#xA;&#xD;&#xA;The profile defines information structure of a Norwegian cadastral address (matrikkeladresse), as defined by FREG." />
+  <purpose value="Matrikkeladresse" />
+  <fhirVersion value="4.0.0" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Address" />
+  <baseDefinition value="http://ehelse.no/fhir/StructureDefinition/gd-Address" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Address.extension:propertyinformation">
+      <path value="Address.extension" />
+      <sliceName value="propertyinformation" />
+      <short value="matrikkelnummer fra FREG" />
+      <definition value="gd-Address-cadastral uses property information to contain the cadastralnumber from FREG. The cadastral number describing a cadastral address NEVER contains a condoniumUnitNumber. FREG exposes a subNumber to describe different units on the same cadastral number.&#xD;&#xA;&#xD;&#xA;Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer." />
+      <alias value="matrikkelnummer" />
+    </element>
+    <element id="Address.extension:propertyinformation.extension:condominiumUnitNumber">
+      <path value="Address.extension.extension" />
+      <sliceName value="condominiumUnitNumber" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Address.extension:cadastralAddress">
+      <path value="Address.extension" />
+      <sliceName value="cadastralAddress" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-cadastral-address" />
+      </type>
+    </element>
+    <element id="Address.extension:cadastralAddress.extension:subNumber">
+      <path value="Address.extension.extension" />
+      <sliceName value="subNumber" />
+      <short value="includes subNumber and additionalName for the Cadastral address" />
+      <definition value="includes subNumber and additionalName for the Cadastral address as registered in the Norwegian Master Person Index.&#xD;&#xA;&#xD;&#xA;undernummer&#xD;&#xA;addressetilleggsnavn" />
+    </element>
+    <element id="Address.extension:separatelyOccupiedUnit">
+      <path value="Address.extension" />
+      <sliceName value="separatelyOccupiedUnit" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-separately-occupied-unit" />
+      </type>
+    </element>
+    <element id="Address.line.extension">
+      <path value="Address.line.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Address.line.extension:coName">
+      <path value="Address.line.extension" />
+      <sliceName value="coName" />
+      <short value="coAdressenavn fra FREG" />
+      <definition value="coAdressenavn fra FREG, beskrivelse av enten hvem mottakeren er i &quot;omsorg&quot; hos (C/O=&quot;care of&quot;) eller hvem som er mottaker innen en organisasjon (v/=ved eller Att:=&quot;attention&quot;)" />
+      <alias value="coAdressenavn" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-careOf" />
+      </type>
+    </element>
+    <element id="Address.line.extension:coName.valueString:valueString">
+      <path value="Address.line.extension.valueString" />
+      <sliceName value="valueString" />
+    </element>
+  </differential>
+</StructureDefinition>

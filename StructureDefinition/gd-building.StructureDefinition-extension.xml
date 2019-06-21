@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/GitRepo/R4/fhir-all-xsd/fhir-single.xsd">
+  <id value="gd-building" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/gd-building" />
+  <version value="2.0.0" />
+  <name value="Building" />
+  <status value="draft" />
+  <date value="2019-06-12" />
+  <description value="Information specific to the internationl address from FREG (internasjonalAdresse)" />
+  <fhirVersion value="4.0.0" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Address.line" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="building from FREG (bygning)" />
+      <definition value="building name or number from FREG (bygning)&#xD;&#xA;&#xD;&#xA;adresseegenskap som beskriver navn og/eller nummer på bygning" />
+      <comment value="Reasoning not to use iso21090 extensions:&#xD;&#xA;iso21090-unitID - is for id's within a building or complex&#xD;&#xA;iso21090-additionalLocator - is for additional locators within a building or in addition to houseNumber, streetName etc." />
+      <alias value="bygning" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/gd-building" />
+    </element>
+    <element id="Extension.value[x]:valueString">
+      <path value="Extension.valueString" />
+      <sliceName value="valueString" />
+      <short value="building name or number from FREG (bygning)" />
+      <definition value="building name or number from FREG (bygning)&#xD;&#xA;&#xD;&#xA;adresseegenskap som beskriver navn og/eller nummer på bygning" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

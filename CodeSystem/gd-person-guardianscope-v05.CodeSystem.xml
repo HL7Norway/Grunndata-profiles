@@ -1,0 +1,30 @@
+<CodeSystem>
+    <id value="gd-person-guardianscope-v05.codesystem" />
+    <meta>
+        <versionId value="1" />
+        <lastUpdated value="2019-06-11T00:00:00.000+00:00" />
+    </meta>
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-guardianscope-v05" />
+    <version value="5.0.0" />
+    <name value="gd-person-guardianscope-v05.codesystem" />
+    <status value="draft" />
+    <date value="2019-06-11T00:00:00.000+00:00" />
+    <publisher value="Skatteetaten" />
+    <content value="complete" />
+    <concept>
+        <code value="utlendingssakerPersonligeOgOekonomiskeInteresser" />
+        <display value="Ivareta personens interesser innenfor det personlige og økonomiske området herunder utlendingssaken (kun for EMA)" />
+    </concept>
+    <concept>
+        <code value="personligeOgOekonomiskeInteresser" />
+        <display value="Ivareta personens interesser innenfor det personlige og økonomiske området" />
+    </concept>
+    <concept>
+        <code value="oekonomiskeInteresser" />
+        <display value="Ivareta personens interesser innenfor det økonomiske området" />
+    </concept>
+    <concept>
+        <code value="personligeInteresser" />
+        <display value="Ivareta personens interesser innenfor det personlige området" />
+    </concept>
+</CodeSystem>

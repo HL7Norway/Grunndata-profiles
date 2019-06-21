@@ -1,0 +1,42 @@
+<CodeSystem>
+    <id value="gd-person-familyrelation-v05.codesystem" />
+    <meta>
+        <versionId value="1" />
+        <lastUpdated value="2018-10-17T00:00:00.000+00:00" />
+    </meta>
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-familyrelation-v05.codesystem" />
+    <version value="5.0.0" />
+    <name value="gd-person-familyrelation-v05.codesystem" />
+    <status value="draft" />
+    <date value="2018-10-17T00:00:00.000+00:00" />
+    <publisher value="Skatteetaten" />
+    <content value="complete" />
+    <concept>
+        <code value="mor" />
+        <display value="Mor" />
+    </concept>
+    <concept>
+        <code value="far" />
+        <display value="Far" />
+    </concept>
+    <concept>
+        <code value="medmor" />
+        <display value="Medmor" />
+    </concept>
+    <concept>
+        <code value="barn" />
+        <display value="Barn" />
+    </concept>
+    <concept>
+        <code value="søsken" />
+        <display value="Søsken" />
+    </concept>
+    <concept>
+        <code value="ektefelleEllerPartner" />
+        <display value="Ektefelle eller partner" />
+    </concept>
+    <concept>
+        <code value="dødfødtBarn" />
+        <display value="Dødfødt barn" />
+    </concept>
+</CodeSystem>

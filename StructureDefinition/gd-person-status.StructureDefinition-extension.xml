@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/GitRepo/R4/fhir-all-xsd/fhir-single.xsd">
+  <id value="gd-person-status" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/gd-person-status" />
+  <version value="2.0.0" />
+  <name value="PersonStatus" />
+  <status value="draft" />
+  <date value="2019-04-24" />
+  <description value="Status of a person from FREG. (bosatt, utflyttet etc)" />
+  <fhirVersion value="4.0.0" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Person" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="Patient" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Status of a person from FREG" />
+      <definition value="Status of a person from FREG (bosatt, utflyttet etc), also contains the metadata about the person status." />
+      <alias value="Folkeregisterpersonstatus" />
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:fregPersonStatus">
+      <path value="Extension.extension" />
+      <sliceName value="fregPersonStatus" />
+      <alias value="Folkeregisterpersonstatus" />
+      <alias value="Personstatus" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:fregPersonStatus.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="fregPersonStatus" />
+    </element>
+    <element id="Extension.extension:fregPersonStatus.value[x]:valueCode">
+      <path value="Extension.extension.valueCode" />
+      <sliceName value="valueCode" />
+      <short value="The actual FREG person status" />
+      <alias value="Folkeregisterpersonstatus" />
+      <min value="1" />
+      <type>
+        <code value="code" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-status-v05" />
+      </binding>
+    </element>
+    <element id="Extension.extension:fregMetadata">
+      <path value="Extension.extension" />
+      <sliceName value="fregMetadata" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:fregMetadata.extension">
+      <path value="Extension.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:fregMetadata.extension:metadata">
+      <path value="Extension.extension.extension" />
+      <sliceName value="metadata" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata" />
+      </type>
+    </element>
+    <element id="Extension.extension:fregMetadata.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="fregMetadata" />
+    </element>
+    <element id="Extension.extension:fregMetadata.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <max value="0" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/gd-person-status" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <alias value="Folkeregisterpersonstatus" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

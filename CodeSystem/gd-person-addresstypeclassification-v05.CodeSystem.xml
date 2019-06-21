@@ -1,0 +1,34 @@
+<CodeSystem>
+    <id value="gd-person-addresstypeclassification-v05.codesystem" />
+    <meta>
+        <versionId value="1" />
+        <lastUpdated value="2018-10-17T00:00:00.000+00:00" />
+    </meta>
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-addresstypeclassification-v05.codesystem" />
+    <version value="5.0.0" />
+    <name value="gd-person-addresstypeclassification-v05.codesystem" />
+    <status value="draft" />
+    <date value="2018-10-17T00:00:00.000+00:00" />
+    <publisher value="Skatteetaten" />
+    <content value="complete" />
+    <concept>
+        <code value="bolig" />
+        <display value="Bolig" />
+    </concept>
+    <concept>
+        <code value="annetBolig" />
+        <display value="Annet bolig" />
+    </concept>
+    <concept>
+        <code value="fritidsbolig" />
+        <display value="Fritidsbolig" />
+    </concept>
+    <concept>
+        <code value="ikkeGodkjentBolig" />
+        <display value="Ikke-godkjent bolig" />
+    </concept>
+    <concept>
+        <code value="unumerertBruksenhet" />
+        <display value="Unumerert bruksenhet" />
+    </concept>
+</CodeSystem>

@@ -1,0 +1,30 @@
+<CodeSystem>
+    <id value="gd-person-addresstypesensitivity-v05.codesystem" />
+    <meta>
+        <versionId value="1" />
+        <lastUpdated value="2018-10-17T00:00:00.000+00:00" />
+    </meta>
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-addresstypesensitivity-v05.codesystem" />
+    <version value="5.0.0" />
+    <name value="gd-person-addresstypesensitivity-v05.codesystem" />
+    <status value="draft" />
+    <date value="2018-10-17T00:00:00.000+00:00" />
+    <publisher value="Skatteetaten" />
+    <content value="complete" />
+    <concept>
+        <code value="ugradert" />
+        <display value="Ugradert" />
+    </concept>
+    <concept>
+        <code value="klientadresse" />
+        <display value="Klientadresse" />
+    </concept>
+    <concept>
+        <code value="sperretAdresseFortrolig" />
+        <display value="Sperret adresse - Fortrolig" />
+    </concept>
+    <concept>
+        <code value="sperretAdresseStrengtFortrolig" />
+        <display value="Sperret adresse - Strengt fortrolig" />
+    </concept>
+</CodeSystem>

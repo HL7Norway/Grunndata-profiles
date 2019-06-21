@@ -1,0 +1,90 @@
+<CodeSystem>
+    <id value="gd-person-identificationdocumenttype-v05.codesystem" />
+    <meta>
+        <versionId value="1" />
+        <lastUpdated value="2018-10-17T00:00:00.000+00:00" />
+    </meta>
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-identificationdocumenttype-v05.codesystem" />
+    <version value="5.0.0" />
+    <name value="gd-person-identificationdocumenttype-v05.codesystem" />
+    <status value="draft" />
+    <date value="2018-10-17T00:00:00.000+00:00" />
+    <publisher value="Skatteetaten" />
+    <content value="complete" />
+    <concept>
+        <code value="pass" />
+        <display value="Pass utstedt i Norge" />
+    </concept>
+    <concept>
+        <code value="servicePass" />
+        <display value="Service-pass" />
+    </concept>
+    <concept>
+        <code value="tjenestepass" />
+        <display value="Tjeneste-pass" />
+    </concept>
+    <concept>
+        <code value="spesialpass" />
+        <display value="Spesial-pass" />
+    </concept>
+    <concept>
+        <code value="diplomatPass" />
+        <display value="Diplomat-pass" />
+    </concept>
+    <concept>
+        <code value="utlendingspass" />
+        <display value="Pass utstedt i utlandet" />
+    </concept>
+    <concept>
+        <code value="nødpass" />
+        <display value="Nødpass" />
+    </concept>
+    <concept>
+        <code value="passerbrev" />
+        <display value="Passerbrev" />
+    </concept>
+    <concept>
+        <code value="nasjonalidentitetskort" />
+        <display value="Nasjonal identitetskort" />
+    </concept>
+    <concept>
+        <code value="reisebevisForFlyktninger" />
+        <display value="Reisebevis for flyktninger" />
+    </concept>
+    <concept>
+        <code value="schengenStandardisertOppholdskort" />
+        <display value="Schengen-standardisert oppholdskort" />
+    </concept>
+    <concept>
+        <code value="førerkort" />
+        <display value="Førerkort" />
+    </concept>
+    <concept>
+        <code value="fødselsmelding" />
+        <display value="Fødselsmelding" />
+    </concept>
+    <concept>
+        <code value="fødselsattest" />
+        <display value="Fødselsattest" />
+    </concept>
+    <concept>
+        <code value="folkeregisterutskrift" />
+        <display value="Utskrift fra Folkeregisteret" />
+    </concept>
+    <concept>
+        <code value="helsetrygddekort" />
+        <display value="Helsetrygddekort" />
+    </concept>
+    <concept>
+        <code value="arbeidsgiversBekreftelse" />
+        <display value="Bekreftelse fra arbeidsgiver" />
+    </concept>
+    <concept>
+        <code value="dnaRapport" />
+        <display value="DNA-rapport" />
+    </concept>
+    <concept>
+        <code value="annet" />
+        <display value="Annet" />
+    </concept>
+</CodeSystem>

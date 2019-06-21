@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/GitRepo/R4/fhir-all-xsd/fhir-single.xsd">
+  <id value="gd-RelatedPerson" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/gd-RelatedPerson" />
+  <version value="2.0.0" />
+  <name value="RelatedPerson" />
+  <status value="draft" />
+  <date value="2019-05-06" />
+  <description value="A related person registered in the norwegian master Person index (FREG). In the case where the RelatedPerson itself is not a person registered in FREG (foreign citizen) the name, nationality, birthDate and gender is returned in the RelatedPerson instance. In all other cases only the RelatedPerson.identifier containtin FNR or DNR is returned." />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="RelatedPerson" />
+  <baseDefinition value="http://hl7.no/fhir/StructureDefinition/no-basis-RelatedPerson" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="RelatedPerson">
+      <path value="RelatedPerson" />
+      <definition value="A related person registered in the norwegian master Person index (FREG). In the case where the RelatedPerson itself is not a person registered in FREG (foreign citizen) the name, nationality, birthDate and gender is returned in the RelatedPerson instance. In all other cases only the RelatedPerson.identifier containting FNR or DNR is returned. For Guardians the name and identifier is returned." />
+      <comment value="For verge: &#xD;&#xA;person som varetar umyndiges interesser og opptrer som rettslig representant på umyndiges vegne i saker" />
+      <alias value="verge" />
+      <alias value="VergeRepresentantEllerFullmektig" />
+    </element>
+    <element id="RelatedPerson.extension">
+      <path value="RelatedPerson.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="RelatedPerson.extension:nationality">
+      <path value="RelatedPerson.extension" />
+      <sliceName value="nationality" />
+      <short value="The nationality of the person" />
+      <definition value="gd-RelatedPerson: When the RelatedPerson instance is a person not registeredn in FREG (a foreign citizen) the RelatedPerson instance is identified by name, gender, birthDate and nationality.&#xD;&#xA;&#xD;&#xA;The nationality of the person. Should be a country code from ISO 3166-1 alpha 3 code system" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-person-nationality" />
+      </type>
+      <binding>
+        <strength value="required" />
+		<valueSet value="urn:iso:std:iso:3166" />
+      </binding>
+    </element>
+    <element id="RelatedPerson.identifier">
+      <path value="RelatedPerson.identifier" />
+      <definition value="An identifier for this person. Should be at Fødselsnummer or D-nummer&#xD;&#xA;&#xD;&#xA;For verger: &#xD;&#xA;Folkeregisteridentifikatoren til vergen hvis denne finnes i Folkeregisteret. Vergen kan være uten tilknytning til Norge og egenskapen vil være uten verdi.&#xD;&#xA;Fødselsnummer: personidentifikasjonsnummer for de som er, eller har vært, bosatt i Norge, samt personer som er &quot;ikke bosatt&quot;&#xD;&#xA;d-nummer: identifikasjonsnummer som tildeles personer med midlertidig tilknytning til Norge, det vil si som ikke er bosatt i Norge&#xD;&#xA;&#xD;&#xA;Identifier for a person within a particular scope." />
+      <alias value="Folkeregisteridentifikatoren" />
+      <alias value="fødselsEllerDNummer" />
+    </element>
+    <element id="RelatedPerson.patient">
+      <path value="RelatedPerson.patient" />
+      <definition value="no-basis: Can reference no-basis-Patient, no-basis-Person or Person in addition to Patient resources.&#xD;&#xA;gd-RelatedPerson: Reference to the Person/Patient registered in FREG that this RelatedPerson is related t&#xD;&#xA;o. &#xD;&#xA;For maritalStatus this id will contain the id this RelatedPerson instance is in a registered relationship with.&#xD;&#xA;For familyRelation this id will contain the id this RelatedPerson instance has a registered relationship with, this can be both&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;The patient this person is related to." />
+      <alias value="ansvarssubjekt" />
+      <alias value="ansvarlig" />
+      <alias value="relatertPerson" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Person" />
+        <targetProfile value="http://hl7.no/fhir/StructureDefinition/no-basis-Patient" />
+        <targetProfile value="http://hl7.no/fhir/StructureDefinition/no-basis-Person" />
+        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/gd-Person" />
+      </type>
+    </element>
+    <element id="RelatedPerson.relationship">
+      <path value="RelatedPerson.relationship" />
+      <definition value="no-basis: adds slice definitions for three relationship codings from the Norwegian Folkeregisteret.&#xD;&#xA;Some relationships are ordered (a person is a parent of a child, the child on the other hand has a parent). Ordered relationships are always expressed from the RelatedPerson instance to the Patient/Person instance referenced in the RelatedPerson.patient element. This will usually be the EXACT OPPOSITE of the actual data recorded in FREG, as relationships in FREG are recorded with the view from the Person to the RelatedPersons.&#xD;&#xA;&#xD;&#xA;The nature of the relationship between a patient and the related person." />
+    </element>
+    <element id="RelatedPerson.relationship:maritalStatus">
+      <path value="RelatedPerson.relationship" />
+      <sliceName value="maritalStatus" />
+    </element>
+    <element id="RelatedPerson.relationship:maritalStatus.extension">
+      <path value="RelatedPerson.relationship.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="RelatedPerson.relationship:maritalStatus.extension:fregMarital">
+      <path value="RelatedPerson.relationship.extension" />
+      <sliceName value="fregMarital" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-marital-status" />
+      </type>
+    </element>
+    <element id="RelatedPerson.relationship:familyRelation">
+      <path value="RelatedPerson.relationship" />
+      <sliceName value="familyRelation" />
+    </element>
+    <element id="RelatedPerson.relationship:familyRelation.extension">
+      <path value="RelatedPerson.relationship.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="RelatedPerson.relationship:familyRelation.extension:fregFamily">
+      <path value="RelatedPerson.relationship.extension" />
+      <sliceName value="fregFamily" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-family-relation" />
+      </type>
+    </element>
+    <element id="RelatedPerson.relationship:parental">
+      <path value="RelatedPerson.relationship" />
+      <sliceName value="parental" />
+    </element>
+    <element id="RelatedPerson.relationship:parental.extension">
+      <path value="RelatedPerson.relationship.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="RelatedPerson.relationship:parental.extension:fregParental">
+      <path value="RelatedPerson.relationship.extension" />
+      <sliceName value="fregParental" />
+      <definition value="Extension for representing information regarding parental responsibility parent-child or child-parent. Represents the same information awailable in the Norwegian Folkeregister." />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-parental" />
+      </type>
+    </element>
+    <element id="RelatedPerson.relationship:guardianship">
+      <path value="RelatedPerson.relationship" />
+      <sliceName value="guardianship" />
+      <short value="guardianship registered in FREG" />
+      <definition value="vergemål: forpliktelse og myndighet som en verge har til å handle på vegne av en person som mangler evnen til selv å dra omsorg for seg og det vedkommende eier&#xD;&#xA;representant for enslig mindreårig asylsøker: en juridisk erstatter for foreldrene&#xD;&#xA;stadfestet fremtidsfullmakt: en fremtidsfullmakt som er stadfestet til å trå i kraft fra et ikrafttredelsestidspunkt&#xD;&#xA;Folkeregisteret skal ha løsning for å motta opplysninger om omsorgsovertagelse og vergemål fra relevante offentlige virksomheter, samt videre distribuere til aktører med tillatelse.&#xD;&#xA;Folkeregisteret skal gjøre det enklere enn i dag å identifisere relasjoner mellom verge og person som har fått oppnevnt verge.&#xD;&#xA;Egenskapen gyldighetstidspunkt angir ikrafttredelsestidspunktet (vedtaksdato i meldingen fra Statens Sivilrettsforvaltning).&#xD;&#xA;Egenskapen opphørstidspunkt angir når vergemålet ble opphørt/skal opphøres. &#xD;&#xA;Folkeregisteret benytter verge og vergehaver som felles overordnet begrepsnavn ifm. vergemål, representasjon for enslig mindreårig flyktning og fremtidsfullmakt selv om begrepsnavnene i de to sistnevnte er representant – enslig mindreårig flyktning og fullmektig – fullmaktsgiver.&#xD;&#xA;&#xD;&#xA;no-basis: adds slice definitions for three relationship codings from the Norwegian Folkeregisteret.&#xD;&#xA;&#xD;&#xA;Some relationships are ordered (a person is a parent of a child but the child on the other hand is the child of a parent). Ordered relationships are always expressed from the RelatedPerson instance to the Patient/Person instance referenced in the RelatedPerson.patient element. This will usually be the EXACT OPPOSITE of the actual data recorded in FREG, as relationships in FREG is recorded with the view from the Person to the RelatedPersons." />
+      <alias value="vergemåltype" />
+      <binding>
+        <strength value="preferred" />
+        <description value="guardianship type registered in FREG" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-guardiantype-v05" />
+      </binding>
+    </element>
+    <element id="RelatedPerson.relationship:guardianship.extension">
+      <path value="RelatedPerson.relationship.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="RelatedPerson.relationship:guardianship.extension:guardianship">
+      <path value="RelatedPerson.relationship.extension" />
+      <sliceName value="guardianship" />
+      <short value="Informasjon om Vergemaal eller fremtidsfullmakt fra FREG." />
+      <definition value="vergemål: forpliktelse og myndighet som en verge har til å handle på vegne av en person som mangler evnen til selv å dra omsorg for seg og det vedkommende eier&#xD;&#xA;representant for enslig mindreårig asylsøker: en juridisk erstatter for foreldrene&#xD;&#xA;stadfestet fremtidsfullmakt: en fremtidsfullmakt som er stadfestet til å trå i kraft fra et ikrafttredelsestidspunkt&#xD;&#xA;Folkeregisteret skal ha løsning for å motta opplysninger om omsorgsovertagelse og vergemål fra relevante offentlige virksomheter, samt videre distribuere til aktører med tillatelse.&#xD;&#xA;Folkeregisteret skal gjøre det enklere enn i dag å identifisere relasjoner mellom verge og person som har fått oppnevnt verge.&#xD;&#xA;Egenskapen gyldighetstidspunkt angir ikrafttredelsestidspunktet (vedtaksdato i meldingen fra Statens Sivilrettsforvaltning).&#xD;&#xA;Egenskapen opphørstidspunkt angir når vergemålet ble opphørt/skal opphøres. &#xD;&#xA;Folkeregisteret benytter verge og vergehaver som felles overordnet begrepsnavn ifm. vergemål, representasjon for enslig mindreårig flyktning og fremtidsfullmakt selv om begrepsnavnene i de to sistnevnte er representant – enslig mindreårig flyktning og fullmektig – fullmaktsgiver." />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-guardianship" />
+      </type>
+    </element>
+    <element id="RelatedPerson.relationship:guardianship.coding">
+      <path value="RelatedPerson.relationship.coding" />
+      <short value="Vergemaaltype fra FREG" />
+      <definition value="beskrivelse av typen vergemål som tar utgangspunkt i omfang og kategori av vergehaver" />
+      <alias value="vergemåltype" />
+      <max value="1" />
+    </element>
+    <element id="RelatedPerson.name">
+      <path value="RelatedPerson.name" />
+      <definition value="Defines the format of norwegian human name according to norwegian regulation (lov om personnavn).&#xD;&#xA;gd-RelatedPerson: When the RelatedPerson instance is a person not registeredn in FREG (a foreign citizen) the RelatedPerson instance is identified by name, gender, birthDate and nationality.&#xD;&#xA;&#xD;&#xA;For verge:&#xD;&#xA;Personnavnet til en verge" />
+      <alias value="personnavn" />
+    </element>
+    <element id="RelatedPerson.gender">
+      <path value="RelatedPerson.gender" />
+      <definition value="gd-RelatedPerson: When the RelatedPerson instance is a person not registeredn in FREG (a foreign citizen) the RelatedPerson instance is identified by name, gender, birthDate and nationality.&#xD;&#xA;&#xD;&#xA;Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes." />
+      <alias value="kjønn" />
+    </element>
+    <element id="RelatedPerson.birthDate">
+      <path value="RelatedPerson.birthDate" />
+      <definition value="gd-RelatedPerson: When the RelatedPerson instance is a person not registeredn in FREG (a foreign citizen) the RelatedPerson instance is identified by name, gender, birthDate and nationality.&#xD;&#xA;&#xD;&#xA;The date on which the related person was born." />
+      <alias value="fødselsdato" />
+    </element>
+  </differential>
+</StructureDefinition>

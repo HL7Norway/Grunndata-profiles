@@ -1,0 +1,30 @@
+<CodeSystem>
+    <id value="gd-person-addresstype-v05.codesystem" />
+    <meta>
+        <versionId value="1" />
+        <lastUpdated value="2018-10-17T00:00:00.000+00:00" />
+    </meta>
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-addresstype-v05.codesystem" />
+    <version value="5.0.0" />
+    <name value="gd-person-addresstype-v05.codesystem" />
+    <status value="draft" />
+    <date value="2018-10-17T00:00:00.000+00:00" />
+    <publisher value="Skatteetaten" />
+    <content value="complete" />
+    <concept>
+        <code value="bostedsadresse" />
+        <display value="Bostedsadresse" />
+    </concept>
+    <concept>
+        <code value="oppholdsadresse" />
+        <display value="Oppholdsadresse" />
+    </concept>
+    <concept>
+        <code value="postadresse" />
+        <display value="Postadresse" />
+    </concept>
+    <concept>
+        <code value="postadresseIUtlandet" />
+        <display value="Postadresse i utlandet" />
+    </concept>
+</CodeSystem>

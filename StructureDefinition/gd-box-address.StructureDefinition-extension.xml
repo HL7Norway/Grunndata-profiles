@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/GitRepo/R4/fhir-all-xsd/fhir-single.xsd">
+  <id value="gd-box-address" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/gd-box-address" />
+  <version value="2.0.0" />
+  <name value="BoxAddress" />
+  <status value="draft" />
+  <date value="2019-04-04" />
+  <description value="Information specific to the box address from FREG (postbokseier)" />
+  <fhirVersion value="4.0.0" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Address" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Information specific to the box address " />
+      <definition value="Information specific to the box address from FREG (postbokseier)" />
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:postBoxOwner">
+      <path value="Extension.extension" />
+      <sliceName value="postBoxOwner" />
+      <short value="postbokseier fra FREG" />
+      <definition value="postbokseier fra FREG, den som leier postboksen fra eier av postboksanlegget" />
+      <alias value="postbokseier" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:postBoxOwner.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="postBoxOwner" />
+    </element>
+    <element id="Extension.extension:postBoxOwner.value[x]:valueString">
+      <path value="Extension.extension.valueString" />
+      <sliceName value="valueString" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/gd-box-address" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
