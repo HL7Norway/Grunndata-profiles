@@ -22,4 +22,22 @@
 			<value value="04021950128" />
 		</identifier>
 	</patient>
+	<relationship>
+		<extension url="http://ehelse.no/fhir/StructureDefinition/gd-marital-status">
+			<extension url="authority">
+				<valueString value="domstolen"/>
+			</extension>
+		</extension>
+		<coding>
+			<system value="http://hl7.no/fhir/ValueSet/no-basis-marital-status"/>
+			<code value="gift"/>
+		</coding>
+	</relationship>
+	<name>
+		<extension url="http://hl7.no/fhir/StructureDefinition/no-basis-middlename">
+			<valueString value="Pårørende"/>
+		</extension>
+		<family value="Sørgård"/>
+		<given value="Ærlend"/>
+	</name>
 </RelatedPerson>
