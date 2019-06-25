@@ -354,6 +354,7 @@
         <expression value="extension.exists() != value.exists()" />
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -1410,7 +1411,7 @@
         <rules value="open" />
       </slicing>
       <short value="A human identifier for this person" />
-      <definition value="An identifier for this person. Should be at Fødselsnummer or D-nummer&#xD;&#xA;&#xD;&#xA;For verger: &#xD;&#xA;Folkeregisteridentifikatoren til vergen hvis denne finnes i Folkeregisteret. Vergen kan være uten tilknytning til Norge og egenskapen vil være uten verdi.&#xD;&#xA;Fødselsnummer: personidentifikasjonsnummer for de som er, eller har vært, bosatt i Norge, samt personer som er &quot;ikke bosatt&quot;&#xD;&#xA;d-nummer: identifikasjonsnummer som tildeles personer med midlertidig tilknytning til Norge, det vil si som ikke er bosatt i Norge&#xD;&#xA;&#xD;&#xA;Identifier for a person within a particular scope." />
+      <definition value="An identifier for this person. Should be at Fødselsnummer or D-nummer&#xD;&#xA;The identifier of the RelatedPerson returned by grunndata will only contain data if the RelatedPerson is a person also registered in FREG. For foreign citizens the service will return name and birthDate.&#xD;&#xA;&#xD;&#xA;For verger: &#xD;&#xA;Folkeregisteridentifikatoren til vergen hvis denne finnes i Folkeregisteret. Vergen kan være uten tilknytning til Norge og egenskapen vil være uten verdi.&#xD;&#xA;Fødselsnummer: personidentifikasjonsnummer for de som er, eller har vært, bosatt i Norge, samt personer som er &quot;ikke bosatt&quot;&#xD;&#xA;d-nummer: identifikasjonsnummer som tildeles personer med midlertidig tilknytning til Norge, det vil si som ikke er bosatt i Norge&#xD;&#xA;&#xD;&#xA;Identifier for a person within a particular scope." />
       <requirements value="People are known by a variety of ids. Some institutions maintain several, and most collect identifiers for exchange with other organizations concerning the patient. Examples are national person identifier and local identifier." />
       <alias value="Folkeregisteridentifikatoren" />
       <alias value="fødselsEllerDNummer" />
@@ -2387,7 +2388,7 @@
     <element id="RelatedPerson.patient">
       <path value="RelatedPerson.patient" />
       <short value="The person this person is related to" />
-      <definition value="no-basis: Can reference no-basis-Patient, no-basis-Person or Person in addition to Patient resources.&#xD;&#xA;&#xD;&#xA;gd-RelatedPerson: Reference to the Person/Patient registered in FREG that this RelatedPerson is related to. The identifier value will only exist if the RelatedPerson represents a person registered in FREG. Otherwise only the name and birthdate is returned.&#xD;&#xA;&#xD;&#xA;For maritalStatus this identifier will contain the FREG identifier this RelatedPerson instance has.&#xD;&#xA;For familyRelation this idientifier will contain the FREG identifier for this RelatedPerson instance has a registered relationship with, this can be both.&#xD;&#xA;For parental this identifier will contain the FREG identifier of the RelatedPerson instance in a parental relationship with a Person.&#xD;&#xA;&#xD;&#xA;The patient this person is related to." />
+      <definition value="no-basis: Can reference no-basis-Patient, no-basis-Person or Person in addition to Patient resources.&#xD;&#xA;&#xD;&#xA;gd-RelatedPerson: Logical reference (identifier) of the Person/Patient instance (registered in FREG) that this RelatedPerson instance is related to. Contains DNR or FNR.&#xD;&#xA;&#xD;&#xA;For maritalStatus this identifier will contain the FREG identifier of the Person/Patient this RelatedPerson instance is related to.&#xD;&#xA;For familyRelation this idientifier will contain the FREG identifier of the Person/Patient this RelatedPerson instance is related to.&#xD;&#xA;For parental this identifier will contain the FREG identifier of the Person/Patient this RelatedPerson instance is related to.&#xD;&#xA;&#xD;&#xA;The patient this person is related to." />
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
       <requirements value="We need to know which patient this RelatedPerson is related to." />
       <alias value="ansvarssubjekt" />
@@ -2682,7 +2683,7 @@
         <rules value="open" />
       </slicing>
       <short value="The nature of the relationship" />
-      <definition value="no-basis: adds slice definitions for three relationship codings from the Norwegian Folkeregisteret.&#xD;&#xA;Some relationships are ordered (a person is a parent of a child, the child on the other hand has a parent). Ordered relationships are always expressed from the RelatedPerson instance to the Patient/Person instance referenced in the RelatedPerson.patient element. This will usually be the EXACT OPPOSITE of the actual data recorded in FREG, as relationships in FREG are recorded with the view from the Person to the RelatedPersons.&#xD;&#xA;&#xD;&#xA;The nature of the relationship between a patient and the related person." />
+      <definition value="no-basis: adds slice definitions for four relationship codings from the Norwegian Folkeregisteret.&#xD;&#xA;Some relationships are ordered (a person is a parent of a child, the child on the other hand has a parent). Ordered relationships are always expressed from the RelatedPerson instance to the Patient/Person instance referenced in the RelatedPerson.patient element. This will usually be the EXACT OPPOSITE of the actual data recorded in FREG, as relationships in FREG are recorded with the view from the Person to the RelatedPersons.&#xD;&#xA;&#xD;&#xA;The nature of the relationship between a patient and the related person." />
       <comment value="Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." />
       <requirements value="We need to know the relationship with the patient since it influences the interpretation of the information attributed to this person." />
       <min value="0" />
@@ -2703,6 +2704,7 @@
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <strength value="preferred" />
@@ -3513,10 +3515,11 @@
     <element id="RelatedPerson.name">
       <path value="RelatedPerson.name" />
       <short value="Norwegian human name" />
-      <definition value="Defines the format of norwegian human name according to norwegian regulation (lov om personnavn).&#xD;&#xA;gd-RelatedPerson: When the RelatedPerson instance is a person not registeredn in FREG (a foreign citizen) the RelatedPerson instance is identified by name, gender, birthDate and nationality.&#xD;&#xA;&#xD;&#xA;For verge:&#xD;&#xA;Personnavnet til en verge" />
+      <definition value="Defines the format of norwegian human name according to norwegian regulation (lov om personnavn).&#xD;&#xA;&#xD;&#xA;gd-RelatedPerson: When the RelatedPerson instance is a person not registeredn in FREG (a foreign citizen) the RelatedPerson instance is identified by name, gender, birthDate and nationality.&#xD;&#xA;&#xD;&#xA;For verge:&#xD;&#xA;Personnavnet til en verge" />
       <comment value="Names may be changed, or repudiated, or people may have different names in different contexts. Names may be divided into parts of different type that have variable significance depending on context, though the division into parts does not always matter. With personal names, the different parts might or might not be imbued with some implicit meaning; various cultures associate different importance with the name parts and the degree to which systems must care about name parts around the world varies widely." />
       <requirements value="Related persons need to be identified by name, but it is uncommon to need details about multiple other names for that person." />
       <alias value="personnavn" />
+      <alias value="navn" />
       <min value="0" />
       <max value="*" />
       <base>
@@ -3536,6 +3539,7 @@
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -3644,6 +3648,7 @@
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <strength value="required" />
@@ -3693,6 +3698,7 @@
         <expression value="extension.exists() != value.exists()" />
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -4133,6 +4139,7 @@
         <code value="Extension" />
         <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-person-citizenship" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.extension:citizenship.extension:code">
       <path value="RelatedPerson.extension.extension" />
@@ -4144,7 +4151,7 @@
     </element>
     <element id="RelatedPerson.identifier">
       <path value="RelatedPerson.identifier" />
-      <definition value="An identifier for this person. Should be at Fødselsnummer or D-nummer&#xD;&#xA;&#xD;&#xA;For verger: &#xD;&#xA;Folkeregisteridentifikatoren til vergen hvis denne finnes i Folkeregisteret. Vergen kan være uten tilknytning til Norge og egenskapen vil være uten verdi.&#xD;&#xA;Fødselsnummer: personidentifikasjonsnummer for de som er, eller har vært, bosatt i Norge, samt personer som er &quot;ikke bosatt&quot;&#xD;&#xA;d-nummer: identifikasjonsnummer som tildeles personer med midlertidig tilknytning til Norge, det vil si som ikke er bosatt i Norge&#xD;&#xA;&#xD;&#xA;Identifier for a person within a particular scope." />
+      <definition value="An identifier for this person. Should be at Fødselsnummer or D-nummer&#xD;&#xA;The identifier of the RelatedPerson returned by grunndata will only contain data if the RelatedPerson is a person also registered in FREG. For foreign citizens the service will return name and birthDate.&#xD;&#xA;&#xD;&#xA;For verger: &#xD;&#xA;Folkeregisteridentifikatoren til vergen hvis denne finnes i Folkeregisteret. Vergen kan være uten tilknytning til Norge og egenskapen vil være uten verdi.&#xD;&#xA;Fødselsnummer: personidentifikasjonsnummer for de som er, eller har vært, bosatt i Norge, samt personer som er &quot;ikke bosatt&quot;&#xD;&#xA;d-nummer: identifikasjonsnummer som tildeles personer med midlertidig tilknytning til Norge, det vil si som ikke er bosatt i Norge&#xD;&#xA;&#xD;&#xA;Identifier for a person within a particular scope." />
       <alias value="Folkeregisteridentifikatoren" />
       <alias value="fødselsEllerDNummer" />
       <mustSupport value="true" />
@@ -4161,7 +4168,7 @@
     </element>
     <element id="RelatedPerson.patient">
       <path value="RelatedPerson.patient" />
-      <definition value="no-basis: Can reference no-basis-Patient, no-basis-Person or Person in addition to Patient resources.&#xD;&#xA;&#xD;&#xA;gd-RelatedPerson: Reference to the Person/Patient registered in FREG that this RelatedPerson is related to. The identifier value will only exist if the RelatedPerson represents a person registered in FREG. Otherwise only the name and birthdate is returned.&#xD;&#xA;&#xD;&#xA;For maritalStatus this identifier will contain the FREG identifier this RelatedPerson instance has.&#xD;&#xA;For familyRelation this idientifier will contain the FREG identifier for this RelatedPerson instance has a registered relationship with, this can be both.&#xD;&#xA;For parental this identifier will contain the FREG identifier of the RelatedPerson instance in a parental relationship with a Person.&#xD;&#xA;&#xD;&#xA;The patient this person is related to." />
+      <definition value="no-basis: Can reference no-basis-Patient, no-basis-Person or Person in addition to Patient resources.&#xD;&#xA;&#xD;&#xA;gd-RelatedPerson: Logical reference (identifier) of the Person/Patient instance (registered in FREG) that this RelatedPerson instance is related to. Contains DNR or FNR.&#xD;&#xA;&#xD;&#xA;For maritalStatus this identifier will contain the FREG identifier of the Person/Patient this RelatedPerson instance is related to.&#xD;&#xA;For familyRelation this idientifier will contain the FREG identifier of the Person/Patient this RelatedPerson instance is related to.&#xD;&#xA;For parental this identifier will contain the FREG identifier of the Person/Patient this RelatedPerson instance is related to.&#xD;&#xA;&#xD;&#xA;The patient this person is related to." />
       <alias value="ansvarssubjekt" />
       <alias value="ansvarlig" />
       <alias value="relatertPerson" />
@@ -4181,7 +4188,8 @@
     </element>
     <element id="RelatedPerson.relationship">
       <path value="RelatedPerson.relationship" />
-      <definition value="no-basis: adds slice definitions for three relationship codings from the Norwegian Folkeregisteret.&#xD;&#xA;Some relationships are ordered (a person is a parent of a child, the child on the other hand has a parent). Ordered relationships are always expressed from the RelatedPerson instance to the Patient/Person instance referenced in the RelatedPerson.patient element. This will usually be the EXACT OPPOSITE of the actual data recorded in FREG, as relationships in FREG are recorded with the view from the Person to the RelatedPersons.&#xD;&#xA;&#xD;&#xA;The nature of the relationship between a patient and the related person." />
+      <definition value="no-basis: adds slice definitions for four relationship codings from the Norwegian Folkeregisteret.&#xD;&#xA;Some relationships are ordered (a person is a parent of a child, the child on the other hand has a parent). Ordered relationships are always expressed from the RelatedPerson instance to the Patient/Person instance referenced in the RelatedPerson.patient element. This will usually be the EXACT OPPOSITE of the actual data recorded in FREG, as relationships in FREG are recorded with the view from the Person to the RelatedPersons.&#xD;&#xA;&#xD;&#xA;The nature of the relationship between a patient and the related person." />
+      <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.relationship:maritalStatus.extension">
       <path value="RelatedPerson.relationship.extension" />
@@ -4281,18 +4289,22 @@
     </element>
     <element id="RelatedPerson.name">
       <path value="RelatedPerson.name" />
-      <definition value="Defines the format of norwegian human name according to norwegian regulation (lov om personnavn).&#xD;&#xA;gd-RelatedPerson: When the RelatedPerson instance is a person not registeredn in FREG (a foreign citizen) the RelatedPerson instance is identified by name, gender, birthDate and nationality.&#xD;&#xA;&#xD;&#xA;For verge:&#xD;&#xA;Personnavnet til en verge" />
+      <definition value="Defines the format of norwegian human name according to norwegian regulation (lov om personnavn).&#xD;&#xA;&#xD;&#xA;gd-RelatedPerson: When the RelatedPerson instance is a person not registeredn in FREG (a foreign citizen) the RelatedPerson instance is identified by name, gender, birthDate and nationality.&#xD;&#xA;&#xD;&#xA;For verge:&#xD;&#xA;Personnavnet til en verge" />
       <alias value="personnavn" />
+      <alias value="navn" />
+      <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.gender">
       <path value="RelatedPerson.gender" />
       <definition value="gd-RelatedPerson: When the RelatedPerson instance is a person not registeredn in FREG (a foreign citizen) the RelatedPerson instance is identified by name, gender, birthDate and nationality.&#xD;&#xA;&#xD;&#xA;Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes." />
       <alias value="kjønn" />
+      <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.birthDate">
       <path value="RelatedPerson.birthDate" />
       <definition value="gd-RelatedPerson: When the RelatedPerson instance is a person not registeredn in FREG (a foreign citizen) the RelatedPerson instance is identified by name, gender, birthDate and nationality.&#xD;&#xA;&#xD;&#xA;The date on which the related person was born." />
       <alias value="fødselsdato" />
+      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>
