@@ -4,7 +4,7 @@
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Address" />
   <version value="2.0.0" />
   <name value="Address" />
-  <title value="gd-Address" />
+  <title value="Address" />
   <status value="draft" />
   <date value="2019-06-20" />
   <description value="Grunndata adresse&#xD;&#xA;Contains information and metadata for addresses defined in Norwegian Master Person Index and Norwegian Directorate of e-Health's health related Master Person Index." />
@@ -140,7 +140,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -2414,7 +2414,6 @@
       <sliceName value="urbanDistrict" />
       <short value="Urban district of this address" />
       <definition value="Simple extension containing information about what part of a norwegian city the patient is a resident. Administrative purpose. Five Norwegian cities have defined administrative districts called bydel. This is Oslo, Bergen, Trondheim, Stavanger og Drammen. &#xD;&#xA;&#xD;&#xA;There are still some uncertainty on what is the official source of bydel information. TBD" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Address.extension:urbanDistrict.value[x]:valueCoding:valueCoding.code">
