@@ -1,0 +1,18 @@
+<CodeSystem>
+    <id value="gd-person-migration-pattern-v05.codesystem" />
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-migration-pattern-v05" />
+    <version value="5.0.0" />
+    <name value="gd-person-migration-pattern-v05.codesystem" />
+    <status value="draft" />
+    <date value="2019-08-15T00:00:00.000+00:00" />
+    <publisher value="Skatteetaten" />
+    <content value="complete" />
+    <concept>
+        <code value="migration" />
+        <display value="Migration Innflytting" />
+    </concept>
+    <concept>
+        <code value="emigration" />
+        <display value="Emigration Utflytting" />
+    </concept>
+</CodeSystem>
