@@ -112,6 +112,7 @@
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -1054,6 +1055,7 @@
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -2260,6 +2262,7 @@
       <path value="Provenance.id" />
       <definition value="Grunndata: Provenance resources for the Grunndata-services should identify their provenance by a counter identifier that identifies the sequence that the Provenance resources where registered on the Grunndata-service. &#xD;&#xA;&#xD;&#xA;The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." />
       <alias value="Hendelseid" />
+      <mustSupport value="true" />
     </element>
     <element id="Provenance.meta.versionId">
       <path value="Provenance.meta.versionId" />
@@ -2292,6 +2295,7 @@
     <element id="Provenance.recorded">
       <path value="Provenance.recorded" />
       <definition value="Grunndata: The time the change was recorded by the Grunndata system.&#xD;&#xA;&#xD;&#xA;The instant of time at which the activity was recorded." />
+      <mustSupport value="true" />
     </element>
     <element id="Provenance.policy">
       <path value="Provenance.policy" />
