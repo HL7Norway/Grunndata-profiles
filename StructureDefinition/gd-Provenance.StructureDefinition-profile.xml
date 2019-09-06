@@ -814,6 +814,49 @@
         <map value="N/A" />
       </mapping>
     </element>
+    <element id="Provenance.target.extension:target">
+      <path value="Provenance.target.extension" />
+      <sliceName value="target" />
+      <short value="reference to specific elements of the target resource" />
+      <definition value="In some cases when you provide a reference to another resource instance you also want to specificly express a  reference to specific elements of the target resource.  Can contain the reference to the element and the change in value." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="Element.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/reference-targetElement" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() or (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
     <element id="Provenance.target.reference">
       <path value="Provenance.target.reference" />
       <short value="Literal reference, Relative, internal or absolute URL" />
@@ -831,7 +874,7 @@
       </type>
       <example>
         <label value="version specific id" />
-        <valueString value="http://example.org/fhir/Observation/1x2/_history/2" />
+        <valueString value="http://example.org/fhir/Patient/1x2/_history/2" />
       </example>
       <condition value="ele-1" />
       <condition value="ref-1" />
@@ -2279,11 +2322,33 @@
       </example>
       <mustSupport value="true" />
     </element>
+    <element id="Provenance.target.extension">
+      <path value="Provenance.target.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Provenance.target.extension:target">
+      <path value="Provenance.target.extension" />
+      <sliceName value="target" />
+      <short value="reference to specific elements of the target resource" />
+      <definition value="In some cases when you provide a reference to another resource instance you also want to specificly express a  reference to specific elements of the target resource.  Can contain the reference to the element and the change in value." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/reference-targetElement" />
+      </type>
+    </element>
     <element id="Provenance.target.reference">
       <path value="Provenance.target.reference" />
       <example>
         <label value="version specific id" />
-        <valueString value="http://example.org/fhir/Observation/1x2/_history/2" />
+        <valueString value="http://example.org/fhir/Patient/1x2/_history/2" />
       </example>
       <mustSupport value="true" />
     </element>
