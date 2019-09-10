@@ -674,7 +674,7 @@
     <element id="Provenance.target">
       <path value="Provenance.target" />
       <short value="Target Reference(s) (usually version specific)" />
-      <definition value="Grunndata uses the target element to reference the UPDATED version of the resource instance, after the recorded activity described by the Provenance resource. This is one reason the references in the target element SHOULD always be version specific.&#xD;&#xA;&#xD;&#xA;The Reference(s) that were generated or updated by  the activity described in this resource. A provenance can point to more than one target if multiple resources were created/updated by the same activity." />
+      <definition value="Grunndata uses the target element to reference the UPDATED version of the resource instance, after the recorded activity described by the Provenance resource has taken place. This is one reason the references in the target element SHOULD always be version specific. There is one exception when the Provenance describes a Delete transaction (Delete activity), in that case the target contains the reference/identifier of the deleted version of the resource: http://hl7.org/fhir/provenance.html#removal&#xD;&#xA;&#xD;&#xA;The Reference(s) that were generated or updated by  the activity described in this resource. A provenance can point to more than one target if multiple resources were created/updated by the same activity." />
       <comment value="Target references are usually version specific, but might not be, if a version has not been assigned or if the provenance information is part of the set of resources being maintained (i.e. a document). When using the RESTful API, the identity of the resource might not be known (especially not the version specific one); the client may either submit the resource first, and then the provenance, or it may submit both using a single transaction. See the notes on transaction for further discussion." />
       <min value="1" />
       <max value="*" />
@@ -814,9 +814,9 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Provenance.target.extension:target">
+    <element id="Provenance.target.extension:targetElement">
       <path value="Provenance.target.extension" />
-      <sliceName value="target" />
+      <sliceName value="targetElement" />
       <short value="reference to specific elements of the target resource" />
       <definition value="In some cases when you provide a reference to another resource instance you also want to specificly express a  reference to specific elements of the target resource.  Can contain the reference to the element and the change in value." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
@@ -2313,7 +2313,7 @@
     </element>
     <element id="Provenance.target">
       <path value="Provenance.target" />
-      <definition value="Grunndata uses the target element to reference the UPDATED version of the resource instance, after the recorded activity described by the Provenance resource. This is one reason the references in the target element SHOULD always be version specific.&#xD;&#xA;&#xD;&#xA;The Reference(s) that were generated or updated by  the activity described in this resource. A provenance can point to more than one target if multiple resources were created/updated by the same activity." />
+      <definition value="Grunndata uses the target element to reference the UPDATED version of the resource instance, after the recorded activity described by the Provenance resource has taken place. This is one reason the references in the target element SHOULD always be version specific. There is one exception when the Provenance describes a Delete transaction (Delete activity), in that case the target contains the reference/identifier of the deleted version of the resource: http://hl7.org/fhir/provenance.html#removal&#xD;&#xA;&#xD;&#xA;The Reference(s) that were generated or updated by  the activity described in this resource. A provenance can point to more than one target if multiple resources were created/updated by the same activity." />
       <example>
         <label value="version specific id" />
         <valueReference>
@@ -2332,13 +2332,10 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Provenance.target.extension:target">
+    <element id="Provenance.target.extension:targetElement">
       <path value="Provenance.target.extension" />
-      <sliceName value="target" />
-      <short value="reference to specific elements of the target resource" />
+      <sliceName value="targetElement" />
       <definition value="In some cases when you provide a reference to another resource instance you also want to specificly express a  reference to specific elements of the target resource.  Can contain the reference to the element and the change in value." />
-      <min value="0" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/reference-targetElement" />
