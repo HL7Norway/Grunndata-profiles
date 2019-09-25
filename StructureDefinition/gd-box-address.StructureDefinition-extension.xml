@@ -3,7 +3,7 @@
   <id value="gd-box-address" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-box-address" />
   <version value="2.0.0" />
-  <name value="BoxAddress" />
+  <name value="GdBoxAddress" />
   <status value="draft" />
   <date value="2019-04-04" />
   <description value="Information specific to the box address from FREG (postbokseier)" />
@@ -303,6 +303,7 @@
           <type value="type" />
           <path value="$this" />
         </discriminator>
+        <rules value="closed" />
       </slicing>
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -757,6 +758,7 @@
           <type value="type" />
           <path value="$this" />
         </discriminator>
+        <rules value="closed" />
       </slicing>
     </element>
     <element id="Extension.extension:postBoxOwner.value[x]:valueString">

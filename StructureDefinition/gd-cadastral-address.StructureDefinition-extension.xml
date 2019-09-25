@@ -2,8 +2,8 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-cadastral-address" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-cadastral-address" />
-  <version value="2.0.0" />
-  <name value="CadastralAddress" />
+  <version value="2.0.1" />
+  <name value="GdCadastralAddress" />
   <status value="draft" />
   <date value="2019-04-03" />
   <description value="Information specific to the cadastral address from FREG (matrikkeladresse)" />
@@ -303,6 +303,7 @@
           <type value="type" />
           <path value="$this" />
         </discriminator>
+        <rules value="closed" />
       </slicing>
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -680,6 +681,7 @@
           <type value="type" />
           <path value="$this" />
         </discriminator>
+        <rules value="closed" />
       </slicing>
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -1133,6 +1135,7 @@
           <type value="type" />
           <path value="$this" />
         </discriminator>
+        <rules value="closed" />
       </slicing>
     </element>
     <element id="Extension.extension:subNumber.value[x]:valueInteger">
@@ -1157,6 +1160,7 @@
           <type value="type" />
           <path value="$this" />
         </discriminator>
+        <rules value="closed" />
       </slicing>
     </element>
     <element id="Extension.extension:addressAdditionalName.value[x]:valueString">

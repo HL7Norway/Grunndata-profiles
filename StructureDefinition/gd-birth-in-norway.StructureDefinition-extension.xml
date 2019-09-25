@@ -2,8 +2,8 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-birth-in-norway" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-birth-in-norway" />
-  <version value="2.0.0" />
-  <name value="BirthInNorway" />
+  <version value="2.0.1" />
+  <name value="GdBirthInNorway" />
   <status value="draft" />
   <date value="2019-04-30" />
   <description value="Fødsel i Norge gir tilleggsinformasjon om fødselen hvis den har skjedd i Norge og er ment for bruk av spesielt interesserte og er derfor skilt ut fra fødsel." />
@@ -312,6 +312,7 @@
           <type value="type" />
           <path value="$this" />
         </discriminator>
+        <rules value="closed" />
       </slicing>
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -689,6 +690,7 @@
           <type value="type" />
           <path value="$this" />
         </discriminator>
+        <rules value="closed" />
       </slicing>
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -1145,6 +1147,7 @@
           <type value="type" />
           <path value="$this" />
         </discriminator>
+        <rules value="closed" />
       </slicing>
     </element>
     <element id="Extension.extension:multipleBirthInteger.value[x]:valueInteger">
@@ -1169,6 +1172,7 @@
           <type value="type" />
           <path value="$this" />
         </discriminator>
+        <rules value="closed" />
       </slicing>
     </element>
     <element id="Extension.extension:organizationName.value[x]:valueString">

@@ -3,7 +3,7 @@
   <id value="gd-building" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-building" />
   <version value="2.0.0" />
-  <name value="Building" />
+  <name value="GdBuilding" />
   <status value="draft" />
   <date value="2019-06-12" />
   <description value="Information specific to the internationl address from FREG (internasjonalAdresse)" />
@@ -180,6 +180,7 @@
           <type value="type" />
           <path value="$this" />
         </discriminator>
+        <rules value="closed" />
       </slicing>
       <short value="Value of extension" />
       <definition value="Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list)." />
@@ -410,6 +411,7 @@
           <type value="type" />
           <path value="$this" />
         </discriminator>
+        <rules value="closed" />
       </slicing>
     </element>
     <element id="Extension.value[x]:valueString">
