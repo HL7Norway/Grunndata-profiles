@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-fregmetadata" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata" />
-  <version value="2.0.0" />
+  <version value="2.0.1" />
   <name value="FregMetadata" />
   <title value="FregMetadata" />
   <status value="draft" />

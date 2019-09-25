@@ -4,7 +4,7 @@
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-birth" />
   <version value="2.0.1" />
   <name value="GdBirth" />
-  <title value="Fødsel" />
+  <title value="GdBirth" />
   <status value="draft" />
   <date value="2019-04-29" />
   <description value="Fødsel gir opplysninger om personens fødsel helt uavhengig av om denne er født i Norge eller ikke. Fødsel i Norge gir tilleggsinformasjon om fødselen hvis den har skjedd i Norge og er ment for bruk av spesielt interesserte og er derfor skilt ut fra fødsel.&#xD;&#xA;Det finnes ikke historiske data for disse informasjonselementene fordi det skal finnes maksimum en sannhet for hvert informasjonselement - selv om denne kan være korrigert flere ganger." />
