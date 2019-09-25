@@ -1,0 +1,18 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="gd-address-physicaladdresstype-v201.valueset"/>
+	<meta>
+		<versionId value="1"/>
+		<lastUpdated value="2019-04-25T00:00:00.000+00:00"/>
+	</meta>
+	<url value="http://ehelse.no/fhir/ValueSet/gd-address-physicaladdresstype-v201"/>
+	<version value="2.0.1"/>
+	<name value="gd-address-physicaladdresstype-v201.valueset"/>
+	<status value="draft"/>
+	<date value="2019-09-25T00:00:00.000+00:00"/>
+	<publisher value="Skatteetaten"/>
+	<compose>
+		<include >
+			<system value="http://ehelse.no/fhir/CodeSystem/gd-address-physicaladdresstype-v201"/>
+		</include>
+	</compose>
+</ValueSet>

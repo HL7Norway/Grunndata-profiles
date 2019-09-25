@@ -1,4 +1,4 @@
-<CodeSystem>
+<CodeSystem xmlns="http://hl7.org/fhir">
     <id value="gd-person-migration-pattern-v05.codesystem" />
     <url value="http://ehelse.no/fhir/CodeSystem/gd-person-migration-pattern-v05" />
     <version value="5.0.0" />

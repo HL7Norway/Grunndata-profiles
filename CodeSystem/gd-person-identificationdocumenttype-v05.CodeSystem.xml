@@ -1,4 +1,4 @@
-<CodeSystem>
+<CodeSystem xmlns="http://hl7.org/fhir">
     <id value="gd-person-identificationdocumenttype-v05.codesystem" />
     <meta>
         <versionId value="1" />
