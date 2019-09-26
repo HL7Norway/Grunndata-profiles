@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns="http://hl7.org/fhir" >
   <id value="gd-Person" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Person" />
   <version value="2.0.0" />
@@ -764,6 +764,8 @@
       </slicing>
       <base>
         <path value="Person.meta.security.extension" />
+		<min value="0"/>
+		<max value="*"/>
       </base>
     </element>
     <element id="Person.meta.security:addressConfidentiality.extension:fregMetadata">
@@ -777,6 +779,7 @@
       <max value="1" />
       <base>
         <path value="Person.meta.security.extension" />
+		<min value="0" />
         <max value="1" />
       </base>
       <type>
