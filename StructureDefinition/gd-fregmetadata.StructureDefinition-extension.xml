@@ -6,7 +6,7 @@
   <name value="FregMetadata" />
   <title value="FregMetadata" />
   <status value="draft" />
-  <date value="2019-03-28" />
+  <date value="2019-10-16" />
   <description value="fregmetadata (registermetadata) describes metadata about resources available from the norwegian person index (folkeregisteret, freg), all resources containing metadata from folkeregisteret will include registermetadata" />
   <purpose value="registermetadata and registermetadataMedGyldighet from FREG" />
   <fhirVersion value="4.0.0" />
@@ -339,6 +339,7 @@
           </extension>
         </code>
       </type>
+      <fixedUri value="registeredTimestamp" />
       <mapping>
         <identity value="rim" />
         <map value="N/A" />
@@ -532,6 +533,7 @@
           </extension>
         </code>
       </type>
+      <fixedUri value="currentInfo" />
       <mapping>
         <identity value="rim" />
         <map value="N/A" />
@@ -725,6 +727,7 @@
           </extension>
         </code>
       </type>
+      <fixedUri value="source" />
       <mapping>
         <identity value="rim" />
         <map value="N/A" />
@@ -918,6 +921,7 @@
           </extension>
         </code>
       </type>
+      <fixedUri value="reason" />
       <mapping>
         <identity value="rim" />
         <map value="N/A" />
@@ -1111,6 +1115,7 @@
           </extension>
         </code>
       </type>
+      <fixedUri value="validFrom" />
       <mapping>
         <identity value="rim" />
         <map value="N/A" />
@@ -1304,6 +1309,7 @@
           </extension>
         </code>
       </type>
+      <fixedUri value="validTo" />
       <mapping>
         <identity value="rim" />
         <map value="N/A" />
@@ -1371,7 +1377,7 @@
           </extension>
         </code>
       </type>
-      <fixedString value="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata" />
       <mapping>
         <identity value="rim" />
         <map value="N/A" />
@@ -1581,6 +1587,10 @@
       <alias value="ajourholdstidspunkt" />
       <max value="1" />
     </element>
+    <element id="Extension.extension:registeredTimestamp.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="registeredTimestamp" />
+    </element>
     <element id="Extension.extension:registeredTimestamp.value[x]">
       <path value="Extension.extension.value[x]" />
       <type>
@@ -1594,6 +1604,10 @@
       <definition value="Flagg som beskriver om informasjonen er gjeldende nå-informasjon om personen. Siden opphørstidspunktet ikke blir oppdatert på &quot;gammelt&quot; element når nye verdier for et element blir registret, så vil dette bli satt til «true»/«false» når tjenesteoppslaget blir utført -  avhengig om dette er gjeldende informasjon eller ikke." />
       <alias value="erGjeldende" />
       <max value="1" />
+    </element>
+    <element id="Extension.extension:currentInfo.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="currentInfo" />
     </element>
     <element id="Extension.extension:currentInfo.value[x]">
       <path value="Extension.extension.value[x]" />
@@ -1609,6 +1623,10 @@
       <alias value="kilde" />
       <max value="1" />
     </element>
+    <element id="Extension.extension:source.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="source" />
+    </element>
     <element id="Extension.extension:source.value[x]">
       <path value="Extension.extension.value[x]" />
       <type>
@@ -1622,6 +1640,10 @@
       <definition value="Hva er årsaken til registrert informasjon. En person med personstatus = «bosatt» kan ha årsak = «født i Norge» eller «innflyttet til Norge»" />
       <alias value="aarsak" />
       <max value="1" />
+    </element>
+    <element id="Extension.extension:reason.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="reason" />
     </element>
     <element id="Extension.extension:reason.value[x]">
       <path value="Extension.extension.value[x]" />
@@ -1637,6 +1659,10 @@
       <alias value="gyldighetstidspunkt" />
       <max value="1" />
     </element>
+    <element id="Extension.extension:validFrom.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="validFrom" />
+    </element>
     <element id="Extension.extension:validFrom.value[x]">
       <path value="Extension.extension.value[x]" />
       <type>
@@ -1651,6 +1677,10 @@
       <alias value="opphoerstidspunkt" />
       <max value="1" />
     </element>
+    <element id="Extension.extension:validTo.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="validTo" />
+    </element>
     <element id="Extension.extension:validTo.value[x]">
       <path value="Extension.extension.value[x]" />
       <type>
@@ -1659,7 +1689,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedString value="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
