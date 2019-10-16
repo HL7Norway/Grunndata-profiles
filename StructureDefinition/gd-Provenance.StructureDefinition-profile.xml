@@ -2,10 +2,10 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Provenance" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Provenance" />
-  <version value="0.0.1" />
+  <version value="2.0.2" />
   <name value="GdProvenance" />
   <status value="draft" />
-  <date value="2019-09-04" />
+  <date value="2019-10-16" />
   <description value="Provenance profile to be used on Grunndata. Person, Practitioner, Organization etc." />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
@@ -36,6 +36,7 @@
         <human value="If the resource is contained in another resource, it SHALL NOT contain nested Resources" />
         <expression value="contained.contained.empty()" />
         <xpath value="not(parent::f:contained and f:contained)" />
+        <source value="DomainResource" />
       </constraint>
       <constraint>
         <key value="dom-4" />
@@ -43,6 +44,7 @@
         <human value="If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated" />
         <expression value="contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()" />
         <xpath value="not(exists(f:contained/*/f:meta/f:versionId)) and not(exists(f:contained/*/f:meta/f:lastUpdated))" />
+        <source value="DomainResource" />
       </constraint>
       <constraint>
         <key value="dom-3" />
@@ -50,6 +52,7 @@
         <human value="If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource" />
         <expression value="contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()" />
         <xpath value="not(exists(for $contained in f:contained return $contained[not(parent::*/descendant::f:reference/@value=concat('#', $contained/*/id/@value) or descendant::f:reference[@value='#'])]))" />
+        <source value="DomainResource" />
       </constraint>
       <constraint>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice">
@@ -63,6 +66,7 @@
         <human value="A resource should have narrative for robust management" />
         <expression value="text.div.exists()" />
         <xpath value="exists(f:text/h:div)" />
+        <source value="DomainResource" />
       </constraint>
       <constraint>
         <key value="dom-5" />
@@ -70,6 +74,7 @@
         <human value="If a resource is contained in another resource, it SHALL NOT have a security label" />
         <expression value="contained.meta.security.empty()" />
         <xpath value="not(exists(f:contained/*/f:meta/f:security))" />
+        <source value="DomainResource" />
       </constraint>
       <mapping>
         <identity value="rim" />
@@ -99,7 +104,7 @@
       <base>
         <path value="Resource.id" />
         <min value="0" />
-        <max value="*" />
+        <max value="1" />
       </base>
       <type>
         <code value="id" />
@@ -111,6 +116,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <mustSupport value="true" />
       <isSummary value="true" />
@@ -128,7 +134,7 @@
       <base>
         <path value="Resource.meta" />
         <min value="0" />
-        <max value="*" />
+        <max value="1" />
       </base>
       <type>
         <code value="Meta" />
@@ -140,6 +146,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <isSummary value="true" />
       <mapping>
@@ -213,6 +220,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <constraint>
         <key value="ext-1" />
@@ -220,6 +228,7 @@
         <human value="Must have either extensions or value[x], not both" />
         <expression value="extension.exists() != value.exists()" />
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="Extension" />
       </constraint>
       <mapping>
         <identity value="rim" />
@@ -240,7 +249,7 @@
       <base>
         <path value="Meta.versionId" />
         <min value="0" />
-        <max value="*" />
+        <max value="1" />
       </base>
       <type>
         <code value="id" />
@@ -252,6 +261,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <isSummary value="true" />
       <mapping>
@@ -269,7 +279,7 @@
       <base>
         <path value="Meta.lastUpdated" />
         <min value="0" />
-        <max value="*" />
+        <max value="1" />
       </base>
       <type>
         <code value="instant" />
@@ -281,6 +291,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <isSummary value="true" />
       <mapping>
@@ -298,7 +309,7 @@
       <base>
         <path value="Meta.source" />
         <min value="0" />
-        <max value="*" />
+        <max value="1" />
       </base>
       <type>
         <code value="uri" />
@@ -310,6 +321,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <isSummary value="true" />
       <mapping>
@@ -340,6 +352,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <isSummary value="true" />
       <mapping>
@@ -369,6 +382,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <isSummary value="true" />
       <binding>
@@ -415,6 +429,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <isSummary value="true" />
       <binding>
@@ -449,7 +464,7 @@
       <base>
         <path value="Resource.implicitRules" />
         <min value="0" />
-        <max value="*" />
+        <max value="1" />
       </base>
       <type>
         <code value="uri" />
@@ -461,6 +476,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <isModifier value="true" />
       <isModifierReason value="This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation" />
@@ -480,7 +496,7 @@
       <base>
         <path value="Resource.language" />
         <min value="0" />
-        <max value="*" />
+        <max value="1" />
       </base>
       <type>
         <code value="code" />
@@ -492,6 +508,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <binding>
         <strength value="preferred" />
@@ -517,7 +534,7 @@
       <base>
         <path value="DomainResource.text" />
         <min value="0" />
-        <max value="*" />
+        <max value="1" />
       </base>
       <type>
         <code value="Narrative" />
@@ -529,6 +546,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <mapping>
         <identity value="rim" />
@@ -602,6 +620,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <constraint>
         <key value="ext-1" />
@@ -609,6 +628,7 @@
         <human value="Must have either extensions or value[x], not both" />
         <expression value="extension.exists() != value.exists()" />
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="Extension" />
       </constraint>
       <mapping>
         <identity value="rim" />
@@ -652,6 +672,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <constraint>
         <key value="ext-1" />
@@ -659,6 +680,7 @@
         <human value="Must have either extensions or value[x], not both" />
         <expression value="extension.exists() != value.exists()" />
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="Extension" />
       </constraint>
       <isModifier value="true" />
       <isModifierReason value="Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them" />
@@ -680,7 +702,7 @@
       <max value="*" />
       <base>
         <path value="Provenance.target" />
-        <min value="0" />
+        <min value="1" />
         <max value="*" />
       </base>
       <type>
@@ -700,6 +722,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <constraint>
         <key value="ref-1" />
@@ -707,6 +730,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
+        <source value="Reference" />
       </constraint>
       <mustSupport value="true" />
       <isSummary value="true" />
@@ -797,6 +821,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <constraint>
         <key value="ext-1" />
@@ -804,6 +829,7 @@
         <human value="Must have either extensions or value[x], not both" />
         <expression value="extension.exists() != value.exists()" />
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="Extension" />
       </constraint>
       <mapping>
         <identity value="rim" />
@@ -831,7 +857,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/reference-targetElement" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/reference-targetElement" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -840,6 +866,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <constraint>
         <key value="ext-1" />
@@ -847,6 +874,7 @@
         <human value="Must have either extensions or value[x], not both" />
         <expression value="extension.exists() != value.exists()" />
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="Extension" />
       </constraint>
       <mapping>
         <identity value="rim" />
@@ -867,7 +895,7 @@
       <base>
         <path value="Reference.reference" />
         <min value="0" />
-        <max value="*" />
+        <max value="1" />
       </base>
       <type>
         <code value="string" />
@@ -884,6 +912,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <mustSupport value="true" />
       <isSummary value="true" />
@@ -906,7 +935,7 @@
       <base>
         <path value="Reference.type" />
         <min value="0" />
-        <max value="*" />
+        <max value="1" />
       </base>
       <type>
         <code value="uri" />
@@ -918,6 +947,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <isSummary value="true" />
       <binding>
@@ -944,7 +974,7 @@
       <base>
         <path value="Reference.identifier" />
         <min value="0" />
-        <max value="*" />
+        <max value="1" />
       </base>
       <type>
         <code value="Identifier" />
@@ -956,6 +986,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <isSummary value="true" />
       <mapping>
@@ -989,7 +1020,7 @@
       <base>
         <path value="Reference.display" />
         <min value="0" />
-        <max value="*" />
+        <max value="1" />
       </base>
       <type>
         <code value="string" />
@@ -1001,6 +1032,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <isSummary value="true" />
       <mapping>
@@ -1022,7 +1054,7 @@
       <base>
         <path value="Provenance.occurred[x]" />
         <min value="0" />
-        <max value="*" />
+        <max value="1" />
       </base>
       <type>
         <code value="Period" />
@@ -1037,6 +1069,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <constraint>
         <key value="per-1" />
@@ -1044,6 +1077,7 @@
         <human value="If present, start SHALL have a lower value than end" />
         <expression value="start.hasValue().not() or end.hasValue().not() or (start &lt;= end)" />
         <xpath value="not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) &lt;= xs:dateTime(f:end/@value))" />
+        <source value="Period" />
       </constraint>
       <mustSupport value="true" />
       <mapping>
@@ -1084,8 +1118,8 @@
       <max value="1" />
       <base>
         <path value="Provenance.recorded" />
-        <min value="0" />
-        <max value="*" />
+        <min value="1" />
+        <max value="1" />
       </base>
       <type>
         <code value="instant" />
@@ -1097,6 +1131,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <mustSupport value="true" />
       <isSummary value="true" />
@@ -1143,6 +1178,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <mustSupport value="false" />
       <mapping>
@@ -1168,7 +1204,7 @@
       <base>
         <path value="Provenance.location" />
         <min value="0" />
-        <max value="*" />
+        <max value="1" />
       </base>
       <type>
         <code value="Reference" />
@@ -1181,6 +1217,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <constraint>
         <key value="ref-1" />
@@ -1188,6 +1225,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
+        <source value="Reference" />
       </constraint>
       <mustSupport value="false" />
       <mapping>
@@ -1241,6 +1279,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <mustSupport value="false" />
       <binding>
@@ -1295,7 +1334,7 @@
       <base>
         <path value="Provenance.activity" />
         <min value="0" />
-        <max value="*" />
+        <max value="1" />
       </base>
       <type>
         <code value="CodeableConcept" />
@@ -1307,6 +1346,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <mustSupport value="true" />
       <binding>
@@ -1357,7 +1397,7 @@
       <max value="*" />
       <base>
         <path value="Provenance.agent" />
-        <min value="0" />
+        <min value="1" />
         <max value="*" />
       </base>
       <type>
@@ -1370,6 +1410,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <mapping>
         <identity value="rim" />
@@ -1458,6 +1499,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <constraint>
         <key value="ext-1" />
@@ -1465,6 +1507,7 @@
         <human value="Must have either extensions or value[x], not both" />
         <expression value="extension.exists() != value.exists()" />
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="Extension" />
       </constraint>
       <mapping>
         <identity value="rim" />
@@ -1501,6 +1544,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <constraint>
         <key value="ext-1" />
@@ -1508,6 +1552,7 @@
         <human value="Must have either extensions or value[x], not both" />
         <expression value="extension.exists() != value.exists()" />
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="Extension" />
       </constraint>
       <isModifier value="true" />
       <isModifierReason value="Modifier extensions are expected to modify the meaning or interpretation of the element that contains them" />
@@ -1531,7 +1576,7 @@
       <base>
         <path value="Provenance.agent.type" />
         <min value="0" />
-        <max value="*" />
+        <max value="1" />
       </base>
       <type>
         <code value="CodeableConcept" />
@@ -1543,6 +1588,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <isSummary value="true" />
       <binding>
@@ -1605,6 +1651,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <binding>
         <strength value="example" />
@@ -1645,8 +1692,8 @@
       <max value="1" />
       <base>
         <path value="Provenance.agent.who" />
-        <min value="0" />
-        <max value="*" />
+        <min value="1" />
+        <max value="1" />
       </base>
       <type>
         <code value="Reference" />
@@ -1664,6 +1711,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <constraint>
         <key value="ref-1" />
@@ -1671,6 +1719,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
+        <source value="Reference" />
       </constraint>
       <isSummary value="true" />
       <mapping>
@@ -1756,6 +1805,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <constraint>
         <key value="ext-1" />
@@ -1763,6 +1813,7 @@
         <human value="Must have either extensions or value[x], not both" />
         <expression value="extension.exists() != value.exists()" />
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="Extension" />
       </constraint>
       <mapping>
         <identity value="rim" />
@@ -1783,7 +1834,7 @@
       <base>
         <path value="Reference.reference" />
         <min value="0" />
-        <max value="*" />
+        <max value="1" />
       </base>
       <type>
         <code value="string" />
@@ -1796,6 +1847,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <isSummary value="true" />
       <mapping>
@@ -1817,7 +1869,7 @@
       <base>
         <path value="Reference.type" />
         <min value="0" />
-        <max value="*" />
+        <max value="1" />
       </base>
       <type>
         <code value="uri" />
@@ -1829,6 +1881,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <isSummary value="true" />
       <binding>
@@ -1855,7 +1908,7 @@
       <base>
         <path value="Reference.identifier" />
         <min value="0" />
-        <max value="*" />
+        <max value="1" />
       </base>
       <type>
         <code value="Identifier" />
@@ -1867,6 +1920,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <isSummary value="true" />
       <mapping>
@@ -1900,7 +1954,7 @@
       <base>
         <path value="Reference.display" />
         <min value="0" />
-        <max value="*" />
+        <max value="1" />
       </base>
       <type>
         <code value="string" />
@@ -1912,6 +1966,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <mustSupport value="true" />
       <isSummary value="true" />
@@ -1934,7 +1989,7 @@
       <base>
         <path value="Provenance.agent.onBehalfOf" />
         <min value="0" />
-        <max value="*" />
+        <max value="1" />
       </base>
       <type>
         <code value="Reference" />
@@ -1952,6 +2007,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <constraint>
         <key value="ref-1" />
@@ -1959,6 +2015,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
+        <source value="Reference" />
       </constraint>
       <mapping>
         <identity value="rim" />
@@ -1995,6 +2052,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <mustSupport value="true" />
       <mapping>
@@ -2076,6 +2134,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <constraint>
         <key value="ext-1" />
@@ -2083,6 +2142,7 @@
         <human value="Must have either extensions or value[x], not both" />
         <expression value="extension.exists() != value.exists()" />
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="Extension" />
       </constraint>
       <mapping>
         <identity value="rim" />
@@ -2119,6 +2179,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <constraint>
         <key value="ext-1" />
@@ -2126,6 +2187,7 @@
         <human value="Must have either extensions or value[x], not both" />
         <expression value="extension.exists() != value.exists()" />
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+        <source value="Extension" />
       </constraint>
       <isModifier value="true" />
       <isModifierReason value="Modifier extensions are expected to modify the meaning or interpretation of the element that contains them" />
@@ -2148,8 +2210,8 @@
       <max value="1" />
       <base>
         <path value="Provenance.entity.role" />
-        <min value="0" />
-        <max value="*" />
+        <min value="1" />
+        <max value="1" />
       </base>
       <type>
         <code value="code" />
@@ -2161,6 +2223,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <mustSupport value="true" />
       <isSummary value="true" />
@@ -2195,8 +2258,8 @@
       <max value="1" />
       <base>
         <path value="Provenance.entity.what" />
-        <min value="0" />
-        <max value="*" />
+        <min value="1" />
+        <max value="1" />
       </base>
       <type>
         <code value="Reference" />
@@ -2209,6 +2272,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <constraint>
         <key value="ref-1" />
@@ -2216,6 +2280,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
+        <source value="Reference" />
       </constraint>
       <mustSupport value="true" />
       <isSummary value="true" />
@@ -2280,6 +2345,7 @@
         <human value="All FHIR elements must have a @value or children" />
         <expression value="hasValue() or (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
+        <source value="Element" />
       </constraint>
       <mustSupport value="false" />
       <mapping>
@@ -2336,9 +2402,11 @@
       <path value="Provenance.target.extension" />
       <sliceName value="targetElement" />
       <definition value="In some cases when you provide a reference to another resource instance you also want to specificly express a  reference to specific elements of the target resource.  Can contain the reference to the element and the change in value." />
+      <min value="0" />
+      <max value="*" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/reference-targetElement" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/reference-targetElement" />
       </type>
     </element>
     <element id="Provenance.target.reference">

@@ -3,7 +3,7 @@
   <id value="gd-deceased" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-deceased" />
   <version value="2.0.2" />
-  <name value="GdDeased" />
+  <name value="GdDeceased" />
   <status value="draft" />
   <date value="2019-10-16" />
   <description value="en hendelse der en person dør og erklæres død av en lege som deretter avgir legeerklæring om dødsfall (dødsattest)" />
