@@ -5,7 +5,7 @@
   <version value="2.0.2" />
   <name value="GdPerson" />
   <status value="draft" />
-  <date value="2019-10-16" />
+  <date value="2019-10-17" />
   <publisher value="Direktoratet for e-helse" />
   <description value="Folkeregisterperson fra FREG." />
   <fhirVersion value="4.0.0" />
@@ -764,6 +764,8 @@
       </slicing>
       <base>
         <path value="Person.meta.security.extension" />
+		<min value="0" />
+        <max value="1" />
       </base>
     </element>
     <element id="Person.meta.security:addressConfidentiality.extension:fregMetadata">
@@ -777,6 +779,7 @@
       <max value="1" />
       <base>
         <path value="Person.meta.security.extension" />
+        <min value="0" />
         <max value="1" />
       </base>
       <type>
