@@ -764,8 +764,6 @@
       </slicing>
       <base>
         <path value="Person.meta.security.extension" />
-		<min value="0" />
-        <max value="1" />
       </base>
     </element>
     <element id="Person.meta.security:addressConfidentiality.extension:fregMetadata">
@@ -779,7 +777,6 @@
       <max value="1" />
       <base>
         <path value="Person.meta.security.extension" />
-        <min value="0" />
         <max value="1" />
       </base>
       <type>
@@ -1435,10 +1432,6 @@
     <element id="Person.identifier">
       <path value="Person.identifier" />
       <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="type.coding.code" />
-        </discriminator>
         <rules value="closed" />
       </slicing>
       <short value="A human identifier for this person" />
@@ -3974,10 +3967,6 @@
     <element id="Person.identifier">
       <path value="Person.identifier" />
       <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="type.coding.code" />
-        </discriminator>
         <rules value="closed" />
       </slicing>
       <min value="1" />
