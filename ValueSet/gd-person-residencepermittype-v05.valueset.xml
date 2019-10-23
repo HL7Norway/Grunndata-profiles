@@ -7,7 +7,7 @@
 	</meta>
 	<url value="http://ehelse.no/fhir/ValueSet/gd-person-residencepermittype-v05"/>
 	<version value="5.0.0"/>
-	<name value="gd-person-residencepermittype-v05.valueset"/>
+	<name value="GdPersonResidencepermittypeValueSet"/>
 	<status value="draft"/>
 	<date value="2019-06-11T00:00:00.000+00:00"/>
 	<publisher value="Skatteetaten"/>

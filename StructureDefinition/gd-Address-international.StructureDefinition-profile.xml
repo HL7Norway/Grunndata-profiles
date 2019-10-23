@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Address-international" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Address-international" />
-  <version value="2.0.2" />
+  <version value="2.0.3" />
   <name value="GdAddressInternational" />
   <status value="draft" />
   <date value="2019-10-17" />
@@ -1161,7 +1161,7 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <alias value="adressenavn " />
+      <alias value="adressenavn" />
       <min value="0" />
       <max value="1" />
       <base>
@@ -1307,7 +1307,7 @@
       <path value="Address.line.extension" />
       <sliceName value="unitID" />
       <short value="boenhet fra FREG" />
-      <definition value="boenhet fra FREG, adresseegenskap som beskriver hva slags tilholdssted en person eller virksomhet er registrert på, samt unik identifikator innen bygningen/etasjen&#xD;&#xA;" />
+      <definition value="boenhet fra FREG, adresseegenskap som beskriver hva slags tilholdssted en person eller virksomhet er registrert på, samt unik identifikator innen bygningen/etasjen" />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -1357,7 +1357,7 @@
       <path value="Address.line.extension" />
       <sliceName value="postBox" />
       <short value="postboks fra FREG" />
-      <definition value="postboks fra FREG, identifikator på postboks som består av landets betegnelse for postboks samt den alfanumeriske identifikatoren til denne og eventuell tilleggsinformasjon&#xD;&#xA;" />
+      <definition value="postboks fra FREG, identifikator på postboks som består av landets betegnelse for postboks samt den alfanumeriske identifikatoren til denne og eventuell tilleggsinformasjon" />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -1784,8 +1784,7 @@
       <sliceName value="streetName" />
       <short value="adressenavn fra FREG" />
       <definition value="adressenavn fra FREG, navn på gate, veg, sti, plass eller område, brukt som del av den offisielle adressen" />
-      <alias value="adressenavn " />
-      <min value="0" />
+      <alias value="adressenavn" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -1798,7 +1797,6 @@
       <short value="coAdressenavn fra FREG" />
       <definition value="coAdressenavn fra FREG, beskrivelse av enten hvem mottakeren er i &quot;omsorg&quot; hos (C/O=&quot;care of&quot;) eller hvem som er mottaker innen en organisasjon (v/=ved eller Att:=&quot;attention&quot;)" />
       <alias value="coAdressenavn" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -1811,7 +1809,6 @@
       <short value="etasjenummer fra FREG" />
       <definition value="etasjenummer fra FREG, adresseegenskap som beskriver hvilken etasje en person eller virksomhet har sitt registrerte tilholdssted" />
       <alias value="etasjenummer" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -1822,9 +1819,8 @@
       <path value="Address.line.extension" />
       <sliceName value="unitID" />
       <short value="boenhet fra FREG" />
-      <definition value="boenhet fra FREG, adresseegenskap som beskriver hva slags tilholdssted en person eller virksomhet er registrert på, samt unik identifikator innen bygningen/etasjen&#xD;&#xA;" />
+      <definition value="boenhet fra FREG, adresseegenskap som beskriver hva slags tilholdssted en person eller virksomhet er registrert på, samt unik identifikator innen bygningen/etasjen" />
       <alias value="boenhet" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -1835,9 +1831,8 @@
       <path value="Address.line.extension" />
       <sliceName value="postBox" />
       <short value="postboks fra FREG" />
-      <definition value="postboks fra FREG, identifikator på postboks som består av landets betegnelse for postboks samt den alfanumeriske identifikatoren til denne og eventuell tilleggsinformasjon&#xD;&#xA;" />
+      <definition value="postboks fra FREG, identifikator på postboks som består av landets betegnelse for postboks samt den alfanumeriske identifikatoren til denne og eventuell tilleggsinformasjon" />
       <alias value="postboks" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />

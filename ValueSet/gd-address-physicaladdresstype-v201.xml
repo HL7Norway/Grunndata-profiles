@@ -6,7 +6,7 @@
 	</meta>
 	<url value="http://ehelse.no/fhir/ValueSet/gd-address-physicaladdresstype-v201"/>
 	<version value="2.0.1"/>
-	<name value="gd-address-physicaladdresstype-v201.valueset"/>
+	<name value="GdAddressPhysicaladdresstypeValueSet"/>
 	<status value="draft"/>
 	<date value="2019-09-25T00:00:00.000+00:00"/>
 	<publisher value="Skatteetaten"/>

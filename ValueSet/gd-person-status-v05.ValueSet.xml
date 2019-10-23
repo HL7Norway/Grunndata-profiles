@@ -6,7 +6,7 @@
 	</meta>
 	<url value="http://ehelse.no/fhir/ValueSet/gd-person-status-v05"/>
 	<version value="5.0.0"/>
-	<name value="gd-person-status-v05.valueset"/>
+	<name value="GdPersonStatusValueSet"/>
 	<status value="draft"/>
 	<date value="2019-04-17T00:00:00.000+00:00"/>
 	<publisher value="Skatteetaten"/>

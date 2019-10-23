@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Address-street" />
   <url value="http://example.org/fhir/StructureDefinition/gd-Address-street" />
-  <version value="2.0.2" />
+  <version value="2.0.3" />
   <name value="GdAddressStreet" />
   <status value="draft" />
   <date value="2019-10-16" />
@@ -1765,7 +1765,7 @@
       <path value="Address.line.extension" />
       <sliceName value="streetName" />
       <short value="adressenavn fra FREG" />
-      <definition value="adressenavn fra FREG, navn på gate, veg, sti, plass eller område, brukt som del av den offisielle adressen&#xD;&#xA;" />
+      <definition value="adressenavn fra FREG, navn på gate, veg, sti, plass eller område, brukt som del av den offisielle adressen" />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -1815,7 +1815,7 @@
       <path value="Address.line.extension" />
       <sliceName value="houseNumberNumeric" />
       <short value="husnummer fra FREG" />
-      <definition value="husnummer fra FREG, nummer som entydig identifiserer eiendommer, anlegg, bygninger eller innganger til bygninger innenfor en adresserbar gate, veg, sti, plass eller område&#xD;&#xA;" />
+      <definition value="husnummer fra FREG, nummer som entydig identifiserer eiendommer, anlegg, bygninger eller innganger til bygninger innenfor en adresserbar gate, veg, sti, plass eller område" />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -1865,11 +1865,11 @@
       <path value="Address.line.extension" />
       <sliceName value="buildingNumberSuffix" />
       <short value="husbokstav fra FREG" />
-      <definition value="husbokstav fra FREG, bokstav som sammen med husnummer entydig identifiserer eiendommer, anlegg, bygninger eller innganger til bygninger innenfor en adresserbar gate, veg, sti, plass eller område&#xD;&#xA;" />
+      <definition value="husbokstav fra FREG, bokstav som sammen med husnummer entydig identifiserer eiendommer, anlegg, bygninger eller innganger til bygninger innenfor en adresserbar gate, veg, sti, plass eller område" />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <alias value="husbokstav " />
+      <alias value="husbokstav" />
       <min value="0" />
       <max value="1" />
       <base>
@@ -1915,11 +1915,11 @@
       <path value="Address.line.extension" />
       <sliceName value="coName" />
       <short value="coAdressenavn fra FREG" />
-      <definition value="coAdressenavn fra FREG, beskrivelse av enten hvem mottakeren er i &quot;omsorg&quot; hos (C/O=&quot;care of&quot;) eller hvem som er mottaker innen en organisasjon (v/=ved eller Att:=&quot;attention&quot;)&#xD;&#xA;" />
+      <definition value="coAdressenavn fra FREG, beskrivelse av enten hvem mottakeren er i &quot;omsorg&quot; hos (C/O=&quot;care of&quot;) eller hvem som er mottaker innen en organisasjon (v/=ved eller Att:=&quot;attention&quot;)" />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <alias value="coAdressenavn " />
+      <alias value="coAdressenavn" />
       <min value="0" />
       <max value="1" />
       <base>
@@ -2391,9 +2391,8 @@
       <path value="Address.line.extension" />
       <sliceName value="streetName" />
       <short value="adressenavn fra FREG" />
-      <definition value="adressenavn fra FREG, navn på gate, veg, sti, plass eller område, brukt som del av den offisielle adressen&#xD;&#xA;" />
+      <definition value="adressenavn fra FREG, navn på gate, veg, sti, plass eller område, brukt som del av den offisielle adressen" />
       <alias value="adressenavn" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -2404,9 +2403,8 @@
       <path value="Address.line.extension" />
       <sliceName value="houseNumberNumeric" />
       <short value="husnummer fra FREG" />
-      <definition value="husnummer fra FREG, nummer som entydig identifiserer eiendommer, anlegg, bygninger eller innganger til bygninger innenfor en adresserbar gate, veg, sti, plass eller område&#xD;&#xA;" />
+      <definition value="husnummer fra FREG, nummer som entydig identifiserer eiendommer, anlegg, bygninger eller innganger til bygninger innenfor en adresserbar gate, veg, sti, plass eller område" />
       <alias value="husnummer" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -2417,9 +2415,8 @@
       <path value="Address.line.extension" />
       <sliceName value="buildingNumberSuffix" />
       <short value="husbokstav fra FREG" />
-      <definition value="husbokstav fra FREG, bokstav som sammen med husnummer entydig identifiserer eiendommer, anlegg, bygninger eller innganger til bygninger innenfor en adresserbar gate, veg, sti, plass eller område&#xD;&#xA;" />
-      <alias value="husbokstav " />
-      <min value="0" />
+      <definition value="husbokstav fra FREG, bokstav som sammen med husnummer entydig identifiserer eiendommer, anlegg, bygninger eller innganger til bygninger innenfor en adresserbar gate, veg, sti, plass eller område" />
+      <alias value="husbokstav" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -2430,9 +2427,8 @@
       <path value="Address.line.extension" />
       <sliceName value="coName" />
       <short value="coAdressenavn fra FREG" />
-      <definition value="coAdressenavn fra FREG, beskrivelse av enten hvem mottakeren er i &quot;omsorg&quot; hos (C/O=&quot;care of&quot;) eller hvem som er mottaker innen en organisasjon (v/=ved eller Att:=&quot;attention&quot;)&#xD;&#xA;" />
-      <alias value="coAdressenavn " />
-      <min value="0" />
+      <definition value="coAdressenavn fra FREG, beskrivelse av enten hvem mottakeren er i &quot;omsorg&quot; hos (C/O=&quot;care of&quot;) eller hvem som er mottaker innen en organisasjon (v/=ved eller Att:=&quot;attention&quot;)" />
+      <alias value="coAdressenavn" />
       <max value="1" />
       <type>
         <code value="Extension" />
