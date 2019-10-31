@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Person" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Person" />
-  <version value="2.0.3" />
+  <version value="2.0.6" />
   <name value="GdPerson" />
   <status value="draft" />
   <date value="2019-10-18" />
@@ -168,7 +168,7 @@
       <definition value="Information registered in FREG regarding the residence permit of the person.&#xD;&#xA;&#xD;&#xA;Informasjonen innen opphold beskriver opplysninger i Registeret som omfatter oppholdstillatelse, oppholdsrett og arbeidstillatelse." />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.nofhir/StructureDefinition/gd-residence-permit" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-residence-permit" />
       </type>
       <mustSupport value="true" />
     </element>
