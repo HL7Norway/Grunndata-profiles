@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="gd-Provenance" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/gd-Provenance" />
+  <version value="2.0.2" />
+  <name value="GdProvenance" />
+  <status value="draft" />
+  <date value="2019-10-16" />
+  <description value="Provenance profile to be used on Grunndata. Person, Practitioner, Organization etc." />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Provenance" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Provenance" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Provenance">
+      <path value="Provenance" />
+      <alias value="Hendelse" />
+    </element>
+    <element id="Provenance.id">
+      <path value="Provenance.id" />
+      <definition value="Grunndata: Provenance resources for the Grunndata-services should identify their provenance by a counter identifier that identifies the sequence that the Provenance resources where registered on the Grunndata-service. &#xD;&#xA;&#xD;&#xA;The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." />
+      <alias value="Hendelseid" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.meta.versionId">
+      <path value="Provenance.meta.versionId" />
+      <definition value="Grunndata: Provenance resources themself should probably not exist in more than one version.&#xD;&#xA;&#xD;&#xA;The version specific identifier, as it appears in the version portion of the URL. This value changes when the resource is created, updated, or deleted." />
+    </element>
+    <element id="Provenance.target">
+      <path value="Provenance.target" />
+      <definition value="Grunndata uses the target element to reference the UPDATED version of the resource instance, after the recorded activity described by the Provenance resource has taken place. This is one reason the references in the target element SHOULD always be version specific. There is one exception when the Provenance describes a Delete transaction (Delete activity), in that case the target contains the reference/identifier of the deleted version of the resource: http://hl7.org/fhir/provenance.html#removal&#xD;&#xA;&#xD;&#xA;The Reference(s) that were generated or updated by  the activity described in this resource. A provenance can point to more than one target if multiple resources were created/updated by the same activity." />
+      <example>
+        <label value="version specific id" />
+        <valueReference>
+          <reference value="http://example.org/fhir/Observation/1x2/_history/2" />
+        </valueReference>
+      </example>
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.target.extension">
+      <path value="Provenance.target.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Provenance.target.extension:targetElement">
+      <path value="Provenance.target.extension" />
+      <sliceName value="targetElement" />
+      <definition value="In some cases when you provide a reference to another resource instance you also want to specificly express a  reference to specific elements of the target resource.  Can contain the reference to the element and the change in value." />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/reference-targetElement" />
+      </type>
+    </element>
+    <element id="Provenance.target.reference">
+      <path value="Provenance.target.reference" />
+      <example>
+        <label value="version specific id" />
+        <valueString value="http://example.org/fhir/Patient/1x2/_history/2" />
+      </example>
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.occurred[x]">
+      <path value="Provenance.occurred[x]" />
+      <definition value="Grunndata: When the activity leading to the change occurred in another system (FREG ex.) This would be the registered dates from that system.&#xD;&#xA;&#xD;&#xA;The period during which the activity occurred." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.recorded">
+      <path value="Provenance.recorded" />
+      <definition value="Grunndata: The time the change was recorded by the Grunndata system.&#xD;&#xA;&#xD;&#xA;The instant of time at which the activity was recorded." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.policy">
+      <path value="Provenance.policy" />
+      <definition value="Grunndata don't use this element.&#xD;&#xA;&#xD;&#xA;Policy or plan the activity was defined by. Typically, a single activity may have multiple applicable policy documents, such as patient consent, guarantor funding, etc." />
+      <mustSupport value="false" />
+    </element>
+    <element id="Provenance.location">
+      <path value="Provenance.location" />
+      <definition value="Grunndata don't use this element.&#xD;&#xA;&#xD;&#xA;Where the activity occurred, if relevant." />
+      <mustSupport value="false" />
+    </element>
+    <element id="Provenance.reason">
+      <path value="Provenance.reason" />
+      <definition value="Grunndata don't use this element.&#xD;&#xA;&#xD;&#xA;The reason that the activity was taking place." />
+      <mustSupport value="false" />
+    </element>
+    <element id="Provenance.activity">
+      <path value="Provenance.activity" />
+      <definition value="Grunndata uses this element to document what kind of transaction changed the content of the resource. Only codes identifying Data operation types will be used: http://terminology.hl7.org/CodeSystem/v3-DataOperation&#xD;&#xA;&#xD;&#xA;An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities." />
+      <alias value="Data Operation" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.activity.coding.system">
+      <path value="Provenance.activity.coding.system" />
+      <definition value="http://terminology.hl7.org/CodeSystem/v3-DataOperation&#xD;&#xA;&#xD;&#xA;The identification of the code system that defines the meaning of the symbol in the code." />
+      <min value="1" />
+      <fixedUri value="http://terminology.hl7.org/CodeSystem/v3-DataOperation" />
+    </element>
+    <element id="Provenance.activity.coding.code">
+      <path value="Provenance.activity.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Provenance.agent">
+      <path value="Provenance.agent" />
+      <definition value="Grunndata uses who.display value to describe the organization responsible for the change.&#xD;&#xA;&#xD;&#xA;An actor taking a role in an activity  for which it can be assigned some degree of responsibility for the activity taking place." />
+    </element>
+    <element id="Provenance.agent.who.display">
+      <path value="Provenance.agent.who.display" />
+      <definition value="Grunndata uses display value to describe the organization responsible for the change.&#xD;&#xA;&#xD;&#xA;Plain text narrative that identifies the resource in addition to the resource reference." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.entity">
+      <path value="Provenance.entity" />
+      <definition value="Grunndata uses this element to identify the resources updated during the activity recorded by the Provenance resource. Should be version specific reference to resources that are updated. &#xD;&#xA;When the provenance records the first generation of a resource the entity element can be empty.&#xD;&#xA;&#xD;&#xA;An entity used in this activity." />
+      <meaningWhenMissing value="When the provenance records the first generation of a resource the entity element can be empty." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.entity.role">
+      <path value="Provenance.entity.role" />
+      <definition value="Grunndata will use revision | quotation | source | removal.&#xD;&#xA;&#xD;&#xA;How the entity was used during the activity." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.entity.what">
+      <path value="Provenance.entity.what" />
+      <definition value="Grunndata uses this element to identify the resources updated during the activity recorded by the Provenance resource. Should be version specific reference to resources that are updated.&#xD;&#xA;&#xD;&#xA;Identity of the  Entity used. May be a logical or physical uri and maybe absolute or relative." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.signature">
+      <path value="Provenance.signature" />
+      <comment value="Grunndata don't use this element&#xD;&#xA;&#xD;&#xA;The elements of the Signature Resource are for ease of access of these elements. For digital signatures (Xml DigSig, JWS), the non-repudiation proof comes from the Signature  validation, which includes validation of the referenced objects (e.g. Resources) (a.k.a., Content) in the XML-Signature Detached form." />
+      <mustSupport value="false" />
+    </element>
+  </differential>
+</StructureDefinition>
