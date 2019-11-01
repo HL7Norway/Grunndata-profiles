@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="no-basis-RelatedPerson" />
+  <url value="http://hl7.no/fhir/StructureDefinition/no-basis-RelatedPerson" />
+  <version value="2.0.9" />
+  <name value="NoBasisRelatedPerson" />
+  <title value="no-basis-RelatedPerson" />
+  <status value="active" />
+  <date value="2019-05-20" />
+  <description value="Basisprofil for Norwegian RelatedPerson information. Defined by The Norwegian Directorate of eHealth and HL7 Norway. Should be used as a basis for further profiling in use-cases where specific identity information is needed. The basis profile is open, but derived profiles should close down the information elements according to specification relevant to the use-case.&#xD;&#xA;&#xD;&#xA;Typical use-case for no-basis-RelatedPerson involves information about relations person-patient.&#xD;&#xA;- Relations registered in norwegian Master Person Information Index (aka Folkeregisteret)&#xD;&#xA;- Other relationship information registered on a patient or person neccessary for patient treatment&#xD;&#xA;- Should not be used for contact persons for the patient with a predefined role in the patient care, as information as this is registered separately in the Patient resource" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="RelatedPerson" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="RelatedPerson.identifier">
+      <path value="RelatedPerson.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <definition value="An identifier for this person. Should be at Fødselsnummer or D-nummer&#xD;&#xA;&#xD;&#xA;Identifier for a person within a particular scope." />
+    </element>
+    <element id="RelatedPerson.identifier:FNR">
+      <path value="RelatedPerson.identifier" />
+      <sliceName value="FNR" />
+      <short value="Norwegian FNR" />
+      <definition value="Fødselsnummer for the patient. Fødselsnummer as one of the possible patient identifier, should at least be sent unless there is a reason not to. Reasons for not sending the Fødselsnummer include but are not limited to, research and apps without a contract for processing data.&#xD;&#xA;&#xD;&#xA;Multiple FNR can exist for a person. If several FNR is provided the time period that each identifier is valid should be provided. No information about period is required when only one FNR is provided." />
+    </element>
+    <element id="RelatedPerson.identifier:FNR.system">
+      <path value="RelatedPerson.identifier.system" />
+      <short value="Identification of the Norwegian FNR" />
+      <definition value="Identifies that this is a Norwegian Fødselsnummer" />
+      <min value="1" />
+      <fixedUri value="urn:oid:2.16.578.1.12.4.1.4.1" />
+    </element>
+    <element id="RelatedPerson.identifier:FNR.value">
+      <path value="RelatedPerson.identifier.value" />
+      <short value="The actual Fødselsnummer" />
+      <definition value="The Norwegian Fødselsnummer" />
+      <alias value="Fødselsnummer" />
+      <min value="1" />
+      <example>
+        <label value="Fødselsnummer" />
+        <valueString value="15076500565" />
+      </example>
+    </element>
+    <element id="RelatedPerson.identifier:DNR">
+      <path value="RelatedPerson.identifier" />
+      <sliceName value="DNR" />
+      <short value="The D-nummer of the patient" />
+      <definition value="The D-nummer of the patient. (assigned by the norwegian Skatteetaten)" />
+    </element>
+    <element id="RelatedPerson.identifier:DNR.system">
+      <path value="RelatedPerson.identifier.system" />
+      <short value="The identification of the D-nummer" />
+      <definition value="The identification of the Norwegian D-nummer" />
+      <min value="1" />
+      <fixedUri value="urn:oid:2.16.578.1.12.4.1.4.2" />
+    </element>
+    <element id="RelatedPerson.identifier:DNR.value">
+      <path value="RelatedPerson.identifier.value" />
+      <short value="The actual D-nummer" />
+      <definition value="The actual Norwegian D-nummer" />
+      <alias value="D-nummer" />
+      <min value="1" />
+      <example>
+        <label value="D-nummer" />
+        <valueString value="700199 50032" />
+      </example>
+    </element>
+    <element id="RelatedPerson.patient">
+      <path value="RelatedPerson.patient" />
+      <short value="The person this person is related to" />
+      <definition value="no-basis: Can reference no-basis-Patient, no-basis-Person or Person in addition to Patient resources.&#xD;&#xA;&#xD;&#xA;The patient this person is related to." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.no/fhir/StructureDefinition/no-basis-Patient" />
+        <targetProfile value="http://hl7.no/fhir/StructureDefinition/no-basis-Person" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Person" />
+      </type>
+    </element>
+    <element id="RelatedPerson.relationship">
+      <path value="RelatedPerson.relationship" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <definition value="no-basis: adds slice definitions for three relationship codings from the Norwegian Folkeregisteret.&#xD;&#xA;Some relationships are ordered (a person is a parent of a child but the child on the other hand is the child of a parent). Ordered relationships are always expressed from the RelatedPerson instance to the Patient/Person instance referenced in the RelatedPerson.patient element. This will usually be the EXACT OPPOSITE of the actual data recorded in FREG, as relationships in FREG is recorded with the view from the Person to the RelatedPersons.&#xD;&#xA;&#xD;&#xA;The nature of the relationship between a patient and the related person." />
+    </element>
+    <element id="RelatedPerson.relationship:maritalStatus">
+      <path value="RelatedPerson.relationship" />
+      <sliceName value="maritalStatus" />
+      <short value="marital status from Norwegian Person Index" />
+      <definition value="Sivilstand as registered in the norwegian Person Index (folkeregisteret). &#xD;&#xA;&#xD;&#xA;• uoppgitt (kode i DSF: 0)&#xD;&#xA;• ugift (kode i DSF: 1)&#xD;&#xA;• gift (kode i DSF: 2)&#xD;&#xA;• enkeEllerEnkemann (enke eller enkemann) (kode i DSF: 3)&#xD;&#xA;• skilt (kode i DSF: 4)&#xD;&#xA;• separert (kode i DSF: 5)&#xD;&#xA;• registrertPartner(registrert partner) (kode i DSF: 6)&#xD;&#xA;• separertPartner (separert partner) (kode i DSF: 7)&#xD;&#xA;• skiltPartner (skilt partner) (kode i DSF: 8)&#xD;&#xA;• gjenlevendePartner (gjenlevende partner) (kode i DSF: 9)" />
+      <alias value="sivilstand" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://hl7.no/fhir/ValueSet/no-basis-marital-status" />
+      </binding>
+    </element>
+    <element id="RelatedPerson.relationship:maritalStatus.coding.system">
+      <path value="RelatedPerson.relationship.coding.system" />
+      <fixedUri value="http://hl7.no/fhir/CodeSystem/no-basis-marital-status" />
+    </element>
+    <element id="RelatedPerson.relationship:familyRelation">
+      <path value="RelatedPerson.relationship" />
+      <sliceName value="familyRelation" />
+      <short value="Family relationship from Norwegian Person Index" />
+      <definition value="Family relationship from Norwegian Person Index. &#xD;&#xA;This is the role of the RelatedPerson instance in a familyrelation to the Person/Patient instance(relatertPersonsRolle).&#xD;&#xA;&#xD;&#xA;mor&#xD;&#xA;far&#xD;&#xA;medmor&#xD;&#xA;barn&#xD;&#xA;søsken&#xD;&#xA;ektefelleEllerPartner&#xD;&#xA;dødfødtBarn" />
+      <alias value="familierelasjon" />
+      <alias value="relatertPersonsRolle" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://hl7.no/fhir/ValueSet/no-basis-family-relation" />
+      </binding>
+    </element>
+    <element id="RelatedPerson.relationship:familyRelation.coding.system">
+      <path value="RelatedPerson.relationship.coding.system" />
+      <fixedUri value="http://hl7.no/fhir/CodeSystem/no-basis-family-relation" />
+    </element>
+    <element id="RelatedPerson.relationship:parental">
+      <path value="RelatedPerson.relationship" />
+      <sliceName value="parental" />
+      <short value="Parental responsibility registered in Norwegian person index" />
+      <definition value="Parental responsibility registered in Norwegian person index.&#xD;&#xA;&#xD;&#xA;barnet har krav på omsut og omtanke frå dei som har foreldreansvaret. Dei har rett og plikt til å ta avgjerder for barnet i personlege tilhøve innanfor dei grensene som §§ 31 til 33 set. Foreldreansvaret skal utøvast ut frå barnet sine interesser og behov. Dei som har foreldreansvaret, er skyldige til å gje barnet forsvarleg oppseding og forsyting. Dei skal syte for at barnet får utdanning etter evne og givnad&#xD;&#xA;Inneholder hvem som evt. har foreldremyndighet for en umyndig person.&#xD;&#xA;foreldremyndighet = myndighet til å inneha og utøve et foreldreansvar&#xD;&#xA;&#xD;&#xA;Kodeverdier i Registeret i Freg:&#xD;&#xA;- felles&#xD;&#xA;- mor&#xD;&#xA;- far&#xD;&#xA;- medmor&#xD;&#xA;- andre&#xD;&#xA;- ukjent&#xD;&#xA;I Registeret vil ansvaret bli vist som en to-veis relasjon vha. identifikatorer eller identifiserende informasjon.&#xD;&#xA;De gjeldende relasjonene til personer/barnevernsnemnd o.l. vil i praksis opphøre når personen ikke lenger er underlagt foreldreansvar, men de vil ikke opphøre i Registeret.&#xD;&#xA;Når informasjonen er migrert fra DSF vil Registeret være oppdatert i takt med DSF." />
+      <alias value="foreldreansvar" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://hl7.no/fhir/ValueSet/no-basis-parental-responsibility" />
+      </binding>
+    </element>
+    <element id="RelatedPerson.relationship:parental.coding.system">
+      <path value="RelatedPerson.relationship.coding.system" />
+      <fixedUri value="http://hl7.no/fhir/CodeSystem/no-basis-parental-responsibility" />
+    </element>
+    <element id="RelatedPerson.name">
+      <path value="RelatedPerson.name" />
+      <type>
+        <code value="HumanName" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-HumanName" />
+      </type>
+    </element>
+    <element id="RelatedPerson.address">
+      <path value="RelatedPerson.address" />
+      <short value="Norwegian address" />
+      <definition value="http://hl7.no/fhir/StructureDefinition/no-basis-Address" />
+      <type>
+        <code value="Address" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-Address" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

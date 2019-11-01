@@ -1,0 +1,38 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="gd-address-type-v201.codesystem" />
+    <meta>
+        <versionId value="1" />
+        <lastUpdated value="2019-04-24T00:00:00.000+00:00" />
+    </meta>
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-address-type-v201" />
+    <version value="2.0.1" />
+    <name value="gd-address-type-v201.codesystem" />
+    <status value="draft" />
+    <date value="2019-09-25T00:00:00.000+00:00" />
+    <publisher value="Skatteetaten" />
+    <content value="complete" />
+    <concept>
+        <code value="Bostedsadresse" />
+        <display value="Bostedsadresse" />
+    </concept>
+    <concept>
+        <code value="Oppholdsadresse" />
+        <display value="Oppholdsadresse" />
+    </concept>
+    <concept>
+        <code value="DeltBosted" />
+        <display value="Delt bosted" />
+    </concept>
+    <concept>
+        <code value="Kontaktadresse" />
+        <display value="Kontaktadresse" />
+    </concept>
+        <concept>
+        <code value="KontaktadresseUtlandet" />
+        <display value="Kontaktadresse utlandet" />
+    </concept>
+        <concept>
+        <code value="PreferertKontaktadresse" />
+        <display value="Preferert kontaktadresse" />
+        </concept>
+</CodeSystem>
