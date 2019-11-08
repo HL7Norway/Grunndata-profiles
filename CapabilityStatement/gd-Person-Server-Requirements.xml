@@ -4,7 +4,7 @@
 	<name value="PersonServerRequirements"/>
 	<title value="Requirements for Grunndata Person Service Interface"/>
 	<status value="draft"/>
-	<date value="2019-06-21"/>
+	<date value="2019-11-07"/>
 	<description value="Requirements for the Grunndata Person service provided by Direktoratet for e-helse"/>
 	<kind value="requirements"/>
 	<fhirVersion value="4.0.0"/>
@@ -67,6 +67,7 @@
 				<code value="vread"/>
 				<documentation value="Normal read operation on specific versions."/>
 			</interaction>
+			<seartchRevInclude value="Provenance:target"/>
 			<searchParam>
 				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 					<valueCode value="SHALL"/>
@@ -83,6 +84,51 @@
 			<searchParam>
 				<name value="name"/>
 				<type value="string"/>
+				<documentation value="Search on RelatedPerson.name: GET [base]/RelatedPerson?name=[string]"/>
+			</searchParam>
+		</resource>
+		<resource>
+			<type value="Provenance"/>
+			<profile value="http://ehelse.no/fhir/StructureDefinition/gd-Provenance"/>
+			<interaction>
+				<code value="search-type"/>
+				<documentation value="Search for a specific Resource type on some specified filter criteria"/>
+			</interaction>
+			<interaction>
+				<code value="read"/>
+				<documentation value="Normal read operation."/>
+			</interaction>
+			<interaction>
+				<code value="vread"/>
+				<documentation value="Normal read operation on specific versions."/>
+			</interaction>
+			<interaction>
+				<code value="history"/>
+				<documentation value="Retrieve the change history for a particular resource."/>
+			</interaction>
+			<interaction>
+				<code value="history_type"/>
+				<documentation value="Retrieve the change history for all resources of a particular type."/>
+			</interaction>
+			<seartchInclude value="Provenance:agent"/>
+			<seartchInclude value="Provenance:entity"/>
+			<seartchInclude value="Provenance:target"/>
+			<searchParam>
+				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+					<valueCode value="SHALL"/>
+				</extension>
+				<name value="target"/>
+				<type value="token"/>
+				<documentation value="Search on RelatedPerson.identifier: GET [base]/Provenance?identifier=[system]|[code]  Example: GET [base]/RelatedPatient?identifier=urn:oid:2.16.578.1.12.4.1.4.1|13116900216 "/>
+			</searchParam>
+			<searchParam>
+				<name value="entity"/>
+				<type value="reference"/>
+				<documentation value="Search on RelatedPerson.patient reference: GET [base]/RelatedPerson?patient=[system]|[code]"/>
+			</searchParam>
+			<searchParam>
+				<name value="recorded"/>
+				<type value="instant"/>
 				<documentation value="Search on RelatedPerson.name: GET [base]/RelatedPerson?name=[string]"/>
 			</searchParam>
 		</resource>
