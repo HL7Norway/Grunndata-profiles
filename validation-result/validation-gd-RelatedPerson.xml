@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OperationOutcome xmlns="http://hl7.org/fhir">
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>All OK</p>
+      <table class="grid">
+        <tr>
+          <td>
+            <b>Severity</b>
+          </td>
+          <td>
+            <b>Location</b>
+          </td>
+          <td>
+            <b>Code</b>
+          </td>
+          <td>
+            <b>Details</b>
+          </td>
+          <td>
+            <b>Diagnostics</b>
+          </td>
+          <td>
+            <b>Source</b>
+          </td>
+        </tr>
+        <tr>
+          <td>INFORMATION</td>
+          <td/>
+          <td>Informational Note</td>
+          <td>This element does not match any known slice for the profile http://ehelse.no/fhir/StructureDefinition/gd-marital-status</td>
+          <td/>
+          <td>InstanceValidator</td>
+        </tr>
+        <tr>
+          <td>INFORMATION</td>
+          <td/>
+          <td>Informational Note</td>
+          <td>This element does not match any known slice for the profile http://ehelse.no/fhir/StructureDefinition/gd-guardianship</td>
+          <td/>
+          <td>InstanceValidator</td>
+        </tr>
+      </table>
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+    <valueString value="gd-RelatedPerson-example.xml"/>
+  </extension>
+  <issue>
+    <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+      <valueInteger value="33"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+      <valueInteger value="79"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+      <valueCode value="InstanceValidator"/>
+    </extension>
+    <severity value="information"/>
+    <code value="informational"/>
+    <details>
+      <text value="This element does not match any known slice for the profile http://ehelse.no/fhir/StructureDefinition/gd-marital-status"/>
+    </details>
+    <expression value="RelatedPerson.relationship[0].extension[0].extension[2]"/>
+  </issue>
+  <issue>
+    <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+      <valueInteger value="57"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+      <valueInteger value="79"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+      <valueCode value="InstanceValidator"/>
+    </extension>
+    <severity value="information"/>
+    <code value="informational"/>
+    <details>
+      <text value="This element does not match any known slice for the profile http://ehelse.no/fhir/StructureDefinition/gd-guardianship"/>
+    </details>
+    <expression value="RelatedPerson.relationship[1].extension[0].extension[2]"/>
+  </issue>
+</OperationOutcome>

@@ -1,0 +1,1214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <type value="collection"/>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="extensions"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <table class="grid">
+              <tr>
+                <td>
+                  <b>Severity</b>
+                </td>
+                <td>
+                  <b>Location</b>
+                </td>
+                <td>
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Details</b>
+                </td>
+                <td>
+                  <b>Diagnostics</b>
+                </td>
+                <td>
+                  <b>Source</b>
+                </td>
+              </tr>
+              <tr>
+                <td>WARNING</td>
+                <td/>
+                <td>Validation rule failed</td>
+                <td>Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches(&#39;[A-Z]([A-Za-z0-9_]){0,254}&#39;)]</td>
+                <td/>
+                <td>InstanceValidator</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="extension-iso21090-adxp-additionallocator.xml"/>
+        </extension>
+        <issue>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+            <valueInteger value="2"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+            <valueInteger value="2"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+            <valueCode value="InstanceValidator"/>
+          </extension>
+          <severity value="warning"/>
+          <code value="invariant"/>
+          <details>
+            <text value="Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches(&#39;[A-Z]([A-Za-z0-9_]){0,254}&#39;)]"/>
+          </details>
+          <expression value="StructureDefinition"/>
+        </issue>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="extensions"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <table class="grid">
+              <tr>
+                <td>
+                  <b>Severity</b>
+                </td>
+                <td>
+                  <b>Location</b>
+                </td>
+                <td>
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Details</b>
+                </td>
+                <td>
+                  <b>Diagnostics</b>
+                </td>
+                <td>
+                  <b>Source</b>
+                </td>
+              </tr>
+              <tr>
+                <td>WARNING</td>
+                <td/>
+                <td>Validation rule failed</td>
+                <td>Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches(&#39;[A-Z]([A-Za-z0-9_]){0,254}&#39;)]</td>
+                <td/>
+                <td>InstanceValidator</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="extension-iso21090-adxp-buildingnumbersuffix.xml"/>
+        </extension>
+        <issue>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+            <valueInteger value="2"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+            <valueInteger value="2"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+            <valueCode value="InstanceValidator"/>
+          </extension>
+          <severity value="warning"/>
+          <code value="invariant"/>
+          <details>
+            <text value="Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches(&#39;[A-Z]([A-Za-z0-9_]){0,254}&#39;)]"/>
+          </details>
+          <expression value="StructureDefinition"/>
+        </issue>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="extensions"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <table class="grid">
+              <tr>
+                <td>
+                  <b>Severity</b>
+                </td>
+                <td>
+                  <b>Location</b>
+                </td>
+                <td>
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Details</b>
+                </td>
+                <td>
+                  <b>Diagnostics</b>
+                </td>
+                <td>
+                  <b>Source</b>
+                </td>
+              </tr>
+              <tr>
+                <td>WARNING</td>
+                <td/>
+                <td>Validation rule failed</td>
+                <td>Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches(&#39;[A-Z]([A-Za-z0-9_]){0,254}&#39;)]</td>
+                <td/>
+                <td>InstanceValidator</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="extension-iso21090-adxp-careof.xml"/>
+        </extension>
+        <issue>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+            <valueInteger value="2"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+            <valueInteger value="2"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+            <valueCode value="InstanceValidator"/>
+          </extension>
+          <severity value="warning"/>
+          <code value="invariant"/>
+          <details>
+            <text value="Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches(&#39;[A-Z]([A-Za-z0-9_]){0,254}&#39;)]"/>
+          </details>
+          <expression value="StructureDefinition"/>
+        </issue>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="extensions"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <table class="grid">
+              <tr>
+                <td>
+                  <b>Severity</b>
+                </td>
+                <td>
+                  <b>Location</b>
+                </td>
+                <td>
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Details</b>
+                </td>
+                <td>
+                  <b>Diagnostics</b>
+                </td>
+                <td>
+                  <b>Source</b>
+                </td>
+              </tr>
+              <tr>
+                <td>WARNING</td>
+                <td/>
+                <td>Validation rule failed</td>
+                <td>Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches(&#39;[A-Z]([A-Za-z0-9_]){0,254}&#39;)]</td>
+                <td/>
+                <td>InstanceValidator</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="extension-iso21090-adxp-housenumbernumeric.xml"/>
+        </extension>
+        <issue>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+            <valueInteger value="2"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+            <valueInteger value="2"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+            <valueCode value="InstanceValidator"/>
+          </extension>
+          <severity value="warning"/>
+          <code value="invariant"/>
+          <details>
+            <text value="Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches(&#39;[A-Z]([A-Za-z0-9_]){0,254}&#39;)]"/>
+          </details>
+          <expression value="StructureDefinition"/>
+        </issue>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="extensions"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <table class="grid">
+              <tr>
+                <td>
+                  <b>Severity</b>
+                </td>
+                <td>
+                  <b>Location</b>
+                </td>
+                <td>
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Details</b>
+                </td>
+                <td>
+                  <b>Diagnostics</b>
+                </td>
+                <td>
+                  <b>Source</b>
+                </td>
+              </tr>
+              <tr>
+                <td>WARNING</td>
+                <td/>
+                <td>Validation rule failed</td>
+                <td>Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches(&#39;[A-Z]([A-Za-z0-9_]){0,254}&#39;)]</td>
+                <td/>
+                <td>InstanceValidator</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="extension-iso21090-adxp-postbox.xml"/>
+        </extension>
+        <issue>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+            <valueInteger value="2"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+            <valueInteger value="2"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+            <valueCode value="InstanceValidator"/>
+          </extension>
+          <severity value="warning"/>
+          <code value="invariant"/>
+          <details>
+            <text value="Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches(&#39;[A-Z]([A-Za-z0-9_]){0,254}&#39;)]"/>
+          </details>
+          <expression value="StructureDefinition"/>
+        </issue>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="extensions"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <table class="grid">
+              <tr>
+                <td>
+                  <b>Severity</b>
+                </td>
+                <td>
+                  <b>Location</b>
+                </td>
+                <td>
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Details</b>
+                </td>
+                <td>
+                  <b>Diagnostics</b>
+                </td>
+                <td>
+                  <b>Source</b>
+                </td>
+              </tr>
+              <tr>
+                <td>WARNING</td>
+                <td/>
+                <td>Validation rule failed</td>
+                <td>Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches(&#39;[A-Z]([A-Za-z0-9_]){0,254}&#39;)]</td>
+                <td/>
+                <td>InstanceValidator</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="extension-iso21090-adxp-streetname.xml"/>
+        </extension>
+        <issue>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+            <valueInteger value="2"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+            <valueInteger value="2"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+            <valueCode value="InstanceValidator"/>
+          </extension>
+          <severity value="warning"/>
+          <code value="invariant"/>
+          <details>
+            <text value="Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches(&#39;[A-Z]([A-Za-z0-9_]){0,254}&#39;)]"/>
+          </details>
+          <expression value="StructureDefinition"/>
+        </issue>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="extensions"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <table class="grid">
+              <tr>
+                <td>
+                  <b>Severity</b>
+                </td>
+                <td>
+                  <b>Location</b>
+                </td>
+                <td>
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Details</b>
+                </td>
+                <td>
+                  <b>Diagnostics</b>
+                </td>
+                <td>
+                  <b>Source</b>
+                </td>
+              </tr>
+              <tr>
+                <td>WARNING</td>
+                <td/>
+                <td>Validation rule failed</td>
+                <td>Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches(&#39;[A-Z]([A-Za-z0-9_]){0,254}&#39;)]</td>
+                <td/>
+                <td>InstanceValidator</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="extension-iso21090-adxp-unitid.xml"/>
+        </extension>
+        <issue>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+            <valueInteger value="2"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+            <valueInteger value="2"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+            <valueCode value="InstanceValidator"/>
+          </extension>
+          <severity value="warning"/>
+          <code value="invariant"/>
+          <details>
+            <text value="Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches(&#39;[A-Z]([A-Za-z0-9_]){0,254}&#39;)]"/>
+          </details>
+          <expression value="StructureDefinition"/>
+        </issue>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="extension-patient-citizenship.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="extensions"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <table class="grid">
+              <tr>
+                <td>
+                  <b>Severity</b>
+                </td>
+                <td>
+                  <b>Location</b>
+                </td>
+                <td>
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Details</b>
+                </td>
+                <td>
+                  <b>Diagnostics</b>
+                </td>
+                <td>
+                  <b>Source</b>
+                </td>
+              </tr>
+              <tr>
+                <td>WARNING</td>
+                <td/>
+                <td>Validation rule failed</td>
+                <td>Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches(&#39;[A-Z]([A-Za-z0-9_]){0,254}&#39;)]</td>
+                <td/>
+                <td>InstanceValidator</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="extension-patient-nationality.xml"/>
+        </extension>
+        <issue>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+            <valueInteger value="3"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+            <valueInteger value="3"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+            <valueCode value="InstanceValidator"/>
+          </extension>
+          <severity value="warning"/>
+          <code value="invariant"/>
+          <details>
+            <text value="Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches(&#39;[A-Z]([A-Za-z0-9_]){0,254}&#39;)]"/>
+          </details>
+          <expression value="StructureDefinition"/>
+        </issue>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-additional-humanname.StructureDefinition-extension.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-Address-box.StructureDefinition-profile.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-Address-cadastral.StructureDefinition-profile.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-Address-freeform.StructureDefinition-profile.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-Address-international.StructureDefinition-profile.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-address-metadata.StructureDefinition-extension.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-Address-street.StructureDefinition-profile.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-Address.StructureDefinition-profile.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-birth-in-norway.StructureDefinition-extension.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-birth.StructureDefinition-extension.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-box-address.StructureDefinition-extension.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-building.StructureDefinition-extension.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-cadastral-address.StructureDefinition-extension.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-country-code-3166-1-3.StructureDefinition-extension.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-deceased.StructureDefinition-extension.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-family-relation.StructureDefinition-extension.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-fregmetadata.StructureDefinition-extension.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-guardianship.StructureDefinition-extension.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-HumanName.StructureDefinition-profile.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-Identifier-foreign.StructureDefinition-profile.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-Identifier-freg.StructureDefinition-profile.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-marital-status.StructureDefinition-extension.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-migration.StructureDefinition-extension.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-parental.StructureDefinition-extension.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-person-citizenship.structuredefinition-extension.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-person-identifier-status.StructureDefinition-extension.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-person-status.StructureDefinition-extension.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="extensions"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <table class="grid">
+              <tr>
+                <td>
+                  <b>Severity</b>
+                </td>
+                <td>
+                  <b>Location</b>
+                </td>
+                <td>
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Details</b>
+                </td>
+                <td>
+                  <b>Diagnostics</b>
+                </td>
+                <td>
+                  <b>Source</b>
+                </td>
+              </tr>
+              <tr>
+                <td>ERROR</td>
+                <td/>
+                <td>Structural Issue</td>
+                <td>Profile http://hl7.org/fhir/StructureDefinition/ElementDefinition, Element &#39;StructureDefinition.snapshot.element[18].base.max&#39;: minimum required = 1, but only found 0</td>
+                <td/>
+                <td>InstanceValidator</td>
+              </tr>
+              <tr>
+                <td>ERROR</td>
+                <td/>
+                <td>Structural Issue</td>
+                <td>Profile http://hl7.org/fhir/StructureDefinition/ElementDefinition, Element &#39;StructureDefinition.snapshot.element[18].base.min&#39;: minimum required = 1, but only found 0</td>
+                <td/>
+                <td>InstanceValidator</td>
+              </tr>
+              <tr>
+                <td>ERROR</td>
+                <td/>
+                <td>Structural Issue</td>
+                <td>Profile http://hl7.org/fhir/StructureDefinition/ElementDefinition, Element &#39;StructureDefinition.snapshot.element[19].base.min&#39;: minimum required = 1, but only found 0</td>
+                <td/>
+                <td>InstanceValidator</td>
+              </tr>
+              <tr>
+                <td>ERROR</td>
+                <td/>
+                <td>Validation rule failed</td>
+                <td>All element definitions must have unique ids (snapshot) ( (ids: Person,Person.id,Person.meta,Person.meta.id,Person.meta.extension,Person.meta.versionId,Person.meta.lastUpdated,Person.meta.source,Person.meta.profile,Person.meta.security,Person.meta.security:addressConfidentiality,Person.meta.security:addressConfidentiality.id,Person.meta.security:addressConfidentiality.extension,Person.meta.security:addressConfidentiality.system,Person.meta.security:addressConfidentiality.version,Person.meta.security:addressConfidentiality.code,Person.meta.security:addressConfidentiality.display,Person.meta.security:addressConfidentiality.userSelected,Person.meta.security:addressConfidentiality.extension,Person.meta.security:addressConfidentiality.extension:fregMetadata,Person.meta.tag,Person.implicitRules,Person.language,Person.text,Person.contained,Person.extension,Person.extension:deceased,Person.extension:birth,Person.extension:birthInNorway,Person.extension:migration,Person.extension:citizenship,Person.extension:fregPersonStatus,Person.extension:residencePermit,Person.modifierExtension,Person.identifier,Person.identifier:FNR,Person.identifier:FNR.id,Person.identifier:FNR.extension,Person.identifier:FNR.use,Person.identifier:FNR.type,Person.identifier:FNR.system,Person.identifier:FNR.value,Person.identifier:FNR.period,Person.identifier:FNR.assigner,Person.identifier:DNR,Person.identifier:DNR.id,Person.identifier:DNR.extension,Person.identifier:DNR.use,Person.identifier:DNR.type,Person.identifier:DNR.system,Person.identifier:DNR.value,Person.identifier:DNR.period,Person.identifier:DNR.assigner,Person.identifier:foreignIdentifier,Person.name,Person.telecom,Person.gender,Person.gender.id,Person.gender.extension,Person.gender.extension:metadata,Person.gender.value,Person.birthDate,Person.address,Person.photo,Person.managingOrganization,Person.active,Person.link,Person.link.id,Person.link.extension,Person.link.modifierExtension,Person.link.target,Person.link.assurance)) [snapshot.element.all(id.exists()) and snapshot.element.id.trace(&#39;ids&#39;).isDistinct()]</td>
+                <td/>
+                <td>InstanceValidator</td>
+              </tr>
+              <tr>
+                <td>ERROR</td>
+                <td/>
+                <td>Validation rule failed</td>
+                <td>Each element definition in a snapshot must have a formal definition and cardinalities [element.all(definition.exists() and min.exists() and max.exists())]</td>
+                <td/>
+                <td>InstanceValidator</td>
+              </tr>
+              <tr>
+                <td>ERROR</td>
+                <td/>
+                <td>Validation rule failed</td>
+                <td>If there are no discriminators, there must be a definition [discriminator.exists() or description.exists()]</td>
+                <td/>
+                <td>InstanceValidator</td>
+              </tr>
+              <tr>
+                <td>ERROR</td>
+                <td/>
+                <td>Validation rule failed</td>
+                <td>If there are no discriminators, there must be a definition [discriminator.exists() or description.exists()]</td>
+                <td/>
+                <td>InstanceValidator</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-Person.StructureDefinition-profile.xml"/>
+        </extension>
+        <issue>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+            <valueInteger value="765"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+            <valueInteger value="13"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+            <valueCode value="InstanceValidator"/>
+          </extension>
+          <severity value="error"/>
+          <code value="structure"/>
+          <details>
+            <text value="Profile http://hl7.org/fhir/StructureDefinition/ElementDefinition, Element &#39;StructureDefinition.snapshot.element[18].base.max&#39;: minimum required = 1, but only found 0"/>
+          </details>
+          <expression value="StructureDefinition.snapshot.element[18].base"/>
+        </issue>
+        <issue>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+            <valueInteger value="765"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+            <valueInteger value="13"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+            <valueCode value="InstanceValidator"/>
+          </extension>
+          <severity value="error"/>
+          <code value="structure"/>
+          <details>
+            <text value="Profile http://hl7.org/fhir/StructureDefinition/ElementDefinition, Element &#39;StructureDefinition.snapshot.element[18].base.min&#39;: minimum required = 1, but only found 0"/>
+          </details>
+          <expression value="StructureDefinition.snapshot.element[18].base"/>
+        </issue>
+        <issue>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+            <valueInteger value="778"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+            <valueInteger value="13"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+            <valueCode value="InstanceValidator"/>
+          </extension>
+          <severity value="error"/>
+          <code value="structure"/>
+          <details>
+            <text value="Profile http://hl7.org/fhir/StructureDefinition/ElementDefinition, Element &#39;StructureDefinition.snapshot.element[19].base.min&#39;: minimum required = 1, but only found 0"/>
+          </details>
+          <expression value="StructureDefinition.snapshot.element[19].base"/>
+        </issue>
+        <issue>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+            <valueInteger value="2"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+            <valueInteger value="50"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+            <valueCode value="InstanceValidator"/>
+          </extension>
+          <severity value="error"/>
+          <code value="invariant"/>
+          <details>
+            <text value="All element definitions must have unique ids (snapshot) ( (ids: Person,Person.id,Person.meta,Person.meta.id,Person.meta.extension,Person.meta.versionId,Person.meta.lastUpdated,Person.meta.source,Person.meta.profile,Person.meta.security,Person.meta.security:addressConfidentiality,Person.meta.security:addressConfidentiality.id,Person.meta.security:addressConfidentiality.extension,Person.meta.security:addressConfidentiality.system,Person.meta.security:addressConfidentiality.version,Person.meta.security:addressConfidentiality.code,Person.meta.security:addressConfidentiality.display,Person.meta.security:addressConfidentiality.userSelected,Person.meta.security:addressConfidentiality.extension,Person.meta.security:addressConfidentiality.extension:fregMetadata,Person.meta.tag,Person.implicitRules,Person.language,Person.text,Person.contained,Person.extension,Person.extension:deceased,Person.extension:birth,Person.extension:birthInNorway,Person.extension:migration,Person.extension:citizenship,Person.extension:fregPersonStatus,Person.extension:residencePermit,Person.modifierExtension,Person.identifier,Person.identifier:FNR,Person.identifier:FNR.id,Person.identifier:FNR.extension,Person.identifier:FNR.use,Person.identifier:FNR.type,Person.identifier:FNR.system,Person.identifier:FNR.value,Person.identifier:FNR.period,Person.identifier:FNR.assigner,Person.identifier:DNR,Person.identifier:DNR.id,Person.identifier:DNR.extension,Person.identifier:DNR.use,Person.identifier:DNR.type,Person.identifier:DNR.system,Person.identifier:DNR.value,Person.identifier:DNR.period,Person.identifier:DNR.assigner,Person.identifier:foreignIdentifier,Person.name,Person.telecom,Person.gender,Person.gender.id,Person.gender.extension,Person.gender.extension:metadata,Person.gender.value,Person.birthDate,Person.address,Person.photo,Person.managingOrganization,Person.active,Person.link,Person.link.id,Person.link.extension,Person.link.modifierExtension,Person.link.target,Person.link.assurance)) [snapshot.element.all(id.exists()) and snapshot.element.id.trace(&#39;ids&#39;).isDistinct()]"/>
+          </details>
+          <expression value="StructureDefinition"/>
+        </issue>
+        <issue>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+            <valueInteger value="17"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+            <valueInteger value="13"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+            <valueCode value="InstanceValidator"/>
+          </extension>
+          <severity value="error"/>
+          <code value="invariant"/>
+          <details>
+            <text value="Each element definition in a snapshot must have a formal definition and cardinalities [element.all(definition.exists() and min.exists() and max.exists())]"/>
+          </details>
+          <expression value="StructureDefinition.snapshot"/>
+        </issue>
+        <issue>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+            <valueInteger value="1434"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+            <valueInteger value="16"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+            <valueCode value="InstanceValidator"/>
+          </extension>
+          <severity value="error"/>
+          <code value="invariant"/>
+          <details>
+            <text value="If there are no discriminators, there must be a definition [discriminator.exists() or description.exists()]"/>
+          </details>
+          <expression value="StructureDefinition.snapshot.element[34].slicing"/>
+        </issue>
+        <issue>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+            <valueInteger value="3417"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+            <valueInteger value="16"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+            <valueCode value="InstanceValidator"/>
+          </extension>
+          <severity value="error"/>
+          <code value="invariant"/>
+          <details>
+            <text value="If there are no discriminators, there must be a definition [discriminator.exists() or description.exists()]"/>
+          </details>
+          <expression value="StructureDefinition.differential.element[19].slicing"/>
+        </issue>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-Provenance.StructureDefinition-profile.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-RelatedPerson.StructureDefinition-profile.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-residence-permit.StructureDefinition-extension.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-separately-occupied-unit.StructureDefinition-extension.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-street-address.StructureDefinition-extension.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="targetElement.StructureDefinition-extension.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+</Bundle>

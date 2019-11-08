@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <type value="collection"/>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-address-confidentiality-v201.ValueSet.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-address-contenttype-v201.ValueSet.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-address-physicaladdresstype-v201.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-address-separatelyoccupiedunittype-v200.ValueSet.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-address-type-v201.ValueSet.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-person-guardianscope-v05.ValueSet.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-person-guardiantype-v05.ValueSet.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-person-identificationnumbertype-v05.ValueSet.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-person-identifierstatus-v05.ValueSet.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-person-migration-pattern-v05.ValueSet.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-person-residencepermittype-v05.valueset.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-person-status-v05.ValueSet.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+</Bundle>
