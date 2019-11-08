@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CapabilityStatement xmlns="http://hl7.org/fhir">
-	<url value="http://ehelse.no/fhir/CapabilityStatement/gd-Person-Server-Requirements/v002"/>
+<CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/FHIR/R4/fhir-all-xsd/fhir-single.xsd">
+	<url value="http://ehelse.no/fhir/CapabilityStatement/gd-Person-Server-Requirements/v003"/>
 	<name value="PersonServerRequirements"/>
 	<title value="Requirements for Grunndata Person Service Interface"/>
 	<status value="draft"/>
@@ -67,7 +67,7 @@
 				<code value="vread"/>
 				<documentation value="Normal read operation on specific versions."/>
 			</interaction>
-			<seartchRevInclude value="Provenance:target"/>
+			<searchRevInclude value="Provenance:target"/>
 			<searchParam>
 				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 					<valueCode value="SHALL"/>
@@ -103,16 +103,16 @@
 				<documentation value="Normal read operation on specific versions."/>
 			</interaction>
 			<interaction>
-				<code value="history"/>
+				<code value="history-instance"/>
 				<documentation value="Retrieve the change history for a particular resource."/>
 			</interaction>
 			<interaction>
-				<code value="history_type"/>
+				<code value="history-type"/>
 				<documentation value="Retrieve the change history for all resources of a particular type."/>
 			</interaction>
-			<seartchInclude value="Provenance:agent"/>
-			<seartchInclude value="Provenance:entity"/>
-			<seartchInclude value="Provenance:target"/>
+			<searchInclude value="Provenance:agent"/>
+			<searchInclude value="Provenance:entity"/>
+			<searchInclude value="Provenance:target"/>
 			<searchParam>
 				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 					<valueCode value="SHALL"/>
@@ -128,7 +128,7 @@
 			</searchParam>
 			<searchParam>
 				<name value="recorded"/>
-				<type value="instant"/>
+				<type value="composite"/>
 				<documentation value="Search on RelatedPerson.name: GET [base]/RelatedPerson?name=[string]"/>
 			</searchParam>
 		</resource>
