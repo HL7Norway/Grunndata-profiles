@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/FHIR/R4/fhir-all-xsd/fhir-single.xsd">
+<CapabilityStatement xmlns="http://hl7.org/fhir" >
 	<url value="http://ehelse.no/fhir/CapabilityStatement/gd-Person-Server-Requirements/v003"/>
 	<name value="PersonServerRequirements"/>
 	<title value="Requirements for Grunndata Person Service Interface"/>
@@ -34,6 +34,14 @@
 			<interaction>
 				<code value="vread"/>
 				<documentation value="Normal read operation on specific versions."/>
+			</interaction>
+			<interaction>
+				<code value="history-instance"/>
+				<documentation value="Retrieve the change history for a particular resource."/>
+			</interaction>
+			<interaction>
+				<code value="history-type"/>
+				<documentation value="Retrieve the change history for all resources of a particular type."/>
 			</interaction>
 			<searchRevInclude value="RelatedPerson:patient"/>
 			<searchRevInclude value="Provenance:target"/>
@@ -123,14 +131,6 @@
 			<interaction>
 				<code value="vread"/>
 				<documentation value="Normal read operation on specific versions."/>
-			</interaction>
-			<interaction>
-				<code value="history-instance"/>
-				<documentation value="Retrieve the change history for a particular resource."/>
-			</interaction>
-			<interaction>
-				<code value="history-type"/>
-				<documentation value="Retrieve the change history for all resources of a particular type."/>
 			</interaction>
 			<searchInclude value="Provenance:agent"/>
 			<searchInclude value="Provenance:entity"/>
