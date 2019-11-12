@@ -51,13 +51,12 @@
 				</extension>
 				<name value="_id"/>
 				<type value="token"/>
-				<documentation>
-					<div xmlns="http://www.w3.org/1999/xhtml">
-					  <p> Search on Person by logical id of the Resource: </p> 
-					  <p> <code>GET [base]/Person?_id=[id] </code></p>
-					  <p> GET [base]/Person/[id]</p> 
-					</div>
-				</documentation>
+				<documentation value="
+					Search on Person by logical id of the Resource: 
+					```
+					GET [base]/Person?_id=[id]
+					GET [base]/Person/[id]
+					```"/>
 			</searchParam>
 			<searchParam>
 				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
