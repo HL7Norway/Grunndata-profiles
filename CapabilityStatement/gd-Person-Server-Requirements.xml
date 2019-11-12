@@ -51,7 +51,13 @@
 				</extension>
 				<name value="_id"/>
 				<type value="token"/>
-				<documentation value="Search on Person by logical id of the Resource: GET [base]/Person?_id=[id] or GET [base]/Person/[id]"/>
+				<documentation>
+					<div xmlns="http://www.w3.org/1999/xhtml">
+					  <p> Search on Person by logical id of the Resource: </p> 
+					  <p> <code>GET [base]/Person?_id=[id] </code></p>
+					  <p> GET [base]/Person/[id]</p> 
+					</div>
+				</documentation>
 			</searchParam>
 			<searchParam>
 				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -59,7 +65,7 @@
 				</extension>
 				<name value="identifier"/>
 				<type value="token"/>
-				<documentation value="Search on Person.identifier: GET [base]/Person?identifier=[system]|[code]  Example: GET [base]/Patient?identifier=urn:oid:2.16.578.1.12.4.1.4.1|13116900216 "/>
+				<documentation value="Search on Person.identifier: GET [base]/Person?identifier=[system]|[code] Example: GET [base]/Patient?identifier=urn:oid:2.16.578.1.12.4.1.4.1|13116900216 "/>
 			</searchParam>
 			<searchParam>
 				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -135,6 +141,14 @@
 			<searchInclude value="Provenance:agent"/>
 			<searchInclude value="Provenance:entity"/>
 			<searchInclude value="Provenance:target"/>
+			<searchParam>
+				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+					<valueCode value="SHALL"/>
+				</extension>
+				<name value="_id"/>
+				<type value="token"/>
+				<documentation value="Search on Provenance by logical id of the Resource: GET [base]/Provenance?_id=[id] or GET [base]/Provenance/[id]"/>
+			</searchParam>
 			<searchParam>
 				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 					<valueCode value="SHALL"/>
