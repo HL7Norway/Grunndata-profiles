@@ -1,10 +1,23 @@
+
+http://hapi.fhir.org/baseR4/SearchParameter?name=NoBasisMiddlename
+
 http://hapi.fhir.org/baseR4/Person?middlename=Tirsdag&_pretty=true 
 
 http://hapi.fhir.org/baseR4/Provenance?recorded=gt2019-10-14T10:00&_sort=_id
 
 http://hapi.fhir.org/baseR4/Provenance?_id=53130&_include=Provenance:target
 
+
 http://hapi.fhir.org/baseR4/Person?identifier=04021950128&_revinclude=provenance:target&_pretty=true
+
+http://hapi.fhir.org/baseR4/RelatedPerson?patient:identifier=urn:oid:2.16.578.1.12.4.1.4.1|04021950128
+HAPI støtter ikke slike søk, bare referanser, literal, 
+
+Ping
+http://hapi.fhir.org/baseR4/metadata?_elements=fhirVersion
+
+Metadata:
+http://hapi.fhir.org/baseR4/metadata
 
 http://hapi.fhir.org/baseR4/RelatedPerson?patient=04021950128
 Virker ikke på HAPI?!?
