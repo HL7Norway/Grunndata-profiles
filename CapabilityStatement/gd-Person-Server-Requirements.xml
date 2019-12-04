@@ -87,8 +87,8 @@
 					<valueCode value="SHALL"/>
 				</extension>
 				<name value="gender"/>
-				<type value="code"/>
-				<documentation value="Search on Person.gender: GET [base]/Person?birthDate=[date]"/>
+				<type value="token"/>
+				<documentation value="Search on Person.gender: GET [base]/Person?gender=[code]"/>
 			</searchParam>
 		</resource>
 		<resource>
