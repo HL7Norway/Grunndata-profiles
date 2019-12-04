@@ -74,6 +74,22 @@
 				<type value="string"/>
 				<documentation value="Search on Person.name: GET [base]/Person?name=[string]"/>
 			</searchParam>
+			<searchParam>
+				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+					<valueCode value="SHALL"/>
+				</extension>
+				<name value="birthDate"/>
+				<type value="date"/>
+				<documentation value="Search on Person.birthDate: GET [base]/Person?birthDate=[date]"/>
+			</searchParam>
+			<searchParam>
+				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+					<valueCode value="SHALL"/>
+				</extension>
+				<name value="gender"/>
+				<type value="code"/>
+				<documentation value="Search on Person.gender: GET [base]/Person?birthDate=[date]"/>
+			</searchParam>
 		</resource>
 		<resource>
 			<type value="RelatedPerson"/>
