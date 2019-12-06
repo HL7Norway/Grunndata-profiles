@@ -175,7 +175,7 @@
     <element id="Person.identifier">
       <path value="Person.identifier" />
       <slicing>
-      <discriminator>
+        <discriminator>
           <type value="value" />
           <path value="system" />
         </discriminator>

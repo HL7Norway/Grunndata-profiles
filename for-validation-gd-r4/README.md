@@ -5,3 +5,5 @@ There are some problems using oid identified ValueSets in profiles that the offi
 
 The official validator can be downloaded here: https://www.hl7.org/fhir/downloads.html
 
+no-basis-propertyinformation - removed oid linkage
+
