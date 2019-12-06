@@ -88,8 +88,42 @@
     </element>
     <element id="Provenance.reason">
       <path value="Provenance.reason" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <definition value="Grunndata don't use this element.&#xD;&#xA;&#xD;&#xA;The reason that the activity was taking place." />
-      <mustSupport value="false" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.reason:fregEventtype">
+      <path value="Provenance.reason" />
+      <sliceName value="fregEventtype" />
+      <short value="Event type from FREG" />
+      <definition value="The event type from FREG that thescribes the change to the Master Person Index in some detail." />
+      <max value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-provenance-freg-hendelsestype-v210" />
+      </binding>
+    </element>
+    <element id="Provenance.reason:fregEventtype.coding">
+      <path value="Provenance.reason.coding" />
+      <max value="1" />
+    </element>
+    <element id="Provenance.reason:fregEventtype.coding.system">
+      <path value="Provenance.reason.coding.system" />
+      <short value="Event type codesystem from freg" />
+      <definition value="Event type codesystem from freg" />
+      <min value="1" />
+      <fixedUri value="http://ehelse.no/fhir/CodeSystem/gd-provenance-freg-hendelsestype-v210" />
+    </element>
+    <element id="Provenance.reason:fregEventtype.coding.code">
+      <path value="Provenance.reason.coding.code" />
+      <min value="1" />
     </element>
     <element id="Provenance.activity">
       <path value="Provenance.activity" />
