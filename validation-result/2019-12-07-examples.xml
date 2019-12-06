@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <type value="collection"/>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="extensions"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+            <table class="grid">
+              <tr>
+                <td>
+                  <b>Severity</b>
+                </td>
+                <td>
+                  <b>Location</b>
+                </td>
+                <td>
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Details</b>
+                </td>
+                <td>
+                  <b>Diagnostics</b>
+                </td>
+                <td>
+                  <b>Source</b>
+                </td>
+              </tr>
+              <tr>
+                <td>INFORMATION</td>
+                <td/>
+                <td>Informational Note</td>
+                <td>This element does not match any known slice for the profile http://ehelse.no/fhir/StructureDefinition/gd-person-status</td>
+                <td/>
+                <td>InstanceValidator</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="c:\GitRepo\grunndata-r4\examples\gd-Person-04021950128-v21.xml"/>
+        </extension>
+        <issue>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+            <valueInteger value="9"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+            <valueInteger value="78"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+            <valueCode value="InstanceValidator"/>
+          </extension>
+          <severity value="information"/>
+          <code value="informational"/>
+          <details>
+            <text value="This element does not match any known slice for the profile http://ehelse.no/fhir/StructureDefinition/gd-person-status"/>
+          </details>
+          <expression value="Person.extension[0].extension[1]"/>
+        </issue>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="extensions"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <table class="grid">
+              <tr>
+                <td>
+                  <b>Severity</b>
+                </td>
+                <td>
+                  <b>Location</b>
+                </td>
+                <td>
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Details</b>
+                </td>
+                <td>
+                  <b>Diagnostics</b>
+                </td>
+                <td>
+                  <b>Source</b>
+                </td>
+              </tr>
+              <tr>
+                <td>ERROR</td>
+                <td/>
+                <td>Invalid Code</td>
+                <td>Unknown Code urn:oid:2.16.578.1.12.4.1.1.3402#0238 in urn:oid:2.16.578.1.12.4.1.1.3402 for &#39;urn:oid:2.16.578.1.12.4.1.1.3402#0238&#39;</td>
+                <td/>
+                <td>TerminologyEngine</td>
+              </tr>
+              <tr>
+                <td>INFORMATION</td>
+                <td/>
+                <td>Informational Note</td>
+                <td>This element does not match any known slice for the profile http://ehelse.no/fhir/StructureDefinition/gd-person-status</td>
+                <td/>
+                <td>InstanceValidator</td>
+              </tr>
+              <tr>
+                <td>INFORMATION</td>
+                <td/>
+                <td>Informational Note</td>
+                <td>This element does not match any known slice for the profile http://ehelse.no/fhir/StructureDefinition/gd-Address</td>
+                <td/>
+                <td>InstanceValidator</td>
+              </tr>
+              <tr>
+                <td>INFORMATION</td>
+                <td/>
+                <td>Informational Note</td>
+                <td>This element does not match any known slice for the profile http://ehelse.no/fhir/StructureDefinition/gd-Address</td>
+                <td/>
+                <td>InstanceValidator</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="c:\GitRepo\grunndata-r4\examples\gd-Person-04021950128-version-2.xml"/>
+        </extension>
+        <issue>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+            <valueInteger value="77"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+            <valueInteger value="18"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+            <valueCode value="TerminologyEngine"/>
+          </extension>
+          <severity value="error"/>
+          <code value="code-invalid"/>
+          <details>
+            <text value="Unknown Code urn:oid:2.16.578.1.12.4.1.1.3402#0238 in urn:oid:2.16.578.1.12.4.1.1.3402 for &#39;urn:oid:2.16.578.1.12.4.1.1.3402#0238&#39;"/>
+          </details>
+          <expression value="Person.address[0].extension[0].extension[0].value.ofType(Coding)"/>
+        </issue>
+        <issue>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+            <valueInteger value="10"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+            <valueInteger value="78"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+            <valueCode value="InstanceValidator"/>
+          </extension>
+          <severity value="information"/>
+          <code value="informational"/>
+          <details>
+            <text value="This element does not match any known slice for the profile http://ehelse.no/fhir/StructureDefinition/gd-person-status"/>
+          </details>
+          <expression value="Person.extension[0].extension[1]"/>
+        </issue>
+        <issue>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+            <valueInteger value="128"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+            <valueInteger value="80"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+            <valueCode value="InstanceValidator"/>
+          </extension>
+          <severity value="information"/>
+          <code value="informational"/>
+          <details>
+            <text value="This element does not match any known slice for the profile http://ehelse.no/fhir/StructureDefinition/gd-Address"/>
+          </details>
+          <expression value="Person.address[0].extension[4]"/>
+        </issue>
+        <issue>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+            <valueInteger value="133"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+            <valueInteger value="90"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+            <valueCode value="InstanceValidator"/>
+          </extension>
+          <severity value="information"/>
+          <code value="informational"/>
+          <details>
+            <text value="This element does not match any known slice for the profile http://ehelse.no/fhir/StructureDefinition/gd-Address"/>
+          </details>
+          <expression value="Person.address[0].extension[5]"/>
+        </issue>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="extensions"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+            <table class="grid">
+              <tr>
+                <td>
+                  <b>Severity</b>
+                </td>
+                <td>
+                  <b>Location</b>
+                </td>
+                <td>
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Details</b>
+                </td>
+                <td>
+                  <b>Diagnostics</b>
+                </td>
+                <td>
+                  <b>Source</b>
+                </td>
+              </tr>
+              <tr>
+                <td>INFORMATION</td>
+                <td/>
+                <td>Informational Note</td>
+                <td>This element does not match any known slice for the profile http://ehelse.no/fhir/StructureDefinition/gd-person-status</td>
+                <td/>
+                <td>InstanceValidator</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="c:\GitRepo\grunndata-r4\examples\gd-Person-04021950128.xml"/>
+        </extension>
+        <issue>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+            <valueInteger value="9"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+            <valueInteger value="78"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+            <valueCode value="InstanceValidator"/>
+          </extension>
+          <severity value="information"/>
+          <code value="informational"/>
+          <details>
+            <text value="This element does not match any known slice for the profile http://ehelse.no/fhir/StructureDefinition/gd-person-status"/>
+          </details>
+          <expression value="Person.extension[0].extension[1]"/>
+        </issue>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="c:\GitRepo\grunndata-r4\examples\gd-Provenance-Create.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="extensions"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <table class="grid">
+              <tr>
+                <td>
+                  <b>Severity</b>
+                </td>
+                <td>
+                  <b>Location</b>
+                </td>
+                <td>
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Details</b>
+                </td>
+                <td>
+                  <b>Diagnostics</b>
+                </td>
+                <td>
+                  <b>Source</b>
+                </td>
+              </tr>
+              <tr>
+                <td>ERROR</td>
+                <td/>
+                <td>Structural Issue</td>
+                <td>Undefined attribute &#39;@xsi:schemaLocation&#39; on Provenance for type Provenance (properties = [Provenance.id, Provenance.meta, Provenance.implicitRules, Provenance.language, Provenance.text, Provenance.contained, Provenance.extension, Provenance.modifierExtension, Provenance.target, Provenance.occurred[x], Provenance.recorded, Provenance.policy, Provenance.location, Provenance.reason, Provenance.activity, Provenance.agent, Provenance.entity, Provenance.signature])</td>
+                <td/>
+                <td>InstanceValidator</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="c:\GitRepo\grunndata-r4\examples\gd-Provenance-UPDATE-2.xml"/>
+        </extension>
+        <issue>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+            <valueInteger value="2"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+            <valueInteger value="184"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+            <valueCode value="InstanceValidator"/>
+          </extension>
+          <severity value="error"/>
+          <code value="structure"/>
+          <details>
+            <text value="Undefined attribute &#39;@xsi:schemaLocation&#39; on Provenance for type Provenance (properties = [Provenance.id, Provenance.meta, Provenance.implicitRules, Provenance.language, Provenance.text, Provenance.contained, Provenance.extension, Provenance.modifierExtension, Provenance.target, Provenance.occurred[x], Provenance.recorded, Provenance.policy, Provenance.location, Provenance.reason, Provenance.activity, Provenance.agent, Provenance.entity, Provenance.signature])"/>
+          </details>
+          <expression value="/f:Provenance"/>
+        </issue>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="c:\GitRepo\grunndata-r4\examples\gd-Provenance-UPDATE.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="extensions"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+            <table class="grid">
+              <tr>
+                <td>
+                  <b>Severity</b>
+                </td>
+                <td>
+                  <b>Location</b>
+                </td>
+                <td>
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Details</b>
+                </td>
+                <td>
+                  <b>Diagnostics</b>
+                </td>
+                <td>
+                  <b>Source</b>
+                </td>
+              </tr>
+              <tr>
+                <td>INFORMATION</td>
+                <td/>
+                <td>Informational Note</td>
+                <td>This element does not match any known slice for the profile http://ehelse.no/fhir/StructureDefinition/gd-marital-status</td>
+                <td/>
+                <td>InstanceValidator</td>
+              </tr>
+              <tr>
+                <td>INFORMATION</td>
+                <td/>
+                <td>Informational Note</td>
+                <td>This element does not match any known slice for the profile http://ehelse.no/fhir/StructureDefinition/gd-guardianship</td>
+                <td/>
+                <td>InstanceValidator</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="c:\GitRepo\grunndata-r4\examples\gd-RelatedPerson-example.xml"/>
+        </extension>
+        <issue>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+            <valueInteger value="33"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+            <valueInteger value="79"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+            <valueCode value="InstanceValidator"/>
+          </extension>
+          <severity value="information"/>
+          <code value="informational"/>
+          <details>
+            <text value="This element does not match any known slice for the profile http://ehelse.no/fhir/StructureDefinition/gd-marital-status"/>
+          </details>
+          <expression value="RelatedPerson.relationship[0].extension[0].extension[2]"/>
+        </issue>
+        <issue>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+            <valueInteger value="57"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+            <valueInteger value="79"/>
+          </extension>
+          <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source">
+            <valueCode value="InstanceValidator"/>
+          </extension>
+          <severity value="information"/>
+          <code value="informational"/>
+          <details>
+            <text value="This element does not match any known slice for the profile http://ehelse.no/fhir/StructureDefinition/gd-guardianship"/>
+          </details>
+          <expression value="RelatedPerson.relationship[1].extension[0].extension[2]"/>
+        </issue>
+      </OperationOutcome>
+    </resource>
+  </entry>
+</Bundle>

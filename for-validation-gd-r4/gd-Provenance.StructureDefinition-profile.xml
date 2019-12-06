@@ -2,10 +2,10 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Provenance" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Provenance" />
-  <version value="2.0.2" />
+  <version value="2.1.0" />
   <name value="GdProvenance" />
   <status value="draft" />
-  <date value="2019-10-16" />
+  <date value="2019-12-06" />
   <description value="Provenance profile to be used on Grunndata. Person, Practitioner, Organization etc." />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
@@ -95,7 +95,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <definition value="Grunndata don't use this element.&#xD;&#xA;&#xD;&#xA;The reason that the activity was taking place." />
+      <definition value="Grunndata uses the reason code to communicate the original change event type from the data source, usually FREG event types.&#xD;&#xA;&#xD;&#xA;The reason that the activity was taking place." />
       <mustSupport value="true" />
     </element>
     <element id="Provenance.reason:fregEventtype">
