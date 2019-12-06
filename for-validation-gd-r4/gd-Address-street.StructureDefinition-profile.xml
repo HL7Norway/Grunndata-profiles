@@ -1634,7 +1634,7 @@
       <binding>
         <strength value="required" />
         <description value="kommunenummer" />
-        <valueSet value="urn:oid:2.16.578.1.12.4.1.1.3402" />
+        <valueSet value="http://hl7.no/fhir/ValueSet/2.16.578.1.12.4.1.1.3402" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -1789,7 +1789,7 @@
       <binding>
         <strength value="required" />
         <description value="Kommunenummer according to CodeSystem" />
-        <valueSet value="urn:oid:2.16.578.1.12.4.1.1.3402" />
+        <valueSet value="http://hl7.no/fhir/ValueSet/2.16.578.1.12.4.1.1.3402" />
       </binding>
       <mapping>
         <identity value="rim" />
