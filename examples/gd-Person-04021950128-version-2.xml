@@ -77,7 +77,7 @@
 				<valueCoding>
 					<system value="urn:oid:2.16.578.1.12.4.1.1.3402"/>
 					<code value="0238"/>
-					<display value="Bergen"/>
+					<display value="Nannestad"/>
 				</valueCoding>
 			</extension>
 		</extension>
@@ -169,6 +169,23 @@
 					<code value="1201"/>
 					<display value="Bergen"/>
 				</valueCoding>
+			</extension>
+		</extension>
+		<extension url="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata">
+			<extension url="registeredTimestamp"> <!-- ajourholdstidspunkt -->
+				<valueDateTime value="2019-09-04T00:00:00+02:00"/>
+			</extension>
+			<extension url="currentInfo"> <!-- ergjeldende -->
+				<valueBoolean value="false"/>
+			</extension>	
+			<extension url="source">
+				<valueString value ="KILDE_DSF"/>
+			</extension>
+			<extension url="reason"> <!-- aarsak -->
+				<valueString value="Årsakskode fra DSF:"/>
+			</extension>
+			<extension url="validFrom"> <!-- gyldighetstidspunkt -->
+				<valueDateTime value="2019-09-04T00:00:00+02:00"/>
 			</extension>
 		</extension>
 		<extension url="http://hl7.no/fhir/StructureDefinition/no-basis-address-official">

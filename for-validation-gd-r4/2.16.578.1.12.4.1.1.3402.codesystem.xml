@@ -23,4 +23,8 @@
 		<code value="0301"/>
 		<display value="Oslo"/>
     </concept>
+    <concept>
+		<code value="0238"/>
+		<display value="Nannestad"/>
+    </concept> 
 </CodeSystem>
