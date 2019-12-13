@@ -37,6 +37,7 @@
         <code value="Extension" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/gd-preferred-address" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Address.line">
       <path value="Address.line" />
