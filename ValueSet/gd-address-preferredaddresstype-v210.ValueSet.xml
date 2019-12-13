@@ -1,0 +1,41 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="gd-preferredaddress-type-v210.valueset"/>
+	<meta>
+		<versionId value="1"/>
+		<lastUpdated value="2019-12-13T00:00:00.000+00:00"/>
+	</meta>
+	<url value="http://ehelse.no/fhir/ValueSet/gd-preferredaddress-type-v210"/>
+	<version value="2.1.0"/>
+	<name value="GdPreferredaddresstypeValueSet"/>
+	<status value="draft"/>
+	<date value="2019-12-13T00:00:00.000+00:00"/>
+	<publisher value="Skatteetaten"/>
+	<purpose value="Valg av adressetype i kodeliste:
+* bostedsadresse
+* oppholdsadresse
+* postadresse
+* postadresseIUtlandet
+Valget styrer innholdet i adressegradering og kontaktadresseIFrittFormat hvor
+innholdet i disse hentes fra valgt registrert gjeldende adresse"/>
+	<compose>
+		<include >
+			<system value="http://ehelse.no/fhir/CodeSystem/gd-address-type-v201"/>
+		</include>
+		<concept>
+			<code value="Bostedsadresse" />
+			<display value="Bostedsadresse" />
+		</concept>
+		<concept>
+			<code value="Oppholdsadresse" />
+			<display value="Oppholdsadresse" />
+		</concept>
+		<concept>
+			<code value="Kontaktadresse" />
+			<display value="Kontaktadresse" />
+		</concept>
+		<concept>
+			<code value="KontaktadresseUtlandet" />
+			<display value="Kontaktadresse utlandet" />
+		</concept>
+	</compose>
+</ValueSet>
