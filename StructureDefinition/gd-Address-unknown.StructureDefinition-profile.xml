@@ -24,5 +24,14 @@
       <sliceName value="municipality" />
       <mustSupport value="true" />
     </element>
+    <element id="Address.extension:addressMetadata">
+      <path value="Address.extension" />
+      <sliceName value="addressMetadata" />
+    </element>
+    <element id="Address.extension:addressMetadata.extension:addressIsUnknown">
+      <path value="Address.extension.extension" />
+      <sliceName value="addressIsUnknown" />
+      <mustSupport value="true" />
+    </element>
   </differential>
 </StructureDefinition>
