@@ -13,4 +13,16 @@
   <type value="Address" />
   <baseDefinition value="http://ehelse.no/fhir/StructureDefinition/gd-Address" />
   <derivation value="constraint" />
+  <differential>
+    <element id="Address.extension:propertyInformation">
+      <path value="Address.extension" />
+      <sliceName value="propertyInformation" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Address.extension:propertyInformation.extension:municipality">
+      <path value="Address.extension.extension" />
+      <sliceName value="municipality" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
 </StructureDefinition>

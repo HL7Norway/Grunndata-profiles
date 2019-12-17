@@ -244,7 +244,7 @@
         <key value="addressType-1" />
         <severity value="error" />
         <human value="addressIsUnknown must have fregAddressType of AdressenErUkjent" />
-        <expression value="fregAddressType.Value()=AdressenErUkjent" />
+        <expression value="addressIsUnknown.value() and (fregAddressType.Value()=AdressenErUkjent)" />
         <source value="Extension" />
       </constraint>
     </element>

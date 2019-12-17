@@ -1,0 +1,98 @@
+<Person xmlns="http://hl7.org/fhir">
+	<meta>
+		<profile value="http://ehelse.no/fhir/StructureDefinition/gd-Person"/>
+	</meta>
+	<extension url="http://ehelse.no/fhir/StructureDefinition/gd-person-status">
+		<extension url="fregPersonStatus">
+			<valueCode value="bosatt"/>
+		</extension>
+		<extension url="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata">
+			<extension url="registeredTimestamp">
+				<valueDateTime value="2019-09-05T11:17:43.399+02:00"/>
+			</extension>
+			<extension url="currentInfo">
+				<valueBoolean value="true"/>
+			</extension>	
+			<extension url="source">
+				<valueString value="KILDE_DSF"/>
+			</extension>
+			<extension url="reason">
+				<valueString value="fødsel"/>
+			</extension>
+			<extension url="validFrom">
+				<valueDateTime value="2019-09-05T11:17:43.399+02:00"/>
+			</extension>
+		</extension>
+	</extension>
+	<identifier><!-- Fødselnummeret til brukeren -->
+		<extension url="http://ehelse.no/fhir/StructureDefinition/gd-person-identifier-status">
+			<valueCode value="iBruk"/>
+		</extension>
+		<system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
+		<value value="03121999934"/>
+	</identifier>
+	<name> <!-- Navnet til brukeren -->
+		<extension url="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata">
+			<extension url="registeredTimestamp">
+				<valueDateTime value="2019-12-03T09:50:27+01:00"/>
+			</extension>
+			<extension url="currentInfo">
+				<valueBoolean value="true"/>
+			</extension>	
+			<extension url="reason">	
+				<valueString value="Fødsel"/>
+			</extension>
+			<extension url="validFrom">
+				<valueDateTime value="2019-07-03T00:00:00+02:00"/>
+			</extension>
+		</extension>
+		<family value="ARTERIE"/>
+		<given value="UNG*GUTT"/>
+	</name>
+	<!-- Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes. -->
+	<gender value="male">
+		<extension url="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata">
+			<extension url="registeredTimestamp">
+				<valueDateTime value="2019-12-03T09:50:27+01:00"/>
+			</extension>
+			<extension url="currentInfo">
+				<valueBoolean value="true"/>
+			</extension>	
+			<extension url="reason">	
+				<valueString value="Fødsel"/>
+			</extension>
+			<extension url="validFrom">
+				<valueDateTime value="2019-12-03T00:00:00+01:00"/>
+			</extension>
+		</extension>
+	</gender>
+	<address>
+	<!-- Norwegian address: http://hl7.no/fhir/StructureDefinition/no-basis-Address -->
+	<!-- Norwegian basisprofil for Address resource adding Norwegian specific property information, official use of address and further explanation of the use for the data-elements in a Norwegian address. -->
+		<extension url="http://hl7.no/fhir/StructureDefinition/no-basis-address-official">
+		<!-- Defines the concept of an officially registered address in Norway. Usually this will be the adress registered in "Folkeregisteret" for persons or "Enhetsregisteret" for organizations. -->
+			<valueBoolean value="true"/>
+		</extension>
+		<extension url="http://hl7.no/fhir/StructureDefinition/no-basis-propertyinformation">
+		<!-- Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer. -->
+			<extension url="municipality">
+				<valueCoding>
+					<system value="urn:oid:2.16.578.1.12.4.1.1.3402"/>
+					<code value="1201"/>
+					<display value="Bergen"/>
+				</valueCoding>
+			</extension>
+		</extension>
+		<extension url="http://ehelse.no/fhir/StructureDefinition/gd-address-metadata">
+			<extension url="confidentiality">
+				<valueCode value="ugradert"/>
+			</extension>
+			<extension url="fregAddressContentType">
+				<valueCode value="UkjentBosted"/>
+			</extension>
+			<extension url="fregAddressType">
+				<valueCode value="Bostedsadresse"/>
+			</extension>
+		</extension>
+	</address>
+</Person>
