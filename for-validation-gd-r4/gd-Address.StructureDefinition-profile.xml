@@ -6,7 +6,7 @@
   <name value="GdAddress" />
   <title value="Address" />
   <status value="draft" />
-  <date value="2019-06-20" />
+  <date value="2019-12-18" />
   <description value="Grunndata adresse&#xD;&#xA;Contains information and metadata for addresses defined in Norwegian Master Person Index and Norwegian Directorate of e-Health's health related Master Person Index." />
   <fhirVersion value="4.0.0" />
   <kind value="complex-type" />
@@ -373,7 +373,7 @@
       <binding>
         <strength value="required" />
         <description value="Bydel" />
-        <valueSet value="urn:oid:2.16.578.1.12.4.1.1.3403" />
+        <valueSet value="http://hl7.no/fhir/ValueSet/2.16.578.1.12.4.1.1.3402" />
       </binding>
       <mapping>
         <identity value="rim" />

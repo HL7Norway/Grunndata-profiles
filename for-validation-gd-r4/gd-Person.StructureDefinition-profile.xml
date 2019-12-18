@@ -2,12 +2,12 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Person" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Person" />
-  <version value="2.0.6" />
+  <version value="2.1.0" />
   <name value="GdPerson" />
   <status value="draft" />
-  <date value="2019-10-18" />
+  <date value="2019-12-11" />
   <publisher value="Direktoratet for e-helse" />
-  <description value="Folkeregisterperson fra FREG." />
+  <description value="Folkeregisterperson fra FREG.&#xD;&#xA;&#xD;&#xA;versjon 2.1.0 - Feilretting på Adressestruktur" />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />
@@ -175,13 +175,14 @@
     <element id="Person.identifier">
       <path value="Person.identifier" />
       <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
+		  <discriminator>
+			  <type value="value" />
+			  <path value="system" />
+			</discriminator>
         <rules value="closed" />
       </slicing>
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Person.identifier:FNR">
       <path value="Person.identifier" />
@@ -256,9 +257,14 @@
     </element>
     <element id="Person.address">
       <path value="Person.address" />
+      <definition value="Grunndata uses Five different address content types expressed in gd-Address profiles that further restricts the use of the http://hl7.no/fhir/StructureDefinition/no-basis-Address to contain information from the norwegian Master person index.&#xD;&#xA;&#xD;&#xA;Based on: http://hl7.no/fhir/StructureDefinition/no-basis-Address" />
       <type>
         <code value="Address" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-Address" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-Address-cadastral" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-Address-international" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-Address-street" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-Address-box" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-Address-freeform" />
       </type>
       <mustSupport value="true" />
     </element>

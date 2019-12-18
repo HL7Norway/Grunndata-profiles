@@ -10,7 +10,7 @@
   <name value="NoBasisUrbanDistrict" />
   <title value="no-basis-urban-district" />
   <status value="active" />
-  <date value="2018-10-26" />
+  <date value="2018-12-19" />
   <description value="Simple extension containing information about what part of a norwegian city the patient is a resident. Administrative purpose." />
   <fhirVersion value="4.0.0" />
   <kind value="complex-type" />
@@ -184,7 +184,7 @@
           </extension>
         </code>
       </type>
-      <fixedString value="http://hl7.no/fhir/StructureDefinition/no-basis-urban-district" />
+      <fixedUri value="http://hl7.no/fhir/StructureDefinition/no-basis-urban-district" />
       <mapping>
         <identity value="rim" />
         <map value="N/A" />
@@ -239,7 +239,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedString value="http://hl7.no/fhir/StructureDefinition/no-basis-urban-district" />
+      <fixedUri value="http://hl7.no/fhir/StructureDefinition/no-basis-urban-district" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />

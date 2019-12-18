@@ -175,6 +175,10 @@
     <element id="Person.identifier">
       <path value="Person.identifier" />
       <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="system" />
+		</discriminator>
         <rules value="closed" />
       </slicing>
       <min value="1" />
