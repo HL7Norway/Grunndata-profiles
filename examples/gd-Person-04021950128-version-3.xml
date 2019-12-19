@@ -1,6 +1,6 @@
 <Person xmlns="http://hl7.org/fhir">
 	<meta>
-		<versionId value="2"/>
+		<versionId value="3"/>
 		<profile value="http://ehelse.no/fhir/StructureDefinition/gd-Person"/>
 	</meta>
 	<extension url="http://ehelse.no/fhir/StructureDefinition/gd-person-status">
