@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="gd-preferred-address" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/gd-preferred-address" />
+  <version value="2.1.0" />
+  <name value="GdPreferredAddress" />
+  <status value="draft" />
+  <date value="2019-12-13" />
+  <description value="The Indicates the citicen choice of preferred address for contact as registered in FREG" />
+  <fhirVersion value="4.0.0" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Address" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="preferred address" />
+      <definition value="The Indicates the citicen choice of preferred address for contact as registered in FREG&#xD;&#xA;&#xD;&#xA;valg av hvilken av adressene en person er oppført med som skal benyttes til å&#xD;&#xA;kontakte personen&#xD;&#xA;- Adressen som personen kan motta post på i inn- eller utland&#xD;&#xA;- Kan finnes i både strukturert og ustrukturert format&#xD;&#xA;Målet med å innføre denne nye egenskapen er at innbygger selv kan styre&#xD;&#xA;hvor denne vil motta post fra avsendere i samfunnet samtidig som at&#xD;&#xA;forvaltningen av ordningen er billigst mulig for Folkeregisteret.&#xD;&#xA;Innbygger kan velge hvilken av adressene denne har oppført i Registeret fra&#xD;&#xA;før og sette denne som preferert kontaktadresse. Eksempelvis kan en person&#xD;&#xA;som veksler mellom å oppholde seg på en norsk og en utenlandsk adresse&#xD;&#xA;gjennom året ganske enkelt skifte mellom bostedsadressen og&#xD;&#xA;&#xD;&#xA;postadresseIUtlandet kun ved å &quot;peke&quot; alternerende på den ønskede&#xD;&#xA;adressetypen gjennom året uten å melde adresseendring på noen av sine&#xD;&#xA;registrerte adresser.&#xD;&#xA;Så lenge DSF er master så leveres kontaktadresseIFrittFormat på ustrukturert&#xD;&#xA;format med store bokstaver siden dette er formen på informasjonen i DSF.&#xD;&#xA;Etter at Registeret blir master vil Registeret kunne levere&#xD;&#xA;kontaktadresseIFrittFormat på ustrukturert format med store og små bokstaver.&#xD;&#xA;Det kan kun være en gjeldende preferert kontaktadresse per tidspunkt." />
+      <alias value="preferertKontaktadresse" />
+      <max value="1" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/gd-preferred-address" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <short value="The preferred addresstype" />
+      <definition value="The preferred addresstype" />
+      <alias value="preferertKontaktadresse" />
+      <type>
+        <code value="code" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-preferredaddress-type-v210" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

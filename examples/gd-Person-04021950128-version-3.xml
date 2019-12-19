@@ -3,6 +3,12 @@
 		<versionId value="3"/>
 		<profile value="http://ehelse.no/fhir/StructureDefinition/gd-Person"/>
 	</meta>
+	<text>
+		<status value="additional"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+		  <p>Example Person demonstrating PreferertKontaktadresse</p>
+		</div>
+	</text>
 	<extension url="http://ehelse.no/fhir/StructureDefinition/gd-person-status">
 		<extension url="fregPersonStatus">
 			<valueCode value="bosatt"/>
@@ -244,9 +250,7 @@
 			</extension>
 		</extension>
 		<extension url="http://ehelse.no/fhir/StructureDefinition/gd-preferred-address">
-			<extension url="preferredAddress">
-				<valueCode value="Bostedsadresse"/>
-			</extension>
+			<valueCode value="Bostedsadresse"/>
 		</extension>
 		<line value="Åsvegen 358"/>
 		<line value="2030 NANNESTAD"/> <!-- Poststed -->
