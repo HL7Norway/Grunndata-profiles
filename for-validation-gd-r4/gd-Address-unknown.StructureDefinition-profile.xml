@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="gd-Address-unknown" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/gd-Address-unknown" />
+  <version value="2.1.0" />
+  <name value="GdAddressUnknown" />
+  <status value="draft" />
+  <date value="2019-12-16" />
+  <description value="The GdAddressUnknown is used for two kind of addresses from FREG&#xD;&#xA;For addresses with address-type of &quot;Bosted&quot; and &quot;DeltBosted&quot;, the uknown address can contain a municipality code. The content type of this addresses SHALL be &quot;UkjentBosted&quot;.&#xD;&#xA;For addresses with type &quot;Opphold&quot; this address can only contain the address metadata. The content type of this addresses should be &quot;AdressenErUkjent&quot;." />
+  <fhirVersion value="4.0.0" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Address" />
+  <baseDefinition value="http://ehelse.no/fhir/StructureDefinition/gd-Address" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Address.extension:propertyInformation">
+      <path value="Address.extension" />
+      <sliceName value="propertyInformation" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Address.extension:propertyInformation.extension:municipality">
+      <path value="Address.extension.extension" />
+      <sliceName value="municipality" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Address.extension:addressMetadata">
+      <path value="Address.extension" />
+      <sliceName value="addressMetadata" />
+    </element>
+    <element id="Address.extension:addressMetadata.extension:addressIsUnknown">
+      <path value="Address.extension.extension" />
+      <sliceName value="addressIsUnknown" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

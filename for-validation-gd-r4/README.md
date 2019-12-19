@@ -40,5 +40,3 @@ org.hl7.fhir.exceptions.DefinitionException: Profile GdAddress (http://ehelse.no
         at org.hl7.fhir.r5.validation.ValidationEngine.prepare(ValidationEngine.java:1326)
         at org.hl7.fhir.r5.validation.Validator.main(Validator.java:652)
  
-Forslag til fix: 
- - Forsøkte å lage ny GdAddress uten endringene i urban-district for å se om det glir igjennom.

@@ -134,12 +134,12 @@
       <path value="Extension.extension" />
       <sliceName value="fregAddressContentType" />
       <short value="Content type for address provided by FREG" />
-      <definition value="FREG exposes 7 AddressContentTypes&#xD;&#xA;&#xD;&#xA;Vegadresse&#xD;&#xA;VegadresseForPost&#xD;&#xA;Postboksadresse&#xD;&#xA;Matrikkeladresse&#xD;&#xA;InternasjonalAdresse&#xD;&#xA;PostadresseFrittFormat&#xD;&#xA;InternasjonalAdresseFrittFormat" />
+      <definition value="FREG exposes 9 AddressContentTypes&#xD;&#xA;&#xD;&#xA;Vegadresse&#xD;&#xA;VegadresseForPost&#xD;&#xA;Postboksadresse&#xD;&#xA;Matrikkeladresse&#xD;&#xA;InternasjonalAdresse&#xD;&#xA;PostadresseFrittFormat&#xD;&#xA;InternasjonalAdresseFrittFormat&#xD;&#xA;UkjentBosted&#xD;&#xA;AdressenErUkjent (only for &quot;oppholdsadresse&quot;)" />
       <max value="1" />
       <binding>
         <strength value="required" />
         <description value="Address Content Types" />
-        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-address-contenttype-v201" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-address-contenttype-v210" />
       </binding>
     </element>
     <element id="Extension.extension:fregAddressContentType.url">

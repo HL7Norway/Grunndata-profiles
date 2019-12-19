@@ -1,14 +1,14 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="gd-address-contenttype-v201.codesystem" />
+    <id value="gd-address-contenttype-v210.codesystem" />
     <meta>
         <versionId value="1" />
         <lastUpdated value="2019-04-24T00:00:00.000+00:00" />
     </meta>
-    <url value="http://ehelse.no/fhir/CodeSystem/gd-address-contenttype-v201" />
-    <version value="2.0.1" />
-    <name value="gd-address-contenttype-v201.codesystem" />
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-address-contenttype-v210" />
+    <version value="2.1.0" />
+    <name value="gd-address-contenttype-v210.codesystem" />
     <status value="draft" />
-    <date value="2019-09-25T00:00:00.000+00:00" />
+    <date value="2019-12-19T00:00:00.000+00:00" />
     <publisher value="Skatteetaten" />
     <content value="complete" />
     <concept>
@@ -35,8 +35,19 @@
         <code value="PostadresseFrittFormat" />
         <display value="Postadresse fritt format" />
     </concept>
-        <concept>
+    <concept>
         <code value="InternasjonalAdresseFrittFormat" />
         <display value="Internasjonal adresse fritt format" />
     </concept>
+    <concept>
+        <code value="UkjentBosted" />
+        <display value="bostedet til en person er ikke fastsatt til en fast bostedsadresse" />
+        <definition value="Valgegenskap som beskriver mangelen på en offisiell bostedsadresse (bosted/deltbosted). Hvis egenskapen bostedskommune ikke er oppgitt så har personen ukjent bosted i en ukjent kommune."/>
+    </concept>
+    <concept>
+        <code value="AdressenErUkjent" />
+        <display value="Ukjent Oppholdsadresse" />
+        <definition value="Valgegenskap som angir om Folkeregisteret har eller ikke har en kjent oppholdsadresse for personen." />
+    </concept>
+    
 </CodeSystem>

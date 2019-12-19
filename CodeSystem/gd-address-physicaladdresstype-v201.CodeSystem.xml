@@ -5,7 +5,7 @@
         <lastUpdated value="2018-10-17T00:00:00.000+00:00" />
     </meta>
     <url value="http://ehelse.no/fhir/CodeSystem/gd-address-physicaladdresstype-v201" />
-    <version value="5.0.0" />
+    <version value="2.0.1" />
     <name value="gd-address-physicaladdresstype-v201.codesystem" />
     <status value="draft" />
     <date value="2018-10-17T00:00:00.000+00:00" />
