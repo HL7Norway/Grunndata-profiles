@@ -22,6 +22,7 @@ Add to gd-Person:
           <path value="system" />
         </discriminator>
 
+Validatorfeil.
 no-basis-propertyinformation fix for official validator - removed oid binding of valueset in profiles, replace with http reference e.g. http://hl7.no/fhir/ValueSet/2.16.578.1.12.4.1.1.3402
 * C:\GitRepo\Grunndata-R4\for-validation-gd-r4\gd-Address-cadastral.StructureDefinition-profile.xml (2 hits)
 	Line 1634:         <valueSet value="urn:oid:2.16.578.1.12.4.1.1.3402" />
