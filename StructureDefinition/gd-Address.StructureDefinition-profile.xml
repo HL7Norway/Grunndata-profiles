@@ -2,11 +2,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Address" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Address" />
-  <version value="2.0.2" />
+  <version value="2.1.0" />
   <name value="GdAddress" />
-  <title value="Address" />
+  <title value="GdAddress" />
   <status value="draft" />
-  <date value="2019-06-20" />
+  <date value="2019-12-20" />
   <description value="Grunndata adresse&#xD;&#xA;Contains information and metadata for addresses defined in Norwegian Master Person Index and Norwegian Directorate of e-Health's health related Master Person Index." />
   <fhirVersion value="4.0.0" />
   <kind value="complex-type" />
@@ -60,12 +60,14 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Address.type">
-      <path value="Address.type" />
+    <element id="Address.use">
+      <path value="Address.use" />
+      <definition value="Grunndata don't use this element&#xD;&#xA;&#xD;&#xA;The purpose of this address.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide. In general the address used for visiting the person should have use &quot;home&quot; and type &quot;physical&quot; or &quot;both&quot;. The &quot;official&quot; flag can be either true or false." />
       <mustSupport value="false" />
     </element>
-    <element id="Address.text">
-      <path value="Address.text" />
+    <element id="Address.type">
+      <path value="Address.type" />
+      <definition value="Grunndata don't use this element&#xD;&#xA;&#xD;&#xA;Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide. In general the address used for visiting the person should have use &quot;home&quot; and type &quot;physical&quot; or &quot;both&quot;. The &quot;official&quot; flag can be either true or false." />
       <mustSupport value="false" />
     </element>
     <element id="Address.city">
