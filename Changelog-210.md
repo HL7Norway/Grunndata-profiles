@@ -1,5 +1,15 @@
 # Changelog from 2.1.0
 ## Changes implemented from version 2.0.6 to 2.1.0
+
+The update includes changes for:
+- Using all address-types in gd-Person
+- Representing unknown bostedsadresse and kontaktadresse from FREG
+- Include original event codes from FREG in gd-Provenance
+- Added extension to represent information regarding preferred address
+- Updated examples, images and documentation to represent changes in the definition
+
+## Files change description
+
 |File|Change description|
 |-
 |CodeSystem/gd-address-contenttype-v210|Updated codesystem to include types for "UkjentBosted" and "AdressenErUkjent"|
@@ -23,4 +33,5 @@
 |images/Hendelse Filter.png|New image to document Filter use-case|
 |images/gd-Address.png|Updated documentation of the gd-Address definitions|
 |images/gd-Person.png|Updated documentation of the gd-Person definitions|
-
+|images/gd-Provenance.png|Updated documentation of the gd-Provenance defintions|
+|ImplementationGuide/Address-documentation.md|Added better documentation about address types and address content types|
