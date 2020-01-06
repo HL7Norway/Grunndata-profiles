@@ -1,4 +1,4 @@
-# Changelog from 2.1.0
+# Changelog for 2.1.0
 ## Changes implemented from version 2.0.6 to 2.1.0
 
 The update includes changes for:
@@ -35,3 +35,9 @@ The update includes changes for:
 |images/gd-Person.png|Updated documentation of the gd-Person definitions|
 |images/gd-Provenance.png|Updated documentation of the gd-Provenance defintions|
 |ImplementationGuide/Address-documentation.md|Added better documentation about address types and address content types|
+
+## Documentation changes after 2.1.0 release
+|Date|File|Change description|
+|-
+|2020-01-06|CapabilityStatement/gd-Person-Server-Requirements.xml|Updated identifier searches to use POST transaction|
+|2020-01-06|Implementation guide text|Readers guide: Updated description of read and search by RESTful FHIR API using POST transaction|
