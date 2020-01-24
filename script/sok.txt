@@ -24,3 +24,7 @@ Virker ikke på HAPI?!?
 
 http://hapi.fhir.org/baseR4/RelatedPerson?
 
+Dataminiemering i praksis:
+http://hapi.fhir.org/baseR4/Person?identifier=04021950128&_elements=name.extension.middlename
+http://hapi.fhir.org/baseR4/Person/53098?_summary=true
+
