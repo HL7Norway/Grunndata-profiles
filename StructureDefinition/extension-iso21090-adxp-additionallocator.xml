@@ -9,7 +9,7 @@
     <valueInteger value="1"/>
   </extension>
   <url value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator"/>
-  <version value="4.0.1"/>
+  <version value="4.0.0"/>
   <name value="ADXP-additionalLocator"/>
   <status value="draft"/>
   <date value="2012-06-24"/>
