@@ -3,16 +3,16 @@
   <id value="gd-Address-contenttype" />
   <url value="http://ehelse.no/fhir/SearchParameter/gd-Address-contenttype" />
   <name value="GDAddressContentType-SearchParameter" />
-  <status value="draft" />
+  <status value="active" />
   <description value="SearchParameter for the content type of gd-Addresses" />
-  <code value="contenttype" />
+  <code value="addresscontenttype" />
   <base value="Patient" />
   <base value="Person" />
   <base value="RelatedPerson" />
   <base value="Practitioner" />
-  <type value="string" />
-  <expression value="Patient.address.extension.where(url='http://ehelse.no/fhir/StructureDefinition/gd-address-metadata'.extension.where(url='fregAddressContentType') | Patient.address.extension.where(url='http://ehelse.no/fhir/StructureDefinition/gd-address-metadata'.extension.where(url='fregAddressContentType') | Patient.address.extension.where(url='http://ehelse.no/fhir/StructureDefinition/gd-address-metadata'.extension.where(url='fregAddressContentType') | Patient.address.extension.where(url='http://ehelse.no/fhir/StructureDefinition/gd-address-metadata'.extension.where(url='fregAddressContentType')"/>
-  <xpath value="f:Patient/f:name/f:extension[@url='http://hl7.no/fhir/StructureDefinition/no-basis-middlename'] | f:Practitioner/f:name/f:extension[@url='http://hl7.no/fhir/StructureDefinition/no-basis-middlename'] | f:Person/f:name/f:extension[@url='http://hl7.no/fhir/StructureDefinition/no-basis-middlename']" />
+  <type value="token" />
+  <expression value="Patient.address.extension.where(url='http://ehelse.no/fhir/StructureDefinition/gd-address-metadata').extension.where(url='fregAddressContentType') | Person.address.extension.where(url='http://ehelse.no/fhir/StructureDefinition/gd-address-metadata').extension.where(url='fregAddressContentType') | RelatedPerson.address.extension.where(url='http://ehelse.no/fhir/StructureDefinition/gd-address-metadata').extension.where(url='fregAddressContentType') | Practitioner.address.extension.where(url='http://ehelse.no/fhir/StructureDefinition/gd-address-metadata').extension.where(url='fregAddressContentType')"/>
+  <xpath value="f:Patient/f:address/f:extension[@url='http://ehelse.no/fhir/StructureDefinition/gd-address-metadata']/f:extension[@url='fregAddressContentType'] | f:Person/f:address/f:extension[@url='http://ehelse.no/fhir/StructureDefinition/gd-address-metadata']/f:extension[@url='fregAddressContentType'] | f:Practitioner/f:address/f:extension[@url='http://ehelse.no/fhir/StructureDefinition/gd-address-metadata']/f:extension[@url='fregAddressContentType'] | f:RelatedPerson/f:address/f:extension[@url='http://ehelse.no/fhir/StructureDefinition/gd-address-metadata']/f:extension[@url='fregAddressContentType']" />
   <xpathUsage value="normal" />
   <multipleOr value="true" />
   <multipleAnd value="true" />
