@@ -83,6 +83,7 @@
     </element>
     <element id="Person.language">
       <path value="Person.language" />
+      <definition value="&#xD;&#xA;&#xD;&#xA;The base language in which the resource is written." />
       <mustSupport value="false" />
     </element>
     <element id="Person.text">
