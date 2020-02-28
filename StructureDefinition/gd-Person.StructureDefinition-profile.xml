@@ -123,6 +123,11 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="Person.extension:birth.extension:birthYear">
+      <path value="Person.extension.extension" />
+      <sliceName value="birthYear" />
+      <definition value="The birth year for the person registered in FREG. &#xD;&#xA;&#xD;&#xA;FREG always exposes a birthYear that can be found in this element. When the brithDate is known this information will exist in addition to the information about the birthYear of the person." />
+    </element>
     <element id="Person.extension:birthInNorway">
       <path value="Person.extension" />
       <sliceName value="birthInNorway" />
@@ -201,7 +206,7 @@
     <element id="Person.identifier:foreignIdentifier">
       <path value="Person.identifier" />
       <sliceName value="foreignIdentifier" />
-      <definition value="Contains both values from FREG only discriminated by the identifierType value. FREG uses two different elements for the &#xD;&#xA;&#xD;&#xA;utenlandsk personidentifikasjon: informasjon om et personidentifikasjonsnummer fra en utenlandsk myndighet&#xD;&#xA;&#xD;&#xA;utlendingsmyndighetenes identifikasjonsnummer: personidentifikasjonsnummer for person som blir førstegangsregistrert i landet av utlendingsmyndighetene. Dette nummeret går i dag ofte under navnet DUF-nummer" />
+      <definition value="Identification number from foreign authority or the identifier value from the Norwegian immigration administration.&#xD;&#xA;Foreign identifiers from FREG is discriminated by the identifierType value. FREG uses two different elements for this information:&#xD;&#xA;- utenlandsk personidentifikasjon: informasjon om et personidentifikasjonsnummer fra en utenlandsk myndighet&#xD;&#xA;- utlendingsmyndighetenes identifikasjonsnummer: personidentifikasjonsnummer for person som blir førstegangsregistrert i landet av utlendingsmyndighetene. Dette nummeret går i dag ofte under navnet DUF-nummer" />
       <type>
         <code value="Identifier" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/gd-Identifier-foreign" />
@@ -247,7 +252,7 @@
     </element>
     <element id="Person.birthDate">
       <path value="Person.birthDate" />
-      <definition value="The birth date for the person registered in FREG.&#xD;&#xA;&#xD;&#xA;The metadata about the birtDate from FREG is always connected to the gd-birth extension: Person.extension:birth&#xD;&#xA;FREG can expose more than one birthDate of any given person but the FHIR model only allows one recorded birthDate&#xD;&#xA;&#xD;&#xA;datoen personen er født/antas å være født&#xD;&#xA;&#xD;&#xA;I dagens folkeregister har vi ikke eget felt for fødselsdato, fødselsdatoen fremkommer kun av fødselsnummer/d-nummer. Dette betyr at når vi ikke har tilgjengelige fødselsnumre/d-numre for en spesifikk fødselsdato så settes en fiktiv fødselsdato i fødselsnummeret/d-nummeret. Den reelle fødselsdatoen er dermed ikke tilgjengelig.&#xD;&#xA;&#xD;&#xA;Etter migrering av fødselsinformasjon fra DSF til Registeret og etter at Freg er master:&#xD;&#xA;I modernisert folkeregister vil vi tilgjengeliggjøre den faktiske eller den fastsatte fødselsdatoen fra norske myndigheter. Denne kan avvike fra den fødselsdatoen som inngår i fødselsnummeret/d-nummeret." />
+      <definition value="The birth date for the person registered in FREG. FREG always exposes a birthYear that can be found in the gd-birth extension: Person.extension:birthYear&#xD;&#xA;&#xD;&#xA;When the brithDate is known this information will exist in addition to the information about the birthYear found in the gd-birth extension.&#xD;&#xA;&#xD;&#xA;The metadata about the birtDate from FREG is always connected to the gd-birth extension: Person.extension:birth&#xD;&#xA;FREG can expose more than one birthDate of any given person but the FHIR model only allows one recorded birthDate&#xD;&#xA;&#xD;&#xA;datoen personen er født/antas å være født&#xD;&#xA;&#xD;&#xA;I dagens folkeregister har vi ikke eget felt for fødselsdato, fødselsdatoen fremkommer kun av fødselsnummer/d-nummer. Dette betyr at når vi ikke har tilgjengelige fødselsnumre/d-numre for en spesifikk fødselsdato så settes en fiktiv fødselsdato i fødselsnummeret/d-nummeret. Den reelle fødselsdatoen er dermed ikke tilgjengelig.&#xD;&#xA;&#xD;&#xA;Etter migrering av fødselsinformasjon fra DSF til Registeret og etter at Freg er master:&#xD;&#xA;I modernisert folkeregister vil vi tilgjengeliggjøre den faktiske eller den fastsatte fødselsdatoen fra norske myndigheter. Denne kan avvike fra den fødselsdatoen som inngår i fødselsnummeret/d-nummeret." />
       <alias value="fødselsdato" />
       <mustSupport value="true" />
     </element>
