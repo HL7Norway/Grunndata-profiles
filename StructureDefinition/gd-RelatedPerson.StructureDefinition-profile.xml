@@ -17,7 +17,7 @@
     <element id="RelatedPerson">
       <path value="RelatedPerson" />
       <short value="A person that is related to another person" />
-      <definition value="A related person registered in the norwegian master Person index (FREG). The RelatedPerson instance can contain multiple relationsships registered on a given between a Person and a RelatedPerson instance. &#xD;&#xA;&#xD;&#xA;In the case where the RelatedPerson instance itself does not represent a person registered in FREG (foreign citizen), the name, citizenship, birthDate and gender is returned in the RelatedPerson instance. In all other cases only the RelatedPerson.identifier containting FNR or DNR is returned. For Guardians the name and identifier is returned. " />
+      <definition value="A related person registered in the norwegian master Person index (FREG). The RelatedPerson instance can contain multiple relationsships registered on a given between a Person and a RelatedPerson instance. &#xD;&#xA;&#xD;&#xA;In the case where the RelatedPerson instance itself does not represent a person registered in FREG (foreign citizen), the name, citizenship, birthDate and gender is returned in the RelatedPerson instance. In all other cases only the RelatedPerson.identifier containting FNR or DNR is returned. For Guardians the name and identifier is returned." />
       <comment value="For verge: &#xD;&#xA;person som ivaretar umyndiges interesser og opptrer som rettslig representant på umyndiges vegne i saker" />
       <alias value="verge" />
       <alias value="VergeRepresentantEllerFullmektig" />
@@ -95,7 +95,7 @@
     </element>
     <element id="RelatedPerson.relationship">
       <path value="RelatedPerson.relationship" />
-      <definition value="no-basis: adds slice definitions for four relationship codings from the Norwegian Folkeregisteret.&#xD;&#xA;Some relationships are ordered (a person is a parent of a child, the child on the other hand has a parent). Ordered relationships are always expressed from the RelatedPerson instance to the Patient/Person instance referenced in the RelatedPerson.patient element. This will usually be the EXACT OPPOSITE of the actual data recorded in FREG, as relationships in FREG are recorded with the view from the Person to the RelatedPersons.&#xD;&#xA;&#xD;&#xA;The nature of the relationship between a patient and the related person." />
+      <definition value="grunndata profile: Adds slice definition for guardianship relationship type in addition to the existing slice definitions from no-basis (marital, family and parental). All relationships are ordered from the RelatedPerson.patient instance to the RelatedPerson instance to excactly copy the ordereing of how the relationship is expressed in the Norwegian Folkeregister.&#xD;&#xA;&#xD;&#xA;The nature of the relationship between a patient and the related person." />
       <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.relationship:maritalStatus">
@@ -163,7 +163,6 @@
     <element id="RelatedPerson.relationship:parental.extension:fregParental">
       <path value="RelatedPerson.relationship.extension" />
       <sliceName value="fregParental" />
-      <definition value="Extension for representing information regarding parental responsibility parent-child or child-parent. Represents the same information awailable in the Norwegian Folkeregister." />
       <type>
         <code value="Extension" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/gd-parental" />

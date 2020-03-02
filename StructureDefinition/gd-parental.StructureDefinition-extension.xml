@@ -25,7 +25,7 @@
     <element id="Extension">
       <path value="Extension" />
       <short value="Foreldreansvar" />
-      <definition value="Extension for representing information regarding parental responsibility parent-child/child-parent. Represents the same information awailable in the Norwegian Folkeregister." />
+      <definition value="Extension for representing information regarding parental responsibility parent-child/child-parent. Represents the same information awailable in the Norwegian Folkeregister.&#xD;&#xA;&#xD;&#xA;The information from FREG contains both the identifier of the responsibleParty and the identifier of the subjectOfResponsibility. If either the subject or the responsible party is not a norwegian citizen registered in FREG the elements: responsiblePartyNoId or subjectOfResponsibilityNoId (contains the name of the party/subject) is used.&#xD;&#xA;&#xD;&#xA;If the responsible party is an Organization, responsibleOrganization (identifier from enhetsregisteret) is used." />
       <alias value="foreldreansvar" />
       <max value="1" />
     </element>
