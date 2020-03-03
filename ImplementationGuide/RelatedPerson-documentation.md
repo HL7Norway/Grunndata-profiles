@@ -20,15 +20,29 @@ The RelatedPerson resource instances includes three main parts of information to
 - information describing the nature of the relationships between the RelatedPerson and the patient referenced
 
 The FREG relationships can be represented by this logical model:
-<a href="https://raw.githubusercontent.com/HL7Norway/Grunndata-profiles/master/images/Relationship-Logical-FREG.png">
-<img src="https://raw.githubusercontent.com/HL7Norway/Grunndata-profiles/master/images/Relationship-Logical-FREG.png" alt="Drawing" style="width: 100%;max-width: 1000px"/></a>
+<a href="https://raw.githubusercontent.com/HL7Norway/Grunndata-profiles/develop/images/Relationship-Logical-FREG.png">
+<img src="https://raw.githubusercontent.com/HL7Norway/Grunndata-profiles/develop/images/Relationship-Logical-FREG.png" alt="Drawing" style="width: 100%;max-width: 1000px"/></a>
 
 The corresponding FHIR model can be expressed like this:
-<a href="https://raw.githubusercontent.com/HL7Norway/Grunndata-profiles/master/images/Relationship-Logical-FHIR.png">
-<img src="https://raw.githubusercontent.com/HL7Norway/Grunndata-profiles/master/images/Relationship-Logical-FHIR.png" alt="Drawing" style="width: 100%;max-width: 1000px"/></a>
+<a href="https://raw.githubusercontent.com/HL7Norway/Grunndata-profiles/develop/images/Relationship-Logical-FHIR.png">
+<img src="https://raw.githubusercontent.com/HL7Norway/Grunndata-profiles/develop/images/Relationship-Logical-FHIR.png" alt="Drawing" style="width: 100%;max-width: 1000px"/></a>
 
 The main difference on how the relationships is exposed to the readers of the services is that while FREG exposes relationships as part of a person document, the FHIR model exposes each persons relations to another person through a separate RelatedPerson instance containing a reference to the person and a record of every relationship between the person and the RelatedPerson. A simple way of describing this is that while all relationships of a person is awailable in a single document in FREG, the same information is awailable throug one Person resource instance and several RelatedPerson resource instances in the FHIR model.
 
-A simple example of the FHIR resource instances needed to describe a small family containing a married couple and a single child.
+## Example FREG vs FHIR model
 
+A simple example of the FHIR resource instances needed to describe a small family containing a married couple and a single child. The logical model of the relationships can be expressed like this:
+<a href="https://raw.githubusercontent.com/HL7Norway/Grunndata-profiles/develop/images/Logical-family-relationships.png">
+<img src="https://raw.githubusercontent.com/HL7Norway/Grunndata-profiles/develop/images/Logical-family-relationships.png" alt="Drawing" style="width: 100%;max-width: 1000px"/></a>
 
+### FREG model example
+
+Using the information model described by FREG this information is represented like this:
+<a href="https://raw.githubusercontent.com/HL7Norway/Grunndata-profiles/develop/images/Relasjon-family-relationships-FREG-example.png">
+<img src="https://raw.githubusercontent.com/HL7Norway/Grunndata-profiles/develop/images/Relasjon-family-relationships-FREG-example.png" alt="Drawing" style="width: 100%;max-width: 1000px"/></a>
+
+### FHIR model example
+
+Using the FHIR based model the same information can be represented like this:
+<a href="https://raw.githubusercontent.com/HL7Norway/Grunndata-profiles/develop/images/RelatedPerson-family-relationships-FHIR-example.png">
+<img src="https://raw.githubusercontent.com/HL7Norway/Grunndata-profiles/develop/images/RelatedPerson-family-relationships-FHIR-example.png" alt="Drawing" style="width: 100%;max-width: 1000px"/></a>
