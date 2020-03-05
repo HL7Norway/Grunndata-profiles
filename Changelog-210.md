@@ -1,5 +1,18 @@
+#Changelog for 2.2.0
+## Documents the changes implemented from version 2.1.0 to 2.2.0
+### Release date: 2020-03-05
+
+This is a service release to includes changes to the documentation based on feedback on the 2.1.0 version. No breaking changes in the capabilities are documented in this version.
+- Added SearchParameter definitions for AddressContentType and AddressType
+- Updated CapabilityStatement to include several new search parameters
+- Major update to the documentation of RelatedPerson to clarify how this Resource is used to code FREG data
+- Updates to the "Readers Guide" to clarify the use of POST transaction and the meaning of must-support flags in this ImplementationGuide
+- Some minor documentation changes in the gd-Person StructureDefinition updates to the clearify documentation
+- 
+
 # Changelog for 2.1.0
 ## Changes implemented from version 2.0.6 to 2.1.0
+### Release date: 2019-12-19
 
 The update includes changes for:
 - Using all address-types in gd-Person
