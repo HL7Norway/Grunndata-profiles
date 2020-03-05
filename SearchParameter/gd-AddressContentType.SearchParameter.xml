@@ -2,7 +2,7 @@
 <SearchParameter xmlns="http://hl7.org/fhir">
   <id value="gd-Address-contenttype" />
   <url value="http://ehelse.no/fhir/SearchParameter/gd-Address-contenttype" />
-  <name value="GDAddressContentType-SearchParameter" />
+  <name value="GDAddressContentTypeSearchParameter" />
   <status value="active" />
   <description value="SearchParameter for the content type of gd-Addresses" />
   <code value="addresscontenttype" />
