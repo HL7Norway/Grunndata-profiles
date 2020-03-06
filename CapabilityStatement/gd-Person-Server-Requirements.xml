@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CapabilityStatement xmlns="http://hl7.org/fhir" >
-	<url value="http://ehelse.no/fhir/CapabilityStatement/gd-Person-Server-Requirements/v003"/>
+<CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir C:/FHIR/R4/fhir-all-xsd/fhir-single.xsd">
+	<url value="http://ehelse.no/fhir/CapabilityStatement/gd-Person-Server-Requirements/v211"/>
 	<name value="PersonServerRequirements"/>
 	<title value="Requirements for Grunndata Person Service Interface"/>
 	<status value="draft"/>
@@ -89,6 +89,22 @@
 				<name value="gender"/>
 				<type value="token"/>
 				<documentation value="Search on Person.gender: GET [base]/Person?gender=[code]"/>
+			</searchParam>
+			<searchParam>
+				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+					<valueCode value="SHALL"/>
+				</extension>
+				<name value="address"/>
+				<type value="string"/>
+				<documentation value="A server defined search that may match any of the string fields in the Address, including line, city, district, state, country, postalCode, and/or text. Search on Person.address: GET [base]/Person?address=[string]"/>
+			</searchParam>
+			<searchParam>
+				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+					<valueCode value="SHALL"/>
+				</extension>
+				<name value="address-city"/>
+				<type value="string"/>
+				<documentation value="A city specified in an address. Search on Person.address.city: GET [base]/Person?address.city=[string]"/>
 			</searchParam>
 		</resource>
 		<resource>
