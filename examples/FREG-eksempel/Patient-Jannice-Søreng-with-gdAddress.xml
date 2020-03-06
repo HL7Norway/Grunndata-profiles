@@ -80,7 +80,7 @@
 	<maritalStatus>
 	<!-- This field contains a patient's most recent marital (civil) status. -->
 		<coding>
-			<system value="http://hl7.org/fhir/v3/MaritalStatus"/>
+			<system value="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"/>
 			<code value="U"/>
 			<display value="unmarried"/>
 		</coding>
@@ -93,9 +93,9 @@
 		<!-- Coded value for the relationship
 		A coded value should be used for the main contact person. -->
 			<coding>
-				<system value="http://hl7.org/fhir/v2/0131"/>
-				<code value="CP"/>
-				<display value="Contact person"/>
+				<system value="http://terminology.hl7.org/CodeSystem/v2-0131"/>
+				<code value="C"/>
+				<display value="Emergency Contact"/>
 			</coding>
 		</relationship>
 		<relationship>

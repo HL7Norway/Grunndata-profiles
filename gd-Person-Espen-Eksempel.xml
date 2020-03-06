@@ -1,0 +1,131 @@
+<Person xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/FHIR/R4/fhir-all-xsd/fhir-single.xsd">
+	<meta>
+		<profile value="http://ehelse.no/fhir/StructureDefinition/gd-Person"/>
+	</meta>
+	<extension url="http://ehelse.no/fhir/StructureDefinition/gd-person-status">
+		<extension url="fregPersonStatus">
+			<valueCode value="bosatt"/>
+		</extension>
+		<extension url="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata">
+			<extension url="registeredTimestamp">
+				<valueDateTime value="2019-09-05T11:17:43.399+02:00"/>
+			</extension>
+			<extension url="currentInfo">
+				<valueBoolean value="true"/>
+			</extension>	
+			<extension url="source">
+				<valueString value="KILDE_DSF"/>
+			</extension>
+			<extension url="validFrom">
+				<valueDateTime value="2019-09-05T11:17:43.399+02:00"/>
+			</extension>
+		</extension>
+	</extension>
+	<!-- The nationality of the patient. should be a country code from ISO 3166-1 code system -->
+	<identifier> <!-- Fødselnummeret til brukeren -->
+	<!-- Norsk fødselsnummer -->
+		<system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
+		<value value="210377xxxxx"/>
+	</identifier>
+	<name> <!-- Navnet til brukeren -->
+		<extension url="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata">
+			<extension url="registeredTimestamp">
+				<valueDateTime value="2019-05-03T09:50:05+02:00"/>
+			</extension>
+			<extension url="currentInfo">
+				<valueBoolean value="true"/>
+			</extension>	
+			<extension url="reason">	
+				<valueString value="Første gangs navnevalg"/>
+			</extension>
+			<extension url="validFrom">
+				<valueDateTime value="2019-07-03T00:00:00+02:00"/>
+			</extension>
+		</extension>
+		<extension url="http://hl7.no/fhir/StructureDefinition/no-basis-middlename">
+				<valueString value="Stranger"/>
+		</extension>
+		<family value="Eksempel"/>
+		<given value="Espen"/>
+	</name>
+	<telecom>
+		<system value="phone"/>
+		<value value="+4798216832"/>
+		<use value="home"/>
+	</telecom>
+	<!-- Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes. -->
+	<gender value="male">
+		<extension url="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata">
+			<extension url="registeredTimestamp">
+				<valueDateTime value="2019-02-18T11:15:43+01:00"/>
+			</extension>
+			<extension url="currentInfo">
+				<valueBoolean value="true"/>
+			</extension>	
+			<extension url="reason">	
+				<valueString value="Fødsel"/>
+			</extension>
+			<extension url="validFrom">
+				<valueDateTime value="2019-02-18T00:00:00+01:00"/>
+			</extension>
+		</extension>
+	</gender>
+	<address>
+	<!-- Norwegian address: http://hl7.no/fhir/StructureDefinition/no-basis-Address -->
+	<!-- Norwegian basisprofil for Address resource adding Norwegian specific property information, official use of address and further explanation of the use for the data-elements in a Norwegian address. -->
+		<extension url="http://hl7.no/fhir/StructureDefinition/no-basis-propertyinformation">
+		<!-- Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer. -->
+		<!-- I dette eksempelet er bare kommunenavn angitt, men vanligvis vil man benytte address.distreict hvis man bare ønsker kommunenavnet -->
+			<extension url="municipality">
+				<valueCoding>
+					<system value="urn:oid:2.16.578.1.12.4.1.1.3402"/>
+					<code value="0301"/>
+					<display value="Oslo"/>
+				</valueCoding>
+			</extension>
+		</extension>
+<extension url="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata">
+			<extension url="registeredTimestamp"> <!-- ajourholdstidspunkt -->
+				<valueDateTime value="2019-10-06T08:07:21+02:00"/>
+			</extension>
+			<extension url="currentInfo"> <!-- ergjeldende -->
+				<valueBoolean value="true"/>
+			</extension>	
+			<extension url="reason"> <!-- aarsak -->
+				<valueString value="Adresseendring fra matrikkelen"/>
+			</extension>
+			<extension url="validFrom"> <!-- gyldighetstidspunkt -->
+				<valueDateTime value="2019-10-06T00:00:00+02:00"/>
+			</extension>
+		</extension>
+		<extension url="http://hl7.no/fhir/StructureDefinition/no-basis-address-official">
+		<!-- Defines the concept of an officially registered address in Norway. Usually this will be the adress registered in "Folkeregisteret" for persons or "Enhetsregisteret" for organizations. -->
+			<valueBoolean value="true"/>
+		</extension>
+		<extension url="http://ehelse.no/fhir/StructureDefinition/gd-address-metadata">
+			<extension url="confidentiality"> <!-- adressegradering -->
+				<valueCode value="ugradert"/>
+			</extension>
+			<extension url="fregAddressContentType"> 
+				<valueCode value="Vegadresse"/>
+			</extension>
+			<extension url="fregAddressType">
+				<valueCode value="Bostedsadresse"/>
+			</extension>
+			<extension url="cadastralIdentifier"> <!-- adresseIdentifikatorFraMatrikkelen -->
+				<valueString value="161653509"/>
+			</extension>
+		</extension>
+		<use value="home"/>
+		<line value="Stålverkskroken 14"/>
+		<city value="Oslo"/> <!-- Poststed -->
+		<district value="Oslo"/> <!-- Kommunenavn -->
+		<postalCode value="0661"/> <!-- postnummer -->
+		<country value="NO"/> <!-- land (er overflødig i norge -->
+	</address>
+	<link>
+		<target>
+			<reference value="Patient/592410"/>
+		</target>
+	</link>
+</Person>

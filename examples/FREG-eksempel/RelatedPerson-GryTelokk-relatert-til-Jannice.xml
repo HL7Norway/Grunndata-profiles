@@ -1,0 +1,76 @@
+<RelatedPerson xmlns="http://hl7.org/fhir">
+	<meta>
+		<profile value="http://ehelse.no/fhir/StructureDefinition/gd-RelatedPerson"/>
+	</meta>
+	<extension url="http://hl7.no/fhir/StructureDefinition/no-basis-person-citizenship">
+		<extension url="code">
+			<valueCodeableConcept>
+				<coding>
+					<system value="urn:iso:std:iso:3166" />
+                    <code value="NO" />
+				</coding>
+			</valueCodeableConcept>
+		</extension>
+	</extension>
+	<identifier>
+		<system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
+		<value value="12057900499"/>
+	</identifier>
+	<patient>
+		<reference value="Patient/597064"/>
+		<identifier>
+			<system value="urn:oid:2.16.578.1.12.4.1.4.1" />
+			<value value="21030550231" />
+		</identifier>
+	</patient>
+	<relationship>
+		<extension url="http://ehelse.no/fhir/StructureDefinition/gd-marital-status">
+			<extension url="authority">
+				<valueString value="domstolen"/>
+			</extension>
+			<extension url="maritalDate">
+				<valueDate value="2019-10-18"/>
+			</extension>
+			<extension url="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata">
+				<extension url="currentInfo">
+					<valueBoolean value="true"/>
+				</extension>
+				<extension url="validFrom">
+					<valueDateTime value="2019-10-18"/>
+				</extension>
+			</extension>
+		</extension>
+		<coding>
+			<system value="http://hl7.no/fhir/CodeSystem/no-basis-marital-status"/>
+			<code value="gift"/>
+		</coding>
+	</relationship>
+	<relationship>
+		<extension url="http://ehelse.no/fhir/StructureDefinition/gd-guardianship">
+			<extension url="office">
+				<valueString value="domstolen"/>
+			</extension>
+			<extension url="scope">
+				<valueCoding>
+					<code value="all"/>
+				 </valueCoding>
+			</extension>
+			<extension url="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata">
+				<extension url="currentInfo">
+					<valueBoolean value="true"/>
+				</extension>
+				<extension url="validFrom">
+					<valueDateTime value="2018-10-10"/>
+				</extension>
+			</extension>
+		</extension>
+		<coding>
+			<system value="http://ehelse.no/fhir/CodeSystem/gd-person-guardiantype-v05"/>
+			<code value="midlertidigForVoksen"/>
+		</coding>
+	</relationship>
+	<name>
+		<family value="Telokk"/>
+		<given value="Gry"/>
+	</name>
+</RelatedPerson>

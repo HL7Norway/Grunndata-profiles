@@ -1,5 +1,19 @@
+#Changelog for 2.2.0
+## Documents the changes implemented from version 2.1.0 to 2.2.0
+### Release date: 2020-03-06
+
+This is a service release to includes changes to the documentation based on feedback on the 2.1.0 version. No breaking changes in the capabilities are documented in this version, but several updated to extend the capabilites described in the CapabilityStatement.
+- Added search parameter support for several search parameters in the CapabilityStatement
+- Added SearchParameter definitions for AddressContentType and AddressType
+- Updated CapabilityStatement to include several new search parameters
+- Major update to the documentation of RelatedPerson to clarify how this Resource is used to code FREG data
+- Updates to the "Readers Guide" to clarify the use of POST transaction and the meaning of must-support flags in this ImplementationGuide
+- Some minor documentation changes in the gd-Person StructureDefinition updates to clearify the documentation
+- 
+
 # Changelog for 2.1.0
 ## Changes implemented from version 2.0.6 to 2.1.0
+### Release date: 2019-12-19
 
 The update includes changes for:
 - Using all address-types in gd-Person
@@ -41,3 +55,4 @@ The update includes changes for:
 |-
 |2020-01-06|CapabilityStatement/gd-Person-Server-Requirements.xml|Updated identifier searches to use POST transaction|
 |2020-01-06|Implementation guide text|Readers guide: Updated description of read and search by RESTful FHIR API using POST transaction|
+|2020-02-28|Implementation guide text|Readers guide: Updated description of must support in the Readers Guide. Added description of must-support="false" and not-set|

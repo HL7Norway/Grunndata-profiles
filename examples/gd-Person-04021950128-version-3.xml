@@ -1,4 +1,4 @@
-<Person xmlns="http://hl7.org/fhir">
+<Person xmlns="http://hl7.org/fhir" >
 	<meta>
 		<versionId value="3"/>
 		<profile value="http://ehelse.no/fhir/StructureDefinition/gd-Person"/>
