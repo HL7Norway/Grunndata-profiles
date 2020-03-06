@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir C:/FHIR/R4/fhir-all-xsd/fhir-single.xsd">
-	<url value="http://ehelse.no/fhir/CapabilityStatement/gd-Person-Server-Requirements/v211"/>
+	<url value="http://ehelse.no/fhir/CapabilityStatement/gd-Person-Server-Requirements/v220"/>
+	<version value="2.2.0"/>
 	<name value="PersonServerRequirements"/>
 	<title value="Requirements for Grunndata Person Service Interface"/>
 	<status value="draft"/>
-	<date value="2019-01-06"/>
+	<date value="2020-03-06"/>
 	<description value="Requirements for the Grunndata Person service provided by Direktoratet for e-helse"/>
 	<kind value="requirements"/>
 	<fhirVersion value="4.0.0"/>
@@ -138,7 +139,7 @@
 				</extension>
 				<name value="identifier"/>
 				<type value="token"/>
-				<documentation value="Search on RelatedPerson.identifier: POST [base]/RelatedPerson/_search parameters in HTTP body: identifier=[system]|[code] Example: POST [base]/RelatedPatient/_search parameters in HTTP body: identifier=urn:oid:2.16.578.1.12.4.1.4.1|13116900216"/>
+				<documentation value="Search on RelatedPerson.identifier: POST [base]/RelatedPerson/_search parameters in HTTP body: identifier=[system]|[code] Example: POST [base]/RelatedPerson/_search parameters in HTTP body: identifier=urn:oid:2.16.578.1.12.4.1.4.1|13116900216"/>
 			</searchParam>
 			<searchParam>
 				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -152,6 +153,11 @@
 				<name value="name"/>
 				<type value="string"/>
 				<documentation value="Search on RelatedPerson.name: GET [base]/RelatedPerson?name=[string]"/>
+			</searchParam>
+			<searchParam>
+				<name value="relationship"/>
+				<type value="token"/>
+				<documentation value="Search on RelatedPerson.relationship: GET [base]/RelatedPerson?relationship=[system]|[code]"/>
 			</searchParam>
 		</resource>
 		<resource>

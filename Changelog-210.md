@@ -9,7 +9,23 @@ This is a service release to includes changes to the documentation based on feed
 - Major update to the documentation of RelatedPerson to clarify how this Resource is used to code FREG data
 - Updates to the "Readers Guide" to clarify the use of POST transaction and the meaning of must-support flags in this ImplementationGuide
 - Some minor documentation changes in the gd-Person StructureDefinition updates to clearify the documentation
-- 
+- gd-birth-in-norway bugfix
+
+## Files change description
+|File|Change description|
+|-
+|StructureDefinition/gd-birth-in-norway.StructureDefinition-extension.xml|Added freg-metadata to the extension to hold metadata from freg about this content|
+|CapabilityStatement/gd-Server-Requirements.xml|Several updates and bugfixes|
+|SearchParameter/gd-AddressType.SearchParameter.xml|New File|
+|SearchParameter/gd-AddressType.SearchParameter.xml|New File|
+|StructureDefinition/gd-deceased.StructureDefinition-extension.xml|Added gd-RelatedPerson context|
+|StructureDefinition/gd-person-status.StructureDefinition-extension.xml|Added gd-RelatedPerson context|
+|StructureDefinition/gd-Person.StructureDefinition-profile.xml|Gd-Person update of the documentation based on feedback from consumers: Updated Foreign identifier documentation. Updated information about the birtDate and birthYear that will coexist in information from FREG.|
+|gd-RelatedPerson.StructureDefinition-profile.xml|Documentation changes|
+|gd-guardianship.StructureDefinition-extension.xml|Documentation changes|
+|StructureDefinition/gd-parental.StructureDefinition-extension.xml|Documentation changes|
+
+
 
 # Changelog for 2.1.0
 ## Changes implemented from version 2.0.6 to 2.1.0
