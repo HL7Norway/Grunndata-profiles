@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir C:/FHIR/R4/fhir-all-xsd/fhir-single.xsd">
-	<url value="http://ehelse.no/fhir/CapabilityStatement/gd-Person-Server-Requirements/v220"/>
-	<version value="2.2.0"/>
+	<url value="http://ehelse.no/fhir/CapabilityStatement/gd-Person-Server-Requirements/v300"/>
+	<version value="3.0.0"/>
 	<name value="PersonServerRequirements"/>
 	<title value="Requirements for Grunndata Person Service Interface"/>
 	<status value="draft"/>
@@ -36,6 +36,22 @@
 				<code value="vread"/>
 				<documentation value="Normal read operation on specific versions."/>
 			</interaction>
+			<interaction>
+				<code value="history-instance"/>
+				<documentation value="Retrieve the change history for a particular resource."/>
+			</interaction>
+			<interaction>
+				<code value="history-type"/>
+				<documentation value="Retrieve the change history for all resources of a particular type."/>
+			</interaction>
+			<searchInclude value="*"/>
+			<searchInclude value="Person:link"/>
+			<searchInclude value="Person:organization"/>
+			<searchInclude value="Person:patient"/>
+			<searchInclude value="Person:practitioner"/>
+			<searchInclude value="Person:relatedperson"/>
+			<searchRevInclude value="RelatedPerson:patient"/>
+			<searchRevInclude value="Provenance:target"/>
 			<searchParam>
 				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 					<valueCode value="SHALL"/>
@@ -101,6 +117,24 @@
 				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 					<valueCode value="SHALL"/>
 				</extension>
+				<name value="gdaddresstype"/>
+				<definition value="http://ehelse.no/fhir/SearchParameter/gd-Address-type"/>
+				<type value="token"/>
+				<documentation value="SearchParameter for the freg type of gd-Addresses"/>
+			</searchParam>
+			<searchParam>
+				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+					<valueCode value="SHALL"/>
+				</extension>
+				<name value="addresscontenttype"/>
+				<definition value="http://ehelse.no/fhir/SearchParameter/gd-Address-contenttype"/>
+				<type value="token"/>
+				<documentation value="SearchParameter for the content type of gd-Addresses"/>
+			</searchParam>
+            <searchParam>
+				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+					<valueCode value="SHALL"/>
+				</extension>
 				<name value="middlename"/>
 				<definition value="http://hl7.no/fhir/SearchParameter/no-basis-middlename"/>
 				<type value="string"/>
@@ -122,6 +156,81 @@
 				<type value="string"/>
 				<documentation value="Search on Person.family name: GET [base]/Person?family=[string]"/>
 			</searchParam>
+			<searchParam>
+				<name value="_language"/>
+				<type value="string"/>
+				<documentation value="The language of the resource"/>
+			 </searchParam>
+			 <searchParam>
+				<name value="address-state"/>
+				<type value="string"/>
+				<documentation value="A state specified in an address"/>
+			 </searchParam>
+			 <searchParam>
+				<name value="gender"/>
+				<type value="token"/>
+				<documentation value="The gender of the person"/>
+			 </searchParam>
+			 <searchParam>
+				<name value="practitioner"/>
+				<type value="reference"/>
+				<documentation value="The Person links to this Practitioner"/>
+			 </searchParam>
+			 <searchParam>
+				<name value="relatedperson"/>
+				<type value="reference"/>
+				<documentation value="The Person links to this RelatedPerson"/>
+			 </searchParam>
+			 <searchParam>
+				<name value="address-postalcode"/>
+				<type value="string"/>
+				<documentation value="A postal code specified in an address"/>
+			 </searchParam>
+			 <searchParam>
+				<name value="address-country"/>
+				<type value="string"/>
+				<documentation value="A country specified in an address"/>
+			 </searchParam>
+			 <searchParam>
+				<name value="phonetic"/>
+				<type value="string"/>
+				<documentation value="A portion of name using some kind of phonetic matching algorithm"/>
+			 </searchParam>
+			 <searchParam>
+				<name value="phone"/>
+				<type value="token"/>
+				<documentation value="A value in a phone contact"/>
+			 </searchParam>
+			 <searchParam>
+				<name value="patient"/>
+				<type value="reference"/>
+				<documentation value="The Person links to this Patient"/>
+			 </searchParam>
+			 <searchParam>
+				<name value="organization"/>
+				<type value="reference"/>
+				<documentation value="The organization at which this person record is being managed"/>
+			 </searchParam>
+			 <searchParam>
+				<name value="address-use"/>
+				<type value="token"/>
+				<documentation value="A use code specified in an address"/>
+			 </searchParam>
+			 <searchParam>
+				<name value="telecom"/>
+				<type value="token"/>
+				<documentation value="The value in any kind of contact"/>
+			 </searchParam>
+			 <searchParam>
+				<name value="address-city"/>
+				<type value="string"/>
+				<documentation value="A city specified in an address"/>
+			 </searchParam>
+			 <searchParam>
+				<name value="email"/>
+				<type value="token"/>
+				<documentation value="A value in an email contact"/>
+			 </searchParam>
 		</resource>
 		<resource>
 			<type value="RelatedPerson"/>
