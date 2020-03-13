@@ -1,12 +1,12 @@
 <ValueSet  xmlns="http://hl7.org/fhir">
-	<id value="gd-person-citizenship-v220.valueset"/>
+	<id value="gd-person-citizenship.valueset"/>
 	<meta>
 		<versionId value="1"/>
 		<lastUpdated value="2020-03-13T00:00:00.000+00:00"/>
 	</meta>
-	<url value="http://ehelse.no/fhir/ValueSet/gd-person-citizenship-v220"/>
+	<url value="http://ehelse.no/fhir/ValueSet/gd-person-citizenship"/>
 	<version value="2.2.0"/>
-	<name value="CitizensihipValueSet"/>
+	<name value="GdPersonCitizensihipValueSet"/>
 	<status value="draft"/>
 	<date value="2020-03-13T00:00:00.000+00:00"/>
 	<publisher value="Direktoratet for e-Helse"/>

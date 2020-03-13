@@ -169,7 +169,7 @@
     </element>
     <element id="Person.extension:citizenship.extension:code.value[x].coding.code">
       <path value="Person.extension.extension.value[x].coding.code" />
-      <alias value="Kode for statsborgerskap " />
+      <alias value="Kode for statsborgerskap" />
       <mustSupport value="true" />
     </element>
     <element id="Person.extension:citizenship.extension:period">
@@ -209,6 +209,10 @@
     <element id="Person.identifier">
       <path value="Person.identifier" />
       <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
         <rules value="closed" />
       </slicing>
       <min value="1" />
@@ -257,6 +261,10 @@
       <alias value="kjønn" />
       <alias value="personkjønn" />
       <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-gender" />
+      </binding>
     </element>
     <element id="Person.gender.extension">
       <path value="Person.gender.extension" />

@@ -1,12 +1,12 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="gd-person-citizenshipextension-v220.codesystem" />
+    <id value="gd-person-citizenshipextension.codesystem" />
     <meta>
         <versionId value="1" />
         <lastUpdated value="2020-03-13T00:00:00.000+00:00" />
     </meta>
-    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-citizenshipextension-v220" />
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-citizenshipextension" />
     <version value="2.2.0" />
-    <name value="CitizenshipExtensionCodeSystem" />
+    <name value="GdPersonCitizenshipExtensionCodeSystem" />
     <status value="draft" />
     <date value="2020-03-13" />
     <publisher value="Skatteetaten" />
