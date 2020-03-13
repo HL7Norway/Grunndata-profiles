@@ -83,7 +83,6 @@
     </element>
     <element id="Person.language">
       <path value="Person.language" />
-      <definition value="&#xD;&#xA;&#xD;&#xA;The base language in which the resource is written." />
       <mustSupport value="false" />
     </element>
     <element id="Person.text">
@@ -156,6 +155,35 @@
         <code value="Extension" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/gd-person-citizenship" />
       </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Person.extension:citizenship.extension:code">
+      <path value="Person.extension.extension" />
+      <sliceName value="code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Person.extension:citizenship.extension:code.value[x].coding.system">
+      <path value="Person.extension.extension.value[x].coding.system" />
+      <definition value="Grunndata - sets the system value of http://hl7.org/fhir/ValueSet/iso3166-1-3 or extension for the extended code values from FREG&#xD;&#xA;&#xD;&#xA;The identification of the code system that defines the meaning of the symbol in the code." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Person.extension:citizenship.extension:code.value[x].coding.code">
+      <path value="Person.extension.extension.value[x].coding.code" />
+      <alias value="Kode for statsborgerskap " />
+      <mustSupport value="true" />
+    </element>
+    <element id="Person.extension:citizenship.extension:period">
+      <path value="Person.extension.extension" />
+      <sliceName value="period" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Person.extension:citizenship.extension:period.value[x].start">
+      <path value="Person.extension.extension.value[x].start" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Person.extension:citizenship.extension:fregMetadata">
+      <path value="Person.extension.extension" />
+      <sliceName value="fregMetadata" />
       <mustSupport value="true" />
     </element>
     <element id="Person.extension:fregPersonStatus">
