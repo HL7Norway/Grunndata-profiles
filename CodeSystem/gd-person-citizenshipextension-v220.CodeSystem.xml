@@ -1,0 +1,27 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="gd-person-citizenshipextension-v220.codesystem" />
+    <meta>
+        <versionId value="1" />
+        <lastUpdated value="2020-03-13T00:00:00.000+00:00" />
+    </meta>
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-citizenshipextension-v220" />
+    <version value="2.2.0" />
+    <name value="CitizenshipExtensionCodeSystem" />
+    <status value="draft" />
+    <date value="2020-03-13" />
+    <publisher value="Skatteetaten" />
+    <description value="Det nye Folkeregisteret benytter ISO 3166-1 alpha 3 for landkoder med følgende utvidelser som følger UDI sine regler"/>
+    <content value="complete" />
+    <concept>
+        <code value="XXX" />
+        <display value="Statsløs (kun for statsborgerskap)" />
+    </concept>
+    <concept>
+        <code value="XUK" />
+        <display value="Ukjent (kun for statsborgerskap)" />
+    </concept>
+    <concept>
+        <code value="XXK" />
+        <display value="Kosovo" />
+    </concept>
+</CodeSystem>

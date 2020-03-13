@@ -1,0 +1,27 @@
+<ValueSet  xmlns="http://hl7.org/fhir">
+	<id value="gd-person-citizenship-v220.valueset"/>
+	<meta>
+		<versionId value="1"/>
+		<lastUpdated value="2020-03-13T00:00:00.000+00:00"/>
+	</meta>
+	<url value="http://ehelse.no/fhir/ValueSet/gd-person-citizenship-v220"/>
+	<version value="2.2.0"/>
+	<name value="CitizensihipValueSet"/>
+	<status value="draft"/>
+	<date value="2020-03-13T00:00:00.000+00:00"/>
+	<publisher value="Direktoratet for e-Helse"/>
+	<description value="Det nye Folkeregisteret benytter ISO 3166-1 alpha 3 for landkoder, med utvidelser som følger UDI sine regler"/>
+	<compose>
+		<include> 
+		  <system value="urn:iso:std:iso:3166"/> 
+		  <filter> 
+			<property value="code"/> 
+			<op value="regex"/> 
+			<value value="[A-Z]{3}"/> 
+		  </filter> 
+		</include> 
+		<include>
+			<system value="http://ehelse.no/fhir/CodeSystem/gd-person-citizenshipextension-v220"/>
+		</include>
+	</compose>
+</ValueSet>
