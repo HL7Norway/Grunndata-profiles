@@ -7,7 +7,7 @@
   <status value="draft" />
   <date value="2020-01-22" />
   <description value="Fødsel i Norge gir tilleggsinformasjon om fødselen hvis den har skjedd i Norge og er ment for bruk av spesielt interesserte og er derfor skilt ut fra fødsel." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
@@ -27,6 +27,12 @@
   <derivation value="constraint" />
   <differential>
     <element id="Extension">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Extension" />
       <short value="Fødsel i Norge" />
       <definition value="Fødsel i Norge gir tilleggsinformasjon om fødselen hvis den har skjedd i Norge og er ment for bruk av spesielt interesserte og er derfor skilt ut fra fødsel." />
@@ -44,6 +50,12 @@
       </slicing>
     </element>
     <element id="Extension.extension:multipleBirthInteger">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Extension.extension" />
       <sliceName value="multipleBirthInteger" />
       <short value="informasjon om nummer i rekken og antall barn i en flerfødsel" />
@@ -56,12 +68,24 @@
       <fixedUri value="multipleBirthInteger" />
     </element>
     <element id="Extension.extension:multipleBirthInteger.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Extension.extension.value[x]" />
       <type>
         <code value="integer" />
       </type>
     </element>
     <element id="Extension.extension:organizationName">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Extension.extension" />
       <sliceName value="organizationName" />
       <short value="navnet på helseinstitusjon i Norge hvor fødselen ble registrert" />
@@ -74,12 +98,24 @@
       <fixedUri value="organizationName" />
     </element>
     <element id="Extension.extension:organizationName.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Extension.extension.value[x]" />
       <type>
         <code value="string" />
       </type>
     </element>
     <element id="Extension.extension:fregMetadata">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Extension.extension" />
       <sliceName value="fregMetadata" />
       <max value="1" />
@@ -95,6 +131,12 @@
       </slicing>
     </element>
     <element id="Extension.extension:fregMetadata.extension:metadata">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Extension.extension.extension" />
       <sliceName value="metadata" />
       <max value="1" />
@@ -108,6 +150,12 @@
       <fixedUri value="fregMetadata" />
     </element>
     <element id="Extension.extension:fregMetadata.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Extension.extension.value[x]" />
       <max value="0" />
     </element>
@@ -116,6 +164,12 @@
       <fixedUri value="http://ehelse.no/fhir/StructureDefinition/gd-birth-in-norway" />
     </element>
     <element id="Extension.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
       <path value="Extension.value[x]" />
       <max value="0" />
     </element>
