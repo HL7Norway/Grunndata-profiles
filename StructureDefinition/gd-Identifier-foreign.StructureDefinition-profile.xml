@@ -169,7 +169,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Identifier.period" />
-      <definition value="Time period during which identifier is/was valid for use." />
+      <definition value="This element is not used by gd-Identifier-foreign, period is set in the extension containing fregMetadata&#xD;&#xA;&#xD;&#xA;Time period during which identifier is/was valid for use." />
       <comment value="This element is not used by gd-Identifier-foreign&#xD;&#xA;&#xD;&#xA;A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. &quot;the patient was an inpatient of the hospital for this time range&quot;) or one value from the range applies (e.g. &quot;give to the patient between these two times&quot;).&#xA;&#xA;Period is not used for a duration (a measure of elapsed time). See [Duration](datatypes.html#Duration)." />
     </element>
     <element id="Identifier.assigner">
@@ -180,6 +180,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="Identifier.assigner" />
+      <definition value="This element is not used by gd-Identifier-foreign&#xD;&#xA;&#xD;&#xA;Organization that issued/manages the identifier." />
       <comment value="This element is not used by gd-Identifier-foreign&#xD;&#xA;&#xD;&#xA;The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization." />
     </element>
   </differential>
