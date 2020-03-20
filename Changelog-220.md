@@ -9,7 +9,8 @@ This is a service release to includes changes to the documentation based on feed
 - Major update to the documentation of RelatedPerson to clarify how this Resource is used to code FREG data
 - Updates to the "Readers Guide" to clarify the use of POST transaction and the meaning of must-support flags in this ImplementationGuide
 - Some minor documentation changes in the gd-Person StructureDefinition updates to clearify the documentation concerning birtDate and foreignIdentifier
-- gd-birth-in-norway bugfix
+- gd-birth-in-norway bugfix, added freg-metadata to extension
+- gd-person-citizenship Change the name of the codesytem/valueset, updated to documentation
 
 
 ## Files change description
@@ -25,6 +26,15 @@ This is a service release to includes changes to the documentation based on feed
 |gd-RelatedPerson.StructureDefinition-profile.xml|Documentation changes|
 |gd-guardianship.StructureDefinition-extension.xml|Documentation changes|
 |StructureDefinition/gd-parental.StructureDefinition-extension.xml|Documentation changes|
+|StructureDefinition/gd-person-citizenship.structuredefinition-extension.xml|Documentatio changes to clearify the use of the gd-person-citizenship.structuredefinition-extension structure; only period.start is set, code and system is used to represent the actual citizenship|
+|CodeSystem/gd-person-citizenshipextension.CodeSystem.xml|File name change, removed version number in url and filenames|
+|ValueSet/gd-person-citizenship.ValueSet.xml|File name change, removed version number in url and filenames|
+|ValueSet/gd-person-gender.ValueSet.xml|New file defining valueset for gender to reflect male/female values used by FREG for administrative gender|
+|StructureDefinition/gd-Person.StructureDefinition-profile.xml|Changed reference to gender valueset ValueSet/gd-person-gender.ValueSet.xml|
+|odeSystem/gd-person-migration-pattern.CodeSystem.xml
+
+
+
 
 
 
