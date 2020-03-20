@@ -1,6 +1,6 @@
 #Changelog for 2.2.0
 ## Documents the changes implemented from version 2.1.0 to 2.2.0
-### Release date: 2020-03-06
+### Release date: 2020-03-20
 
 This is a service release to includes changes to the documentation based on feedback on the 2.1.0 version. No breaking changes in the capabilities are documented in this version, but several updated to extend the capabilites described in the CapabilityStatement.
 - Added search parameter support for several search parameters in the CapabilityStatement
