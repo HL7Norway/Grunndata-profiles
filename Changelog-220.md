@@ -31,7 +31,7 @@ This is a service release to includes changes to the documentation based on feed
 |ValueSet/gd-person-citizenship.ValueSet.xml|File name change, removed version number in url and filenames|
 |ValueSet/gd-person-gender.ValueSet.xml|New file defining valueset for gender to reflect male/female values used by FREG for administrative gender|
 |StructureDefinition/gd-Person.StructureDefinition-profile.xml|Changed reference to gender valueset ValueSet/gd-person-gender.ValueSet.xml|
-|odeSystem/gd-person-migration-pattern.CodeSystem.xml
+|CodeSystem/gd-person-migration-pattern.CodeSystem.xml||
 
 
 
