@@ -31,7 +31,15 @@ This is a service release to includes changes to the documentation based on feed
 |ValueSet/gd-person-citizenship.ValueSet.xml|File name change, removed version number in url and filenames|
 |ValueSet/gd-person-gender.ValueSet.xml|New file defining valueset for gender to reflect male/female values used by FREG for administrative gender|
 |StructureDefinition/gd-Person.StructureDefinition-profile.xml|Changed reference to gender valueset ValueSet/gd-person-gender.ValueSet.xml|
-|CodeSystem/gd-person-migration-pattern.CodeSystem.xml||
+|CodeSystem/gd-person-migration-pattern.CodeSystem.xml|Updated filename and url of the CodeSystem|
+|ValueSet/gd-person-migration-pattern.ValueSet.xml|Updated filename and url of the ValueSet, updated reference to CodeSystem|
+|StructureDefinition/gd-migration.StructureDefinition-extension.xml|Updated reference to migration-pattern ValueSet|
+|StructureDefinition/gd-Identifier-foreign.StructureDefinition-profile|Description added for all elements not used in this profile, Updated must-support information, Removed the 1..1 cardinality for identifier.system, the identifier system value should not be set, Added description of the use of identifier.type for the foreign identifiers, Added description for period and assigner "This element is not used by gd-Identifier-foreign", updated codesystem and valueset to new naming sceme|
+|CodeSystem/gd-person-identificationnumbertype.CodeSystem.xml|Updated filename and url of the CodeSystem|
+ValueSet/gd-person-identificationnumbertype.ValueSet.xml|Updated filename and url of the ValueSet, updated reference to CodeSystem|
+|StructureDefinition/gd-Identifier-foreign.StructureDefinition-profile.xml|Added must support information for elements, Added descripton for all elements not used in the profile "This element is not used by gd-Identifier"
+|
+
 
 
 
