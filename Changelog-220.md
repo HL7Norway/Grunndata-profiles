@@ -1,4 +1,4 @@
-#Changelog for 2.2.0
+# Changelog for 2.2.0
 ## Documents the changes implemented from version 2.1.0 to 2.2.0
 ### Release date: 2020-03-24
 
@@ -39,8 +39,7 @@ This is a service release to includes changes to the documentation based on feed
 |StructureDefinition/gd-Identifier-foreign.StructureDefinition-profile|Description added for all elements not used in this profile, Updated must-support information, Removed the 1..1 cardinality for identifier.system, the identifier system value should not be set, Added description of the use of identifier.type for the foreign identifiers, Added description for period and assigner "This element is not used by gd-Identifier-foreign", updated codesystem and valueset to new naming sceme|
 |CodeSystem/gd-person-identificationnumbertype.CodeSystem.xml|Updated filename and url of the CodeSystem|
 ValueSet/gd-person-identificationnumbertype.ValueSet.xml|Updated filename and url of the ValueSet, updated reference to CodeSystem|
-|StructureDefinition/gd-Identifier-foreign.StructureDefinition-profile.xml|Added must support information for elements, Added descripton for all elements not used in the profile "This element is not used by gd-Identifier"
-|
+|StructureDefinition/gd-Identifier-foreign.StructureDefinition-profile.xml|Added must support information for elements, Added descripton for all elements not used in the profile "This element is not used by gd-Identifier"|
 |examples/gd-RelatedPerson-example.xml|Bugfix of the Coded value for scope|
 
 # Changelog for 2.1.0
