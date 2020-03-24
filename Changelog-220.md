@@ -1,6 +1,6 @@
 #Changelog for 2.2.0
 ## Documents the changes implemented from version 2.1.0 to 2.2.0
-### Release date: 2020-03-20
+### Release date: 2020-03-24
 
 This is a service release to includes changes to the documentation based on feedback on the 2.1.0 version. No breaking changes in the capabilities are documented in this version, but several updated to extend the capabilites described in the CapabilityStatement.
 - Added search parameter support for several search parameters in the CapabilityStatement
@@ -11,7 +11,9 @@ This is a service release to includes changes to the documentation based on feed
 - Some minor documentation changes in the gd-Person StructureDefinition updates to clearify the documentation concerning birtDate and foreignIdentifier
 - gd-birth-in-norway bugfix, added freg-metadata to extension
 - gd-person-citizenship Change the name of the codesytem/valueset, updated to documentation
-
+- gd-migration.StructureDefinition-extension, update to documentation and ValueSet
+- gd-Identifier-foreign update to codesystems and documentation
+- gd-Identifier update documentation
 
 ## Files change description
 |File|Change description|
@@ -39,12 +41,7 @@ This is a service release to includes changes to the documentation based on feed
 ValueSet/gd-person-identificationnumbertype.ValueSet.xml|Updated filename and url of the ValueSet, updated reference to CodeSystem|
 |StructureDefinition/gd-Identifier-foreign.StructureDefinition-profile.xml|Added must support information for elements, Added descripton for all elements not used in the profile "This element is not used by gd-Identifier"
 |
-
-
-
-
-
-
+|examples/gd-RelatedPerson-example.xml|Bugfix of the Coded value for scope|
 
 # Changelog for 2.1.0
 ## Changes implemented from version 2.0.6 to 2.1.0
