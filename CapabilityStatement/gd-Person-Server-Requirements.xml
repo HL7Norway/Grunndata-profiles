@@ -13,8 +13,22 @@
 	<format value="xml"/>
 	<rest>
 		<mode value="server"/>
-		<documentation value="The server must support a subset of the FHIR restful interactions described by HL7. Some special notes concerning the Capabilities offered by the server can be found in the ImplementationGuide for the service.
-%23%23 Limiting the search result
+		<documentation>
+		<h2 id="limiting-the-search-result-to-elements-of-interest">Limiting the search result to elements of interest</h2>
+<p>To limit the returned resource instances the FHIR server supports the use of two operations:</p>
+<ul>
+<li>_elements</li>
+<li>_summary</li>
+</ul>
+<p>These operations can be added to any search to limit the information returned in the search result like this:</p>
+<pre><code>GET http:%2F%2Fhapi.fhir.org%2FbaseR4%2FPerson%3Fname%3DEspen%26_elements%3Dname%2Caddress
+</code></pre>
+<h3 id="summary-value-false">Summary value = false</h3>
+<p>A summary value of false will return all the information available about the Person.</p>
+<pre><code>GET http://hapi.fhir.org/baseR4/Person?name=Espen&amp;_summary=false
+</code></pre>
+		The server must support a subset of the FHIR restful interactions described by HL7. Some special notes concerning the Capabilities offered by the server can be found in the ImplementationGuide for the service.
+## Limiting the search result
 
 ### The server expects _elements
 
@@ -30,6 +44,7 @@ The operations can be added to any search to limit the information returned in t
 GET http:%2F%2Fhapi.fhir.org%2FbaseR4%2FPerson%3Fname%3DEspen%26_elements%3Dname%2Caddress
 ```
 "/>
+</documentation>
 		<resource>
 		<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
 				<extension url="required">
