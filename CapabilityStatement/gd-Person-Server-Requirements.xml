@@ -27,7 +27,7 @@ To limit the returned resource instances the FHIR server supports the use of the
 
 The operations can be added to any search to limit the information returned in the search result like this 
 ```
-GET http://hapi.fhir.org/baseR4/Person?name=Espen&_elements=name,address
+GET http:%2F%2Fhapi.fhir.org%2FbaseR4%2FPerson%3Fname%3DEspen%26_elements%3Dname%2Caddress
 ```
 "/>
 		<resource>
