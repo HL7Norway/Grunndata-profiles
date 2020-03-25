@@ -3,9 +3,9 @@
 	<url value="http://ehelse.no/fhir/CapabilityStatement/gd-Person-Server-Requirements/v220"/>
 	<version value="2.2.0"/>
 	<name value="PersonServerRequirements"/>
-	<title value="Requirements for Grunndata Person Service Interface"/>
+	<title value="Requirements for Grunndata Person Service Interface for the test deliverable (L0)"/>
 	<status value="draft"/>
-	<date value="2020-03-06"/>
+	<date value="2020-03-25"/>
 	<description value="Requirements for the Grunndata Person service provided by Direktoratet for e-helse"/>
 	<kind value="requirements"/>
 	<fhirVersion value="4.0.0"/>
@@ -13,6 +13,23 @@
 	<format value="xml"/>
 	<rest>
 		<mode value="server"/>
+		<documentation value="The server must support a subset of the FHIR restful interactions described by HL7. Some special notes concerning the Capabilities offered by the server can be found in the ImplementationGuide for the service.
+## Limiting the search result
+
+### The server expects _elements
+
+The server expects all read and search interactions to use the _elements operation specifying what elements should be included in the search result. In the case where the _elements operation is missing a resouce containing only the identifier element is returned.
+
+###
+
+To limit the returned resource instances the FHIR server supports the use of the _elements operation.
+
+
+The operations can be added to any search to limit the information returned in the search result like this 
+```
+GET http://hapi.fhir.org/baseR4/Person?name=Espen&_elements=name,address
+```
+"/>
 		<resource>
 		<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
 				<extension url="required">
@@ -72,30 +89,6 @@
 				<name value="birthDate"/>
 				<type value="date"/>
 				<documentation value="Search on Person.birthDate: GET [base]/Person?birthDate=[date]"/>
-			</searchParam>
-			<searchParam>
-				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-					<valueCode value="SHALL"/>
-				</extension>
-				<name value="gender"/>
-				<type value="token"/>
-				<documentation value="Search on Person.gender: GET [base]/Person?gender=[code]"/>
-			</searchParam>
-			<searchParam>
-				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-					<valueCode value="SHALL"/>
-				</extension>
-				<name value="address"/>
-				<type value="string"/>
-				<documentation value="A server defined search that may match any of the string fields in the Address, including line, city, district, state, country, postalCode, and/or text. Search on Person.address: GET [base]/Person?address=[string]"/>
-			</searchParam>
-			<searchParam>
-				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-					<valueCode value="SHALL"/>
-				</extension>
-				<name value="address-city"/>
-				<type value="string"/>
-				<documentation value="A city specified in an address. Search on Person.address.city: GET [base]/Person?address.city=[string]"/>
 			</searchParam>
 			<searchParam>
 				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
