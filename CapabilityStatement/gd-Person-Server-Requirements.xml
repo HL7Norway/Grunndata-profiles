@@ -14,7 +14,7 @@
 	<rest>
 		<mode value="server"/>
 		<documentation value="The server must support a subset of the FHIR restful interactions described by HL7. Some special notes concerning the Capabilities offered by the server can be found in the ImplementationGuide for the service.
-## Limiting the search result
+%23%23 Limiting the search result
 
 ### The server expects _elements
 
