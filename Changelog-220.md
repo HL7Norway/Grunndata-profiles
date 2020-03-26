@@ -14,12 +14,14 @@ This is a service release to includes changes to the documentation based on feed
 - gd-migration.StructureDefinition-extension, update to documentation and ValueSet
 - gd-Identifier-foreign update to codesystems and documentation
 - gd-Identifier update documentation
+- Updated CapabilityStatement for both L0 and L1
 
 ## Files change description
 |File|Change description|
 |-
 |StructureDefinition/gd-birth-in-norway.StructureDefinition-extension.xml|Added freg-metadata to the extension to hold metadata from freg about this content|
-|CapabilityStatement/gd-Server-Requirements.xml|Several updates and bugfixes|
+|CapabilityStatement/gd-Server-Requirements.xml|Several updates and bugfixes to describe L0 delivery|
+|CapabilityStatement/gd-Server-Requirements-v300.xml|New file to describe L1 delivery|
 |SearchParameter/gd-AddressType.SearchParameter.xml|New File|
 |SearchParameter/gd-AddressType.SearchParameter.xml|New File|
 |StructureDefinition/gd-deceased.StructureDefinition-extension.xml|Added gd-RelatedPerson context|
@@ -87,3 +89,4 @@ The update includes changes for:
 |2020-01-06|CapabilityStatement/gd-Person-Server-Requirements.xml|Updated identifier searches to use POST transaction|
 |2020-01-06|Implementation guide text|Readers guide: Updated description of read and search by RESTful FHIR API using POST transaction|
 |2020-02-28|Implementation guide text|Readers guide: Updated description of must support in the Readers Guide. Added description of must-support="false" and not-set|
+|2020-03-26|ImplementationGuide text|Cleared up some confusing use of logical vs literal references on the RelatedPerson page|
