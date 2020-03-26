@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir C:/FHIR/R4/fhir-all-xsd/fhir-single.xsd">
+<CapabilityStatement xmlns="http://hl7.org/fhir" >
 	<url value="http://ehelse.no/fhir/CapabilityStatement/gd-Person-Server-Requirements/v220"/>
 	<version value="2.2.0"/>
 	<name value="PersonServerRequirements"/>
-	<title value="Requirements for Grunndata Person Service Interface for the test deliverable (L0)"/>
+	<title value="Requirements for Grunndata Person Service Interface (server)"/>
 	<status value="draft"/>
 	<date value="2020-03-25"/>
-	<description value="Requirements for the Grunndata Person service provided by Direktoratet for e-helse"/>
+	<description value="Requirements for the Grunndata Person service provided by Direktoratet for e-helse. Requirements for the test deliverable (L0)."/>
 	<kind value="requirements"/>
 	<fhirVersion value="4.0.0"/>
 	<format value="json"/>
@@ -132,8 +132,6 @@ GET http:%2F%2Fhapi.fhir.org%2FbaseR4%2FPerson%3Fname%3DEspen%26_elements%3Dname
 				<code value="vread"/>
 				<documentation value="Normal read operation on specific versions."/>
 			</interaction>
-			<searchInclude value="RelatedPerson:patient"/>
-			<searchRevInclude value="Provenance:target"/>
 			<searchParam>
 				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 					<valueCode value="SHALL"/>
@@ -159,62 +157,9 @@ GET http:%2F%2Fhapi.fhir.org%2FbaseR4%2FPerson%3Fname%3DEspen%26_elements%3Dname
 				<documentation value="Search on RelatedPerson.patient reference: GET [base]/RelatedPerson?patient:identifier=[system]|[code] Example: GET [base]/RelatedPerson?patient:identifier=urn:oid:2.16.578.1.12.4.1.4.1|04021950128"/>
 			</searchParam>
 			<searchParam>
-				<name value="name"/>
-				<type value="string"/>
-				<documentation value="Search on RelatedPerson.name: GET [base]/RelatedPerson?name=[string]"/>
-			</searchParam>
-			<searchParam>
 				<name value="relationship"/>
 				<type value="token"/>
-				<documentation value="Search on RelatedPerson.relationship: GET [base]/RelatedPerson?relationship=[system]|[code]"/>
-			</searchParam>
-		</resource>
-		<resource>
-			<type value="Provenance"/>
-			<profile value="http://ehelse.no/fhir/StructureDefinition/gd-Provenance"/>
-			<interaction>
-				<code value="search-type"/>
-				<documentation value="Search for a specific Resource type on some specified filter criteria"/>
-			</interaction>
-			<interaction>
-				<code value="read"/>
-				<documentation value="Normal read operation."/>
-			</interaction>
-			<interaction>
-				<code value="vread"/>
-				<documentation value="Normal read operation on specific versions."/>
-			</interaction>
-			<searchInclude value="Provenance:agent"/>
-			<searchInclude value="Provenance:entity"/>
-			<searchInclude value="Provenance:target"/>
-			<searchParam>
-				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-					<valueCode value="SHALL"/>
-				</extension>
-				<name value="_id"/>
-				<type value="token"/>
-				<documentation value="Search on Provenance by logical id of the Resource: GET [base]/Provenance?_id=[id] or GET [base]/Provenance/[id]"/>
-			</searchParam>
-			<searchParam>
-				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-					<valueCode value="SHALL"/>
-				</extension>
-				<name value="target"/>
-				<type value="reference"/>
-				<documentation value="Search on Provenance.target: GET [base]/Provenance?target=[reference]  Example: GET [base]/Provenance?target=Person/53098"/>
-			</searchParam>
-			<searchParam>
-				<name value="entity"/>
-				<type value="reference"/>
-				<documentation value="Search on Provenance.entity reference: GET [base]/Provenance?entity=[reference]  Example: GET [base]/Provenance?entity=Person/53098"/>
-			</searchParam>
-			<searchParam>
-				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-					<valueCode value="SHALL"/>
-				</extension>
-				<name value="recorded"/>
-				<type value="date"/>
-				<documentation value="Search on Provenance.recorded: GET [base]/Provenance?recorded=[date]  Example: GET [base]Provenance?recorded=gt2019-10-14T10:00&amp;_sort=_id"/>
+				<documentation value="Search on relationshiptype RelatedPerson.relationship: GET [base]/RelatedPerson?relationship=[system]|[code]"/>
 			</searchParam>
 		</resource>
 	</rest>

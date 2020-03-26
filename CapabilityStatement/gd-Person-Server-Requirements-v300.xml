@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir C:/FHIR/R4/fhir-all-xsd/fhir-single.xsd">
+<CapabilityStatement xmlns="http://hl7.org/fhir" >
 	<url value="http://ehelse.no/fhir/CapabilityStatement/gd-Person-Server-Requirements/v300"/>
 	<version value="3.0.0"/>
 	<name value="PersonServerRequirements"/>
-	<title value="Requirements for Grunndata Person Service Interface"/>
+	<title value="Requirements for Grunndata Person Service Interface (server)"/>
 	<status value="draft"/>
 	<date value="2020-03-06"/>
-	<description value="Requirements for the Grunndata Person service provided by Direktoratet for e-helse"/>
+	<description value="Requirements for the Grunndata Person service provided by Direktoratet for e-helse. Requirements for the test deliverable (L1)."/>
 	<kind value="requirements"/>
 	<fhirVersion value="4.0.0"/>
 	<format value="json"/>
@@ -247,6 +247,12 @@
 				<code value="vread"/>
 				<documentation value="Normal read operation on specific versions."/>
 			</interaction>
+			<interaction>
+				<code value="history-instance"/>
+			</interaction>
+			<interaction>
+				<code value="history-type"/>
+			</interaction>
 			<searchInclude value="RelatedPerson:patient"/>
 			<searchRevInclude value="Provenance:target"/>
 			<searchParam>
@@ -281,8 +287,74 @@
 			<searchParam>
 				<name value="relationship"/>
 				<type value="token"/>
-				<documentation value="Search on RelatedPerson.relationship: GET [base]/RelatedPerson?relationship=[system]|[code]"/>
+				<documentation value="Search on relationshiptype RelatedPerson.relationship: GET [base]/RelatedPerson?relationship=[system]|[code]"/>
 			</searchParam>
+			<searchParam>
+            <name value="_language"/>
+            <type value="string"/>
+            <documentation value="The language of the resource"/>
+         </searchParam>
+  
+         <searchParam>
+            <name value="gdaddresstype"/>
+            <type value="token"/>
+            <documentation value="SearchParameter for the freg type of gd-Addresses"/>
+         </searchParam>
+         <searchParam>
+            <name value="address"/>
+            <type value="string"/>
+            <documentation value="A server defined search that may match any of the string fields in the Address, including line, city, district, state, country, postalCode, and/or text"/>
+         </searchParam>
+         <searchParam>
+            <name value="birthdate"/>
+            <type value="date"/>
+            <documentation value="The Related Person's date of birth"/>
+         </searchParam>
+         <searchParam>
+            <name value="gender"/>
+            <type value="token"/>
+            <documentation value="Gender of the related person"/>
+         </searchParam>
+         <searchParam>
+            <name value="addresscontenttype"/>
+            <type value="token"/>
+            <documentation value="SearchParameter for the content type of gd-Addresses"/>
+         </searchParam>
+         <searchParam>
+            <name value="active"/>
+            <type value="token"/>
+            <documentation value="Indicates if the related person record is active"/>
+         </searchParam>
+         <searchParam>
+            <name value="address-postalcode"/>
+            <type value="string"/>
+            <documentation value="A postal code specified in an address"/>
+         </searchParam>
+         <searchParam>
+            <name value="address-country"/>
+            <type value="string"/>
+            <documentation value="A country specified in an address"/>
+         </searchParam>
+         <searchParam>
+            <name value="phonetic"/>
+            <type value="string"/>
+            <documentation value="A portion of name using some kind of phonetic matching algorithm"/>
+         </searchParam>
+         <searchParam>
+            <name value="phone"/>
+            <type value="token"/>
+            <documentation value="A value in a phone contact"/>
+         </searchParam>
+         <searchParam>
+            <name value="address-use"/>
+            <type value="token"/>
+            <documentation value="A use code specified in an address"/>
+         </searchParam>
+         <searchParam>
+            <name value="address-city"/>
+            <type value="string"/>
+            <documentation value="A city specified in an address"/>
+         </searchParam>
 		</resource>
 		<resource>
 			<type value="Provenance"/>
@@ -299,9 +371,12 @@
 				<code value="vread"/>
 				<documentation value="Normal read operation on specific versions."/>
 			</interaction>
+			<searchInclude value="*"/>
 			<searchInclude value="Provenance:agent"/>
 			<searchInclude value="Provenance:entity"/>
 			<searchInclude value="Provenance:target"/>
+			<searchInclude value="Provenance:location"/>
+			<searchInclude value="Provenance:patient"/>
 			<searchParam>
 				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 					<valueCode value="SHALL"/>
@@ -330,6 +405,46 @@
 				<name value="recorded"/>
 				<type value="date"/>
 				<documentation value="Search on Provenance.recorded: GET [base]/Provenance?recorded=[date]  Example: GET [base]Provenance?recorded=gt2019-10-14T10:00&amp;_sort=_id"/>
+			</searchParam>
+			<searchParam>
+				<name value="_language"/>
+				<type value="string"/>
+				<documentation value="The language of the resource"/>
+			</searchParam>
+			<searchParam>
+				<name value="agent-type"/>
+				<type value="token"/>
+				<documentation value="How the agent participated"/>
+			</searchParam>
+			<searchParam>
+				<name value="agent"/>
+				<type value="reference"/>
+				<documentation value="Who participated"/>
+			</searchParam>
+			<searchParam>
+				<name value="signature-type"/>
+				<type value="token"/>
+				<documentation value="Indication of the reason the entity signed the object(s)"/>
+			</searchParam>
+			<searchParam>
+				<name value="patient"/>
+				<type value="reference"/>
+				<documentation value="Target Reference(s) (usually version specific)"/>
+			</searchParam>
+			<searchParam>
+				<name value="location"/>
+				<type value="reference"/>
+				<documentation value="Where the activity occurred, if relevant"/>
+			</searchParam>
+			<searchParam>
+				<name value="agent-role"/>
+				<type value="token"/>
+				<documentation value="What the agents role was"/>
+			</searchParam>
+			<searchParam>
+				<name value="when"/>
+				<type value="date"/>
+				<documentation value="When the activity occurred"/>
 			</searchParam>
 		</resource>
 	</rest>
