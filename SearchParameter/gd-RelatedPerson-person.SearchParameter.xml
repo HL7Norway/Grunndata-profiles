@@ -1,0 +1,32 @@
+<SearchParameter>
+	<id value="gd-RelatedPerson-patient-Fhir4.0" />
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+		<valueCode value="trial-use" />
+	</extension>
+	<url value="http://ehelse.no/fhir/SearchParameter/RelatedPerson-person" />
+	<version value="4.0.0" />
+	<name value="person" />
+	<status value="draft" />
+	<experimental value="false" />
+	<publisher value="The Norwegian directorate of e-Health" />
+	<contact>
+		<telecom>
+			<system value="url" />
+			<value value="http://ehelse.no" />
+		</telecom>
+	</contact>
+	<description value="The person this related person is related to" />
+	<code value="person" />
+	<base value="RelatedPerson" />
+	<type value="reference" />
+	<expression value="RelatedPerson.patient" />
+	<xpath value="f:RelatedPerson/f:patient" />
+	<xpathUsage value="normal" />
+	<target value="Patient" />
+	<target value="Person" />
+	<multipleOr value="true" />
+	<multipleAnd value="true" />
+	<modifier value="missing" />
+	<modifier value="type" />
+	<modifier value="identifier" />
+</SearchParameter>
