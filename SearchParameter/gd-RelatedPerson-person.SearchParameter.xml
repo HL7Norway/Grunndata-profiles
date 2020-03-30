@@ -22,7 +22,6 @@
 	<xpath value="f:RelatedPerson/f:patient" />
 	<xpathUsage value="normal" />
 	<target value="Patient" />
-	<target value="Person" />
 	<multipleOr value="true" />
 	<multipleAnd value="true" />
 	<modifier value="missing" />
