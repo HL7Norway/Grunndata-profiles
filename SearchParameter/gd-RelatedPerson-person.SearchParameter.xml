@@ -1,30 +1,43 @@
-<SearchParameter>
-	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-		<valueCode value="trial-use" />
-	</extension>
-	<url value="http://ehelse.no/fhir/SearchParameter/RelatedPerson-person" />
-	<version value="4.0.0" />
-	<name value="Person" />
-	<status value="draft" />
-	<experimental value="false" />
-	<publisher value="The Norwegian directorate of e-Health" />
-	<contact>
-		<telecom>
-			<system value="url" />
-			<value value="http://ehelse.no" />
-		</telecom>
-	</contact>
-	<description value="The person this related person is related to" />
-	<code value="person" />
-	<base value="RelatedPerson" />
-	<type value="reference" />
-	<expression value="RelatedPerson.patient" />
-	<xpath value="f:RelatedPerson/f:patient" />
-	<xpathUsage value="normal" />
-	<target value="Patient" />
-	<multipleOr value="true" />
-	<multipleAnd value="true" />
-	<modifier value="missing" />
-	<modifier value="type" />
-	<modifier value="identifier" />
+<SearchParameter xmlns="http://hl7.org/fhir">
+    <id value="RelatedPerson-patient-Fhir4.0" />
+    <meta>
+        <versionId value="62cdd997-6c87-40c5-96d9-6bd376586f9d" />
+        <lastUpdated value="2020-04-01T08:18:41.196+00:00" />
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="trial-use" />
+    </extension>
+    <url value="http://hl7.org/fhir/SearchParameter/RelatedPerson-patient" />
+    <version value="4.0.0" />
+    <name value="patient" />
+    <status value="draft" />
+    <experimental value="false" />
+    <publisher value="Health Level Seven International (Patient Administration)" />
+    <contact>
+        <telecom>
+            <system value="url" />
+            <value value="http://hl7.org/fhir" />
+        </telecom>
+    </contact>
+    <contact>
+        <telecom>
+            <system value="url" />
+            <value value="http://www.hl7.org/Special/committees/pafm/index.cfm" />
+        </telecom>
+    </contact>
+    <description value="The person or patient this related person is related to" />
+	<purpose value="Redefinition of the standard search parameter for RelatedPerson.patient to make search for RelatedPersons referencing Person instances (not Patient) work on thg Grunndata interface. This SearchParameter replaces the standard search parameter on the server providing the Grunndata services."/>
+    <code value="patient" />
+    <base value="RelatedPerson" />
+    <type value="reference" />
+    <expression value="RelatedPerson.patient" />
+    <xpath value="f:RelatedPerson/f:patient" />
+    <xpathUsage value="normal" />
+    <target value="Patient" />
+    <target value="Person" />
+    <multipleOr value="true" />
+    <multipleAnd value="true" />
+    <modifier value="missing" />
+    <modifier value="type" />
+    <modifier value="identifier" />
 </SearchParameter>

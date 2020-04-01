@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="gd-Person-family" />
+  <url value="http://ehelse.no/fhir/SearchParameter/gd-Person-family" />
+  <version value="2.2.0"/>
+  <name value="GdPersonFamily" />
+  <status value="draft" />
+  <description value="SearchParameter for the family name of a Person" />
+  <code value="family" />
+  <base value="Person" />
+  <type value="string" />
+  <description value="Person: A portion of the family name&#xD;&#xA;"/>
+  <expression value="Person.name.family"/>
+  <xpath value="f:Person/f:name/f:family"/>
+  <xpathUsage value="normal" />
+  <multipleOr value="true" />
+  <multipleAnd value="true" />
+</SearchParameter>

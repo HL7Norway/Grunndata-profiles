@@ -15,6 +15,8 @@ This is a service release to includes changes to the documentation based on feed
 - gd-Identifier-foreign update to codesystems and documentation
 - gd-Identifier update documentation
 - Updated CapabilityStatement for both L0 and L1
+- Search parameter definition for given and family names of a Person
+- Updated documentation for RelatedPerson.patient references
 
 ## Files change description
 |File|Change description|
@@ -43,6 +45,7 @@ This is a service release to includes changes to the documentation based on feed
 ValueSet/gd-person-identificationnumbertype.ValueSet.xml|Updated filename and url of the ValueSet, updated reference to CodeSystem|
 |StructureDefinition/gd-Identifier-foreign.StructureDefinition-profile.xml|Added must support information for elements, Added descripton for all elements not used in the profile "This element is not used by gd-Identifier"|
 |examples/gd-RelatedPerson-example.xml|Bugfix of the Coded value for scope|
+|StructureDefinition/gd-RelatedPerson.StructureDefinition-profile.xml|Added must support for RelatedPerson.patient.reference and updated documentation concerning references|
 
 # Changelog for 2.1.0
 ## Changes implemented from version 2.0.6 to 2.1.0

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="gd-Person-given" />
+  <url value="http://ehelse.no/fhir/SearchParameter/gd-Person-given" />
+  <version value="2.2.0"/>
+  <name value="GdPersonGiven" />
+  <status value="active" />
+  <description value="SearchParameter the given name of a Person" />
+  <code value="given" />
+  <base value="Person" />
+  <type value="string" />
+  <description value="Person: A portion of the given name&#xD;&#xA;"/>
+  <expression value="Person.name.given"/>
+  <xpath value="f:Person/f:name/f:given"/>
+  <xpathUsage value="normal" />
+  <multipleOr value="true" />
+  <multipleAnd value="true" />
+</SearchParameter>
