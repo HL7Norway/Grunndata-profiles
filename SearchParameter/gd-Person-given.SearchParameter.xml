@@ -9,7 +9,6 @@
   <code value="given" />
   <base value="Person" />
   <type value="string" />
-  <description value="Person: A portion of the given name&#xD;&#xA;"/>
   <expression value="Person.name.given"/>
   <xpath value="f:Person/f:name/f:given"/>
   <xpathUsage value="normal" />
