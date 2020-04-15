@@ -47,6 +47,12 @@ ValueSet/gd-person-identificationnumbertype.ValueSet.xml|Updated filename and ur
 |examples/gd-RelatedPerson-example.xml|Bugfix of the Coded value for scope|
 |StructureDefinition/gd-RelatedPerson.StructureDefinition-profile.xml|Added must support for RelatedPerson.patient.reference and updated documentation concerning references|
 
+## Documentation changes after 2.2.0 release
+|Date|File|Change description|
+|-
+|2020-04-15|IG: Updated the description of change and event types. Including new ValueSet rendering for gd-Provenance|
+|2020-04-15| New file describing the activity types used by Persontjenesten: ValueSet/gd-provenance-activity-types.valueset.xml|
+
 # Changelog for 2.1.0
 ## Changes implemented from version 2.0.6 to 2.1.0
 ### Release date: 2019-12-19
