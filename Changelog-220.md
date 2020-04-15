@@ -50,8 +50,8 @@ ValueSet/gd-person-identificationnumbertype.ValueSet.xml|Updated filename and ur
 ## Documentation changes after 2.2.0 release
 |Date|File|Change description|
 |-
-|2020-04-15|IG: Updated the description of change and event types. Including new ValueSet rendering for gd-Provenance|
-|2020-04-15| New file describing the activity types used by Persontjenesten: ValueSet/gd-provenance-activity-types.valueset.xml|
+|2020-04-15|Implementation Guide text|Updated the description of change and event types. Including new ValueSet rendering for gd-Provenance|
+|2020-04-15| New file|The activity types used by Persontjenesten: ValueSet/gd-provenance-activity-types.valueset.xml|
 
 # Changelog for 2.1.0
 ## Changes implemented from version 2.0.6 to 2.1.0
