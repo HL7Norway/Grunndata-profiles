@@ -27,7 +27,7 @@
           </div>
         </text>
         <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
-          <valueString value="gd-address-contenttype-v201.ValueSet.xml"/>
+          <valueString value="gd-address-contenttype-v210.ValueSet.xml"/>
         </extension>
       </OperationOutcome>
     </resource>
@@ -43,6 +43,21 @@
         </text>
         <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
           <valueString value="gd-address-physicaladdresstype-v201.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-address-preferredaddresstype-v210.ValueSet.xml"/>
         </extension>
       </OperationOutcome>
     </resource>
@@ -87,6 +102,36 @@
           </div>
         </text>
         <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-person-citizenship.ValueSet.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-person-gender.ValueSet.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
           <valueString value="gd-person-guardianscope-v05.ValueSet.xml"/>
         </extension>
       </OperationOutcome>
@@ -117,7 +162,7 @@
           </div>
         </text>
         <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
-          <valueString value="gd-person-identificationnumbertype-v05.ValueSet.xml"/>
+          <valueString value="gd-person-identificationnumbertype.ValueSet.xml"/>
         </extension>
       </OperationOutcome>
     </resource>
@@ -147,7 +192,7 @@
           </div>
         </text>
         <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
-          <valueString value="gd-person-migration-pattern-v05.ValueSet.xml"/>
+          <valueString value="gd-person-migration-pattern.ValueSet.xml"/>
         </extension>
       </OperationOutcome>
     </resource>
@@ -178,6 +223,36 @@
         </text>
         <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
           <valueString value="gd-person-status-v05.ValueSet.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-provenance-activity-type.valueset.xml"/>
+        </extension>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>All OK</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-file">
+          <valueString value="gd-provenance-freg-hendelsestype-v210.ValueSet.xml"/>
         </extension>
       </OperationOutcome>
     </resource>

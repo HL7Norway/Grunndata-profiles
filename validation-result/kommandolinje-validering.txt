@@ -1,0 +1,8 @@
+java -jar e:\FHIR-validator\org.hl7.fhir.validator.jar gd-*.xml -output ..\validation-result\validation.xml -version 4.0.0
+
+java -jar e:\FHIR-validator\org.hl7.fhir.validator.jar gd-*.xml -ig E:\GitRepo\Grunndata-R4\StructureDefinition\ -output ..\validation-result\validation.xml -version 4.0.0
+
+java -jar /home/vadi/Downloads/org.hl7.fhir.validator.jar '/home/vadi/Desktop/swedishnationalmedicationlist/MedicationRequest-example-bad.json' -ig '/home/vadi/Desktop/swedishnationalmedicationlist/' -version 3.0
+
+
+java -jar e:\FHIR-validator\org.hl7.fhir.publisher.jar -ig control-parameters.json -source StructureDefinition -destination . -version 4.0.0

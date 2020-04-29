@@ -14,6 +14,8 @@ java -jar c:\download\org.hl7.fhir.validator.jar c:\GitRepo\Grunndata-R4\for-val
 Deretter validere eksempler med katalogen som "ig":
 java -jar /home/thomas/Downloads/org.hl7.fhir.validator.jar gd-RelatedPerson-example.xml -ig /media/sf_GitRepo/for-validation-gd-r4 -version 4.0.0
 java -jar C:\download\org.hl7.fhir.validator.jar c:\GitRepo\Grunndata-r4\examples\gd-Person-04021950128-version-2.xml -ig C:\GitRepo\Grunndata-r4\for-validation-gd-r4 -version 4.0.1
+java -jar "c:\users\Thomas\Downloads\org.hl7.fhir.validator-4-2-21.jar" e:\GitRepo\Grunndata-R4\examples\gd-Provenance-Create.xml -ig e:\GitRepo\Grunndata-R4\for-validation-gd-221 -version 4.0.1
+
 
 Schema validation XMLspy
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/FHIR/R4/fhir-all-xsd/fhir-single.xsd"

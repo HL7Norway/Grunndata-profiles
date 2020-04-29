@@ -202,6 +202,7 @@
       </extension>
       <path value="RelatedPerson.relationship" />
       <sliceName value="familyRelation" />
+      <definition value="Family relationship from Norwegian Person Index. &#xD;&#xA;This is the role of the RelatedPerson.patient instance to the RelatedPerson instance to excactly copy the ordereing of how the relationship is expressed in the Norwegian Folkeregister (minRolleForPerson). The reverse relationship is expressed in the roleOfRelatedPersonInstance element.&#xD;&#xA;&#xD;&#xA;mor&#xD;&#xA;far&#xD;&#xA;medmor&#xD;&#xA;barn&#xD;&#xA;søsken&#xD;&#xA;ektefelleEllerPartner&#xD;&#xA;dødfødtBarn" />
       <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.relationship:familyRelation.extension">
@@ -228,6 +229,17 @@
         <code value="Extension" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/gd-family-relation" />
       </type>
+    </element>
+    <element id="RelatedPerson.relationship:familyRelation.extension:fregFamily.extension:roleOfRelatedPersonInstance">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="RelatedPerson.relationship.extension.extension" />
+      <sliceName value="roleOfRelatedPersonInstance" />
+      <definition value="Family relationship from Norwegian Person Index. &#xD;&#xA;This is the familyrelation role of the RelatedPerson instance to the RelatedPerson.patient instance (the value from relatertPersonsRolle in FREG).&#xD;&#xA;&#xD;&#xA;mor&#xD;&#xA;far&#xD;&#xA;medmor&#xD;&#xA;barn&#xD;&#xA;søsken&#xD;&#xA;ektefelleEllerPartner&#xD;&#xA;dødfødtBarn" />
     </element>
     <element id="RelatedPerson.relationship:parental">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
