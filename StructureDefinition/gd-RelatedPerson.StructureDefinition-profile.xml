@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-RelatedPerson" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-RelatedPerson" />
-  <version value="2.2.0" />
+  <version value="2.2.1" />
   <name value="GdRelatedPerson" />
   <status value="draft" />
   <date value="2019-10-18" />
