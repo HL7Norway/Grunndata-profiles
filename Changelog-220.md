@@ -56,6 +56,7 @@ ValueSet/gd-person-identificationnumbertype.ValueSet.xml|Updated filename and ur
 |2020-04-29|2.2.1 version GdProvenance examples|ValueSet binding to the GdProvenance valueset|
 |2020-04-29|gd-family-relation.StructureDefinition-extension|Changed the name of element roleOfPersonInstance -> roleOfRelatedPersonInstance|
 |2020-04-29|gd-RelatedPerson.StructureDefinition-profile|Changed the name of element roleOfPersonInstance -> roleOfRelatedPersonInstance|
+|2020-04-30|new file gd-RelatedPerson-example-family|New example|
 
 # Changelog for 2.1.0
 ## Changes implemented from version 2.0.6 to 2.1.0
