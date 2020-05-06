@@ -1,6 +1,6 @@
 # Address types and address content types
 
-FREG exposes several new types of addresses on the new interface. All address types defined by FREG are also exposed by the Master Person Index for health care. In the current version called DSF only one kind of address is recorded the official address called "Bostedsadresse". Consumers of the service have to be able to handle the different address types and content types coming from FREG and use the different address types according to their intended purpose. This page will give a quick overview of the addresses available, for the complete documentations please refer to [Skatteetaten](https://skatteetaten.github.io/folkeregisteret-api-dokumentasjon/informasjonsmodell/).
+FREG exposes several new types of addresses on the new interface. All address types defined by FREG are also exposed by the Master Person Index for health care. In the current version (called DSF) only one kind of address is recorded; the official address called "Bostedsadresse". Consumers of the service must read and store the different address types and content types coming from FREG and use the different address types according to their intended purpose. This page will give a quick overview of the addresses available, for the complete documentations please refer to [Skatteetaten](https://skatteetaten.github.io/folkeregisteret-api-dokumentasjon/informasjonsmodell/).
 
 ## FREG exposes 6 different AddressTypes
 
