@@ -60,6 +60,7 @@ ValueSet/gd-person-identificationnumbertype.ValueSet.xml|Updated filename and ur
 |2020-05-04|Updated dependency|Updated dependency of hl7.fhir.no.basis to the latest patch 2.0.13|
 |2020-05-04|Documentation|Some updates to the Implementation guide: Person information intro|
 |2020-05-06|Documentation|Updates to the implementation guide, adding intro to profile pages to help readability|
+|2020-05-06|Documentation|Update to RelatedPerson (roleOfRelatedPersonInstance)|
 
 # Changelog for 2.1.0
 ## Changes implemented from version 2.0.6 to 2.1.0
