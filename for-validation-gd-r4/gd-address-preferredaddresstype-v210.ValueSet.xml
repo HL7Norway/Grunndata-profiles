@@ -4,7 +4,7 @@
 		<versionId value="1"/>
 		<lastUpdated value="2019-12-13T00:00:00.000+00:00"/>
 	</meta>
-	<url value="http://ehelse.no/fhir/ValueSet/gd-preferredaddress-type-v210"/>
+	<url value="http://ehelse.no/fhir/ValueSet/gd-preferredaddresstype"/>
 	<version value="2.1.0"/>
 	<name value="GdPreferredaddresstypeValueSet"/>
 	<status value="draft"/>
@@ -19,7 +19,7 @@ Valget styrer innholdet i adressegradering og kontaktadresseIFrittFormat hvor
 innholdet i disse hentes fra valgt registrert gjeldende adresse"/>
 	<compose>
 		<include >
-			<system value="http://ehelse.no/fhir/CodeSystem/gd-address-type-v201"/>
+			<system value="http://ehelse.no/fhir/CodeSystem/gd-address-type"/>
 		<concept>
 			<code value="Bostedsadresse" />
 			<display value="Bostedsadresse" />

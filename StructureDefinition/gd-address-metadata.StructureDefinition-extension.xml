@@ -161,7 +161,7 @@
       <binding>
         <strength value="required" />
         <description value="Address Type" />
-        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-address-type-v201" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-address-type" />
       </binding>
     </element>
     <element id="Extension.extension:fregAddressType.url">

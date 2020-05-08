@@ -18,6 +18,10 @@ This is a service release to fix ValueSet and CodeSystem resource version number
 |Rename gd-person-probateform-v05.CodeSystem.xml -> gd-person-probatetype.CodeSystem.xml | Changed the name into something meaningfull, removed version info in filenames and id's|
 |gd-person-gender.ValueSet.xml|Updated the documentation for the ValueSet|
 |Removed file: gd-person-addresstypeclassification-v05.codesystem.xml| This is a duplicate, the system defined is not in use http://ehelse.no/fhir/CodeSystem/gd-person-addresstypeclassification-v05.codesystem|
+|Rename gd-address-preferredaddresstype-v210.ValueSet -> gd-address-preferredaddresstype.ValueSet|removed version info in filenames and id's|
+|Removed gd-person-addresstype-v05.CodeSystem.xml|Not used by any extensions, StructureDefinition or ValueSet, gd-preferredaddrestype is used|
+|Rename gd-address-type-v201.CodeSystem.xml -> gd-address-type.CodeSystem.xml|removed version info in filenames and id's|
+|Rename gd-address-type-v201.ValueSet.xml -> gd-address-type.ValueSet.xml|removed version info in filenames and id's|
 
 
 ## Documents the changes implemented from version 2.1.0 to 2.2.0

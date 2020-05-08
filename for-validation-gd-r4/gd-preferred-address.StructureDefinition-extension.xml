@@ -44,7 +44,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-preferredaddress-type-v210" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-preferredaddresstype" />
       </binding>
     </element>
   </differential>
