@@ -11,7 +11,13 @@ This is a service release to fix ValueSet and CodeSystem resource version number
 |gd-person-identifierstatus.ValueSet.xml|Rename file, remove version in id, filename and url|
 |gd-person-identifierstatus.CodeSystem.xml|Rename file, remove version in id, filename and url, changed code "opphørt" to "opphoert" like the actual data from FREG|
 |StructureDefinition\gd-person-identifier-status.StructureDefinition-extension.xml|changed valueset to http://ehelse.no/fhir/ValueSet/gd-person-identifierstatus|
-
+|gd-person-status.ValueSet.xml|Rename file, remove version in id, filename and url|
+|gd-person-status.CodeSystem.xml|Rename file, remove version in id, filename and url|
+|StructureDefinition\gd-person-status.StructureDefinition-extension.xml|changed valueset to http://ehelse.no/fhir/ValueSet/gd-person-status|
+|New file gd-person-probatetype.ValueSet.xml|New ValueSet to include codes from probatetype codesystem|
+|Rename gd-person-probateform-v05.CodeSystem.xml -> gd-person-probatetype.CodeSystem.xml | Changed the name into something meaningfull, removed version info in filenames and id's|
+|gd-person-gender.ValueSet.xml|Updated the documentation for the ValueSet|
+|Removed file: gd-person-addresstypeclassification-v05.codesystem.xml| This is a duplicate, the system defined is not in use http://ehelse.no/fhir/CodeSystem/gd-person-addresstypeclassification-v05.codesystem|
 
 
 ## Documents the changes implemented from version 2.1.0 to 2.2.0
