@@ -21,6 +21,7 @@ This is a service release to fix ValueSet and CodeSystem resource version number
 |Rename gd-address-preferredaddresstype-v210.ValueSet -> gd-address-preferredaddresstype.ValueSet|removed version info in filenames and id's|
 |Removed gd-person-addresstype-v05.CodeSystem.xml|Not used by any extensions, StructureDefinition or ValueSet, gd-preferredaddrestype is used|
 |Rename gd-address-type-v201.CodeSystem.xml -> gd-address-type.CodeSystem.xml|removed version info in filenames and id's|
+|gd-address-type.CodeSystem.xml|Changed code KontaktadresseUtlandet -> KontaktadresseIUtlandet|
 |Rename gd-address-type-v201.ValueSet.xml -> gd-address-type.ValueSet.xml|removed version info in filenames and id's|
 
 

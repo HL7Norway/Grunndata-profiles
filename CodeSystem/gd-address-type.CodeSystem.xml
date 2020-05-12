@@ -28,8 +28,8 @@
         <display value="Kontaktadresse" />
     </concept>
         <concept>
-        <code value="KontaktadresseUtlandet" />
-        <display value="Kontaktadresse utlandet" />
+        <code value="KontaktadresseIUtlandet" />
+        <display value="Kontaktadresse i utlandet" />
     </concept>
         <concept>
         <code value="PreferertKontaktadresse" />
