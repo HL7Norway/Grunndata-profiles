@@ -12,7 +12,7 @@
 	<publisher value="Skatteetaten"/>
 	<compose>
 		<include> 
-			<system value="http://ehelse.no/fhir/CodeSystem/gd-person-guardianscope-v05"/>
+			<system value="http://ehelse.no/fhir/CodeSystem/gd-person-guardianscope"/>
 		</include>
 	</compose>
 </ValueSet>
