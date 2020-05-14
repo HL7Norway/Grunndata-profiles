@@ -34,6 +34,11 @@ This is a service release to fix ValueSet and CodeSystem resource version number
 |Rename gd-person-residencepermittype-v05.valueset.xml -> gd-person-residencepermittype.valueset.xml|removed version info in filenames and id's|
 |Rename gd-person-residencepermittype-v05.codesystem.xml -> gd-person-residencepermittype.codesystem.xml|removed version info in filenames and id's|
 |gd-residence-permit.StructureDefinition-extension.xml|removed version info in valueset reference to residencepermittype|
+|gd-address-physicaladdresstype-v201.CodeSystem.xml|Changed militær -> militaer and påSvalbard -> paaSvalbard|
+|gd-address-physicaladdresstype-v201.CodeSystem.xml -> gd-address-physicaladdresstype.CodeSystem.xml|removed version info in filenames and id's|
+|gd-address-physicaladdresstype-v201.xml -> gd-address-physicaladdresstype.ValueSet.xml|removed version info in filenames and id's|
+|C:\GitRepo\Grunndata-R4\StructureDefinition\gd-address-metadata.StructureDefinition-extension.xml|removed version info in valueset reference for physicaladdresstype|
+
 
 
 ## Documents the changes implemented from version 2.1.0 to 2.2.0

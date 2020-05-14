@@ -184,7 +184,7 @@
       <binding>
         <strength value="required" />
         <description value="kategori oppholdssted" />
-        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-address-physicaladdresstype-v201" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-address-physicaladdresstype" />
       </binding>
     </element>
     <element id="Extension.extension:physicalAddressType.url">

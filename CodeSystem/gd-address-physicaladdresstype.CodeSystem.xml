@@ -1,18 +1,18 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="gd-address-physicaladdresstype-v201.codesystem" />
+    <id value="gd-address-physicaladdresstype.codesystem" />
     <meta>
-        <versionId value="1" />
-        <lastUpdated value="2018-10-17T00:00:00.000+00:00" />
+        <versionId value="2" />
+        <lastUpdated value="2020-05-14T00:00:00.000+00:00" />
     </meta>
-    <url value="http://ehelse.no/fhir/CodeSystem/gd-address-physicaladdresstype-v201" />
-    <version value="2.0.1" />
-    <name value="gd-address-physicaladdresstype-v201.codesystem" />
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-address-physicaladdresstype" />
+    <version value="2.3.0" />
+    <name value="GdAddressPhysicaladdresstypeCodeSystem" />
     <status value="draft" />
     <date value="2018-10-17T00:00:00.000+00:00" />
-    <publisher value="Skatteetaten" />
+    <publisher value="Copy of Codes from OppholdAnnetSted defined by Skatteetaten" />
     <content value="complete" />
     <concept>
-        <code value="militær" />
+        <code value="militaer" />
         <display value="Militær" />
     </concept>
     <concept>
@@ -20,7 +20,7 @@
         <display value="Utenriks" />
     </concept>
     <concept>
-        <code value="påSvalbard" />
+        <code value="paaSvalbard" />
         <display value="På Svalbard" />
     </concept>
     <concept>
