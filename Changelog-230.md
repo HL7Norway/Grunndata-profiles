@@ -31,8 +31,9 @@ This is a service release to fix ValueSet and CodeSystem resource version number
 |Examples| replaced the use of guardiantype codesystem url to http://ehelse.no/fhir/Codesystem/gd-person-guardiantype|
 |New file gd-person-retaincitizenship.ValueSet.xml|Definition of Bibehold ValueSet|
 |New file gd-person-retaincitizenship.CodeSystem.xml|Definition of Bibehold CodeSystem|
-gd-person-residencepermittype-v05.valueset.xml
-gd-person-residencepermittype-v05.codesystem.xml
+|Rename gd-person-residencepermittype-v05.valueset.xml -> gd-person-residencepermittype.valueset.xml|removed version info in filenames and id's|
+|Rename gd-person-residencepermittype-v05.codesystem.xml -> gd-person-residencepermittype.codesystem.xml|removed version info in filenames and id's|
+|gd-residence-permit.StructureDefinition-extension.xml|removed version info in valueset reference to residencepermittype|
 
 
 ## Documents the changes implemented from version 2.1.0 to 2.2.0
