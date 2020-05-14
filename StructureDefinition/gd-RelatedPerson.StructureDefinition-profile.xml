@@ -292,7 +292,7 @@
       <binding>
         <strength value="required" />
         <description value="guardianship type registered in FREG" />
-        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-guardiantype-v05" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-guardiantype" />
       </binding>
     </element>
     <element id="RelatedPerson.relationship:guardianship.extension">
@@ -343,7 +343,7 @@
         <valueCode value="4.0.0" />
       </extension>
       <path value="RelatedPerson.relationship.coding.system" />
-      <fixedUri value="http://ehelse.no/fhir/CodeSystem/gd-person-guardiantype-v05" />
+      <fixedUri value="http://ehelse.no/fhir/CodeSystem/gd-person-guardiantype" />
     </element>
     <element id="RelatedPerson.name">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">

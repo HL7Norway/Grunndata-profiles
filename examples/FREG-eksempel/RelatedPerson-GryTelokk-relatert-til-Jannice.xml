@@ -65,7 +65,7 @@
 			</extension>
 		</extension>
 		<coding>
-			<system value="http://ehelse.no/fhir/CodeSystem/gd-person-guardiantype-v05"/>
+			<system value="http://ehelse.no/fhir/CodeSystem/gd-person-guardiantype"/>
 			<code value="midlertidigForVoksen"/>
 		</coding>
 	</relationship>

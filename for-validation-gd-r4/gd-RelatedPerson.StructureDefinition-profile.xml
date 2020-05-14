@@ -4232,7 +4232,7 @@
       <binding>
         <strength value="required" />
         <description value="guardianship type registered in FREG" />
-        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-guardiantype-v05" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-guardiantype" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -4544,7 +4544,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://ehelse.no/fhir/CodeSystem/gd-person-guardiantype-v05" />
+      <fixedUri value="http://ehelse.no/fhir/CodeSystem/gd-person-guardiantype" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -6003,7 +6003,7 @@
       <binding>
         <strength value="required" />
         <description value="guardianship type registered in FREG" />
-        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-guardiantype-v05" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-guardiantype" />
       </binding>
     </element>
     <element id="RelatedPerson.relationship:guardianship.extension">
@@ -6036,7 +6036,7 @@
     </element>
     <element id="RelatedPerson.relationship:guardianship.coding.system">
       <path value="RelatedPerson.relationship.coding.system" />
-      <fixedUri value="http://ehelse.no/fhir/CodeSystem/gd-person-guardiantype-v05" />
+      <fixedUri value="http://ehelse.no/fhir/CodeSystem/gd-person-guardiantype" />
     </element>
     <element id="RelatedPerson.name">
       <path value="RelatedPerson.name" />

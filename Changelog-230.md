@@ -23,6 +23,16 @@ This is a service release to fix ValueSet and CodeSystem resource version number
 |Rename gd-address-type-v201.CodeSystem.xml -> gd-address-type.CodeSystem.xml|removed version info in filenames and id's|
 |gd-address-type.CodeSystem.xml|Changed code KontaktadresseUtlandet -> KontaktadresseIUtlandet|
 |Rename gd-address-type-v201.ValueSet.xml -> gd-address-type.ValueSet.xml|removed version info in filenames and id's|
+|Rename gd-person-guardianscope-v05.CodeSystem.xml -> gd-person-guardianscope.CodeSystem.xml|removed version info in filenames and id's|
+|Rename gd-person-guardianscope-v05.ValueSet.xml -> gd-person-guardianscope.ValueSet.xml|removed version info in filenames and id's|
+|Rename gd-person-guardiantype-v05.CodeSystem.xml -> gd-person-guardiantype.CodeSystem.xml|removed version info in filenames and id's|
+|Rename gd-person-guardiantype-v05.ValueSet.xml -> gd-person-guardiantype.ValueSet.xml|removed version info in filenames and id's|
+|gd-person-RelatedPerson.StructureDefinition-profile.xml|Replaced http://ehelse.no/fhir/ValueSet/gd-person-guardiantype-05 with http://ehelse.no/fhir/ValueSet/gd-person-guardiantype|
+|Examples| replaced the use of guardiantype codesystem url to http://ehelse.no/fhir/Codesystem/gd-person-guardiantype|
+|New file gd-person-retaincitizenship.ValueSet.xml|Definition of Bibehold ValueSet|
+|New file gd-person-retaincitizenship.CodeSystem.xml|Definition of Bibehold CodeSystem|
+gd-person-residencepermittype-v05.valueset.xml
+gd-person-residencepermittype-v05.codesystem.xml
 
 
 ## Documents the changes implemented from version 2.1.0 to 2.2.0

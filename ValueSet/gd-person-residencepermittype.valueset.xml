@@ -10,7 +10,7 @@
 	<name value="GdPersonResidencepermittypeValueSet"/>
 	<status value="draft"/>
 	<date value="2019-06-11T00:00:00.000+00:00"/>
-	<publisher value="Skatteetaten"/>
+	<publisher value="Valueset containing all codes from Oppholdstillatelsetype defined by Skatteetaten"/>
 	<compose>
 		<include >
 			<system value="http://ehelse.no/fhir/CodeSystem/gd-person-residencepermittype-v05"/>
