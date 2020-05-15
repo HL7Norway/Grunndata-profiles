@@ -43,7 +43,11 @@ This is a service release to fix ValueSet and CodeSystem resource version number
 |Removed file gd-person-addresstypecategory-v05.CodeSystem.xml|The Codesystem have never been used|
 |Removed file gd-person-addresstypesensitivity-v05.CodeSystem.xml|Codesystem not in use (http://ehelse.no/fhir/CodeSystem/gd-address-confidentiality-v201 is used|
 |Rename gd-person-documentcontrollstatus-v05.CodeSystem.xml -> gd-person-documentcontrolstatus.CodeSystem.xml|New url without version and removed "ll", ValueSet not defined yet|
-
+|Removed gd-person-identificationdocumenttype-v05.CodeSystem.xml|identifikasjonsdokumenttype is not defined as a codesystem by Skatteetaten in their XML-schema|
+|Rename file gd-person-identityresasonstatus-v05.CodeSystem.xml -> gd-person-identityresasonstatus.CodeSystem.xml|New id and url without version number, ValueSet not defined yet|
+|Removed file gd-person-identityresasonunique-v05.CodeSystem.xml|CodeSystem not defined by FREG|
+|Removed file gd-person-maritalstatusauthorities-v05.CodeSystem.xml|CodeSystem not defined by FREG for Sivilstand.myndighet|
+|Rename file gd-person-registerchangesstatus-v05.CodeSystem.xml -> gd-provenance-freg-entitychangetype.CodeSystem.xml|Removed version info in id's and urls|
 
 ## Documents the changes implemented from version 2.1.0 to 2.2.0
 ### Release date: 2020-04-02
