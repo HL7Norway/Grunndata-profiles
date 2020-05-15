@@ -1,15 +1,15 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="gd-person-documentcontrollstatus-v05.codesystem" />
+    <id value="gd-person-documentcontrolstatus.codesystem" />
     <meta>
-        <versionId value="1" />
-        <lastUpdated value="2018-10-17T00:00:00.000+00:00" />
+        <versionId value="2" />
+        <lastUpdated value="2020-05-15T00:00:00.000+00:00" />
     </meta>
-    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-documentcontrollstatus-v05.codesystem" />
-    <version value="5.0.0" />
-    <name value="gd-person-documentcontrollstatus-v05.codesystem" />
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-documentcontrolstatus.codesystem" />
+    <version value="2.3.0" />
+    <name value="GdPersonDocumentcontrolstatusCodeSystem" />
     <status value="draft" />
     <date value="2018-10-17T00:00:00.000+00:00" />
-    <publisher value="Skatteetaten" />
+    <publisher value="Copy of Codes from dokumentkontrollstatus defined by Skatteetaten" />
     <content value="complete" />
     <concept>
         <code value="kontrollertIdentifikasjonsdokument" />

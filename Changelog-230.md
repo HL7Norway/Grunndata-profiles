@@ -38,7 +38,11 @@ This is a service release to fix ValueSet and CodeSystem resource version number
 |gd-address-physicaladdresstype-v201.CodeSystem.xml -> gd-address-physicaladdresstype.CodeSystem.xml|removed version info in filenames and id's|
 |gd-address-physicaladdresstype-v201.xml -> gd-address-physicaladdresstype.ValueSet.xml|removed version info in filenames and id's|
 |C:\GitRepo\Grunndata-R4\StructureDefinition\gd-address-metadata.StructureDefinition-extension.xml|removed version info in valueset reference for physicaladdresstype|
-
+|Removed file gd-person-familyrelation-v05.CodeSystem.xml|The CodeSystem in no-basis should be used|
+|Removed file gd-address-postaltype-v01.CodeSystem.xml|The codesystem have never been used|
+|Removed file gd-person-addresstypecategory-v05.CodeSystem.xml|The Codesystem have never been used|
+|Removed file gd-person-addresstypesensitivity-v05.CodeSystem.xml|Codesystem not in use (http://ehelse.no/fhir/CodeSystem/gd-address-confidentiality-v201 is used|
+|Rename gd-person-documentcontrollstatus-v05.CodeSystem.xml -> gd-person-documentcontrolstatus.CodeSystem.xml|New url without version and removed "ll", ValueSet not defined yet|
 
 
 ## Documents the changes implemented from version 2.1.0 to 2.2.0
