@@ -1,15 +1,15 @@
 <ValueSet  xmlns="http://hl7.org/fhir">
-	<id value="gd-provenance-freg-hendelsestype-v210.ValueSet"/>
+	<id value="gd-provenance-freg-eventtype.ValueSet"/>
 	<meta>
-		<versionId value="1"/>
-		<lastUpdated value="2019-12-06T00:00:00.000+00:00"/>
+		<versionId value="2"/>
+		<lastUpdated value="2020-05-18T00:00:00.000+00:00"/>
 	</meta>
 	<url value="http://ehelse.no/fhir/ValueSet/gd-provenance-freg-eventtype"/>
-	<version value="2.1.0"/>
-	<name value="GdProvenanceFregHendelsestypeValueSet"/>
+	<version value="2.3.0"/>
+	<name value="GdProvenanceFregEventTypeValueSet"/>
 	<status value="draft"/>
 	<date value="2019-04-17T00:00:00.000+00:00"/>
-	<publisher value="Skatteetaten"/>
+	<publisher value="Contains all codes from Hendelsestype defined by Skatteetaten"/>
 	<compose>
 		<include>
 			<system value="http://ehelse.no/fhir/CodeSystem/gd-provenance-freg-eventtype"/>

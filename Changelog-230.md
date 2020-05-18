@@ -49,6 +49,13 @@ This is a service release to fix ValueSet and CodeSystem resource version number
 |Removed file gd-person-maritalstatusauthorities-v05.CodeSystem.xml|CodeSystem not defined by FREG for Sivilstand.myndighet|
 |Rename file gd-person-registerchangesstatus-v05.CodeSystem.xml -> gd-provenance-freg-entitychangetype.CodeSystem.xml|Removed version info in id's and urls|
 
+|New file gd-person-sametingelectorrelation.ValueSet.xml|Definition of forholdTilSametingetsValgmanntallValueSet|
+|New file gd-person-sametingelectorrelation.CodeSystem.xml|Definition of forholdTilSametingetsValgmanntallCodeSystem|
+|Rename gd-provenance-freg-hendelsestype-v210.ValueSet.xml -> gd-provenance-freg-eventtype.ValueSet.xml|Removed version info in id's and urls|
+|Rename gd-provenance-freg-hendelsestype-v210.CodeSystem.xml -> gd-provenance-freg-eventtype.CodeSystem.xml|Removed version info in id's and urls|
+|New code in gd-provenance-freg-eventtype.CodeSystem.xml|endringIVergemaal added from XSD from Skatteetaten|
+
+
 ## Documents the changes implemented from version 2.1.0 to 2.2.0
 ### Release date: 2020-04-02
 

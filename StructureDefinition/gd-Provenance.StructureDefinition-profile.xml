@@ -167,7 +167,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-provenance-freg-hendelsestype-v210" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-provenance-freg-eventtype" />
       </binding>
     </element>
     <element id="Provenance.reason:fregEventtype.coding">
@@ -191,7 +191,7 @@
       <short value="Event type codesystem from freg" />
       <definition value="Event type codesystem from freg" />
       <min value="1" />
-      <fixedUri value="http://ehelse.no/fhir/CodeSystem/gd-provenance-freg-hendelsestype-v210" />
+      <fixedUri value="http://ehelse.no/fhir/CodeSystem/gd-provenance-freg-eventtype" />
     </element>
     <element id="Provenance.reason:fregEventtype.coding.code">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">

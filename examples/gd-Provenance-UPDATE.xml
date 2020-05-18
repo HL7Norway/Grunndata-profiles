@@ -9,7 +9,7 @@
 	<recorded value="2019-11-01T13:28:00.658+00:00"/>
 	<reason>
 		<coding>
-			<system value="http://ehelse.no/fhir/CodeSystem/gd-provenance-freg-hendelsestype-v210"/>
+			<system value="http://ehelse.no/fhir/CodeSystem/gd-provenance-freg-eventtype"/>
 			<code value="endringIBostedsadresse"/>
 		</coding>
 	</reason>
