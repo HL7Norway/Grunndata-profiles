@@ -1,0 +1,22 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="gd-person-identifierstatus.codesystem" />
+    <meta>
+        <versionId value="2" />
+        <lastUpdated value="2020-05-07T00:00:00.000+00:00" />
+    </meta>
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-identifierstatus" />
+    <version value="2.3.0" />
+    <name value="GdPersonIdentifierstatusCodeSystem" />
+    <status value="draft" />
+    <date value="2018-10-17T00:00:00.000+00:00" />
+    <publisher value="Copy of Codes from Identifikatorstatuskode defined by Skatteetaten" />
+    <content value="complete" />
+    <concept>
+        <code value="iBruk" />
+        <display value="I bruk" />
+    </concept>
+    <concept>
+        <code value="opphoert" />
+        <display value="Opphørt" />
+    </concept>
+</CodeSystem>

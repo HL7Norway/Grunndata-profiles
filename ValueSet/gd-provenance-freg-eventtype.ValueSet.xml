@@ -1,0 +1,18 @@
+<ValueSet  xmlns="http://hl7.org/fhir">
+	<id value="gd-provenance-freg-eventtype.ValueSet"/>
+	<meta>
+		<versionId value="2"/>
+		<lastUpdated value="2020-05-18T00:00:00.000+00:00"/>
+	</meta>
+	<url value="http://ehelse.no/fhir/ValueSet/gd-provenance-freg-eventtype"/>
+	<version value="2.3.0"/>
+	<name value="GdProvenanceFregEventTypeValueSet"/>
+	<status value="draft"/>
+	<date value="2019-04-17T00:00:00.000+00:00"/>
+	<publisher value="Contains all codes from Hendelsestype defined by Skatteetaten"/>
+	<compose>
+		<include>
+			<system value="http://ehelse.no/fhir/CodeSystem/gd-provenance-freg-eventtype"/>
+		</include>
+	</compose>
+</ValueSet>

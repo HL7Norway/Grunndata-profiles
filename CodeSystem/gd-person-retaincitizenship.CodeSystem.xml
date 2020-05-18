@@ -1,0 +1,26 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="gd-person-retaincitizenship.codesystem" />
+    <meta>
+        <versionId value="1" />
+        <lastUpdated value="2020-05-14T00:00:00.000+00:00" />
+    </meta>
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-retaincitizenship" />
+    <version value="2.3.0" />
+    <name value="GdPersonRetaincitizenshipCodeSystem" />
+    <status value="draft" />
+    <date value="2020-05-14T00:00:00.000+00:00" />
+    <publisher value="Copy of Codes from Bibehold defined by Skatteetaten" />
+    <content value="complete" />
+    <concept>
+        <code value="harBibehold" />
+        <display value="Personen har fått et bibeholdsvedtak fra utlendingsmyndigheten om sitt norske statsborgerskap" />
+    </concept>
+    <concept>
+        <code value="harIkkeLengerBibehold" />
+        <display value="Personen har ikke bibehold av det norske statsborgerskapet" />
+    </concept>
+    <concept>
+        <code value="norskStatsborgerTrengerIkkeBibehold" />
+        <display value="IPersonen oppfyller kravet til norsk statsborgerskap og trenger derfor ikke å søke om bibehold" />
+    </concept>
+</CodeSystem>

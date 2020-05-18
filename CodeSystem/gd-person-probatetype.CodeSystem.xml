@@ -1,0 +1,18 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="gd-person-probatetype.codesystem" />
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-probatetype" />
+    <version value="2.3.0" />
+    <name value="GdPersonProbateTypeCodeSystem" />
+    <status value="draft" />
+    <date value="2020-05-08T00:00:00.000+00:00" />
+    <publisher value="Copy of Codes from Skifteform defined by Skatteetaten" />
+    <content value="complete" />
+    <concept>
+        <code value="offentlig" />
+        <display value="Offentlig" />
+    </concept>
+    <concept>
+        <code value="annet" />
+        <display value="Annet" />
+    </concept>
+</CodeSystem>
