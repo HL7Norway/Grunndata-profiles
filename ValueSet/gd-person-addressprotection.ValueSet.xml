@@ -1,0 +1,36 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="gd-person-addressprotection.valueset"/>
+	<meta>
+		<versionId value="1"/>
+		<lastUpdated value="2020-05-18T00:00:00.000+00:00"/>
+	</meta>
+	<url value="http://ehelse.no/fhir/ValueSet/gd-person-addressprotection"/>
+	<version value="2.3.0"/>
+	<name value="GdPersonAddressProtectionValueSet"/>
+	<status value="draft"/>
+	<date value="2020-05-18T00:00:00.000+00:00"/>
+	<publisher value="Valueset containing all codes used to identify adressebeskyttelse of a person in FREG, defined by Skatteetaten"/>
+	<description value="A subset of the codes from address confidentiality codesystem
+nivå av beskyttelsesgrad på informasjon
+Gyldige kodeverdier er:
+* ugradert
+* fortrolig
+* strengtFortrolig (strengt fortrolig)"/>
+	<compose>
+		<include >
+			<system value="http://ehelse.no/fhir/CodeSystem/gd-address-confidentiality"/>
+			<concept>
+                <code value="ugradert" />
+                <display value="Ugradert" />
+            </concept>
+            <concept>
+                <code value="fortrolig" />
+                <display value="Fortrolig" />
+            </concept>
+			<concept>
+                <code value="strengtFortrolig" />
+                <display value="Strengt Fortrolig" />
+            </concept>
+		</include>
+	</compose>
+</ValueSet>

@@ -16,23 +16,11 @@
   <derivation value="constraint" />
   <differential>
     <element id="Address">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Address" />
       <short value="Grunndata adresse fra FREG" />
       <definition value="Grunndata adresse&#xD;&#xA;Contains information and metadata for addresses defined in Norwegian Master Person Index and Norwegian Directorate of e-Health's health related Master Person Index.&#xD;&#xA;&#xD;&#xA;An address expressed using postal conventions (as opposed to GPS or other location definition formats).  This data type may be used to convey addresses for use in delivering mail as well as for visiting locations which might not be valid for mail delivery.  There are a variety of postal address formats defined around the world." />
     </element>
     <element id="Address.extension:urbanDistrict">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Address.extension" />
       <sliceName value="urbanDistrict" />
       <short value="Urban district of this address" />
@@ -40,23 +28,11 @@
       <mustSupport value="true" />
     </element>
     <element id="Address.extension:urbanDistrict.value[x].code">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Address.extension.value[x].code" />
       <alias value="bydelsnummer" />
       <mustSupport value="true" />
     </element>
     <element id="Address.extension:urbanDistrict.value[x].display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -67,12 +43,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Address.extension:fregMetadata">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Address.extension" />
       <sliceName value="fregMetadata" />
       <definition value="fregmetadata (registermetadata) describes metadata about resources available from the norwegian person index (folkeregisteret, freg), all resources containing metadata from folkeregisteret will include registermetadata" />
@@ -84,12 +54,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Address.extension:addressMetadata">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Address.extension" />
       <sliceName value="addressMetadata" />
       <max value="1" />
@@ -100,45 +64,21 @@
       <mustSupport value="true" />
     </element>
     <element id="Address.use">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Address.use" />
       <definition value="Grunndata don't use this element&#xD;&#xA;&#xD;&#xA;The purpose of this address.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide. In general the address used for visiting the person should have use &quot;home&quot; and type &quot;physical&quot; or &quot;both&quot;. The &quot;official&quot; flag can be either true or false." />
       <mustSupport value="false" />
     </element>
     <element id="Address.type">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Address.type" />
       <definition value="Grunndata don't use this element&#xD;&#xA;&#xD;&#xA;Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide. In general the address used for visiting the person should have use &quot;home&quot; and type &quot;physical&quot; or &quot;both&quot;. The &quot;official&quot; flag can be either true or false." />
       <mustSupport value="false" />
     </element>
     <element id="Address.city">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Address.city" />
       <definition value="gd-Address: All Norwegian addresses are from Master Person Index uses this element for &quot;poststed&quot; or &quot;postedsnavn&quot;. International addresses uses this element to communicate the name of the city.&#xD;&#xA;&#xD;&#xA;The name of the poststed or city. When a postalcode is given the name of the city must be according to the official list of postalcodes used in Norway. &#xD;&#xA;&#xD;&#xA;The name of the city, town, village or other community or delivery center." />
       <alias value="poststedsnavn" />
     </element>
     <element id="Address.district">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Address.district" />
       <short value="name of &quot;kommune&quot; or district" />
       <definition value="gd-Address: Norwegian addresses uses district for the norwegian &quot;kommune&quot;, international addresses uses district for any other applicable district in that country.&#xD;&#xA;&#xD;&#xA;Name of the county (norwegian &quot;kommune&quot;). If kommune number is required &quot;eiendomsinformasjon&quot; should be used.&#xD;&#xA;&#xD;&#xA;The name of the administrative area (county)." />

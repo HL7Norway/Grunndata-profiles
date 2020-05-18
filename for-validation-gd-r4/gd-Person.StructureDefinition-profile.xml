@@ -41,13 +41,13 @@
       <binding>
         <strength value="extensible" />
         <description value="Security labels from FREG" />
-        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-address-confidentiality-v05" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-address-confidentiality" />
       </binding>
     </element>
     <element id="Person.meta.security:addressConfidentiality.system">
       <path value="Person.meta.security.system" />
       <min value="1" />
-      <fixedUri value="http://ehelse.no/fhir/ValueSet/gd-address-confidentiality-v05" />
+      <fixedUri value="http://ehelse.no/fhir/ValueSet/gd-address-confidentiality" />
       <mustSupport value="true" />
     </element>
     <element id="Person.meta.security:addressConfidentiality.code">

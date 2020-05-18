@@ -4,7 +4,7 @@
         <versionId value="1" />
         <lastUpdated value="2019-04-24T00:00:00.000+00:00" />
     </meta>
-    <url value="http://ehelse.no/fhir/CodeSystem/gd-address-contenttype-v210" />
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-address-contenttype" />
     <version value="2.1.0" />
     <name value="gd-address-contenttype-v210.codesystem" />
     <status value="draft" />

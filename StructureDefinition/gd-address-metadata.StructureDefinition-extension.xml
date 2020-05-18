@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-address-metadata" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-address-metadata" />
-  <version value="2.1.1" />
+  <version value="2.3.0" />
   <name value="GdAddressMetadata" />
   <status value="draft" />
   <date value="2019-09-25" />
@@ -44,7 +44,7 @@
       <binding>
         <strength value="required" />
         <description value="beskyttelsesgrad FREG" />
-        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-address-confidentiality-v201" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-address-confidentiality" />
       </binding>
     </element>
     <element id="Extension.extension:confidentiality.url">
@@ -139,7 +139,7 @@
       <binding>
         <strength value="required" />
         <description value="Address Content Types" />
-        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-address-contenttype-v210" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-address-contenttype" />
       </binding>
     </element>
     <element id="Extension.extension:fregAddressContentType.url">

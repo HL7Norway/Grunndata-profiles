@@ -54,6 +54,15 @@ This is a service release to fix ValueSet and CodeSystem resource version number
 |Rename gd-provenance-freg-hendelsestype-v210.ValueSet.xml -> gd-provenance-freg-eventtype.ValueSet.xml|Removed version info in id's and urls|
 |Rename gd-provenance-freg-hendelsestype-v210.CodeSystem.xml -> gd-provenance-freg-eventtype.CodeSystem.xml|Removed version info in id's and urls|
 |New code in gd-provenance-freg-eventtype.CodeSystem.xml|endringIVergemaal added from XSD from Skatteetaten|
+|Description in gd-address-preferredaddresstype.ValueSet.xml|Clarify the valueset is for choice of preferred address type|
+|Rename file gd-address-contenttype-v210.CodeSystem.xml -> gd-address-contenttype.CodeSystem.xml|Removed version info in id's and urls|
+|Rename file gd-address-contenttype-v210.ValueSet.xml -> gd-address-contenttype.ValueSet.xml|Removed version info in id's and urls|
+|gd-address-metadata.StructureDefinition-extension.xml|Changed the url used to reference gd-address-contenttype.Valueset, removed id in url|
+|Rename gd-address-confidentiality-v201.ValueSet.xml -> gd-address-confidentiality.ValueSet.xml|Removed version info in id's and urls|
+|Rename gd-address-confidentiality-v201.CodeSystem.xml -> gd-address-confidentiality.CodeSystem.xml|Removed version info in id's and urls|
+|Added Valueset for addressprotection gd-person-addressprotection.ValueSet.xml
+|gd-Person.StructureDefinition-profile.xml|Changed valueset for meta.security slice to use gd-person-addressproctition.ValueSet|
+|gd-address-metadata.StructureDefinition-extension.xml|Changed the use of correct url for gd-address-confidentiality.ValueSet|
 
 
 ## Documents the changes implemented from version 2.1.0 to 2.2.0
