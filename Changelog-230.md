@@ -48,7 +48,7 @@ This is a service release to fix ValueSet and CodeSystem resource version number
 |Removed file gd-person-identityresasonunique-v05.CodeSystem.xml|CodeSystem not defined by FREG|
 |Removed file gd-person-maritalstatusauthorities-v05.CodeSystem.xml|CodeSystem not defined by FREG for Sivilstand.myndighet|
 |Rename file gd-person-registerchangesstatus-v05.CodeSystem.xml -> gd-provenance-freg-entitychangetype.CodeSystem.xml|Removed version info in id's and urls|
-
+|New file gd-provenance-freg-entitychangetype.ValueSet.xml|include all codes from gd-provenance-freg-entitychangetype codesystem|
 |New file gd-person-sametingelectorrelation.ValueSet.xml|Definition of forholdTilSametingetsValgmanntallValueSet|
 |New file gd-person-sametingelectorrelation.CodeSystem.xml|Definition of forholdTilSametingetsValgmanntallCodeSystem|
 |Rename gd-provenance-freg-hendelsestype-v210.ValueSet.xml -> gd-provenance-freg-eventtype.ValueSet.xml|Removed version info in id's and urls|
@@ -63,7 +63,10 @@ This is a service release to fix ValueSet and CodeSystem resource version number
 |Added Valueset for addressprotection gd-person-addressprotection.ValueSet.xml
 |gd-Person.StructureDefinition-profile.xml|Changed valueset for meta.security slice to use gd-person-addressproctition.ValueSet|
 |gd-address-metadata.StructureDefinition-extension.xml|Changed the use of correct url for gd-address-confidentiality.ValueSet|
-
+|New file gd-person-documentcontrolstatus.ValueSet.xml|include all codes from gd-person-documentcontrolstatus codesystem|
+|New file gd-person-identityresasonstatus.ValueSet.xml|include all codes from gd-person-identityresasonstatus codesystem|
+|gd-provenance-freg-entitychangetype.CodeSystem.xml|Removed ".codesystem" from url value|
+|gd-person-identityresasonstatus.CodeSystem.xml|Removed ".codesystem" from url value|
 
 ## Documents the changes implemented from version 2.1.0 to 2.2.0
 ### Release date: 2020-04-02
