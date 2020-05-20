@@ -36,7 +36,7 @@
         <display value="Postadresse fritt format" />
     </concept>
     <concept>
-        <code value="InternasjonalAdresseFrittFormat" />
+        <code value="InternasjonalAdresseIFrittFormat" />
         <display value="Internasjonal adresse fritt format" />
     </concept>
     <concept>
