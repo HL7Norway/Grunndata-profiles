@@ -10,14 +10,14 @@ This is a service release to fix ValueSet and CodeSystem resource version number
 |-
 |gd-person-identifierstatus.ValueSet.xml|Rename file, remove version in id, filename and url|PBI 2981|
 |gd-person-identifierstatus.CodeSystem.xml|Rename file, remove version in id, filename and url, changed code "opphørt" to "opphoert" like the actual data from FREG|PBI 2981|
-|StructureDefinition\gd-person-identifier-status.StructureDefinition-extension.xml|changed valueset to http://ehelse.no/fhir/ValueSet/gd-person-identifierstatus|PBI 2981|
+|StructureDefinition\gd-person-identifier-status.StructureDefinition-extension.xml|changed valueset to http://ehelse.no/fhir/ValueSet/gd-person-identifierstatus| PBI 2981|
 |gd-person-status.ValueSet.xml|Rename file, remove version in id, filename and url|PBI 2981|
 |gd-person-status.CodeSystem.xml|Rename file, remove version in id, filename and url|PBI 2981|
 |StructureDefinition\gd-person-status.StructureDefinition-extension.xml|changed valueset to http://ehelse.no/fhir/ValueSet/gd-person-status|PBI 2981|
 |New file gd-person-probatetype.ValueSet.xml|New ValueSet to include codes from probatetype codesystem|PBI 2981|
 |Rename gd-person-probateform-v05.CodeSystem.xml -> gd-person-probatetype.CodeSystem.xml | Changed the name into something meaningfull, removed version info in filenames and id's|PBI 2981|
 |gd-person-gender.ValueSet.xml|Updated the documentation for the ValueSet|PBI 2981|
-|Removed file: gd-person-addresstypeclassification-v05.codesystem.xml| This is a duplicate, the system defined is not in use http://ehelse.no/fhir/CodeSystem/gd-person-addresstypeclassification-v05.codesystem|PBI 2981|
+|Removed file: gd-person-addresstypeclassification-v05.codesystem.xml| This is a duplicate, the system defined is not in use http://ehelse.no/fhir/CodeSystem/gd-person-addresstypeclassification-v05.codesystem| PBI 2981|
 |Rename gd-address-preferredaddresstype-v210.ValueSet -> gd-address-preferredaddresstype.ValueSet|removed version info in filenames and id's|PBI 2981|
 |Removed gd-person-addresstype-v05.CodeSystem.xml|Not used by any extensions, StructureDefinition or ValueSet, gd-preferredaddrestype is used|PBI 2981|
 |Rename gd-address-type-v201.CodeSystem.xml -> gd-address-type.CodeSystem.xml|removed version info in filenames and id's|PBI 2981|
@@ -27,8 +27,8 @@ This is a service release to fix ValueSet and CodeSystem resource version number
 |Rename gd-person-guardianscope-v05.ValueSet.xml -> gd-person-guardianscope.ValueSet.xml|removed version info in filenames and id's|PBI 2981|
 |Rename gd-person-guardiantype-v05.CodeSystem.xml -> gd-person-guardiantype.CodeSystem.xml|removed version info in filenames and id's|PBI 2981|
 |Rename gd-person-guardiantype-v05.ValueSet.xml -> gd-person-guardiantype.ValueSet.xml|removed version info in filenames and id's|PBI 2981|
-|gd-person-RelatedPerson.StructureDefinition-profile.xml|Replaced http://ehelse.no/fhir/ValueSet/gd-person-guardiantype-05 with http://ehelse.no/fhir/ValueSet/gd-person-guardiantype|PBI 2981|
-|Examples| replaced the use of guardiantype codesystem url to http://ehelse.no/fhir/Codesystem/gd-person-guardiantype|PBI 2981|
+|gd-person-RelatedPerson.StructureDefinition-profile.xml|Replaced http://ehelse.no/fhir/ValueSet/gd-person-guardiantype-05 with http://ehelse.no/fhir/ValueSet/gd-person-guardiantype| PBI 2981|
+|Examples| replaced the use of guardiantype codesystem url to http://ehelse.no/fhir/Codesystem/gd-person-guardiantype| PBI 2981|
 |New file gd-person-retaincitizenship.ValueSet.xml|Definition of Bibehold ValueSet|PBI 2981|
 |New file gd-person-retaincitizenship.CodeSystem.xml|Definition of Bibehold CodeSystem|PBI 2981|
 |Rename gd-person-residencepermittype-v05.valueset.xml -> gd-person-residencepermittype.valueset.xml|removed version info in filenames and id's|PBI 2981|
