@@ -6,68 +6,68 @@
 This is a service release to fix ValueSet and CodeSystem resource version numbering in filenames, id's an URL's, and removal of CodeSystem definitions not used in the specification.
 
 ## Files change description
-|File|Change description|
+|File|Change description|Dev-ops id|
 |-
-|gd-person-identifierstatus.ValueSet.xml|Rename file, remove version in id, filename and url|
-|gd-person-identifierstatus.CodeSystem.xml|Rename file, remove version in id, filename and url, changed code "opphørt" to "opphoert" like the actual data from FREG|
-|StructureDefinition\gd-person-identifier-status.StructureDefinition-extension.xml|changed valueset to http://ehelse.no/fhir/ValueSet/gd-person-identifierstatus|
-|gd-person-status.ValueSet.xml|Rename file, remove version in id, filename and url|
-|gd-person-status.CodeSystem.xml|Rename file, remove version in id, filename and url|
-|StructureDefinition\gd-person-status.StructureDefinition-extension.xml|changed valueset to http://ehelse.no/fhir/ValueSet/gd-person-status|
-|New file gd-person-probatetype.ValueSet.xml|New ValueSet to include codes from probatetype codesystem|
-|Rename gd-person-probateform-v05.CodeSystem.xml -> gd-person-probatetype.CodeSystem.xml | Changed the name into something meaningfull, removed version info in filenames and id's|
-|gd-person-gender.ValueSet.xml|Updated the documentation for the ValueSet|
-|Removed file: gd-person-addresstypeclassification-v05.codesystem.xml| This is a duplicate, the system defined is not in use http://ehelse.no/fhir/CodeSystem/gd-person-addresstypeclassification-v05.codesystem|
-|Rename gd-address-preferredaddresstype-v210.ValueSet -> gd-address-preferredaddresstype.ValueSet|removed version info in filenames and id's|
-|Removed gd-person-addresstype-v05.CodeSystem.xml|Not used by any extensions, StructureDefinition or ValueSet, gd-preferredaddrestype is used|
-|Rename gd-address-type-v201.CodeSystem.xml -> gd-address-type.CodeSystem.xml|removed version info in filenames and id's|
-|gd-address-type.CodeSystem.xml|Changed code KontaktadresseUtlandet -> KontaktadresseIUtlandet|
-|Rename gd-address-type-v201.ValueSet.xml -> gd-address-type.ValueSet.xml|removed version info in filenames and id's|
-|Rename gd-person-guardianscope-v05.CodeSystem.xml -> gd-person-guardianscope.CodeSystem.xml|removed version info in filenames and id's|
-|Rename gd-person-guardianscope-v05.ValueSet.xml -> gd-person-guardianscope.ValueSet.xml|removed version info in filenames and id's|
-|Rename gd-person-guardiantype-v05.CodeSystem.xml -> gd-person-guardiantype.CodeSystem.xml|removed version info in filenames and id's|
-|Rename gd-person-guardiantype-v05.ValueSet.xml -> gd-person-guardiantype.ValueSet.xml|removed version info in filenames and id's|
-|gd-person-RelatedPerson.StructureDefinition-profile.xml|Replaced http://ehelse.no/fhir/ValueSet/gd-person-guardiantype-05 with http://ehelse.no/fhir/ValueSet/gd-person-guardiantype|
-|Examples| replaced the use of guardiantype codesystem url to http://ehelse.no/fhir/Codesystem/gd-person-guardiantype|
-|New file gd-person-retaincitizenship.ValueSet.xml|Definition of Bibehold ValueSet|
-|New file gd-person-retaincitizenship.CodeSystem.xml|Definition of Bibehold CodeSystem|
-|Rename gd-person-residencepermittype-v05.valueset.xml -> gd-person-residencepermittype.valueset.xml|removed version info in filenames and id's|
-|Rename gd-person-residencepermittype-v05.codesystem.xml -> gd-person-residencepermittype.codesystem.xml|removed version info in filenames and id's|
-|gd-residence-permit.StructureDefinition-extension.xml|removed version info in valueset reference to residencepermittype|
-|gd-address-physicaladdresstype-v201.CodeSystem.xml|Changed militær -> militaer and påSvalbard -> paaSvalbard|
-|gd-address-physicaladdresstype-v201.CodeSystem.xml -> gd-address-physicaladdresstype.CodeSystem.xml|removed version info in filenames and id's|
-|gd-address-physicaladdresstype-v201.xml -> gd-address-physicaladdresstype.ValueSet.xml|removed version info in filenames and id's|
-|C:\GitRepo\Grunndata-R4\StructureDefinition\gd-address-metadata.StructureDefinition-extension.xml|removed version info in valueset reference for physicaladdresstype|
-|Removed file gd-person-familyrelation-v05.CodeSystem.xml|The CodeSystem in no-basis should be used|
-|Removed file gd-address-postaltype-v01.CodeSystem.xml|The codesystem have never been used|
-|Removed file gd-person-addresstypecategory-v05.CodeSystem.xml|The Codesystem have never been used|
-|Removed file gd-person-addresstypesensitivity-v05.CodeSystem.xml|Codesystem not in use (http://ehelse.no/fhir/CodeSystem/gd-address-confidentiality-v201 is used|
-|Rename gd-person-documentcontrollstatus-v05.CodeSystem.xml -> gd-person-documentcontrolstatus.CodeSystem.xml|New url without version and removed "ll", ValueSet not defined yet|
-|Removed gd-person-identificationdocumenttype-v05.CodeSystem.xml|identifikasjonsdokumenttype is not defined as a codesystem by Skatteetaten in their XML-schema|
-|Rename file gd-person-identityresasonstatus-v05.CodeSystem.xml -> gd-person-identityresasonstatus.CodeSystem.xml|New id and url without version number, ValueSet not defined yet|
-|Removed file gd-person-identityresasonunique-v05.CodeSystem.xml|CodeSystem not defined by FREG|
-|Removed file gd-person-maritalstatusauthorities-v05.CodeSystem.xml|CodeSystem not defined by FREG for Sivilstand.myndighet|
-|Rename file gd-person-registerchangesstatus-v05.CodeSystem.xml -> gd-provenance-freg-entitychangetype.CodeSystem.xml|Removed version info in id's and urls|
-|New file gd-provenance-freg-entitychangetype.ValueSet.xml|include all codes from gd-provenance-freg-entitychangetype codesystem|
-|New file gd-person-sametingelectorrelation.ValueSet.xml|Definition of forholdTilSametingetsValgmanntallValueSet|
-|New file gd-person-sametingelectorrelation.CodeSystem.xml|Definition of forholdTilSametingetsValgmanntallCodeSystem|
-|Rename gd-provenance-freg-hendelsestype-v210.ValueSet.xml -> gd-provenance-freg-eventtype.ValueSet.xml|Removed version info in id's and urls|
-|Rename gd-provenance-freg-hendelsestype-v210.CodeSystem.xml -> gd-provenance-freg-eventtype.CodeSystem.xml|Removed version info in id's and urls|
-|New code in gd-provenance-freg-eventtype.CodeSystem.xml|endringIVergemaal added from XSD from Skatteetaten|
-|Description in gd-address-preferredaddresstype.ValueSet.xml|Clarify the valueset is for choice of preferred address type|
-|Rename file gd-address-contenttype-v210.CodeSystem.xml -> gd-address-contenttype.CodeSystem.xml|Removed version info in id's and urls|
-|Rename file gd-address-contenttype-v210.ValueSet.xml -> gd-address-contenttype.ValueSet.xml|Removed version info in id's and urls|
-|gd-address-metadata.StructureDefinition-extension.xml|Changed the url used to reference gd-address-contenttype.Valueset, removed id in url|
-|Rename gd-address-confidentiality-v201.ValueSet.xml -> gd-address-confidentiality.ValueSet.xml|Removed version info in id's and urls|
-|Rename gd-address-confidentiality-v201.CodeSystem.xml -> gd-address-confidentiality.CodeSystem.xml|Removed version info in id's and urls|
+|gd-person-identifierstatus.ValueSet.xml|Rename file, remove version in id, filename and url|PBI 2981|
+|gd-person-identifierstatus.CodeSystem.xml|Rename file, remove version in id, filename and url, changed code "opphørt" to "opphoert" like the actual data from FREG|PBI 2981|
+|StructureDefinition\gd-person-identifier-status.StructureDefinition-extension.xml|changed valueset to http://ehelse.no/fhir/ValueSet/gd-person-identifierstatus|PBI 2981|
+|gd-person-status.ValueSet.xml|Rename file, remove version in id, filename and url|PBI 2981|
+|gd-person-status.CodeSystem.xml|Rename file, remove version in id, filename and url|PBI 2981|
+|StructureDefinition\gd-person-status.StructureDefinition-extension.xml|changed valueset to http://ehelse.no/fhir/ValueSet/gd-person-status|PBI 2981|
+|New file gd-person-probatetype.ValueSet.xml|New ValueSet to include codes from probatetype codesystem|PBI 2981|
+|Rename gd-person-probateform-v05.CodeSystem.xml -> gd-person-probatetype.CodeSystem.xml | Changed the name into something meaningfull, removed version info in filenames and id's|PBI 2981|
+|gd-person-gender.ValueSet.xml|Updated the documentation for the ValueSet|PBI 2981|
+|Removed file: gd-person-addresstypeclassification-v05.codesystem.xml| This is a duplicate, the system defined is not in use http://ehelse.no/fhir/CodeSystem/gd-person-addresstypeclassification-v05.codesystem|PBI 2981|
+|Rename gd-address-preferredaddresstype-v210.ValueSet -> gd-address-preferredaddresstype.ValueSet|removed version info in filenames and id's|PBI 2981|
+|Removed gd-person-addresstype-v05.CodeSystem.xml|Not used by any extensions, StructureDefinition or ValueSet, gd-preferredaddrestype is used|PBI 2981|
+|Rename gd-address-type-v201.CodeSystem.xml -> gd-address-type.CodeSystem.xml|removed version info in filenames and id's|PBI 2981|
+|gd-address-type.CodeSystem.xml|Changed code KontaktadresseUtlandet -> KontaktadresseIUtlandet|PBI 2981|
+|Rename gd-address-type-v201.ValueSet.xml -> gd-address-type.ValueSet.xml|removed version info in filenames and id's|PBI 2981|
+|Rename gd-person-guardianscope-v05.CodeSystem.xml -> gd-person-guardianscope.CodeSystem.xml|removed version info in filenames and id's|PBI 2981|
+|Rename gd-person-guardianscope-v05.ValueSet.xml -> gd-person-guardianscope.ValueSet.xml|removed version info in filenames and id's|PBI 2981|
+|Rename gd-person-guardiantype-v05.CodeSystem.xml -> gd-person-guardiantype.CodeSystem.xml|removed version info in filenames and id's|PBI 2981|
+|Rename gd-person-guardiantype-v05.ValueSet.xml -> gd-person-guardiantype.ValueSet.xml|removed version info in filenames and id's|PBI 2981|
+|gd-person-RelatedPerson.StructureDefinition-profile.xml|Replaced http://ehelse.no/fhir/ValueSet/gd-person-guardiantype-05 with http://ehelse.no/fhir/ValueSet/gd-person-guardiantype|PBI 2981|
+|Examples| replaced the use of guardiantype codesystem url to http://ehelse.no/fhir/Codesystem/gd-person-guardiantype|PBI 2981|
+|New file gd-person-retaincitizenship.ValueSet.xml|Definition of Bibehold ValueSet|PBI 2981|
+|New file gd-person-retaincitizenship.CodeSystem.xml|Definition of Bibehold CodeSystem|PBI 2981|
+|Rename gd-person-residencepermittype-v05.valueset.xml -> gd-person-residencepermittype.valueset.xml|removed version info in filenames and id's|PBI 2981|
+|Rename gd-person-residencepermittype-v05.codesystem.xml -> gd-person-residencepermittype.codesystem.xml|removed version info in filenames and id's|PBI 2981|
+|gd-residence-permit.StructureDefinition-extension.xml|removed version info in valueset reference to residencepermittype|PBI 2981|
+|gd-address-physicaladdresstype-v201.CodeSystem.xml|Changed militær -> militaer and påSvalbard -> paaSvalbard|PBI 2981|
+|gd-address-physicaladdresstype-v201.CodeSystem.xml -> gd-address-physicaladdresstype.CodeSystem.xml|removed version info in filenames and id's|PBI 2981|
+|gd-address-physicaladdresstype-v201.xml -> gd-address-physicaladdresstype.ValueSet.xml|removed version info in filenames and id's|PBI 2981|
+|C:\GitRepo\Grunndata-R4\StructureDefinition\gd-address-metadata.StructureDefinition-extension.xml|removed version info in valueset reference for physicaladdresstype|PBI 2981|
+|Removed file gd-person-familyrelation-v05.CodeSystem.xml|The CodeSystem in no-basis should be used|BUG 3141|
+|Removed file gd-address-postaltype-v01.CodeSystem.xml|The codesystem have never been used|PBI 2981|
+|Removed file gd-person-addresstypecategory-v05.CodeSystem.xml|The Codesystem have never been used|PBI 2981|
+|Removed file gd-person-addresstypesensitivity-v05.CodeSystem.xml|Codesystem not in use (http://ehelse.no/fhir/CodeSystem/gd-address-confidentiality-v201 is used|PBI 2981|
+|Rename gd-person-documentcontrollstatus-v05.CodeSystem.xml -> gd-person-documentcontrolstatus.CodeSystem.xml|New url without version and removed "ll", ValueSet not defined yet|PBI 2981|
+|Removed gd-person-identificationdocumenttype-v05.CodeSystem.xml|identifikasjonsdokumenttype is not defined as a codesystem by Skatteetaten in their XML-schema|PBI 2981|
+|Rename file gd-person-identityresasonstatus-v05.CodeSystem.xml -> gd-person-identityresasonstatus.CodeSystem.xml|New id and url without version number, ValueSet not defined yet|PBI 2981|
+|Removed file gd-person-identityresasonunique-v05.CodeSystem.xml|CodeSystem not defined by FREG|PBI 2981|
+|Removed file gd-person-maritalstatusauthorities-v05.CodeSystem.xml|CodeSystem not defined by FREG for Sivilstand.myndighet|PBI 2981|
+|Rename file gd-person-registerchangesstatus-v05.CodeSystem.xml -> gd-provenance-freg-entitychangetype.CodeSystem.xml|Removed version info in id's and urls|PBI 2981|
+|New file gd-provenance-freg-entitychangetype.ValueSet.xml|include all codes from gd-provenance-freg-entitychangetype codesystem|PBI 2981|
+|New file gd-person-sametingelectorrelation.ValueSet.xml|Definition of forholdTilSametingetsValgmanntallValueSet|PBI 2981|
+|New file gd-person-sametingelectorrelation.CodeSystem.xml|Definition of forholdTilSametingetsValgmanntallCodeSystem|PBI 2981|
+|Rename gd-provenance-freg-hendelsestype-v210.ValueSet.xml -> gd-provenance-freg-eventtype.ValueSet.xml|Removed version info in id's and urls|PBI 2981|
+|Rename gd-provenance-freg-hendelsestype-v210.CodeSystem.xml -> gd-provenance-freg-eventtype.CodeSystem.xml|Removed version info in id's and urls|PBI 2981|
+|New code in gd-provenance-freg-eventtype.CodeSystem.xml|endringIVergemaal added from XSD from Skatteetaten|PBI 2981|
+|Description in gd-address-preferredaddresstype.ValueSet.xml|Clarify the valueset is for choice of preferred address type|PBI 2981|
+|Rename file gd-address-contenttype-v210.CodeSystem.xml -> gd-address-contenttype.CodeSystem.xml|Removed version info in id's and urls|PBI 2981|
+|Rename file gd-address-contenttype-v210.ValueSet.xml -> gd-address-contenttype.ValueSet.xml|Removed version info in id's and urls|PBI 2981|
+|gd-address-metadata.StructureDefinition-extension.xml|Changed the url used to reference gd-address-contenttype.Valueset, removed id in url|PBI 2981|
+|Rename gd-address-confidentiality-v201.ValueSet.xml -> gd-address-confidentiality.ValueSet.xml|Removed version info in id's and urls|PBI 2981|
+|Rename gd-address-confidentiality-v201.CodeSystem.xml -> gd-address-confidentiality.CodeSystem.xml|Removed version info in id's and urls|PBI 2981|
 |Added Valueset for addressprotection gd-person-addressprotection.ValueSet.xml
-|gd-Person.StructureDefinition-profile.xml|Changed valueset for meta.security slice to use gd-person-addressproctition.ValueSet|
-|gd-address-metadata.StructureDefinition-extension.xml|Changed the use of correct url for gd-address-confidentiality.ValueSet|
-|New file gd-person-documentcontrolstatus.ValueSet.xml|include all codes from gd-person-documentcontrolstatus codesystem|
-|New file gd-person-identityresasonstatus.ValueSet.xml|include all codes from gd-person-identityresasonstatus codesystem|
-|gd-provenance-freg-entitychangetype.CodeSystem.xml|Removed ".codesystem" from url value|
-|gd-person-identityresasonstatus.CodeSystem.xml|Removed ".codesystem" from url value|
-|gd-address-contenttype.CodeSystem.xml and gd-address-metadta.StructureDefinition-extension.xml|Fixed the CodeSystem value for InternasjonalAdresseIFrittFormat -> InternasjonalAdresseIIFrittFormat|
+|gd-Person.StructureDefinition-profile.xml|Changed valueset for meta.security slice to use gd-person-addressproctition.ValueSet|PBI 2981|
+|gd-address-metadata.StructureDefinition-extension.xml|Changed the use of correct url for gd-address-confidentiality.ValueSet|PBI 2981|
+|New file gd-person-documentcontrolstatus.ValueSet.xml|include all codes from gd-person-documentcontrolstatus codesystem|PBI 2981|
+|New file gd-person-identityresasonstatus.ValueSet.xml|include all codes from gd-person-identityresasonstatus codesystem|PBI 2981|
+|gd-provenance-freg-entitychangetype.CodeSystem.xml|Removed ".codesystem" from url value|PBI 2981|
+|gd-person-identityresasonstatus.CodeSystem.xml|Removed ".codesystem" from url value|PBI 2981|
+|gd-address-contenttype.CodeSystem.xml and gd-address-metadta.StructureDefinition-extension.xml|Fixed the CodeSystem value for InternasjonalAdresseIFrittFormat -> InternasjonalAdresseIIFrittFormat|PBI 2981|
 
 ## Documents the changes implemented from version 2.1.0 to 2.2.0
 ### Release date: 2020-04-02
