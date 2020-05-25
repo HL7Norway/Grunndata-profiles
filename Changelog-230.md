@@ -60,7 +60,7 @@ This is a service release to fix ValueSet and CodeSystem resource version number
 |gd-address-metadata.StructureDefinition-extension.xml|Changed the url used to reference gd-address-contenttype.Valueset, removed id in url|PBI 2981|
 |Rename gd-address-confidentiality-v201.ValueSet.xml -> gd-address-confidentiality.ValueSet.xml|Removed version info in id's and urls|PBI 2981|
 |Rename gd-address-confidentiality-v201.CodeSystem.xml -> gd-address-confidentiality.CodeSystem.xml|Removed version info in id's and urls|PBI 2981|
-|Added Valueset for addressprotection gd-person-addressprotection.ValueSet.xml
+|New file gd-person-addressprotection.ValueSet.xml|Added Valueset for addressprotection gd-person-addressprotection.ValueSet.xml|PBI 2981|
 |gd-Person.StructureDefinition-profile.xml|Changed valueset for meta.security slice to use gd-person-addressproctition.ValueSet|PBI 2981|
 |gd-address-metadata.StructureDefinition-extension.xml|Changed the use of correct url for gd-address-confidentiality.ValueSet|PBI 2981|
 |New file gd-person-documentcontrolstatus.ValueSet.xml|include all codes from gd-person-documentcontrolstatus codesystem|PBI 2981|
