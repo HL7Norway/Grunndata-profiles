@@ -67,7 +67,7 @@ This is a service release to fix ValueSet and CodeSystem resource version number
 |New file gd-person-identityresasonstatus.ValueSet.xml|include all codes from gd-person-identityresasonstatus codesystem|PBI 2981|
 |gd-provenance-freg-entitychangetype.CodeSystem.xml|Removed ".codesystem" from url value|PBI 2981|
 |gd-person-identityresasonstatus.CodeSystem.xml|Removed ".codesystem" from url value|PBI 2981|
-|gd-address-contenttype.CodeSystem.xml and gd-address-metadta.StructureDefinition-extension.xml|Fixed the CodeSystem value for InternasjonalAdresseIFrittFormat -> InternasjonalAdresseIIFrittFormat|PBI 2981|
+|gd-address-contenttype.CodeSystem.xml and gd-address-metadta.StructureDefinition-extension.xml|Fixed the CodeSystem value for InternasjonalAdresseIFrittFormat -> InternasjonalAdresseIIFrittFormat|PBI 2981, BUG 2610|
 
 ## Documents the changes implemented from version 2.1.0 to 2.2.0
 ### Release date: 2020-04-02
