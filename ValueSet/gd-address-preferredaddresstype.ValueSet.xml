@@ -20,22 +20,22 @@ innholdet i disse hentes fra valgt registrert gjeldende adresse"/>
 	<compose>
 		<include >
 			<system value="http://ehelse.no/fhir/CodeSystem/gd-address-type"/>
-		<concept>
-			<code value="Bostedsadresse" />
-			<display value="Bostedsadresse" />
-		</concept>
-		<concept>
-			<code value="Oppholdsadresse" />
-			<display value="Oppholdsadresse" />
-		</concept>
-		<concept>
-			<code value="Kontaktadresse" />
-			<display value="Kontaktadresse" />
-		</concept>
-		<concept>
-			<code value="KontaktadresseUtlandet" />
-			<display value="Kontaktadresse utlandet" />
-		</concept>
+			<concept>
+				<code value="Bostedsadresse" />
+				<display value="Bostedsadresse" />
+			</concept>
+			<concept>
+				<code value="Oppholdsadresse" />
+				<display value="Oppholdsadresse" />
+			</concept>
+			<concept>
+				<code value="Kontaktadresse" />
+				<display value="Kontaktadresse" />
+			</concept>
+			<concept>
+				<code value="KontaktadresseIUtlandet" />
+				<display value="Kontaktadresse i utlandet" />
+			</concept>
 		</include>
 	</compose>
 </ValueSet>

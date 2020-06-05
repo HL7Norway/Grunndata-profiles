@@ -21,7 +21,7 @@
 		  </filter> 
 		</include> 
 		<include>
-			<system value="http://ehelse.no/fhir/CodeSystem/gd-person-citizenshipextension-v220"/>
+			<system value="http://ehelse.no/fhir/CodeSystem/gd-person-citizenshipextension"/>
 		</include>
 	</compose>
 </ValueSet>
