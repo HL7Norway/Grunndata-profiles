@@ -6,7 +6,7 @@
   <name value="GdPreferredAddress" />
   <status value="draft" />
   <date value="2019-12-13" />
-  <description value="The Indicates the citicen choice of preferred address for contact as registered in FREG" />
+  <description value="The Indicates the citizens own choice of preferred address for contact as registered in FREG" />
   <fhirVersion value="4.0.0" />
   <mapping>
     <identity value="rim" />

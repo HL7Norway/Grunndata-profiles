@@ -7,7 +7,7 @@
   <status value="draft" />
   <date value="2019-12-11" />
   <publisher value="Direktoratet for e-helse" />
-  <description value="Folkeregisterperson fra FREG." />
+  <description value="The GdPerson profile describes the structure and coding of demographic data concerning a norwegian citizen. At this time the information is collected from FREG and presented through a FHIR RESTful interface from the Person information service.&#xD;&#xA;&#xD;&#xA;Folkeregisterperson fra FREG." />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />

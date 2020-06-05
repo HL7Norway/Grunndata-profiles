@@ -6,7 +6,7 @@
   <name value="GdIdentifierFreg" />
   <status value="draft" />
   <date value="2019-10-16" />
-  <description value="Person Identifier containing metadata from FREG" />
+  <description value="Person Identifier containing metadata from FREG&#xD;&#xA;&#xD;&#xA;The GdIdentifierFreg profile describes the structure and coding of how to identify official Norwegian human identifiers collected from FREG or elsewhere. The profile don't establish the different slicing rules for the business identifiers used (FNR/DNR etc, these are established in Person/RelatedPerson profiles) but establishes the metadata structures and identification of the namingsystems used (system/value pair)." />
   <purpose value="Folkeregisteridentifikator identifikasjonsnummer" />
   <fhirVersion value="4.0.0" />
   <kind value="complex-type" />
@@ -26,12 +26,6 @@
       </slicing>
     </element>
     <element id="Identifier.extension:fregMetadata">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Identifier.extension" />
       <sliceName value="fregMetadata" />
       <max value="1" />
@@ -42,12 +36,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Identifier.extension:fregStatus">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Identifier.extension" />
       <sliceName value="fregStatus" />
       <type>
@@ -57,68 +45,32 @@
       <mustSupport value="true" />
     </element>
     <element id="Identifier.use">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Identifier.use" />
       <definition value="This element is not used by gd-Identifier.&#xD;&#xA;&#xD;&#xA;All Person identifiers from FREG will be of use &quot;official&quot;." />
       <mustSupport value="false" />
     </element>
     <element id="Identifier.type">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Identifier.type" />
       <definition value="gd-Idenfitier don't use this element" />
       <mustSupport value="false" />
     </element>
     <element id="Identifier.system">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Identifier.system" />
       <definition value="gd-Identifier can be either Fødselsnummer or D-nummer" />
       <mustSupport value="true" />
     </element>
     <element id="Identifier.value">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Identifier.value" />
       <short value="The identifier value from FREG" />
       <definition value="The identifier value from FREG" />
       <mustSupport value="true" />
     </element>
     <element id="Identifier.period">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Identifier.period" />
       <definition value="gd-Idenfitier don't use this element&#xD;&#xA;&#xD;&#xA;Time period during which identifier is/was valid for use." />
       <mustSupport value="false" />
     </element>
     <element id="Identifier.assigner">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Identifier.assigner" />
       <definition value="gd-Idenfitier don't use this element&#xD;&#xA;&#xD;&#xA;Organization that issued/manages the identifier." />
       <mustSupport value="false" />

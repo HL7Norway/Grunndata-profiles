@@ -70,6 +70,11 @@ This is a service release to fix ValueSet and CodeSystem resource version number
 |gd-address-contenttype.CodeSystem.xml and gd-address-metadta.StructureDefinition-extension.xml|Fixed the CodeSystem value for InternasjonalAdresseIFrittFormat -> InternasjonalAdresseIIFrittFormat|PBI 2981, BUG 2610|
 |gd-address-preferredaddresstype.ValueSet.xml|Fixed the KontaktadresseUtlandet -> KontaktadresseIUtlandet|PBI 2981|
 |gd-person-citizenship.ValueSet.xml|Fixed the reference to http://ehelse.no/fhir/CodeSystem/gd-person-citizenshipextension |PBI 2981|
+|gd-Identifier-foreign.StructureDefinition-profile.xml|Updated description of the profile|NA|
+|gd-Identifier-freg.StructureDefinition-profile.xml|Updated description of the profile|NA|
+|gd-Person.StructureDefinition-profile.xml|Updated description of the profile|NA|
+|gd-preferred-address.StructureDefinition-extension.xml|Updated description of the extension|NA|
+|gd-Provenance.StructureDefinition-profile.xml|Updated description of the profile|NA|
 
 ## Documents the changes implemented from version 2.1.0 to 2.2.0
 ### Release date: 2020-04-02

@@ -6,7 +6,7 @@
   <name value="GdIdentifierForeign" />
   <status value="draft" />
   <date value="2019-10-16" />
-  <description value="Identification number from foreign authority or the identifier value from the Norwegian immigration administration.&#xD;&#xA;&#xD;&#xA;utenlandsk personidentifikasjon: informasjon om et personidentifikasjonsnummer fra en utenlandsk myndighet&#xD;&#xA;&#xD;&#xA;utlendingsmyndighetenes identifikasjonsnummer: personidentifikasjonsnummer for person som blir førstegangsregistrert i landet av utlendingsmyndighetene. Dette nummeret går i dag ofte under navnet DUF-nummer" />
+  <description value="Identification number from foreign authority or the identifier value from the Norwegian immigration administration.&#xD;&#xA;&#xD;&#xA;The GdIdentifierForeign profile describes the structure and coding of how to identify official Norwegian human identifiers used to identify foreign citizens registered in FREG. The profile establishes how the business identifiers used to identify foreign citizens should be coded using type.coding and value.&#xD;&#xA;&#xD;&#xA;utenlandsk personidentifikasjon: informasjon om et personidentifikasjonsnummer fra en utenlandsk myndighet&#xD;&#xA;&#xD;&#xA;utlendingsmyndighetenes identifikasjonsnummer: personidentifikasjonsnummer for person som blir førstegangsregistrert i landet av utlendingsmyndighetene. Dette nummeret går i dag ofte under navnet DUF-nummer" />
   <fhirVersion value="4.0.0" />
   <kind value="complex-type" />
   <abstract value="false" />
@@ -15,12 +15,6 @@
   <derivation value="constraint" />
   <differential>
     <element id="Identifier">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Identifier" />
       <short value="foreign identification" />
       <definition value="Identification number from foreign authority or the identifier value from the Norwegian immigration administration." />
@@ -41,12 +35,6 @@
       </slicing>
     </element>
     <element id="Identifier.extension:fregMetadata">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Identifier.extension" />
       <sliceName value="fregMetadata" />
       <max value="1" />
@@ -57,12 +45,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Identifier.extension:country">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Identifier.extension" />
       <sliceName value="country" />
       <short value="Country where the intentifier is issued" />
@@ -76,22 +58,10 @@
       <mustSupport value="true" />
     </element>
     <element id="Identifier.use">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Identifier.use" />
       <definition value="This element is not used by gd-Identifier-foreign&#xD;&#xA;&#xD;&#xA;The purpose of this identifier." />
     </element>
     <element id="Identifier.type">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Identifier.type" />
       <definition value="FREG identifies four different types of foreign identifiers, the kind of identifier in this instance is a coded value from the ValueSet.&#xD;&#xA;&#xD;&#xA;A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
       <alias value="identifikasjonsnummertype" />
@@ -102,59 +72,29 @@
       </binding>
     </element>
     <element id="Identifier.type.coding">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Identifier.type.coding" />
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Identifier.type.coding.system">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Identifier.type.coding.system" />
       <definition value="The identification number type of this gdIdentifierForeign.&#xD;&#xA;&#xD;&#xA;The identification of the code system that defines the meaning of the symbol in the code." />
       <fixedUri value="http://ehelse.no/fhir/ValueSet/gd-person-identificationnumbertype" />
       <mustSupport value="true" />
     </element>
     <element id="Identifier.type.coding.code">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Identifier.type.coding.code" />
       <definition value="The type of foreign identifier for this Person.&#xD;&#xA;&#xD;&#xA;A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Identifier.system">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Identifier.system" />
       <definition value="This element is not used by gd-Identifier-foreign&#xD;&#xA;&#xD;&#xA;Establishes the namespace for the value - that is, a URL that describes a set values that are unique." />
       <mustSupport value="false" />
     </element>
     <element id="Identifier.value">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Identifier.value" />
       <definition value="The actual identifier value of the gd-Identifier-foreign&#xD;&#xA;&#xD;&#xA;The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
       <alias value="identifikasjonsnummer" />
@@ -162,23 +102,11 @@
       <mustSupport value="true" />
     </element>
     <element id="Identifier.period">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Identifier.period" />
       <definition value="This element is not used by gd-Identifier-foreign, period is set in the extension containing fregMetadata&#xD;&#xA;&#xD;&#xA;Time period during which identifier is/was valid for use." />
       <comment value="This element is not used by gd-Identifier-foreign&#xD;&#xA;&#xD;&#xA;A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. &quot;the patient was an inpatient of the hospital for this time range&quot;) or one value from the range applies (e.g. &quot;give to the patient between these two times&quot;).&#xA;&#xA;Period is not used for a duration (a measure of elapsed time). See [Duration](datatypes.html#Duration)." />
     </element>
     <element id="Identifier.assigner">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Identifier.assigner" />
       <definition value="This element is not used by gd-Identifier-foreign&#xD;&#xA;&#xD;&#xA;Organization that issued/manages the identifier." />
       <comment value="This element is not used by gd-Identifier-foreign&#xD;&#xA;&#xD;&#xA;The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization." />
