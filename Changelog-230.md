@@ -1,7 +1,7 @@
 # Changelog for 2.3.0
 
 ## Documents the changes implemented from version 2.2.0 to 2.3.0
-### Release date: 2020-05-XX
+### Release date: 2020-06-09
 
 This is a service release to fix ValueSet and CodeSystem resource version numbering in filenames, id's an URL's, and removal of CodeSystem definitions not used in the specification.
 
