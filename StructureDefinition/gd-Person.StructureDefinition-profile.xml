@@ -209,6 +209,7 @@
     <element id="Person.identifier">
       <path value="Person.identifier" />
       <slicing>
+		<description value="Slicing discriminator from no-basis-Person"/>
         <rules value="closed" />
       </slicing>
       <min value="1" />

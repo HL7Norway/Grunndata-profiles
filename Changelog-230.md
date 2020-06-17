@@ -76,6 +76,10 @@ This is a service release to fix ValueSet and CodeSystem resource version number
 |gd-preferred-address.StructureDefinition-extension.xml|Updated description of the extension|NA|
 |gd-Provenance.StructureDefinition-profile.xml|Updated description of the profile|NA|
 
+### Documentation changes after 2.3.0 release
+|Date|File|Change description|
+|-
+|2020-06-17|Implementation Guide text|Updated the Provenance REST interactions description|
 
 ## Documents the changes implemented from version 2.1.0 to 2.2.0
 ### Release date: 2020-04-02
