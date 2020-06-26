@@ -80,6 +80,7 @@ This is a service release to fix ValueSet and CodeSystem resource version number
 |Date|File|Change description|
 |-
 |2020-06-17|Implementation Guide text|Updated the Provenance REST interactions description|
+|2020-06-29|Implementation Guide text|Updated the Service Interface page, as well as the Readers guide and Person REST interactions to clarify search functionality available|
 
 ## Documents the changes implemented from version 2.1.0 to 2.2.0
 ### Release date: 2020-04-02
