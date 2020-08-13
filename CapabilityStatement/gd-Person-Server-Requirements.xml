@@ -25,8 +25,7 @@ The server expects all read and search interactions to use the _elements operati
 
 To limit the returned resource instances the FHIR server supports the use of the _elements operation.
 
-
-The operations can be added to any search to limit the information returned in the search result like this 
+The operation MUST be added to any search to limit the information returned in the search result like this 
 ```
 GET http:%2F%2Fhapi.fhir.org%2FbaseR4%2FPerson%3Fname%3DEspen%26_elements%3Dname%2Caddress
 ``` 

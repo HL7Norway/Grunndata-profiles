@@ -81,6 +81,11 @@ This is a service release to fix ValueSet and CodeSystem resource version number
 |-
 |2020-06-17|Implementation Guide text|Updated the Provenance REST interactions description|
 |2020-06-29|Implementation Guide text|Updated the Service Interface page, as well as the Readers guide and Person REST interactions to clarify search functionality available|
+|2020-08-13|Implementation Guide text|Updated the "use cases" chapter with text to describe the use cases|
+|2020-08-13|Implementation Guide text|Changed the ordring of text on the intro page of the guide|
+|2020-08-13|Implementation Guide image|Updated the color scheme of Figure 1: Distribution platform for Core Data| 
+|2020-08-13|CapabilityStatement/gd-Server-Requirements|Minor change in the wording in the documentation "The operation "MUST" be added"| 
+|2020-08-13|Implementation Guide text|Updated Service Interface/History of a Resource with new wording|
 
 ## Documents the changes implemented from version 2.1.0 to 2.2.0
 ### Release date: 2020-04-02
