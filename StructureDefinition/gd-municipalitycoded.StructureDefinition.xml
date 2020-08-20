@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-municipalitycoded" />
+  <version value="3.0.0" />
   <name value="GdMunicipalitycoded" />
   <status value="draft" />
   <description value="Coded value for municipality/county Norwegian kommune" />
