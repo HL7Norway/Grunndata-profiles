@@ -42,6 +42,31 @@
       <alias value="bydelsnavn" />
       <mustSupport value="true" />
     </element>
+    <element id="Address.extension:propertyInformation">
+      <path value="Address.extension" />
+      <sliceName value="propertyInformation" />
+    </element>
+    <element id="Address.extension:propertyInformation.extension:municipality">
+      <path value="Address.extension.extension" />
+      <sliceName value="municipality" />
+      <definition value="GdAddress: uses this element when a cadastral address is provided by the source (FREG). In all other cases kommune and the provided kommunennummer is given in Address.district.&#xD;&#xA;&#xD;&#xA;The norwegian kommune identifies an administrative geographic unit in Norway called kommune by a predefined number and its official name." />
+      <alias value="kommunenummer" />
+    </element>
+    <element id="Address.extension:propertyInformation.extension:municipality.value[x].system">
+      <path value="Address.extension.extension.value[x].system" />
+      <fixedUri value="urn:oid:2.16.578.1.12.4.1.1.3402" />
+    </element>
+    <element id="Address.extension:propertyInformation.extension:municipality.value[x].code">
+      <path value="Address.extension.extension.value[x].code" />
+      <alias value="kommunenummer" />
+    </element>
+    <element id="Address.extension:propertyInformation.extension:municipality.value[x].display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Address.extension.extension.value[x].display" />
+      <definition value="The name of the municipality taken from the codesystem." />
+    </element>
     <element id="Address.extension:fregMetadata">
       <path value="Address.extension" />
       <sliceName value="fregMetadata" />
@@ -81,7 +106,7 @@
     <element id="Address.district">
       <path value="Address.district" />
       <short value="name of &quot;kommune&quot; or district" />
-      <definition value="gd-Address: Norwegian addresses uses district for the norwegian &quot;kommune&quot;, international addresses uses district for any other applicable district in that country.&#xD;&#xA;&#xD;&#xA;Name of the county (norwegian &quot;kommune&quot;). If kommune number is required &quot;eiendomsinformasjon&quot; should be used.&#xD;&#xA;&#xD;&#xA;The name of the administrative area (county)." />
+      <definition value="gd-Address: Norwegian addresses uses district for the norwegian &quot;kommune&quot;, international addresses uses district for any other applicable district in that country.&#xD;&#xA;&#xD;&#xA;GdAddress: uses this element when a street address is provided by the source (FREG). In the cases where a cadastral address is provided the code for kommune is also provided as a part of the propertyInformation.extension.&#xD;&#xA;&#xD;&#xA;The name of the administrative area (county)." />
     </element>
     <element id="Address.district.extension">
       <path value="Address.district.extension" />
@@ -96,7 +121,6 @@
     <element id="Address.district.extension:municipalityCoded">
       <path value="Address.district.extension" />
       <sliceName value="municipalityCoded" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />

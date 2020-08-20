@@ -19,7 +19,6 @@
       <path value="Address.extension" />
       <sliceName value="propertyInformation" />
       <definition value="gd-Address-street uses property information to contain the municipality code from FREG. no other part of propertyinformation is used by this profile.&#xD;&#xA;&#xD;&#xA;Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer" />
-      <mustSupport value="true" />
     </element>
     <element id="Address.extension:propertyInformation.extension:cadastralUnitNumber">
       <path value="Address.extension.extension" />
@@ -40,11 +39,6 @@
       <path value="Address.extension.extension" />
       <sliceName value="condominiumUnitNumber" />
       <mustSupport value="false" />
-    </element>
-    <element id="Address.extension:propertyInformation.extension:municipality">
-      <path value="Address.extension.extension" />
-      <sliceName value="municipality" />
-      <mustSupport value="true" />
     </element>
     <element id="Address.extension:streetAddress">
       <path value="Address.extension" />
@@ -124,6 +118,15 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-careOf" />
       </type>
+    </element>
+    <element id="Address.district">
+      <path value="Address.district" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Address.district.extension:municipalityCoded">
+      <path value="Address.district.extension" />
+      <sliceName value="municipalityCoded" />
+      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>

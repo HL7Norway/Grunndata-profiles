@@ -26,7 +26,7 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
-      <definition value="Coded value for municipality/county Norwegian kommune" />
+      <definition value="Coded value for municipality/county, Norwegian kommune" />
       <alias value="kommunenummer" />
       <alias value="kommune" />
       <alias value="county" />
@@ -49,6 +49,10 @@
     <element id="Extension.value[x].system">
       <path value="Extension.value[x].system" />
       <fixedUri value="urn:oid:2.16.578.1.12.4.1.1.3402" />
+    </element>
+    <element id="Extension.value[x].code">
+      <path value="Extension.value[x].code" />
+      <alias value="kommunenummer" />
     </element>
   </differential>
 </StructureDefinition>
