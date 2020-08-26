@@ -17,7 +17,7 @@
   <differential>
     <element id="Address">
       <path value="Address" />
-      <alias value="freg:matrikkeladresse" />
+      <alias value="matrikkeladresse" />
       <mapping>
         <identity value="freg" />
         <map value="matrikkeladresse" />
