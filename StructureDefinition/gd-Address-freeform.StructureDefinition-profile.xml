@@ -2,13 +2,25 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Address-freeform" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Address-freeform" />
-  <version value="2.1.0" />
+  <version value="2.3.1" />
   <name value="GdAddressFreeform" />
   <status value="draft" />
   <date value="2019-12-19" />
   <description value="Contains information and metadata for addresses defined in Norwegian Master Person Index (FREG) and Norwegian Directorate of e-Health's health related Master Person Index.&#xD;&#xA;&#xD;&#xA;The profile defines information structure of unstructured norwegian or interntional street address (internasjonalAdresseFrittFormat, PostadresseFrittFormat), as defined by FREG.&#xD;&#xA;&#xD;&#xA;Also used for AddressType of PreferertKontaktadresse, to give information about the preferred contact adress of the person." />
   <purpose value="PostadresseIFrittFormat&#xD;&#xA;InternasjonalAdresseIFrittFormat&#xD;&#xA;PreferertKontaktadresse" />
   <fhirVersion value="4.0.0" />
+  <mapping>
+    <identity value="freg.KontaktadresseIUtlandet" />
+    <name value="utenlandskAdresseIFrittFormat" />
+  </mapping>
+  <mapping>
+    <identity value="freg.Kontaktadresse" />
+    <name value="postadresseIFrittFormat" />
+  </mapping>
+  <mapping>
+    <identity value="freg.PreferertKontaktadresse" />
+    <name value="kontaktadresseIFrittFormat" />
+  </mapping>
   <kind value="complex-type" />
   <abstract value="false" />
   <type value="Address" />

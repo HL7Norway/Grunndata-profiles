@@ -2,19 +2,32 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Address-box" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Address-box" />
-  <version value="2.2.0" />
+  <version value="2.3.1" />
   <name value="GdAddressBox" />
   <status value="draft" />
   <date value="2019-10-17" />
   <description value="Contains information and metadata for addresses defined in Norwegian Master Person Index (FREG) and Norwegian Directorate of e-Health's health related Master Person Index.&#xD;&#xA;&#xD;&#xA;The profile defines information structure of a Norwegian post box address (postboksadresse), as defined by FREG.&#xD;&#xA;&#xD;&#xA;postadresse til en postboks" />
   <purpose value="postboksadresse" />
   <fhirVersion value="4.0.0" />
+  <mapping>
+    <identity value="freg" />
+    <name value="postboksadresse" />
+  </mapping>
   <kind value="complex-type" />
   <abstract value="false" />
   <type value="Address" />
   <baseDefinition value="http://ehelse.no/fhir/StructureDefinition/gd-Address" />
   <derivation value="constraint" />
   <differential>
+    <element id="Address">
+      <path value="Address" />
+      <definition value="The profile defines information structure of a Norwegian post box address (postboksadresse), as defined by FREG.&#xD;&#xA;postadresse til en postboks&#xD;&#xA;&#xD;&#xA;Grunndata adresse&#xD;&#xA;Contains information and metadata for addresses defined in Norwegian Master Person Index and Norwegian Directorate of e-Health's health related Master Person Index.&#xD;&#xA;&#xD;&#xA;An address expressed using postal conventions (as opposed to GPS or other location definition formats).  This data type may be used to convey addresses for use in delivering mail as well as for visiting locations which might not be valid for mail delivery.  There are a variety of postal address formats defined around the world." />
+      <alias value="postboksadresse" />
+      <mapping>
+        <identity value="freg" />
+        <map value="postboksadresse" />
+      </mapping>
+    </element>
     <element id="Address.extension">
       <path value="Address.extension" />
       <slicing>
@@ -26,12 +39,6 @@
       </slicing>
     </element>
     <element id="Address.extension:postBoxOwner">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Address.extension" />
       <sliceName value="postBoxOwner" />
       <short value="postbokseier fra FREG" />
@@ -65,12 +72,6 @@
       </slicing>
     </element>
     <element id="Address.line.extension:postBox">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Address.line.extension" />
       <sliceName value="postBox" />
       <short value="postboks fra FREG" />
@@ -83,6 +84,10 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox" />
       </type>
       <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="postboks" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>
