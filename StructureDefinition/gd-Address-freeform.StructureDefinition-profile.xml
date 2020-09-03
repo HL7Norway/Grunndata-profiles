@@ -27,6 +27,24 @@
   <baseDefinition value="http://ehelse.no/fhir/StructureDefinition/gd-Address" />
   <derivation value="constraint" />
   <differential>
+    <element id="Address">
+      <path value="Address" />
+      <alias value="PostadresseIFrittFormat" />
+      <alias value="InternasjonalAdresseIFrittFormat" />
+      <alias value="PreferertKontaktadresse" />
+      <mapping>
+        <identity value="freg.KontaktadresseIUtlandet" />
+        <map value="utenlandskAdresseIFrittFormat" />
+      </mapping>
+      <mapping>
+        <identity value="freg.Kontaktadresse" />
+        <map value="postadresseIFrittFormat" />
+      </mapping>
+      <mapping>
+        <identity value="freg.PreferertKontaktadresse" />
+        <map value="kontaktadresseIFrittFormat" />
+      </mapping>
+    </element>
     <element id="Address.extension">
       <path value="Address.extension" />
       <slicing>
@@ -56,7 +74,12 @@
       <path value="Address.line" />
       <short value="adresselinjer fra FREG" />
       <definition value="adresselinjer fra FREG, Norske adresser oppgis med opptil 4 linjer, internasjonale adresser kan oppgis med ubegrenset antall linjer.&#xD;&#xA;&#xD;&#xA;En en-dimensjonal tabell med opptil 4 tekstlinjer for å kunne uttrykke en norsk postadresse fullt ut. Det skal være plass til 1: coAdressenavn, 2: adressetilleggsnavn, 3: adressenavn med adressenummer og 4: postnummer med poststedsnavn i dette formatet.&#xD;&#xA;&#xD;&#xA;This component contains the house number, apartment number, street name, street direction,  P.O. Box number, delivery hints, and similar address &#xD;&#xA;information." />
+      <alias value="adresselinje" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="freg.KontaktadresseIUtlandet" />
+        <map value="adresselinje" />
+      </mapping>
     </element>
     <element id="Address.city">
       <path value="Address.city" />
@@ -64,6 +87,14 @@
       <definition value="gd-Address: All Norwegian addresses are from Master Person Index uses this element for &quot;poststed&quot; or &quot;postedsnavn&quot;. International addresses uses this element to communicate the name of the city (byEllerStedsnavn i FREG).&#xD;&#xA;&#xD;&#xA;The name of the poststed or city. When a postalcode is given the name of the city must be according to the official list of postalcodes used in Norway. &#xD;&#xA;&#xD;&#xA;The name of the city, town, village or other community or delivery center." />
       <alias value="byEllerStedsnavn" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="freg.InternasjonalAdresseFrittformat" />
+        <map value="byEllerStedsnavn" />
+      </mapping>
+      <mapping>
+        <identity value="freg.PostadresseIFrittFormat" />
+        <map value="poststedsnavn" />
+      </mapping>
     </element>
     <element id="Address.postalCode">
       <path value="Address.postalCode" />
