@@ -14,8 +14,8 @@ Fix some discripancies in mapping information regarding mapping to FREG
 |gd-separately-occupied-unit.StructureDefinition-extension.xml|Added duplicated mapping information contains both alias and mapping tags||
 |gd-Address-cadastral.StructureDefinition-profile.xml|Added duplicated mapping information contains both alias and mapping tags||
 |gd-cadastral-address.StructureDefinition-extension.xml|Added duplicated mapping information contains both alias and mapping tags||
-|gd-Address-freeform.StructureDefinition-profile.xml|Added top level mapping and duplicated aliases in mapping element|TODO-multimapping|
-
+|gd-Address-freeform.StructureDefinition-profile.xml|Added top level mapping and duplicated aliases in mapping element||
+|gd-preferred-address.StructureDefinition-extension.xml|Added duplicated aliases in mapping element||
 
 # Changelog for 2.3.0
 

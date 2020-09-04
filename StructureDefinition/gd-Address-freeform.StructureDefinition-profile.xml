@@ -77,7 +77,7 @@
       <alias value="adresselinje" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="freg.KontaktadresseIUtlandet" />
+        <identity value="freg" />
         <map value="adresselinje" />
       </mapping>
     </element>
@@ -102,6 +102,14 @@
       <definition value="Internasjonal postkode eller norsk postnummer fra FREG&#xD;&#xA;&#xD;&#xA;A postal code designating a region defined by the postal service.&#xD;&#xA;&#xD;&#xA;In Norway this is af four digit number defined by the norwegian postal service." />
       <alias value="postkode" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="freg.KontaktadresseIUtlandet" />
+        <map value="postkode" />
+      </mapping>
+      <mapping>
+        <identity value="freg.Kontaktadresse" />
+        <map value="postnummer" />
+      </mapping>
     </element>
     <element id="Address.country">
       <path value="Address.country" />
@@ -109,6 +117,10 @@
       <definition value="landkode fra FREG, kode for å representere et land, FREG benytter ISO 3166-3&#xD;&#xA;&#xD;&#xA;Country (e.g. can be ISO 3166 3 letter code)&#xD;&#xA;Country - a nation as commonly understood or generally accepted." />
       <alias value="landkode" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="landkode" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>
