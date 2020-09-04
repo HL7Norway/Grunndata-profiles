@@ -9,17 +9,54 @@
   <description value="Contains information and metadata for addresses defined in Norwegian Master Person Index (FREG) and Norwegian Directorate of e-Health's health related Master Person Index.&#xD;&#xA;&#xD;&#xA;The profile defines information structure of a Norwegian street address (vegadresse, vegadresseforpost), as defined by FREG.&#xD;&#xA;&#xD;&#xA;adresse for en bygning, bruksenhet, eiendom eller annet objekt som er registrert med adresse i matrikkelen&#xD;&#xA;Denne entitetstypen for norsk strukturert vegadresse er fullt kompatibel med strukturen i matrikkelen mht. egenskapsnavn." />
   <purpose value="vegadresse&#xD;&#xA;vegadresseforpost" />
   <fhirVersion value="4.0.0" />
+  <mapping>
+    <identity value="freg" />
+    <name value="vegadresse" />
+  </mapping>
   <kind value="complex-type" />
   <abstract value="false" />
   <type value="Address" />
   <baseDefinition value="http://ehelse.no/fhir/StructureDefinition/gd-Address" />
   <derivation value="constraint" />
   <differential>
+    <element id="Address">
+      <path value="Address" />
+      <alias value="vegadresse" />
+      <mapping>
+        <identity value="freg" />
+        <map value="vegadresse" />
+      </mapping>
+    </element>
+    <element id="Address.extension">
+      <path value="Address.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Address.extension:urbanDistrict">
+      <path value="Address.extension" />
+      <sliceName value="urbanDistrict" />
+      <mustSupport value="true" />
+    </element>
     <element id="Address.extension:propertyInformation">
       <path value="Address.extension" />
       <sliceName value="propertyInformation" />
       <definition value="gd-Address-street uses property information to contain the municipality code from FREG. no other part of propertyinformation is used by this profile.&#xD;&#xA;&#xD;&#xA;Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer" />
       <mustSupport value="true" />
+    </element>
+    <element id="Address.extension:propertyInformation.extension">
+      <path value="Address.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
     </element>
     <element id="Address.extension:propertyInformation.extension:cadastralUnitNumber">
       <path value="Address.extension.extension" />

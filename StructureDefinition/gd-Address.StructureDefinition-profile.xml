@@ -20,12 +20,21 @@
       <short value="Grunndata adresse fra FREG" />
       <definition value="Grunndata adresse&#xD;&#xA;Contains information and metadata for addresses defined in Norwegian Master Person Index and Norwegian Directorate of e-Health's health related Master Person Index.&#xD;&#xA;&#xD;&#xA;An address expressed using postal conventions (as opposed to GPS or other location definition formats).  This data type may be used to convey addresses for use in delivering mail as well as for visiting locations which might not be valid for mail delivery.  There are a variety of postal address formats defined around the world." />
     </element>
+    <element id="Address.extension">
+      <path value="Address.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
     <element id="Address.extension:urbanDistrict">
       <path value="Address.extension" />
       <sliceName value="urbanDistrict" />
       <short value="Urban district of this address" />
       <definition value="Simple extension containing information about what part of a norwegian city the patient is a resident. Administrative purpose. Five Norwegian cities have defined administrative districts called bydel. This is Oslo, Bergen, Trondheim, Stavanger og Drammen. &#xD;&#xA;&#xD;&#xA;There are still some uncertainty on what is the official source of bydel information. TBD" />
-      <mustSupport value="true" />
     </element>
     <element id="Address.extension:urbanDistrict.value[x].code">
       <path value="Address.extension.value[x].code" />
@@ -33,9 +42,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Address.extension:urbanDistrict.value[x].display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Address.extension.value[x].display" />
       <short value="The name of the urban district" />
       <definition value="The name of the urban district" />
