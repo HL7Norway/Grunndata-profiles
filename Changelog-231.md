@@ -18,7 +18,7 @@ Fix some discripancies in mapping information regarding mapping to FREG
 |gd-Address-freeform.StructureDefinition-profile.xml|Added top level mapping and included the use of mapping elements to describe freg mappings||
 |gd-preferred-address.StructureDefinition-extension.xml|Added duplicated aliases in mapping element||
 |gd-Address-international.StructureDefinition-profile.xml|Added top level mapping and included the use of mapping elements to describe freg mappings||
-
+|gd-Address-street.StructureDefinition-profile.xml|Added top level mapping and included the use of mapping elements to describe freg mappings||
 
 # Changelog for 2.3.0
 

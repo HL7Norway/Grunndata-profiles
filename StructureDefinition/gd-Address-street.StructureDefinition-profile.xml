@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Address-street" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Address-street" />
-  <version value="2.0.3" />
+  <version value="2.3.1" />
   <name value="GdAddressStreet" />
   <status value="draft" />
   <date value="2019-10-16" />
@@ -12,6 +12,7 @@
   <mapping>
     <identity value="freg" />
     <name value="vegadresse" />
+    <comment value="Kontaktadresser bruker VegadresseForPost som datatype, Vegadresse og VegadresseForPost er slått sammen i GdAddressStreet" />
   </mapping>
   <kind value="complex-type" />
   <abstract value="false" />
@@ -25,6 +26,7 @@
       <mapping>
         <identity value="freg" />
         <map value="vegadresse" />
+        <comment value="Kontaktadresser bruker VegadresseForPost som datatype, Vegadresse og VegadresseForPost er slått sammen i GdAddressStreet" />
       </mapping>
     </element>
     <element id="Address.extension">
@@ -94,6 +96,34 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="Address.extension:streetAddress.extension">
+      <path value="Address.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Address.extension:streetAddress.extension:addressAdditionalName">
+      <path value="Address.extension.extension" />
+      <sliceName value="addressAdditionalName" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="adressetilleggsnavn" />
+      </mapping>
+    </element>
+    <element id="Address.extension:streetAddress.extension:addressCode">
+      <path value="Address.extension.extension" />
+      <sliceName value="addressCode" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="adressekode" />
+      </mapping>
+    </element>
     <element id="Address.extension:separatelyOccupiedUnit">
       <path value="Address.extension" />
       <sliceName value="separatelyOccupiedUnit" />
@@ -102,6 +132,26 @@
         <code value="Extension" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/gd-separately-occupied-unit" />
       </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Address.extension:separatelyOccupiedUnit.extension">
+      <path value="Address.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Address.extension:separatelyOccupiedUnit.extension:separatelyOccupiedUnitType">
+      <path value="Address.extension.extension" />
+      <sliceName value="separatelyOccupiedUnitType" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Address.extension:separatelyOccupiedUnit.extension:separatelyOccupiedUnitNumber">
+      <path value="Address.extension.extension" />
+      <sliceName value="separatelyOccupiedUnitNumber" />
       <mustSupport value="true" />
     </element>
     <element id="Address.line.extension">
@@ -125,6 +175,11 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName" />
       </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="adressenavn" />
+      </mapping>
     </element>
     <element id="Address.line.extension:houseNumberNumeric">
       <path value="Address.line.extension" />
@@ -137,6 +192,12 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumberNumeric" />
       </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="husnummer" />
+        <comment value="adresssenummer.husnummer" />
+      </mapping>
     </element>
     <element id="Address.line.extension:buildingNumberSuffix">
       <path value="Address.line.extension" />
@@ -149,6 +210,12 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix" />
       </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="husbokstav" />
+        <comment value="adressenummer.husbokstav" />
+      </mapping>
     </element>
     <element id="Address.line.extension:coName">
       <path value="Address.line.extension" />
@@ -161,6 +228,27 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-careOf" />
       </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="coAdressenavn" />
+      </mapping>
+    </element>
+    <element id="Address.city">
+      <path value="Address.city" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="poststedsnavn" />
+      </mapping>
+    </element>
+    <element id="Address.postalCode">
+      <path value="Address.postalCode" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="postnummer" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>
