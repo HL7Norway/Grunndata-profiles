@@ -3,29 +3,6 @@
 ## Documents the changes implemented from version 2.2.0 to 2.3.0
 ### Release date: 2020-06-09
 
-Fix some discripancies in mapping information regarding mapping to FREG. This version clarifies all mapping of Addresses and explains the mappings using the <mapping> element to make a clear connection to the FREG model.
-
-## Files change description
-|File|Change description|Dev-ops id|
-|-
-|gd-Address.StructureDefinition-profile.xml|Fixed a bug where urban district was marked must-support, this is not the case for international adresses||
-|gd-fregmetadata.StructureDefinition-extension.xml|Added duplicated mapping information contains both alias and mapping tags||
-|gd-address-metadata.StructureDefinition-extension.xml|Added duplicated mapping information contains both alias and mapping tags||
-|gd-Address-box.StructureDefinition-profile.xml|Added duplicated mapping information contains both alias and mapping tags||
-|gd-separately-occupied-unit.StructureDefinition-extension.xml|Added duplicated mapping information contains both alias and mapping tags||
-|gd-Address-cadastral.StructureDefinition-profile.xml|Added duplicated mapping information contains both alias and mapping tags||
-|gd-cadastral-address.StructureDefinition-extension.xml|Added duplicated mapping information contains both alias and mapping tags||
-|gd-Address-freeform.StructureDefinition-profile.xml|Added top level mapping and included the use of mapping elements to describe freg mappings||
-|gd-preferred-address.StructureDefinition-extension.xml|Added duplicated aliases in mapping element||
-|gd-Address-international.StructureDefinition-profile.xml|Added top level mapping and included the use of mapping elements to describe freg mappings||
-|gd-Address-street.StructureDefinition-profile.xml|Added top level mapping and included the use of mapping elements to describe freg mappings||
-|gd-Address-unknown.StructureDefinition-profile.xml|Added top level mapping for all addresstypes (Bostedsadresse, DeltBosted and Oppholdsadresse). Included the use of mapping elements to describe freg mappings. Added mapping to municipality and addressIsUnknown elements||
-
-# Changelog for 2.3.0
-
-## Documents the changes implemented from version 2.2.0 to 2.3.0
-### Release date: 2020-06-09
-
 This is a service release to fix ValueSet and CodeSystem resource version numbering in filenames, id's an URL's, and removal of CodeSystem definitions not used in the specification.
 
 ## Files change description
