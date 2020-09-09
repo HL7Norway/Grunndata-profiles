@@ -2,31 +2,95 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Address-unknown" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Address-unknown" />
-  <version value="2.1.0" />
+  <version value="2.3.1" />
   <name value="GdAddressUnknown" />
   <status value="draft" />
   <date value="2019-12-16" />
-  <description value="The GdAddressUnknown is used for two kind of addresses from FREG&#xD;&#xA;For addresses with address-type of &quot;Bosted&quot; and &quot;DeltBosted&quot;, the uknown address can contain a municipality code. The content type of this addresses SHALL be &quot;UkjentBosted&quot;.&#xD;&#xA;For addresses with type &quot;Opphold&quot; this address can only contain the address metadata. The content type of this addresses should be &quot;AdressenErUkjent&quot;." />
+  <description value="The GdAddressUnknown is used for two kind of addresses from FREG&#xD;&#xA;For addresses with address-type of &quot;Bosted&quot; and &quot;DeltBosted&quot;, the uknown address can contain a municipality code. The content type of this addresses SHALL be &quot;UkjentBosted&quot;.&#xD;&#xA;For addresses with type &quot;Opphold&quot; this address can only contain the address metadata. The content type of this addresses SHALL be &quot;AdressenErUkjent&quot;." />
   <fhirVersion value="4.0.0" />
+  <mapping>
+    <identity value="freg.bostedsadresse" />
+    <name value="ukjentBosted" />
+  </mapping>
+  <mapping>
+    <identity value="freg.deltbosted" />
+    <name value="ukjentBosted" />
+  </mapping>
+  <mapping>
+    <identity value="freg.oppholdsadresse" />
+    <name value="adressenErUkjent" />
+  </mapping>
   <kind value="complex-type" />
   <abstract value="false" />
   <type value="Address" />
   <baseDefinition value="http://ehelse.no/fhir/StructureDefinition/gd-Address" />
   <derivation value="constraint" />
   <differential>
+    <element id="Address">
+      <path value="Address" />
+      <alias value="ukjentBosted" />
+      <alias value="adressenErUkjent" />
+      <mapping>
+        <identity value="freg.bostedsadresse" />
+        <map value="ukjentBosted" />
+      </mapping>
+      <mapping>
+        <identity value="freg.deltbosted" />
+        <map value="ukjentBosted" />
+      </mapping>
+      <mapping>
+        <identity value="freg.oppholdsadresse" />
+        <map value="adressenErUkjent" />
+      </mapping>
+    </element>
+    <element id="Address.extension">
+      <path value="Address.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
     <element id="Address.extension:propertyInformation">
       <path value="Address.extension" />
       <sliceName value="propertyInformation" />
       <mustSupport value="true" />
     </element>
+    <element id="Address.extension:propertyInformation.extension">
+      <path value="Address.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
     <element id="Address.extension:propertyInformation.extension:municipality">
       <path value="Address.extension.extension" />
       <sliceName value="municipality" />
+      <alias value="bostedskommune" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="bostedskommune" />
+      </mapping>
     </element>
     <element id="Address.extension:addressMetadata">
       <path value="Address.extension" />
       <sliceName value="addressMetadata" />
+    </element>
+    <element id="Address.extension:addressMetadata.extension">
+      <path value="Address.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
     </element>
     <element id="Address.extension:addressMetadata.extension:addressIsUnknown">
       <path value="Address.extension.extension" />

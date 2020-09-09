@@ -19,6 +19,7 @@ Fix some discripancies in mapping information regarding mapping to FREG
 |gd-preferred-address.StructureDefinition-extension.xml|Added duplicated aliases in mapping element||
 |gd-Address-international.StructureDefinition-profile.xml|Added top level mapping and included the use of mapping elements to describe freg mappings||
 |gd-Address-street.StructureDefinition-profile.xml|Added top level mapping and included the use of mapping elements to describe freg mappings||
+|gd-Address-unknown.StructureDefinition-profile.xml|Added top level mapping for all addresstypes (Bostedsadresse, DeltBosted and Oppholdsadresse). Included the use of mapping elements to describe freg mappings. Added mapping to municipality and addressIsUnknown elements||
 
 # Changelog for 2.3.0
 
