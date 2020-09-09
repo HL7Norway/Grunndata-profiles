@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Address-cadastral" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Address-cadastral" />
-  <version value="2.3.1" />
+  <version value="2.3.0" />
   <name value="GdAddressCadastral" />
   <status value="draft" />
   <date value="2019-10-17" />
