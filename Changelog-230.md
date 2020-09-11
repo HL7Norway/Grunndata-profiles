@@ -100,6 +100,7 @@ This is a service release to fix ValueSet and CodeSystem resource version number
 |2020-09-09|gd-Address-international.StructureDefinition-profile.xml|Added top level mapping and included the use of mapping elements to describe freg mappings|
 |2020-09-09|gd-Address-street.StructureDefinition-profile.xml|Added top level mapping and included the use of mapping elements to describe freg mappings|
 |2020-09-09|gd-Address-unknown.StructureDefinition-profile.xml|Added top level mapping for all addresstypes (Bostedsadresse, DeltBosted and Oppholdsadresse). Included the use of mapping elements to describe freg mappings. Added mapping to municipality and addressIsUnknown elements|
+|2020-09-11|Implementation Guide text|Updated description of *History of a resource* in the service interface description, to clearify what elements contains history information from FREG, specificly RelatedPerson|
 
 
 ## Documents the changes implemented from version 2.1.0 to 2.2.0
