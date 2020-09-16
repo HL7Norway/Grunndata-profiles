@@ -8,8 +8,8 @@ This is a service release to fix SearchParameters to work on Vonk server
 ## Files change description
 |File|Change description|Dev-ops id|
 |- 
-|gd-Address-type.SearchParameter|Updated expression with '.value' to work on Vonk server|Bug xxx|
-|gd-Address-contenttype.SearchParameter|Updated expression with '.value' to work on Vonk server|Bug xxx|
+|gd-Address-type.SearchParameter|Updated expression with '.value' to work on Vonk server|Task 4343|
+|gd-Address-contenttype.SearchParameter|Updated expression with '.value' to work on Vonk server|Task  4343|
 
 
 # Changelog for 2.3.0
