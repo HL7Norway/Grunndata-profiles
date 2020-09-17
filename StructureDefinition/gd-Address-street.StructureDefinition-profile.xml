@@ -252,42 +252,15 @@
     </element>
     <element id="Address.period">
       <path value="Address.period" />
-      <definition value="Grunndata uses this element to represent flyttedato, oppholdsadressedato and startdatoForKontakt/sluttdatoForKontakt&#xD;&#xA;&#xD;&#xA;Time period when address was/is in use." />
-      <alias value="flyttedato" />
-      <alias value="oppholdsadressedato" />
-      <alias value="startdatoForKontakt" />
-      <alias value="sluttdatoForKontakt" />
       <mustSupport value="true" />
     </element>
     <element id="Address.period.start">
       <path value="Address.period.start" />
-      <definition value="Grunndata uses this element to represent flyttedato, oppholdsadressedato and startdatoForKontakt&#xD;&#xA;&#xD;&#xA;The start of the period. The boundary is inclusive." />
-      <alias value="flyttedato" />
-      <alias value="oppholdsadressedato" />
-      <alias value="startdatoForKontakt" />
       <mustSupport value="true" />
-      <mapping>
-        <identity value="freg.Bostedsadresse" />
-        <map value="flyttedato" />
-      </mapping>
-      <mapping>
-        <identity value="freg.Oppholdsadresse" />
-        <map value="oppholdsadressedato" />
-      </mapping>
-      <mapping>
-        <identity value="freg.DeltBosted" />
-        <map value="startdatoForKontakt" />
-      </mapping>
     </element>
     <element id="Address.period.end">
       <path value="Address.period.end" />
-      <definition value="Grunndata uses this element to represent sluttdatoForKontakt&#xD;&#xA;&#xD;&#xA;The end of the period. If the end of the period is missing, it means no end was known or planned at the time the instance was created. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time." />
-      <alias value="sluttdatoForKontrakt" />
       <mustSupport value="true" />
-      <mapping>
-        <identity value="freg.DeltBosted" />
-        <map value="sluttdatoForKontrakt" />
-      </mapping>
     </element>
   </differential>
 </StructureDefinition>

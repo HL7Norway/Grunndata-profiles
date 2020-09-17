@@ -196,5 +196,13 @@
         <map value="landkode" />
       </mapping>
     </element>
+    <element id="Address.period">
+      <path value="Address.period" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Address.period.start">
+      <path value="Address.period.start" />
+      <mustSupport value="true" />
+    </element>
   </differential>
 </StructureDefinition>

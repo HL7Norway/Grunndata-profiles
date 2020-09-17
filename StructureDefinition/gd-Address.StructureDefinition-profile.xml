@@ -89,5 +89,41 @@
       <short value="name of &quot;kommune&quot; or district" />
       <definition value="gd-Address: Norwegian addresses uses district for the norwegian &quot;kommune&quot;, international addresses uses district for any other applicable district in that country.&#xD;&#xA;&#xD;&#xA;Name of the county (norwegian &quot;kommune&quot;). If kommune number is required &quot;eiendomsinformasjon&quot; should be used.&#xD;&#xA;&#xD;&#xA;The name of the administrative area (county)." />
     </element>
+    <element id="Address.period">
+      <path value="Address.period" />
+      <definition value="Grunndata uses this element to represent flyttedato, oppholdsadressedato and startdatoForKontrakt/sluttdatoForKontrakt&#xD;&#xA;&#xD;&#xA;Time period when address was/is in use." />
+      <alias value="flyttedato" />
+      <alias value="oppholdsadressedato" />
+      <alias value="startdatoForKontrakt" />
+      <alias value="sluttdatoForKontrakt" />
+    </element>
+    <element id="Address.period.start">
+      <path value="Address.period.start" />
+      <definition value="Grunndata uses this element to represent flyttedato, oppholdsadressedato and startdatoForKontrakt&#xD;&#xA;&#xD;&#xA;The start of the period. The boundary is inclusive." />
+      <alias value="flyttedato" />
+      <alias value="oppholdsadressedato" />
+      <alias value="startdatoForKontrakt" />
+      <mapping>
+        <identity value="freg.Bostedsadresse" />
+        <map value="flyttedato" />
+      </mapping>
+      <mapping>
+        <identity value="freg.Oppholdsadresse" />
+        <map value="oppholdsadressedato" />
+      </mapping>
+      <mapping>
+        <identity value="freg.DeltBosted" />
+        <map value="startdatoForKontrakt" />
+      </mapping>
+    </element>
+    <element id="Address.period.end">
+      <path value="Address.period.end" />
+      <definition value="Grunndata uses this element to represent sluttdatoForKontrakt&#xD;&#xA;&#xD;&#xA;The end of the period. If the end of the period is missing, it means no end was known or planned at the time the instance was created. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time." />
+      <alias value="sluttdatoForKontrakt" />
+      <mapping>
+        <identity value="freg.DeltBosted" />
+        <map value="sluttdatoForKontrakt" />
+      </mapping>
+    </element>
   </differential>
 </StructureDefinition>
