@@ -10,7 +10,11 @@ This is a service release to fix SearchParameters to work on Vonk server
 |- 
 |gd-Address-type.SearchParameter|Updated expression with '.value' to work on Vonk server|Task 4343|
 |gd-Address-contenttype.SearchParameter|Updated expression with '.value' to work on Vonk server|Task  4343|
-
+|gd-Address.StructureDefinition-profile.xml|Described the mapping from FREG flyttedato, bostedsadressedato, startdatoForKontrakt and sluttdatoForKontrakt into the Address.Period element|Bug 4545|
+|gd-Address-cadastral.StructureDefinition-profile|Added must support to the Period.element for the relevant profiles|Bug 4545|
+|gd-Address-international.StructureDefinition-profile.xml|Added must support to the Period.element for the relevant profiles|Bug 4545|
+|gd-Address-street.StructureDefinition-profile.xml|Added must support to the Period.element for the relevant profiles|Bug 4545|
+|gd-Address-unknown.StructureDefinition-profile.xml|Added must support to the Period.element for the relevant profiles|Bug 4545|
 
 # Changelog for 2.3.0
 
