@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Address-international" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Address-international" />
-  <version value="2.3.0" />
+  <version value="2.3.1" />
   <name value="GdAddressInternational" />
   <status value="draft" />
   <date value="2019-10-17" />

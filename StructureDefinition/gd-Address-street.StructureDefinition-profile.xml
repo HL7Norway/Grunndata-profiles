@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Address-street" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Address-street" />
-  <version value="2.3.0" />
+  <version value="2.3.1" />
   <name value="GdAddressStreet" />
   <status value="draft" />
   <date value="2019-10-16" />
