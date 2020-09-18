@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Provenance" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Provenance" />
-  <version value="2.2.1" />
+  <version value="2.3.1" />
   <name value="GdProvenance" />
   <status value="draft" />
   <date value="2019-12-06" />
