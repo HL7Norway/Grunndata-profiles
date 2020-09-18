@@ -1,7 +1,7 @@
 # Changelog for 2.3.1
 
 ## Documents the changes implemented from version 2.3.0 to 2.3.1
-### Release date: 2020-09-XX
+### Release date: 2020-09-18
 
 This is a service release to fix SearchParameters to work on Vonk server
 
