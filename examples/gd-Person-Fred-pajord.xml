@@ -36,7 +36,7 @@
 			<valueCode value="iBruk"/>
 		</extension>
 		<system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
-		<value value="25436000564"/>
+		<value value="25036000564"/>
 	</identifier>
 	<name> <!-- Navnet til brukeren -->
 		<extension url="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata">
@@ -76,6 +76,7 @@
 			</extension>
 		</extension>
 	</gender>
+	<birthDate value="1960-03-25"/>
 	<address>
 	<!-- Norwegian address: http://hl7.no/fhir/StructureDefinition/no-basis-Address -->
 	<!-- Norwegian basisprofil for Address resource adding Norwegian specific property information, official use of address and further explanation of the use for the data-elements in a Norwegian address. -->

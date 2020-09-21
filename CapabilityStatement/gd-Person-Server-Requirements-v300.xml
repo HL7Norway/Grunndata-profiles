@@ -85,9 +85,9 @@
 				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 					<valueCode value="SHALL"/>
 				</extension>
-				<name value="birthDate"/>
+				<name value="birthdate"/>
 				<type value="date"/>
-				<documentation value="Search on Person.birthDate: GET [base]/Person?birthDate=[date]"/>
+				<documentation value="Search on Person.birthdate: GET [base]/Person?birthdate=[date]"/>
 			</searchParam>
 			<searchParam>
 				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
