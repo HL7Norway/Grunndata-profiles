@@ -21,6 +21,11 @@ This is a service release to fix SearchParameters to work on Vonk server
 |gd-Person-Server-Requirements.xml and gd-Person-Server-Requirements-v300.xml|Corrected the birthdate search parameter birthDate -> birthdate||
 |gd-Person-Fred-pajord.xml|Updatedet the example with birthDate||
 
+### Documentation changes after 2.3.1 release
+|Date|File|Change description|
+|-
+|2020-09-23|gd-person-status.StructureDefinition-extension.xml|Bugfix of the valueset binding removed incorrect binding to http://ehelse.no/fhir/ValueSet/gd-person-status-v05|
+
 # Changelog for 2.3.0
 
 ## Documents the changes implemented from version 2.2.0 to 2.3.0
