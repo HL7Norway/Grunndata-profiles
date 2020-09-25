@@ -15,84 +15,6 @@
   <baseDefinition value="http://hl7.no/fhir/StructureDefinition/no-basis-Person" />
   <derivation value="constraint" />
   <differential>
-    <element id="Person.meta">
-      <path value="Person.meta" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Person.meta.security">
-      <path value="Person.meta.security" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <mustSupport value="true" />
-    </element>
-    <element id="Person.meta.security:addressConfidentiality">
-      <path value="Person.meta.security" />
-      <sliceName value="addressConfidentiality" />
-      <short value="address confidentiality from FREG" />
-      <definition value="informasjon om gradering av adresseinformasjon for personer iht. Beskyttelsesinstruksen&#xD;&#xA;Informasjonen benyttes til å beskrive det overordnede felles beskyttelsesnivået en person har på alle sine adresser av typen bostedsadresse, oppholdsadresse og delt bosted. Adressebeskyttelsen gjelder ikke kontaktadressene." />
-      <alias value="adressebeskyttelse" />
-      <alias value="graderingsnivå" />
-      <mustSupport value="true" />
-      <binding>
-        <strength value="required" />
-        <description value="Security labels from FREG" />
-        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-addressprotection" />
-      </binding>
-    </element>
-    <element id="Person.meta.security:addressConfidentiality.system">
-      <path value="Person.meta.security.system" />
-      <min value="1" />
-      <fixedUri value="http://ehelse.no/fhir/ValueSet/gd-person-addressprotection" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Person.meta.security:addressConfidentiality.code">
-      <path value="Person.meta.security.code" />
-      <short value="graderingsnivå from FREG" />
-      <definition value="nivå av beskyttelsesgrad på informasjon&#xD;&#xA;Gyldige kodeverdier er:&#xD;&#xA;• ugradert&#xD;&#xA;• fortrolig&#xD;&#xA;• strengtFortrolig (strengt fortrolig)" />
-      <alias value="graderingsnivå" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Person.meta.security:addressConfidentiality.extension">
-      <path value="Person.meta.security.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Person.meta.security:addressConfidentiality.Extension:fregMetadata">
-      <path value="Person.meta.security.extension" />
-      <sliceName value="fregMetadata" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata" />
-      </type>
-    </element>
-    <element id="Person.implicitRules">
-      <path value="Person.implicitRules" />
-      <mustSupport value="false" />
-    </element>
-    <element id="Person.language">
-      <path value="Person.language" />
-      <mustSupport value="false" />
-    </element>
-    <element id="Person.text">
-      <path value="Person.text" />
-      <mustSupport value="false" />
-    </element>
-    <element id="Person.contained">
-      <path value="Person.contained" />
-      <mustSupport value="false" />
-    </element>
     <element id="Person.extension">
       <path value="Person.extension" />
       <slicing>
@@ -122,6 +44,16 @@
         <profile value="http://ehelse.no/fhir/StructureDefinition/gd-birth" />
       </type>
       <mustSupport value="true" />
+    </element>
+    <element id="Person.extension:birth.extension">
+      <path value="Person.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
     </element>
     <element id="Person.extension:birth.extension:birthYear">
       <path value="Person.extension.extension" />
@@ -156,6 +88,16 @@
         <profile value="http://ehelse.no/fhir/StructureDefinition/gd-person-citizenship" />
       </type>
       <mustSupport value="true" />
+    </element>
+    <element id="Person.extension:citizenship.extension">
+      <path value="Person.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
     </element>
     <element id="Person.extension:citizenship.extension:code">
       <path value="Person.extension.extension" />
@@ -206,10 +148,87 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="Person.meta">
+      <path value="Person.meta" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Person.meta.security">
+      <path value="Person.meta.security" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Person.meta.security:addressConfidentiality">
+      <path value="Person.meta.security" />
+      <sliceName value="addressConfidentiality" />
+      <short value="address confidentiality from FREG" />
+      <definition value="informasjon om gradering av adresseinformasjon for personer iht. Beskyttelsesinstruksen&#xD;&#xA;Informasjonen benyttes til å beskrive det overordnede felles beskyttelsesnivået en person har på alle sine adresser av typen bostedsadresse, oppholdsadresse og delt bosted. Adressebeskyttelsen gjelder ikke kontaktadressene." />
+      <alias value="adressebeskyttelse" />
+      <alias value="graderingsnivå" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <description value="Security labels from FREG" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-addressprotection" />
+      </binding>
+    </element>
+    <element id="Person.meta.security:addressConfidentiality.extension">
+      <path value="Person.meta.security.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Person.meta.security:addressConfidentiality.extension:fregMetadata">
+      <path value="Person.meta.security.extension" />
+      <sliceName value="fregMetadata" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata" />
+      </type>
+    </element>
+    <element id="Person.meta.security:addressConfidentiality.system">
+      <path value="Person.meta.security.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Person.meta.security:addressConfidentiality.code">
+      <path value="Person.meta.security.code" />
+      <short value="graderingsnivå from FREG" />
+      <definition value="nivå av beskyttelsesgrad på informasjon&#xD;&#xA;Gyldige kodeverdier er:&#xD;&#xA;• ugradert&#xD;&#xA;• fortrolig&#xD;&#xA;• strengtFortrolig (strengt fortrolig)" />
+      <alias value="graderingsnivå" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Person.implicitRules">
+      <path value="Person.implicitRules" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Person.language">
+      <path value="Person.language" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Person.text">
+      <path value="Person.text" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Person.contained">
+      <path value="Person.contained" />
+      <mustSupport value="false" />
+    </element>
     <element id="Person.identifier">
       <path value="Person.identifier" />
       <slicing>
-		<description value="Slicing discriminator from no-basis-Person"/>
+        <description value="Slicing discriminator from no-basis-Person" />
         <rules value="closed" />
       </slicing>
       <min value="1" />
