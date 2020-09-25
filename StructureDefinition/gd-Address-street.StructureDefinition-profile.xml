@@ -83,7 +83,12 @@
     <element id="Address.extension:propertyInformation.extension:municipality">
       <path value="Address.extension.extension" />
       <sliceName value="municipality" />
+      <alias value="kommunenummer" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="kommunenummer" />
+      </mapping>
     </element>
     <element id="Address.extension:streetAddress">
       <path value="Address.extension" />
