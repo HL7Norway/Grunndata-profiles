@@ -27,6 +27,7 @@ This is a service release to fix SearchParameters to work on Vonk server
 |2020-09-23|gd-person-status.StructureDefinition-extension.xml|Bugfix of the valueset binding removed incorrect binding to http://ehelse.no/fhir/ValueSet/gd-person-status-v05|
 |2020-09-24|gd-Address-street.StructureDefinition-profile.xml|Bugfix to documentation, added kommunenummer mapping information, won't affect the package|
 |2020-09-24|gd-Person.StructureDefinition-profile.xml|Bugfix to the meta.security.addressConfidentiality element removed the valueset fixed value of system|
+|2020-09-30|gd-person-identificationnumbertype.CodeSystem.xml|Updated the codesystem name according to namiung conventions|
 
 # Changelog for 2.3.0
 
