@@ -15,7 +15,7 @@
   <baseDefinition value="http://hl7.no/fhir/StructureDefinition/no-basis-Person" />
   <derivation value="constraint" />
   <differential>
-	    <element id="Person.meta">
+	<element id="Person.meta">
       <path value="Person.meta" />
       <mustSupport value="true" />
     </element>
@@ -75,6 +75,22 @@
       <alias value="graderingsnivå" />
       <min value="1" />
       <mustSupport value="true" />
+    </element>
+	    <element id="Person.implicitRules">
+      <path value="Person.implicitRules" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Person.language">
+      <path value="Person.language" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Person.text">
+      <path value="Person.text" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Person.contained">
+      <path value="Person.contained" />
+      <mustSupport value="false" />
     </element>
     <element id="Person.extension">
       <path value="Person.extension" />
@@ -208,23 +224,6 @@
         <profile value="http://ehelse.no/fhir/StructureDefinition/gd-residence-permit" />
       </type>
       <mustSupport value="true" />
-    </element>
-
-    <element id="Person.implicitRules">
-      <path value="Person.implicitRules" />
-      <mustSupport value="false" />
-    </element>
-    <element id="Person.language">
-      <path value="Person.language" />
-      <mustSupport value="false" />
-    </element>
-    <element id="Person.text">
-      <path value="Person.text" />
-      <mustSupport value="false" />
-    </element>
-    <element id="Person.contained">
-      <path value="Person.contained" />
-      <mustSupport value="false" />
     </element>
     <element id="Person.identifier">
       <path value="Person.identifier" />
