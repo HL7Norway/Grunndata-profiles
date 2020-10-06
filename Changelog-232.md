@@ -5,6 +5,8 @@
 
 This is a service release to fix bugs in codesystem bindings and update documentation
 
+|2020-10-06|gd-Person-Nabo-Eksempel-klientadresse.xml|Endret eksempel for å inkludere||
+
 ## Files change description
 |Date|File|Change description|
 |-
