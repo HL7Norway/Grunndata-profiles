@@ -1,11 +1,9 @@
-<Person xmlns="http://hl7.org/fhir">
+<Person xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/FHIR/R4/fhir-all-xsd/fhir-single.xsd">
 	<meta>
 		<profile value="http://ehelse.no/fhir/StructureDefinition/gd-Person"/>
 		<security>
-			<coding>
-				<system value="https://simplifier.net/Grunndata-R4/gd-address-confidentiality"/>
+				<system value="http://ehelse.no/fhir/CodeSystem/gd-address-confidentiality"/>
 				<code value="klientadresse"/>
-			</coding>
 		</security>
 	</meta>
 	<extension url="http://ehelse.no/fhir/StructureDefinition/gd-person-status">
