@@ -10,7 +10,7 @@ java -jar /home/thomas/Downloads/org.hl7.fhir.validator.jar gd-RelatedPerson-exa
 
 Først lage en katalog med alle conformance ressurser som benyttes for ig'en. Sjekke at alle validerer:
 java -jar /home/thomas/Downloads/org.hl7.fhir.validator.jar /media/sf_GitRepo/for-validation-gd-r4/ -version 4.0.1
-java -jar c:\download\org.hl7.fhir.validator.jar c:\GitRepo\Grunndata-R4\for-validation-gd-r4\*.xml -version 4.0.1
+java -jar c:\download\validator_cli.jar c:\GitRepo\Grunndata-R4\StructureDefinition\*.xml -version 4.0.0
 
 Deretter validere eksempler med katalogen som "ig":
 java -jar /home/thomas/Downloads/org.hl7.fhir.validator.jar gd-RelatedPerson-example.xml -ig /media/sf_GitRepo/for-validation-gd-r4 -version 4.0.0
