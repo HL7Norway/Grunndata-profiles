@@ -18,18 +18,18 @@
       <path value="Provenance" />
       <alias value="Hendelse" />
     </element>
+        <element id="Provenance.id">
+      <path value="Provenance.id" />
+      <definition value="Grunndata: Provenance resources for the Grunndata-services should identify their provenance by a counter identifier that identifies the sequence that the Provenance resources where registered on the Grunndata-service. &#xD;&#xA;&#xD;&#xA;The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." />
+      <alias value="Hendelseid" />
+      <mustSupport value="true" />
+    </element>
     <element id="Provenance.meta">
       <path value="Provenance.meta" />
     </element>
     <element id="Provenance.meta.versionId">
       <path value="Provenance.meta.versionId" />
       <definition value="Grunndata: Provenance resources themself should probably not exist in more than one version.&#xD;&#xA;&#xD;&#xA;The version specific identifier, as it appears in the version portion of the URL. This value changes when the resource is created, updated, or deleted." />
-    </element>
-    <element id="Provenance.id">
-      <path value="Provenance.id" />
-      <definition value="Grunndata: Provenance resources for the Grunndata-services should identify their provenance by a counter identifier that identifies the sequence that the Provenance resources where registered on the Grunndata-service. &#xD;&#xA;&#xD;&#xA;The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." />
-      <alias value="Hendelseid" />
-      <mustSupport value="true" />
     </element>
     <element id="Provenance.target">
       <path value="Provenance.target" />
