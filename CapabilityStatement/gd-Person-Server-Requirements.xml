@@ -104,6 +104,7 @@ GET http:%2F%2Fhapi.fhir.org%2FbaseR4%2FPerson%3Fname%3DEspen%26_elements%3Dname
 					<valueCode value="SHALL"/>
 				</extension>
 				<name value="given"/>
+				<definition value="http://ehelse.no/fhir/SearchParameter/gd-Person-given"/>
 				<type value="string"/>
 				<documentation value="Search on Person.given name: GET [base]/Person?given=[string]"/>
 			</searchParam>
@@ -112,6 +113,7 @@ GET http:%2F%2Fhapi.fhir.org%2FbaseR4%2FPerson%3Fname%3DEspen%26_elements%3Dname
 					<valueCode value="SHALL"/>
 				</extension>
 				<name value="family"/>
+				<definition value="http://ehelse.no/fhir/SearchParameter/gd-Person-family"/>
 				<type value="string"/>
 				<documentation value="Search on Person.family name: GET [base]/Person?family=[string]"/>
 			</searchParam>
