@@ -7,6 +7,7 @@ This is a service release to fix bugs in codesystem bindings and update document
 
 |2020-10-06|gd-Person-Nabo-Eksempel-klientadresse.xml|Endret eksempel for å inkludere klientadresse i metainformasjon||
 |2020-10-06|gd-Identifier-foreign.StructureDefinition-profile.xml|Oppdaterte type.coding.system til binding til CodeSystem||
+|2020-10-14|examples/gd-Person-04021950128-version-3.xml|Endret eksempel for å tydeliggjøre bruk av line extensions||
 
 ## Files change description
 |Date|File|Change description|
