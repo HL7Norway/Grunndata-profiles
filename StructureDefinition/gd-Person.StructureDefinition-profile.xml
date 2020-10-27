@@ -15,7 +15,7 @@
   <baseDefinition value="http://hl7.no/fhir/StructureDefinition/no-basis-Person" />
   <derivation value="constraint" />
   <differential>
-	<element id="Person.meta">
+      <element id="Person.meta">
       <path value="Person.meta" />
       <mustSupport value="true" />
     </element>
@@ -24,9 +24,9 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="system" />
+          <path value="code" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
       <mustSupport value="true" />
     </element>
@@ -75,8 +75,12 @@
       <alias value="graderingsnivå" />
       <min value="1" />
       <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-addressprotection" />
+      </binding>
     </element>
-	    <element id="Person.implicitRules">
+    <element id="Person.implicitRules">
       <path value="Person.implicitRules" />
       <mustSupport value="false" />
     </element>
