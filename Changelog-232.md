@@ -1,6 +1,7 @@
 # Changelog for 2.3.2
 
 ## Documents the changes implemented from version 2.3.1 to 2.3.2
+
 ### Release date: 2020-09-30
 
 This is a service release to fix bugs in codesystem bindings and update documentation
@@ -8,8 +9,10 @@ This is a service release to fix bugs in codesystem bindings and update document
 |2020-10-06|gd-Person-Nabo-Eksempel-klientadresse.xml|Endret eksempel for å inkludere klientadresse i metainformasjon||
 |2020-10-06|gd-Identifier-foreign.StructureDefinition-profile.xml|Oppdaterte type.coding.system til binding til CodeSystem||
 |2020-10-14|examples/gd-Person-04021950128-version-3.xml|Endret eksempel for å tydeliggjøre bruk av line extensions||
+|2020-11-13|gd-RelatedPerson.StructureDefinition-profile.xml|Oppdaterte informasjonen for å klargjøre bruk av identifikator||
 
 ## Files change description
+
 |Date|File|Change description|
 |-
 |2020-09-23|gd-person-status.StructureDefinition-extension.xml|Bugfix of the valueset binding removed incorrect binding to http://ehelse.no/fhir/ValueSet/gd-person-status-v05||
@@ -20,11 +23,13 @@ This is a service release to fix bugs in codesystem bindings and update document
 # Changelog for 2.3.1
 
 ## Documents the changes implemented from version 2.3.0 to 2.3.1
+
 ### Release date: 2020-09-18
 
 This is a service release to fix SearchParameters to work on Vonk server
 
 ## Files change description
+
 |File|Change description|Dev-ops id|
 |- 
 |gd-Address-type.SearchParameter|Updated expression with '.value' to work on Vonk server|Task 4343|
@@ -40,15 +45,16 @@ This is a service release to fix SearchParameters to work on Vonk server
 |gd-Person-Server-Requirements.xml and gd-Person-Server-Requirements-v300.xml|Corrected the birthdate search parameter birthDate -> birthdate||
 |gd-Person-Fred-pajord.xml|Updatedet the example with birthDate||
 
-
 # Changelog for 2.3.0
 
 ## Documents the changes implemented from version 2.2.0 to 2.3.0
+
 ### Release date: 2020-06-09
 
 This is a service release to fix ValueSet and CodeSystem resource version numbering in filenames, id's an URL's, and removal of CodeSystem definitions not used in the specification.
 
 ## Files change description
+
 |File|Change description|Dev-ops id|
 |-
 |gd-person-identifierstatus.ValueSet.xml|Rename file, remove version in id, filename and url|PBI 2981|
