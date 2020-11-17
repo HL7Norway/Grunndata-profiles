@@ -11,6 +11,7 @@ This is a service release to fix bugs in codesystem bindings and update document
 |2020-10-14|examples/gd-Person-04021950128-version-3.xml|Endret eksempel for å tydeliggjøre bruk av line extensions||
 |2020-11-13|gd-RelatedPerson.StructureDefinition-profile.xml|Oppdaterte informasjonen for å klargjøre bruk av identifikator||
 |2020-11-17|Documentation changes|Oppdaterte informasjon om Must support på Readers guide, lagring er SHOULD, avhenger av konsumentens behov||
+|2020-11-17|Documentation changes|Oppdaterte informasjon om MANDATORY elements adressebeskyttelse|Feature 3372|
 
 ## Files change description
 
