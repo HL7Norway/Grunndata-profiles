@@ -10,6 +10,7 @@ This is a service release to fix bugs in codesystem bindings and update document
 |2020-10-06|gd-Identifier-foreign.StructureDefinition-profile.xml|Oppdaterte type.coding.system til binding til CodeSystem||
 |2020-10-14|examples/gd-Person-04021950128-version-3.xml|Endret eksempel for å tydeliggjøre bruk av line extensions||
 |2020-11-13|gd-RelatedPerson.StructureDefinition-profile.xml|Oppdaterte informasjonen for å klargjøre bruk av identifikator||
+|2020-11-17|Documentation changes|Oppdaterte informasjon om Must support på Readers guide, lagring er SHOULD, avhenger av konsumentens behov||
 
 ## Files change description
 
@@ -126,6 +127,7 @@ This is a service release to fix ValueSet and CodeSystem resource version number
 |gd-Provenance.StructureDefinition-profile.xml|Updated description of the profile|NA|
 
 ### Documentation changes after 2.3.0 release
+
 |Date|File|Change description|
 |-
 |2020-06-17|Implementation Guide text|Updated the Provenance REST interactions description|
@@ -152,11 +154,12 @@ This is a service release to fix ValueSet and CodeSystem resource version number
 |2020-09-11|Implementation Guide text|Updated description of *History of a resource* in the service interface description, to clearify what elements contains history information from FREG, specificly RelatedPerson|
 |2020-09-16|gd-Provenance.StructureDefinition-profile|Documentation changes gd-Provenance.StructureDefinition-profile.xml|
 
-
 ## Documents the changes implemented from version 2.1.0 to 2.2.0
+
 ### Release date: 2020-04-02
 
 This is a service release to includes changes to the documentation based on feedback on the 2.1.0 version. No breaking changes in the capabilities are documented in this version, but several updated to extend the capabilites described in the CapabilityStatement.
+
 - Added search parameter support for several search parameters in the CapabilityStatement
 - Added SearchParameter definitions for AddressContentType and AddressType
 - Updated CapabilityStatement to include several new search parameters
@@ -173,6 +176,7 @@ This is a service release to includes changes to the documentation based on feed
 - Updated documentation for RelatedPerson.patient references
 
 ## Files change description
+
 |File|Change description|
 |-
 |StructureDefinition/gd-birth-in-norway.StructureDefinition-extension.xml|Added freg-metadata to the extension to hold metadata from freg about this content|
@@ -202,6 +206,7 @@ ValueSet/gd-person-identificationnumbertype.ValueSet.xml|Updated filename and ur
 |StructureDefinition/gd-RelatedPerson.StructureDefinition-profile.xml|Added must support for RelatedPerson.patient.reference and updated documentation concerning references|
 
 ## Documentation changes after 2.2.0 release
+
 |Date|File|Change description|
 |-
 |2020-04-15|Implementation Guide text|Updated the description of change and event types. Including new ValueSet rendering for gd-Provenance|
