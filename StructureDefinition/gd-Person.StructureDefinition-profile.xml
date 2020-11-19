@@ -7,7 +7,7 @@
   <status value="draft" />
   <date value="2019-12-11" />
   <publisher value="Direktoratet for e-helse" />
-  <description value="The GdPerson profile describes the structure and coding of demographic data concerning a norwegian citizen. At this time the information is collected from FREG and presented through a FHIR RESTful interface from the Person information service.&#xD;&#xA;&#xD;&#xA;Folkeregisterperson fra FREG." />
+  <description value="The GdPerson profile describes the structure and coding of demographic data concerning a norwegian citizen or person with other legal relation with the kingdom of Norway. At this time the information is collected from FREG and presented through a FHIR RESTful interface from the Person information service.&#xD;&#xA;&#xD;&#xA;Folkeregisterperson fra FREG." />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />
@@ -17,7 +17,7 @@
   <differential>
 	<element id="Person.meta">
       <path value="Person.meta" />
-      <definition value="THIS ELEMENT IS MANDATORY.&#xD;&#xA; The support of the Person.meta.security element is considered MANDATORY by all systems implementing access to the Person-API. &#xD;&#xA; The element is returned by default from the responder service. &#xD;&#xA; All requestor systems SHALL be able to display the information in the data element for human use meaning; any user given access to the information throug the system or subsystems should be able to interpret this information in a meaningfull way. Requestors SHALL be able to process and store the information. &#xD;&#xA; Any failure to support these requirements could lead to the harm or death of the Person whom the information concerns." />
+      <definition value="THIS ELEMENT IS MANDATORY.&#xD;&#xA; The support of the Person.meta.security element is considered MANDATORY by all systems implementing access to the Person-API. &#xD;&#xA; The element is returned by default from the responder service. &#xD;&#xA; All requestor systems SHALL be able to display the information in the data element for human use meaning; any user given access to the information throug the system or subsystems should be able to interpret this information in a meaningfull way. Requestors SHALL be able to process and store the information. &#xD;&#xA; Some information made available by the service has special security and legal obligations and must be handled according to the relevant legislation. Any failure to support these requirements could lead to the harm or death of the Person whom the information concerns." />
       <mustSupport value="true" />
     </element>
     <element id="Person.meta.security">
