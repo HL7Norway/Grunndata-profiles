@@ -15,7 +15,7 @@
   <baseDefinition value="http://hl7.no/fhir/StructureDefinition/no-basis-Person" />
   <derivation value="constraint" />
   <differential>
-	<element id="Person.meta">
+  <element id="Person.meta">
       <path value="Person.meta" />
       <definition value="THIS ELEMENT IS MANDATORY.&#xD;&#xA; The support of the Person.meta.security element is considered MANDATORY by all systems implementing access to the Person-API. &#xD;&#xA; The element is returned by default from the responder service. &#xD;&#xA; All requestor systems SHALL be able to display the information in the data element for human use meaning; any user given access to the information throug the system or subsystems should be able to interpret this information in a meaningfull way. Requestors SHALL be able to process and store the information. &#xD;&#xA; Some information made available by the service has special security and legal obligations and must be handled according to the relevant legislation. Any failure to support these requirements could lead to the harm or death of the Person whom the information concerns." />
       <mustSupport value="true" />
@@ -77,7 +77,7 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-	    <element id="Person.implicitRules">
+    <element id="Person.implicitRules">
       <path value="Person.implicitRules" />
       <mustSupport value="false" />
     </element>
@@ -226,6 +226,7 @@
       </type>
       <mustSupport value="true" />
     </element>
+    
     <element id="Person.identifier">
       <path value="Person.identifier" />
       <slicing>
@@ -334,7 +335,8 @@
     </element>
     <element id="Person.active">
       <path value="Person.active" />
-      <mustSupport value="false" />
+      <definition value="Gd-Person use this element to describe active and not active Person-resources.&#xD;&#xA;A person instances can become not-active in special cases where two person instances is appended into one. In this case one Person instance remains active (active=true) while the duplicate is considered not-active (active=false).&#xD;&#xA;Person instances with value active=false is not returned from the service unless a specific search is made for instances containing the active=false value.&#xD;&#xA;&#xD;&#xA;Whether this person's record is in active use." />
+      <mustSupport value="true" />
     </element>
     <element id="Person.link">
       <path value="Person.link" />
