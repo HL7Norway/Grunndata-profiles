@@ -83,6 +83,11 @@
       <sliceName value="DNR" />
       <mustSupport value="true" />
     </element>
+    <element id="RelatedPerson.active">
+      <path value="RelatedPerson.active" />
+      <definition value="Gd-Person use this element to describe active and not active Person-resources.&#xD;&#xA;A person instances can become not-active in special cases where two person instances is appended into one. In this case one Person instance remains active (active=true) while the duplicate is considered not-active (active=false).&#xD;&#xA;Person instances with value active=false is not returned from the service unless a specific search is made for instances containing the active=false value.&#xD;&#xA;&#xD;&#xA;Whether this related person record is in active use." />
+      <mustSupport value="true" />
+    </element>
     <element id="RelatedPerson.patient">
       <path value="RelatedPerson.patient" />
       <definition value="no-basis: Can reference no-basis-Patient, no-basis-Person or Person in addition to Patient resources.&#xD;&#xA;&#xD;&#xA;gd-RelatedPerson: Logical reference (identifier) and Literal references are included for added search functionality. Both Logical and Literal referene to the Person instance (registered in FREG) that this RelatedPerson instance is related to. Contains DNR or FNR and Reference.&#xD;&#xA;&#xD;&#xA;For maritalStatus this identifier will contain the FREG identifier of the Person/Patient this RelatedPerson instance is related to.&#xD;&#xA;For familyRelation this idientifier will contain the FREG identifier of the Person/Patient this RelatedPerson instance is related to.&#xD;&#xA;For parental this identifier will contain the FREG identifier of the Person/Patient this RelatedPerson instance is related to.&#xD;&#xA;&#xD;&#xA;The patient this person is related to." />

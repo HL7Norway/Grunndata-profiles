@@ -13,6 +13,8 @@ This is a service release to fix bugs in codesystem bindings and update document
 |2020-11-17|Documentation changes|Oppdaterte informasjon om Must support på Readers guide, lagring er SHOULD, avhenger av konsumentens behov||
 |2020-11-17|Documentation changes|Oppdaterte informasjon om MANDATORY elements adressebeskyttelse|Feature 3372|
 |2020-11-19|Documentation changes|Updated information on the GdPerson to include information about persons related to the kingdom of Norway in addition to citizens||
+|2020-12-04|gd-Person.StructureDefinition-profile.xml|Added must support to the active element, updated active documentation|PBI 5091|
+|2020-12-04|gd-RelatedPerson.StructureDefinition-profile.xml|Added must support to the active element, updated active documentation|PBI 5091|
 
 ## Files change description
 
