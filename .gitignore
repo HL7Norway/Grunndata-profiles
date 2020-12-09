@@ -6,3 +6,7 @@ extension-iso21090*
 for-validation-gd-r4-neu/*.*
 
 for-validation-gd-221/*.*
+for-validation-gd-r4/*.*
+for-validation-gd-230/*.*
+validation-result/*.*
+mergefiles/*.*

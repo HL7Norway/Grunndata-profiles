@@ -140,6 +140,7 @@
     <element id="Address.district.extension:municipalityCoded.value[x].code">
       <path value="Address.district.extension.value[x].code" />
       <mustSupport value="true" />
+    </element>
     <element id="Address.period">
       <path value="Address.period" />
       <definition value="Grunndata uses this element to represent flyttedato, oppholdsadressedato and startdatoForKontrakt/sluttdatoForKontrakt&#xD;&#xA;&#xD;&#xA;Time period when address was/is in use." />
