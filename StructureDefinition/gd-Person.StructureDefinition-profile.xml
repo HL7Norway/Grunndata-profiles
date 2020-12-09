@@ -2,12 +2,12 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Person" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Person" />
-  <version value="2.3.0" />
+  <version value="2.3.2" />
   <name value="GdPerson" />
   <status value="draft" />
   <date value="2019-12-11" />
   <publisher value="Direktoratet for e-helse" />
-  <description value="The GdPerson profile describes the structure and coding of demographic data concerning a norwegian citizen. At this time the information is collected from FREG and presented through a FHIR RESTful interface from the Person information service.&#xD;&#xA;&#xD;&#xA;Folkeregisterperson fra FREG." />
+  <description value="The GdPerson profile describes the structure and coding of demographic data concerning a norwegian citizen or person with other legal relation with the kingdom of Norway. At this time the information is collected from FREG and presented through a FHIR RESTful interface from the Person information service.&#xD;&#xA;&#xD;&#xA;Folkeregisterperson fra FREG." />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />
@@ -15,8 +15,9 @@
   <baseDefinition value="http://hl7.no/fhir/StructureDefinition/no-basis-Person" />
   <derivation value="constraint" />
   <differential>
-    <element id="Person.meta">
+  <element id="Person.meta">
       <path value="Person.meta" />
+      <definition value="THIS ELEMENT IS MANDATORY.&#xD;&#xA; The support of the Person.meta.security element is considered MANDATORY by all systems implementing access to the Person-API. &#xD;&#xA; The element is returned by default from the responder service. &#xD;&#xA; All requestor systems SHALL be able to display the information in the data element for human use meaning; any user given access to the information throug the system or subsystems should be able to interpret this information in a meaningfull way. Requestors SHALL be able to process and store the information. &#xD;&#xA; Some information made available by the service has special security and legal obligations and must be handled according to the relevant legislation. Any failure to support these requirements could lead to the harm or death of the Person whom the information concerns." />
       <mustSupport value="true" />
     </element>
     <element id="Person.meta.security">
@@ -44,20 +45,6 @@
         <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-addressprotection" />
       </binding>
     </element>
-    <element id="Person.meta.security:addressConfidentiality.system">
-      <path value="Person.meta.security.system" />
-      <min value="1" />
-      <fixedUri value="http://ehelse.no/fhir/ValueSet/gd-person-addressprotection" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Person.meta.security:addressConfidentiality.code">
-      <path value="Person.meta.security.code" />
-      <short value="graderingsnivå from FREG" />
-      <definition value="nivå av beskyttelsesgrad på informasjon&#xD;&#xA;Gyldige kodeverdier er:&#xD;&#xA;• ugradert&#xD;&#xA;• fortrolig&#xD;&#xA;• strengtFortrolig (strengt fortrolig)" />
-      <alias value="graderingsnivå" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
     <element id="Person.meta.security:addressConfidentiality.extension">
       <path value="Person.meta.security.extension" />
       <slicing>
@@ -68,7 +55,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Person.meta.security:addressConfidentiality.Extension:fregMetadata">
+    <element id="Person.meta.security:addressConfidentiality.extension:fregMetadata">
       <path value="Person.meta.security.extension" />
       <sliceName value="fregMetadata" />
       <max value="1" />
@@ -76,6 +63,19 @@
         <code value="Extension" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata" />
       </type>
+    </element>
+    <element id="Person.meta.security:addressConfidentiality.system">
+      <path value="Person.meta.security.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Person.meta.security:addressConfidentiality.code">
+      <path value="Person.meta.security.code" />
+      <short value="graderingsnivå from FREG" />
+      <definition value="nivå av beskyttelsesgrad på informasjon&#xD;&#xA;Gyldige kodeverdier er:&#xD;&#xA;• ugradert&#xD;&#xA;• fortrolig&#xD;&#xA;• strengtFortrolig (strengt fortrolig)" />
+      <alias value="graderingsnivå" />
+      <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Person.implicitRules">
       <path value="Person.implicitRules" />
@@ -123,6 +123,16 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="Person.extension:birth.extension">
+      <path value="Person.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
     <element id="Person.extension:birth.extension:birthYear">
       <path value="Person.extension.extension" />
       <sliceName value="birthYear" />
@@ -156,6 +166,16 @@
         <profile value="http://ehelse.no/fhir/StructureDefinition/gd-person-citizenship" />
       </type>
       <mustSupport value="true" />
+    </element>
+    <element id="Person.extension:citizenship.extension">
+      <path value="Person.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
     </element>
     <element id="Person.extension:citizenship.extension:code">
       <path value="Person.extension.extension" />
@@ -206,10 +226,11 @@
       </type>
       <mustSupport value="true" />
     </element>
+    
     <element id="Person.identifier">
       <path value="Person.identifier" />
       <slicing>
-		<description value="Slicing discriminator from no-basis-Person"/>
+        <description value="Slicing discriminator from no-basis-Person" />
         <rules value="closed" />
       </slicing>
       <min value="1" />
@@ -314,7 +335,8 @@
     </element>
     <element id="Person.active">
       <path value="Person.active" />
-      <mustSupport value="false" />
+      <definition value="Gd-Person use this element to describe active and not active Person-resources.&#xD;&#xA;A person instances can become not-active in special cases where two person instances is appended into one. In this case one Person instance remains active (active=true) while the duplicate is considered not-active (active=false).&#xD;&#xA;Person instances with value active=false is not returned from the service unless a specific search is made for instances containing the active=false value.&#xD;&#xA;&#xD;&#xA;Whether this person's record is in active use." />
+      <mustSupport value="true" />
     </element>
     <element id="Person.link">
       <path value="Person.link" />

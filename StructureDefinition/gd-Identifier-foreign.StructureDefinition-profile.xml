@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Identifier-foreign" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Identifier-foreign" />
-  <version value="2.2.0" />
+  <version value="2.3.3" />
   <name value="GdIdentifierForeign" />
   <status value="draft" />
   <date value="2019-10-16" />
@@ -80,7 +80,7 @@
     <element id="Identifier.type.coding.system">
       <path value="Identifier.type.coding.system" />
       <definition value="The identification number type of this gdIdentifierForeign.&#xD;&#xA;&#xD;&#xA;The identification of the code system that defines the meaning of the symbol in the code." />
-      <fixedUri value="http://ehelse.no/fhir/ValueSet/gd-person-identificationnumbertype" />
+      <fixedUri value="http://ehelse.no/fhir/CodeSystem/gd-person-identificationnumbertype" />
       <mustSupport value="true" />
     </element>
     <element id="Identifier.type.coding.code">

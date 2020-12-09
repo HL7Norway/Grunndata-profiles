@@ -28,7 +28,12 @@
       <short value="preferred address" />
       <definition value="The Indicates the citicen choice of preferred address for contact as registered in FREG&#xD;&#xA;&#xD;&#xA;valg av hvilken av adressene en person er oppført med som skal benyttes til å&#xD;&#xA;kontakte personen&#xD;&#xA;- Adressen som personen kan motta post på i inn- eller utland&#xD;&#xA;- Kan finnes i både strukturert og ustrukturert format&#xD;&#xA;Målet med å innføre denne nye egenskapen er at innbygger selv kan styre&#xD;&#xA;hvor denne vil motta post fra avsendere i samfunnet samtidig som at&#xD;&#xA;forvaltningen av ordningen er billigst mulig for Folkeregisteret.&#xD;&#xA;Innbygger kan velge hvilken av adressene denne har oppført i Registeret fra&#xD;&#xA;før og sette denne som preferert kontaktadresse. Eksempelvis kan en person&#xD;&#xA;som veksler mellom å oppholde seg på en norsk og en utenlandsk adresse&#xD;&#xA;gjennom året ganske enkelt skifte mellom bostedsadressen og&#xD;&#xA;&#xD;&#xA;postadresseIUtlandet kun ved å &quot;peke&quot; alternerende på den ønskede&#xD;&#xA;adressetypen gjennom året uten å melde adresseendring på noen av sine&#xD;&#xA;registrerte adresser.&#xD;&#xA;Så lenge DSF er master så leveres kontaktadresseIFrittFormat på ustrukturert&#xD;&#xA;format med store bokstaver siden dette er formen på informasjonen i DSF.&#xD;&#xA;Etter at Registeret blir master vil Registeret kunne levere&#xD;&#xA;kontaktadresseIFrittFormat på ustrukturert format med store og små bokstaver.&#xD;&#xA;Det kan kun være en gjeldende preferert kontaktadresse per tidspunkt." />
       <alias value="preferertKontaktadresse" />
+      <alias value="valg" />
       <max value="1" />
+      <mapping>
+        <identity value="freg" />
+        <map value="valg" />
+      </mapping>
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
@@ -39,6 +44,7 @@
       <short value="The preferred addresstype" />
       <definition value="The preferred addresstype" />
       <alias value="preferertKontaktadresse" />
+      <alias value="valg" />
       <type>
         <code value="code" />
       </type>
@@ -46,6 +52,10 @@
         <strength value="required" />
         <valueSet value="http://ehelse.no/fhir/ValueSet/gd-preferredaddresstype" />
       </binding>
+      <mapping>
+        <identity value="freg" />
+        <map value="valg" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>

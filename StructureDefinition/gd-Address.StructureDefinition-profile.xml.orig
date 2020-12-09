@@ -2,7 +2,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Address" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Address" />
+<<<<<<< HEAD
+  <version value="3.0.0" />
+=======
   <version value="2.3.1" />
+>>>>>>> 22f91e9905201c209930aada6510f576d644f67b
   <name value="GdAddress" />
   <title value="GdAddress" />
   <status value="draft" />
@@ -140,6 +144,7 @@
     <element id="Address.district.extension:municipalityCoded.value[x].code">
       <path value="Address.district.extension.value[x].code" />
       <mustSupport value="true" />
+    </element>
     <element id="Address.period">
       <path value="Address.period" />
       <definition value="Grunndata uses this element to represent flyttedato, oppholdsadressedato and startdatoForKontrakt/sluttdatoForKontrakt&#xD;&#xA;&#xD;&#xA;Time period when address was/is in use." />

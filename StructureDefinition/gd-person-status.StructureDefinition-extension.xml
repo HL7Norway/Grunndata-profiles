@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-person-status" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-person-status" />
-  <version value="2.1.0" />
+  <version value="2.3.2" />
   <name value="GdPersonStatus" />
   <status value="draft" />
   <date value="2019-10-16" />
@@ -65,7 +65,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-status-v05" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-status" />
       </binding>
     </element>
     <element id="Extension.extension:fregMetadata">

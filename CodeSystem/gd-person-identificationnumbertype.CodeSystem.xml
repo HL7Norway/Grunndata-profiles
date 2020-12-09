@@ -5,8 +5,8 @@
         <lastUpdated value="2020-03-18T00:00:00.000+00:00" />
     </meta>
     <url value="http://ehelse.no/fhir/CodeSystem/gd-person-identificationnumbertype" />
-    <version value="2.2.0" />
-    <name value="gd-person-identificationnumbertype.codesystem" />
+    <version value="2.3.2" />
+    <name value="GdPersonIdentificationnumbertypeCodeSystem" />
     <status value="draft" />
     <date value="2018-10-17T00:00:00.000+00:00" />
     <publisher value="Skatteetaten" />

@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Provenance" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Provenance" />
-  <version value="2.2.1" />
+  <version value="2.3.1" />
   <name value="GdProvenance" />
   <status value="draft" />
   <date value="2019-12-06" />
@@ -18,11 +18,14 @@
       <path value="Provenance" />
       <alias value="Hendelse" />
     </element>
-    <element id="Provenance.id">
+        <element id="Provenance.id">
       <path value="Provenance.id" />
       <definition value="Grunndata: Provenance resources for the Grunndata-services should identify their provenance by a counter identifier that identifies the sequence that the Provenance resources where registered on the Grunndata-service. &#xD;&#xA;&#xD;&#xA;The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." />
       <alias value="Hendelseid" />
       <mustSupport value="true" />
+    </element>
+    <element id="Provenance.meta">
+      <path value="Provenance.meta" />
     </element>
     <element id="Provenance.meta.versionId">
       <path value="Provenance.meta.versionId" />
@@ -52,11 +55,16 @@
     <element id="Provenance.target.extension:targetElement">
       <path value="Provenance.target.extension" />
       <sliceName value="targetElement" />
-      <definition value="In some cases when you provide a reference to another resource instance you also want to specificly express a  reference to specific elements of the target resource.  Can contain the reference to the element and the change in value." />
+      <definition value="Grunndata uses this element(s) to reference what element in the target resourc is changed by this event.&#xD;&#xA;&#xD;&#xA;In some cases when you provide a reference to another resource instance you also want to specificly express a  reference to specific elements of the target resource.  Can contain the reference to the element and the change in value." />
+      <alias value="entitet" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.no/fhir/StructureDefinition/reference-targetElement" />
       </type>
+      <mapping>
+        <identity value="freg" />
+        <map value="entitet" />
+      </mapping>
     </element>
     <element id="Provenance.target.reference">
       <path value="Provenance.target.reference" />
@@ -69,11 +77,16 @@
     <element id="Provenance.occurred[x]">
       <path value="Provenance.occurred[x]" />
       <definition value="Grunndata: When the activity leading to the change occurred in another system (FREG ex.) This would be the registered dates from that system.&#xD;&#xA;&#xD;&#xA;The period during which the activity occurred." />
+      <alias value="ajourholdstidspunkt" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="ajourholdstidspunkt" />
+      </mapping>
     </element>
     <element id="Provenance.recorded">
       <path value="Provenance.recorded" />
-      <definition value="Grunndata: The time the change was recorded by the Grunndata system.&#xD;&#xA;&#xD;&#xA;The instant of time at which the activity was recorded." />
+      <definition value="Grunndata: The time the change was recorded by the Grunndata system (e.g. not when the change happened in the source system)&#xD;&#xA;&#xD;&#xA;The instant of time at which the activity was recorded." />
       <mustSupport value="true" />
     </element>
     <element id="Provenance.policy">
@@ -103,12 +116,17 @@
       <sliceName value="fregEventtype" />
       <short value="Event type from FREG" />
       <definition value="The event type from FREG that thescribes the change to the Master Person Index in some detail." />
+      <alias value="hendelsestype" />
       <max value="1" />
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <valueSet value="http://ehelse.no/fhir/ValueSet/gd-provenance-freg-eventtype" />
       </binding>
+      <mapping>
+        <identity value="freg" />
+        <map value="hendelsestype" />
+      </mapping>
     </element>
     <element id="Provenance.reason:fregEventtype.coding">
       <path value="Provenance.reason.coding" />
@@ -131,9 +149,6 @@
       <alias value="Data Operation" />
       <mustSupport value="true" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ProvenanceActivity" />
-        </extension>
         <strength value="extensible" />
         <valueSet value="http://ehelse.no/fhir/ValueSet/gd-provenance-activity-type" />
       </binding>
@@ -151,11 +166,9 @@
     <element id="Provenance.agent">
       <path value="Provenance.agent" />
       <definition value="Grunndata uses who.display value to describe the organization responsible for the change.&#xD;&#xA;&#xD;&#xA;An actor taking a role in an activity  for which it can be assigned some degree of responsibility for the activity taking place." />
+      <mustSupport value="true" />
     </element>
     <element id="Provenance.agent.who.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Provenance.agent.who.display" />
       <definition value="Grunndata uses display value to describe the organization responsible for the change.&#xD;&#xA;&#xD;&#xA;Plain text narrative that identifies the resource in addition to the resource reference." />
       <mustSupport value="true" />
@@ -168,7 +181,7 @@
     </element>
     <element id="Provenance.entity.role">
       <path value="Provenance.entity.role" />
-      <definition value="Grunndata will use revision | quotation | source | removal.&#xD;&#xA;&#xD;&#xA;How the entity was used during the activity." />
+      <definition value="Grunndata will use revision | quotation | source | removal. In most cases the entity will have the role of &quot;source&quot;&#xD;&#xA;&#xD;&#xA;How the entity was used during the activity." />
       <mustSupport value="true" />
     </element>
     <element id="Provenance.entity.what">

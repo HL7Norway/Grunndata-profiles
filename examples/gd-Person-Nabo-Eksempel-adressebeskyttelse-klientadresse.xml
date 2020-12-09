@@ -1,6 +1,24 @@
-<Person xmlns="http://hl7.org/fhir">
+<Person xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/FHIR/R4/fhir-all-xsd/fhir-single.xsd">
 	<meta>
 		<profile value="http://ehelse.no/fhir/StructureDefinition/gd-Person"/>
+		<security>
+            <extension url="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata">
+                <extension url="currentInfo">
+					<valueBoolean value="true" />
+				</extension>
+				<extension url="registeredTimestamp">
+					<valueDateTime value="2020-05-05T12:53:56.057+00:00" />
+				</extension>
+				<extension url="source">
+					<valueString value="DP016_spesregAdresserFortrolig" />
+				</extension>
+				<extension url="validFrom">
+					<valueDateTime value="2020-05-05T12:53:56.057+00:00" />
+				</extension>
+			</extension>
+			<system value="http://ehelse.no/fhir/CodeSystem/gd-address-confidentiality" />
+			<code value="klientadresse" />
+		</security>
 	</meta>
 	<extension url="http://ehelse.no/fhir/StructureDefinition/gd-person-status">
 		<extension url="fregPersonStatus">
@@ -21,22 +39,11 @@
 			</extension>
 		</extension>
 	</extension>
-	<extension url="http://ehelse.no/fhir/StructureDefinition/gd-person-citizenship">
-		<extension url="code">
-			<valueCodeableConcept>
-				<coding>
-					<system value="urn:iso:std:iso:3166" />
-                    <code value="NO" />
-				</coding>
-			</valueCodeableConcept>
-		</extension>
-	</extension>
-	<identifier><!-- Fødselnummeret til brukeren -->
-		<extension url="http://ehelse.no/fhir/StructureDefinition/gd-person-identifier-status">
-			<valueCode value="iBruk"/>
-		</extension>
+	<!-- The nationality of the patient. should be a country code from ISO 3166-1 code system -->
+	<identifier> <!-- Fødselnummeret til brukeren -->
+	<!-- Norsk fødselsnummer -->
 		<system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
-		<value value="25036000564"/>
+		<value value="210378xxxxx"/>
 	</identifier>
 	<name> <!-- Navnet til brukeren -->
 		<extension url="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata">
@@ -54,11 +61,16 @@
 			</extension>
 		</extension>
 		<extension url="http://hl7.no/fhir/StructureDefinition/no-basis-middlename">
-				<valueString value="Tirsdag"/>
+				<valueString value="Leilighet"/>
 		</extension>
-		<family value="Påjord"/>
-		<given value="Fred"/>
+		<family value="Ronny"/>
+		<given value="Nabo"/>
 	</name>
+	<telecom>
+		<system value="phone"/>
+		<value value="+4798216833"/>
+		<use value="home"/>
+	</telecom>
 	<!-- Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes. -->
 	<gender value="male">
 		<extension url="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata">
@@ -76,24 +88,32 @@
 			</extension>
 		</extension>
 	</gender>
-	<birthDate value="1960-03-25"/>
 	<address>
 	<!-- Norwegian address: http://hl7.no/fhir/StructureDefinition/no-basis-Address -->
 	<!-- Norwegian basisprofil for Address resource adding Norwegian specific property information, official use of address and further explanation of the use for the data-elements in a Norwegian address. -->
 		<extension url="http://hl7.no/fhir/StructureDefinition/no-basis-propertyinformation">
 		<!-- Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer. -->
-			<extension url="cadastralUnitNumber">
-				<valueInteger value="15"/>
-			</extension>
-			<extension url="propertyUnitNumber">
-				<valueInteger value="557"/>
-			</extension>
+		<!-- I dette eksempelet er bare kommunenavn angitt, men vanligvis vil man benytte address.distreict hvis man bare ønsker kommunenavnet -->
 			<extension url="municipality">
 				<valueCoding>
 					<system value="urn:oid:2.16.578.1.12.4.1.1.3402"/>
-					<code value="1201"/>
-					<display value="Bergen"/>
+					<code value="0301"/>
+					<display value="Oslo"/>
 				</valueCoding>
+			</extension>
+		</extension>
+<extension url="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata">
+			<extension url="registeredTimestamp"> <!-- ajourholdstidspunkt -->
+				<valueDateTime value="2019-10-06T08:07:21+02:00"/>
+			</extension>
+			<extension url="currentInfo"> <!-- ergjeldende -->
+				<valueBoolean value="true"/>
+			</extension>	
+			<extension url="reason"> <!-- aarsak -->
+				<valueString value="Adresseendring fra matrikkelen"/>
+			</extension>
+			<extension url="validFrom"> <!-- gyldighetstidspunkt -->
+				<valueDateTime value="2019-10-06T00:00:00+02:00"/>
 			</extension>
 		</extension>
 		<extension url="http://hl7.no/fhir/StructureDefinition/no-basis-address-official">
@@ -101,21 +121,29 @@
 			<valueBoolean value="true"/>
 		</extension>
 		<extension url="http://ehelse.no/fhir/StructureDefinition/gd-address-metadata">
-			<extension url="confidentiality">
-				<valueCode value="ugradert"/>
+			<extension url="confidentiality"> <!-- adressegradering -->
+				<valueCode value="klientadresse"/>
 			</extension>
-			<extension url="fregAddressContentType">
-				<valueCode value="Matrikkeladresse"/>
+			<extension url="fregAddressContentType"> 
+				<valueCode value="Vegadresse"/>
 			</extension>
 			<extension url="fregAddressType">
-				<valueCode value="Bostedsadresse"/>
+				<valueCode value="Oppholdsadresse"/>
+			</extension>
+			<extension url="cadastralIdentifier"> <!-- adresseIdentifikatorFraMatrikkelen -->
+				<valueString value="161653509"/>
 			</extension>
 		</extension>
 		<use value="home"/>
-		<line value="Nyhaugveien 3"/>
-		<city value="BERGEN"/> <!-- Poststed -->
-		<district value="BERGEN"/> <!-- Kommunenavn -->
-		<postalCode value="5067"/> <!-- postnummer -->
+		<line value="Stålverkskroken 14"/>
+		<city value="Oslo"/> <!-- Poststed -->
+		<district value="Oslo"/> <!-- Kommunenavn -->
+		<postalCode value="0661"/> <!-- postnummer -->
 		<country value="NO"/> <!-- land (er overflødig i norge -->
 	</address>
+	<link>
+		<target>
+			<reference value="Patient/592410"/>
+		</target>
+	</link>
 </Person>

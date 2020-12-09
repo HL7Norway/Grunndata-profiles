@@ -145,7 +145,7 @@
 			</extension>
 		</extension>
 		<use value="home"/>
-		<line value="Åsvegen">
+		<line value="Åsvegen 358">
 			<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
                 <valueString value="Åsvegen" /> <!-- adressenavn -->
             </extension>

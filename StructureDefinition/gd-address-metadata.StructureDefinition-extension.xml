@@ -46,6 +46,10 @@
         <description value="beskyttelsesgrad FREG" />
         <valueSet value="http://ehelse.no/fhir/ValueSet/gd-address-confidentiality" />
       </binding>
+      <mapping>
+        <identity value="freg" />
+        <map value="adressegradering" />
+      </mapping>
     </element>
     <element id="Extension.extension:confidentiality.url">
       <path value="Extension.extension.url" />
@@ -64,6 +68,10 @@
       <definition value="en mindre geografisk enhet som består av et geografisk sammenhengende område som er mest mulig ensartet når det gjelder natur og næringsgrunnlag, kommunikasjonsforhold og bygningsmessig struktur&#xD;&#xA;Informasjonen er gitt ved en unik kode innenfor kommunen." />
       <alias value="grunnkrets" />
       <max value="1" />
+      <mapping>
+        <identity value="freg" />
+        <map value="grunnkrets" />
+      </mapping>
     </element>
     <element id="Extension.extension:basicStatisticalUnit.url">
       <path value="Extension.extension.url" />
@@ -82,6 +90,10 @@
       <definition value="minste kirkelige administrative inndeling&#xD;&#xA;Informasjonen er gitt ved en unik kode innenfor kommunen." />
       <alias value="kirkekrets" />
       <max value="1" />
+      <mapping>
+        <identity value="freg" />
+        <map value="kirkekrets" />
+      </mapping>
     </element>
     <element id="Extension.extension:parishId.url">
       <path value="Extension.extension.url" />
@@ -98,8 +110,12 @@
       <sliceName value="closeCadastralIdentifier" />
       <short value="nærAdresseidentifikatorFraMatrikkelen" />
       <definition value="FREG lagrer en &quot;reserve&quot; adresseidentifikator i de tilfellene at FREG ikke finner en nøyaktig samstemmighet i matrikkelen slik at FREG likevel kan fange opp endringer i kommunenummer, adressenavn, gårds-/bruksnummer osv. Det kan f.eks. hende at det blir oppgitt en vegadresse uten husbokstav på et husnummer som bare finnes med husbokstaver i matrikkelen. Vi tar da identifikatoren til huset med f.eks. &quot;A&quot; som husbokstav." />
-      <alias value="nærAdresseidentifikatorFraMatrikkelen" />
+      <alias value="naerAdresseIdentifikatorFraMatrikkelen" />
       <max value="1" />
+      <mapping>
+        <identity value="freg" />
+        <map value="naerAdresseIdentifikatorFraMatrikkelen" />
+      </mapping>
     </element>
     <element id="Extension.extension:closeCadastralIdentifier.url">
       <path value="Extension.extension.url" />
@@ -119,6 +135,10 @@
       <alias value="valgkrets" />
       <alias value="stemmekrets" />
       <max value="1" />
+      <mapping>
+        <identity value="freg" />
+        <map value="stemmekrets" />
+      </mapping>
     </element>
     <element id="Extension.extension:constituencyId.url">
       <path value="Extension.extension.url" />
@@ -186,6 +206,10 @@
         <description value="kategori oppholdssted" />
         <valueSet value="http://ehelse.no/fhir/ValueSet/gd-address-physicaladdresstype" />
       </binding>
+      <mapping>
+        <identity value="freg" />
+        <map value="oppholdAnnetSted" />
+      </mapping>
     </element>
     <element id="Extension.extension:physicalAddressType.url">
       <path value="Extension.extension.url" />
@@ -204,6 +228,10 @@
       <definition value="en kommunal inndeling som gir en ikke bindende skoletilhørighet for barna i kretsen&#xD;&#xA;Informasjonen er gitt ved en unik kode innenfor kommunen." />
       <alias value="skolekrets" />
       <max value="1" />
+      <mapping>
+        <identity value="freg" />
+        <map value="skolekrets" />
+      </mapping>
     </element>
     <element id="Extension.extension:schoolDistrict.url">
       <path value="Extension.extension.url" />
@@ -222,6 +250,10 @@
       <definition value="Kartverkets matrikkel har en unik informasjonsfri identifikator for enhver adresse ned på husnummer – husbokstav nivå eller bruksnummer/festenummer nivå. FREG tar vare på denne identifikatoren for å kunne fange endringer fra matrikkelen." />
       <alias value="adresseidentifikatorFraMatrikkelen" />
       <max value="1" />
+      <mapping>
+        <identity value="freg" />
+        <map value="adresseIdentifikatorFraMatrikkelen" />
+      </mapping>
     </element>
     <element id="Extension.extension:cadastralIdentifier.url">
       <path value="Extension.extension.url" />
@@ -247,6 +279,10 @@
         <expression value="addressIsUnknown.value() and (fregAddressContentType.Value()=AdressenErUkjent)" />
         <source value="Extension" />
       </constraint>
+      <mapping>
+        <identity value="freg" />
+        <map value="adressenErUkjent" />
+      </mapping>
     </element>
     <element id="Extension.extension:addressIsUnknown.url">
       <path value="Extension.extension.url" />

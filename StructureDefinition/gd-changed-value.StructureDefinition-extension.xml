@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="gd-changed-value" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/gd-changed-value" />
+  <version value="2.0.2" />
+  <name value="GdChangedValue" />
+  <status value="draft" />
+  <date value="2019-10-16" />
+  <description value="The values of a referenced elements that have changed. Contains both old and new values. The newValue will be empty if this is a create transaction. The oldValue will be empty if this is a delete transaction." />
+  <fhirVersion value="4.0.0" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Reference" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="The old and new value of the changed element" />
+      <definition value="The old and new value of the changed element" />
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:oldValue">
+      <path value="Extension.extension" />
+      <sliceName value="oldValue" />
+      <short value="The old value of the element" />
+      <definition value="The old value of the element" />
+      <max value="1" />
+      <meaningWhenMissing value="If the oldValue is missing, this is the result of a transaction adding a value to an unpopulated element." />
+    </element>
+    <element id="Extension.extension:oldValue.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="oldValue" />
+    </element>
+    <element id="Extension.extension:oldValue.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <short value="The old value of the element" />
+      <definition value="The old value of the element" />
+    </element>
+    <element id="Extension.extension:newValue">
+      <path value="Extension.extension" />
+      <sliceName value="newValue" />
+      <short value="The new value of the element" />
+      <definition value="The new value of the element" />
+      <max value="1" />
+      <meaningWhenMissing value="If the newValue is missing, this is the result of a transaction deleting a value from an element." />
+    </element>
+    <element id="Extension.extension:newValue.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="newValue" />
+    </element>
+    <element id="Extension.extension:newValue.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <short value="The new value of the element" />
+      <definition value="The new value of the element" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/gd-changed-value" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

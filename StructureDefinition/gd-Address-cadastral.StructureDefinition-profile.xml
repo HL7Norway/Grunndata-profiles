@@ -2,19 +2,41 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Address-cadastral" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Address-cadastral" />
-  <version value="2.0.5" />
+  <version value="2.3.1" />
   <name value="GdAddressCadastral" />
   <status value="draft" />
   <date value="2019-10-17" />
   <description value="Contains information and metadata for addresses defined in Norwegian Master Person Index (FREG) and Norwegian Directorate of e-Health's health related Master Person Index.&#xD;&#xA;&#xD;&#xA;The profile defines information structure of a Norwegian cadastral address (matrikkeladresse), as defined by FREG." />
   <purpose value="Matrikkeladresse" />
   <fhirVersion value="4.0.0" />
+  <mapping>
+    <identity value="freg" />
+    <name value="matrikkeladresse" />
+  </mapping>
   <kind value="complex-type" />
   <abstract value="false" />
   <type value="Address" />
   <baseDefinition value="http://ehelse.no/fhir/StructureDefinition/gd-Address" />
   <derivation value="constraint" />
   <differential>
+    <element id="Address">
+      <path value="Address" />
+      <alias value="matrikkeladresse" />
+      <mapping>
+        <identity value="freg" />
+        <map value="matrikkeladresse" />
+      </mapping>
+    </element>
+    <element id="Address.extension">
+      <path value="Address.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
     <element id="Address.extension:propertyInformation">
       <path value="Address.extension" />
       <sliceName value="propertyInformation" />
@@ -22,11 +44,58 @@
       <definition value="gd-Address-cadastral uses property information to contain the cadastralnumber from FREG. The cadastral number describing a cadastral address NEVER contains a condoniumUnitNumber. FREG exposes a subNumber to describe different units on the same cadastral number.&#xD;&#xA;&#xD;&#xA;Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer" />
       <alias value="matrikkelnummer" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="matrikkelnummer" />
+      </mapping>
+    </element>
+    <element id="Address.extension:propertyInformation.extension">
+      <path value="Address.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Address.extension:propertyInformation.extension:cadastralUnitNumber">
+      <path value="Address.extension.extension" />
+      <sliceName value="cadastralUnitNumber" />
+      <mapping>
+        <identity value="freg" />
+        <map value="gaardsnummer" />
+      </mapping>
+    </element>
+    <element id="Address.extension:propertyInformation.extension:propertyUnitNumber">
+      <path value="Address.extension.extension" />
+      <sliceName value="propertyUnitNumber" />
+      <mapping>
+        <identity value="freg" />
+        <map value="bruksnummer" />
+      </mapping>
+    </element>
+    <element id="Address.extension:propertyInformation.extension:leaseholdNumber">
+      <path value="Address.extension.extension" />
+      <sliceName value="leaseholdNumber" />
+      <mapping>
+        <identity value="freg" />
+        <map value="festenummer" />
+      </mapping>
     </element>
     <element id="Address.extension:propertyInformation.extension:condominiumUnitNumber">
       <path value="Address.extension.extension" />
       <sliceName value="condominiumUnitNumber" />
       <mustSupport value="false" />
+    </element>
+    <element id="Address.extension:propertyInformation.extension:municipality">
+      <path value="Address.extension.extension" />
+      <sliceName value="municipality" />
+      <alias value="kommunenummer" />
+      <mapping>
+        <identity value="freg" />
+        <map value="kommunenummer" />
+      </mapping>
     </element>
     <element id="Address.extension:cadastralAddress">
       <path value="Address.extension" />
@@ -36,6 +105,16 @@
         <profile value="http://ehelse.no/fhir/StructureDefinition/gd-cadastral-address" />
       </type>
       <mustSupport value="true" />
+    </element>
+    <element id="Address.extension:cadastralAddress.extension">
+      <path value="Address.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
     </element>
     <element id="Address.extension:cadastralAddress.extension:subNumber">
       <path value="Address.extension.extension" />
@@ -74,6 +153,22 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-careOf" />
       </type>
+      <mapping>
+        <identity value="freg" />
+        <map value="coAdressenavn" />
+      </mapping>
+    </element>
+    <element id="Address.period">
+      <path value="Address.period" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Address.period.start">
+      <path value="Address.period.start" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Address.period.end">
+      <path value="Address.period.end" />
+      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>
