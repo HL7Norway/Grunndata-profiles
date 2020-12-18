@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Address-cadastral" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Address-cadastral" />
-  <version value="2.3.1" />
+  <version value="2.3.3" />
   <name value="GdAddressCadastral" />
   <status value="draft" />
   <date value="2019-10-17" />
@@ -36,6 +36,15 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+    </element>
+    <element id="Address.extension:urbanDistrict">
+      <path value="Address.extension" />
+      <sliceName value="urbanDistrict" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Address.extension:urbanDistrict.value[x]">
+      <path value="Address.extension.value[x]" />
+      <mustSupport value="true" />
     </element>
     <element id="Address.extension:propertyInformation">
       <path value="Address.extension" />

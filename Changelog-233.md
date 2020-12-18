@@ -1,4 +1,19 @@
-# Changelog for 2.3.2
+# Changelog for 2.3.3
+
+## Documents the changes implemented from version 2.3.2 to 2.3.3
+
+### Release date: 2020-12-22
+
+This is a service release publish a new package including the changes to the active element and urbandistrict information.
+
+## Files change description
+
+|Date|File|Change description|
+|-
+||Changes to the active element|From the last release|PBI 5091|
+|2020-12-18|gd-Address.StructureDefinition-profile.xml|Added mapping to FREG (n/a) and shortname "bydelsnummer" to code|PBI 6786|
+|2020-12-18|gd-Address-cadastral.StructureDefinition-profile.xml|Added missing must support information|PBI 6786|
+|2020-12-18|gd-Address-street.StructureDefinition-profile.xml|Added missing must support information|PBI 6786|
 
 ## Documents the changes implemented from version 2.3.1 to 2.3.2
 
