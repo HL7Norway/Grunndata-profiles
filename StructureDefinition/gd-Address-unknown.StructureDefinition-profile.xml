@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Address-unknown" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Address-unknown" />
-  <version value="2.3.1" />
+  <version value="3.0.0" />
   <name value="GdAddressUnknown" />
   <status value="draft" />
   <date value="2019-12-16" />
@@ -56,7 +56,6 @@
     <element id="Address.extension:propertyInformation">
       <path value="Address.extension" />
       <sliceName value="propertyInformation" />
-      <mustSupport value="true" />
     </element>
     <element id="Address.extension:propertyInformation.extension">
       <path value="Address.extension.extension" />
@@ -72,7 +71,6 @@
       <path value="Address.extension.extension" />
       <sliceName value="municipality" />
       <alias value="bostedskommune" />
-      <mustSupport value="true" />
       <mapping>
         <identity value="freg" />
         <map value="bostedskommune" />
@@ -95,6 +93,40 @@
     <element id="Address.extension:addressMetadata.extension:addressIsUnknown">
       <path value="Address.extension.extension" />
       <sliceName value="addressIsUnknown" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Address.district">
+      <path value="Address.district" />
+      <alias value="bostedskommune" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="n/a" />
+        <comment value="FREG don't contain kommunenavn" />
+      </mapping>
+    </element>
+    <element id="Address.district.extension">
+      <path value="Address.district.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Address.district.extension:municipalityCoded">
+      <path value="Address.district.extension" />
+      <sliceName value="municipalityCoded" />
+      <alias value="bostedskommune" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="bostedskommune" />
+      </mapping>
+    </element>
+    <element id="Address.district.extension:municipalityCoded.value[x]">
+      <path value="Address.district.extension.value[x]" />
       <mustSupport value="true" />
     </element>
     <element id="Address.period">

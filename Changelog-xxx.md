@@ -10,6 +10,8 @@ This is a release to change the FHIR information model to better reflect the con
 ## Files change description
 |File|Change description|Dev-ops id|
 |-
-|gd-municipalitycoded.StructureDefinition.xml|New extension to incorporate coded values for Norwegian county's (kommunenummer)||
-|gd-Address.StructureDefinition-profile.xml|Include the municipalitycoded extension, updated documentation for kommunenummer||
-|gd-Address-street.StructureDefinition-profile.xml|Change must-support for district and propertyinformation.extension||
+|gd-municipalitycoded.StructureDefinition.xml|New extension to incorporate coded values for Norwegian county's (kommunenummer)|PBI 6787|
+|gd-Address.StructureDefinition-profile.xml|Include the municipalitycoded extension, updated documentation for kommunenummer|PBI 6787|
+|gd-Address-street.StructureDefinition-profile.xml|Documentation changes, Change must-support for propertyinformation.extension, added must support for Address.district, added mapping information|PBI 6787|
+|gd-Address-unknown.StructureDefinition-profile.xml|Documentation changes, Change must-support for propertyinformation.extension, added must support for Address.district, added mapping information|PBI 6787|
+|gd-Address-cadastral.StructureDefinition-profile.xml|Documentation changes, added must support for Address.district, added mapping information|PBI 6787|

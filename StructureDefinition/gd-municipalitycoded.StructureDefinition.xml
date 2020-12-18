@@ -40,6 +40,7 @@
       <path value="Extension.value[x]" />
       <short value="Kommunenummer according to CodeSystem" />
       <definition value="Norwegian kommune identified by a predefined number. The norwegian kommune identifies an administrative geographic unit in Norway called kommune." />
+      <alias value="kommunenummer" />
       <type>
         <code value="Coding" />
       </type>
@@ -48,6 +49,10 @@
         <description value="kommunenummer according to CodeSystem" />
         <valueSet value="urn:oid:2.16.578.1.12.4.1.1.3402" />
       </binding>
+      <mapping>
+        <identity value="freg" />
+        <map value="kommunenummer" />
+      </mapping>
     </element>
     <element id="Extension.value[x].system">
       <path value="Extension.value[x].system" />

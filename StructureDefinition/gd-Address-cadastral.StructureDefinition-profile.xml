@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Address-cadastral" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Address-cadastral" />
-  <version value="2.3.1" />
+  <version value="3.0.0" />
   <name value="GdAddressCadastral" />
   <status value="draft" />
   <date value="2019-10-17" />
@@ -91,7 +91,7 @@
     <element id="Address.extension:propertyInformation.extension:municipality">
       <path value="Address.extension.extension" />
       <sliceName value="municipality" />
-      <alias value="kommunenummer" />
+      <definition value="GdAddress: uses this element when a cadastral address is provided by the source (FREG). In all other cases kommune and the provided kommunennummer is given in Address.district. In the cases where a cadastral address is provided the code for kommune is also provided as a part of the propertyInformation.extension.&#xD;&#xA;&#xD;&#xA;The norwegian kommune identifies an administrative geographic unit in Norway called kommune by a predefined number and its official name." />
       <mapping>
         <identity value="freg" />
         <map value="kommunenummer" />
@@ -157,6 +157,34 @@
         <identity value="freg" />
         <map value="coAdressenavn" />
       </mapping>
+    </element>
+    <element id="Address.district">
+      <path value="Address.district" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Address.district.extension">
+      <path value="Address.district.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Address.district.extension:municipalityCoded">
+      <path value="Address.district.extension" />
+      <sliceName value="municipalityCoded" />
+      <definition value="In the cases where a cadastral address is provided the code for kommune is also provided as a part of the propertyInformation.extension.&#xD;&#xA;&#xD;&#xA;Norwegian kommune identified by a predefined number. The norwegian kommune identifies an administrative geographic unit in Norway called kommune." />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="kommunenummer" />
+      </mapping>
+    </element>
+    <element id="Address.district.extension:municipalityCoded.value[x]">
+      <path value="Address.district.extension.value[x]" />
+      <mustSupport value="true" />
     </element>
     <element id="Address.period">
       <path value="Address.period" />
