@@ -38,6 +38,8 @@
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
+      <short value="Kommunenummer according to CodeSystem" />
+      <definition value="Norwegian kommune identified by a predefined number. The norwegian kommune identifies an administrative geographic unit in Norway called kommune." />
       <type>
         <code value="Coding" />
       </type>
