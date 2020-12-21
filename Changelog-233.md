@@ -14,6 +14,7 @@ This is a service release publish a new package including the changes to the act
 |2020-12-18|gd-Address.StructureDefinition-profile.xml|Added mapping to FREG (n/a) and shortname "bydelsnummer" to code|PBI 6786|
 |2020-12-18|gd-Address-cadastral.StructureDefinition-profile.xml|Added missing must support information|PBI 6786|
 |2020-12-18|gd-Address-street.StructureDefinition-profile.xml|Added missing must support information|PBI 6786|
+|2020-12-21|HL7 FHIR extensions copies|Removed the copy of adxp extensions, patient citizenship and patient nathionality from Grunndata-R4 as the definition is part of HL7 FHIR standard|N/A|
 
 ## Documents the changes implemented from version 2.3.1 to 2.3.2
 
