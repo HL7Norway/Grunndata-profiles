@@ -14,7 +14,7 @@
 	<rest>
 		<mode value="server"/>
 		<documentation value="
-		# Capabilitiy Statement PersonServerReauirements
+		# Capabilitiy Statement PersonServerRequirements
 
 The server must support a subset of the FHIR restful interactions described by HL7. Some special notes concerning the Capabilities offered by the server can be found in the ImplementationGuide for the service.
 
