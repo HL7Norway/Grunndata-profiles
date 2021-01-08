@@ -16,6 +16,12 @@ This is a service release publish a new package including the changes to the act
 |2020-12-18|gd-Address-street.StructureDefinition-profile.xml|Added missing must support information|PBI 6786|
 |2020-12-21|HL7 FHIR extensions copies|Removed the copy of adxp extensions, patient citizenship and patient nathionality from Grunndata-R4 as the definition is part of HL7 FHIR standard|N/A|
 
+## Documentation changes after the 2.3.3 release
+
+|Date|File|Change description|
+|-
+|2021-01-08|gd-Person-Server-Requirements.cml|Change of the documentation element for better mardown rendering||
+
 ## Documents the changes implemented from version 2.3.1 to 2.3.2
 
 ### Release date: 2020-09-30
