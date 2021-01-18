@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Address-street" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Address-street" />
-  <version value="2.3.3" />
+  <version value="2.3.4" />
   <name value="GdAddressStreet" />
   <status value="draft" />
   <date value="2019-10-16" />
@@ -205,7 +205,7 @@
       <mapping>
         <identity value="freg" />
         <map value="husnummer" />
-        <comment value="adresssenummer.husnummer" />
+        <comment value="adressenummer.husnummer" />
       </mapping>
     </element>
     <element id="Address.line.extension:buildingNumberSuffix">
