@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-additional-humanname" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-additional-humanname" />
-  <version value="2.1.1" />
+  <version value="2.3.4" />
   <name value="GdAdditionalHumanname" />
   <status value="draft" />
   <date value="2019-06-12" />
@@ -56,7 +56,7 @@
       <path value="Extension.extension" />
       <sliceName value="originalName" />
       <short value="originaltNavn fra FREG" />
-      <definition value="personens navn iht. godkjent identifikasjonsdokument ved opprettelse av en folkeregisterperson i Folkeregisteret&#xD;&#xA;&#xD;&#xA;Dette er et nytt felt i Folkeregisteret og vil bli benyttet tidligst etter at Registeret er master.&#xD;&#xA;&#xD;&#xA;Når Registeret er master så kan det bli benyttet som følger:&#xD;&#xA;Dette navnet vil bli skrevet på originalt tegnsett fra identifikasjonsdokumentet. Dette vil bli støttet av tegnsettet ISO 10646 lagret på UTF-8 format og vi kan derfor i praksis lagre alle verdens tegn.&#xD;&#xA;Denne datatypen inneholder fornavn, mellomnavn og etternavn, men reglene for innhold etter Navneloven gjelder ikke for utenlandske navn på original form." />
+      <definition value="personens navn iht. godkjent identifikasjonsdokument ved opprettelse av en folkeregisterperson i Folkeregisteret&#xD;&#xA;&#xD;&#xA;Dette er et nytt felt i Folkeregisteret og vil kanskje bli benyttet.&#xD;&#xA;&#xD;&#xA;Når Registeret nå er master så kan det bli benyttet som følger i fremtiden:&#xD;&#xA;Dette navnet vil bli skrevet på originalt tegnsett fra identifikasjonsdokumentet. Dette støttes av tegnsettet ISO 10646 lagret på UTF-8 format og vi kan derfor i praksis lagre alle verdens tegn.&#xD;&#xA;Denne datatypen inneholder fornavn, mellomnavn og etternavn, men reglene for innhold etter Navneloven gjelder ikke for utenlandske navn på original form.&#xD;&#xA;Lagring av originalt navn vil bla. gjøre det lettere å håndtere og samordne identiteter på tvers av landegrenser." />
       <alias value="originaltNavn" />
       <max value="1" />
     </element>
