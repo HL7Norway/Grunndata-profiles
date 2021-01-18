@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-guardianship" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-guardianship" />
-  <version value="2.0.2" />
+  <version value="2.3.4" />
   <name value="GdGuardianship" />
   <status value="draft" />
   <date value="2019-10-16" />
@@ -53,6 +53,10 @@
       <definition value="Name of the office that made approval in the case, from FREG.&#xD;&#xA;&#xD;&#xA;opplysning om hvilket embete som har gjort vedtak i vergemålssaken eller har stadfestet fremtidsfullmakten&#xD;&#xA;Verdi fra kodeliste over fylkesmannsembeter, f.eks. fylkesmannenITrøndelag" />
       <alias value="embete" />
       <max value="1" />
+      <mapping>
+        <identity value="freg" />
+        <map value="embete" />
+      </mapping>
     </element>
     <element id="Extension.extension:office.url">
       <path value="Extension.extension.url" />
@@ -75,6 +79,10 @@
         <strength value="required" />
         <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-guardianscope-v05" />
       </binding>
+      <mapping>
+        <identity value="freg" />
+        <map value="omfang" />
+      </mapping>
     </element>
     <element id="Extension.extension:scope.url">
       <path value="Extension.extension.url" />
@@ -98,6 +106,28 @@
     <element id="Extension.extension:fregMetadata.url">
       <path value="Extension.extension.url" />
       <fixedUri value="fregMetadata" />
+    </element>
+    <element id="Extension.extension:personalScope">
+      <path value="Extension.extension" />
+      <sliceName value="personalScope" />
+      <short value="Boolsk flagg som benyttes for enkel testing på om omfanget er innen det" />
+      <definition value="Boolsk flagg som benyttes for enkel testing på om omfanget er innen det&#xD;&#xA;personlige området" />
+      <alias value="omfangetErInnenPersonligOmraade" />
+      <max value="1" />
+      <mapping>
+        <identity value="freg" />
+        <map value="omfangetErInnenPersonligOmraade" />
+      </mapping>
+    </element>
+    <element id="Extension.extension:personalScope.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="personalScope" />
+    </element>
+    <element id="Extension.extension:personalScope.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="boolean" />
+      </type>
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />

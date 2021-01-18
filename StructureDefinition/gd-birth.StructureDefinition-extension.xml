@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-birth" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-birth" />
-  <version value="2.1.1" />
+  <version value="2.3.4" />
   <name value="GdBirth" />
   <title value="GdBirth" />
   <status value="draft" />
@@ -78,7 +78,7 @@
       <path value="Extension.extension" />
       <sliceName value="placeOfBirth" />
       <short value="place of birth" />
-      <definition value="sted i et land hvor personen er født&#xD;&#xA;- Personer som er født i Norge: navnet på kommunen på fødselstidspunktet - hvis det er lagret&#xD;&#xA;- Personer som er født i utlandet: type steder kan variere fra land til land. Vi skal se på muligheten for å etablere rutiner/systemstøtte for hvilke typer steder som skal kunne registreres for ulike land." />
+      <definition value="fødekommunen eller fødelandet personen er født&#xD;&#xA;- Personer som er født i Norge: navnet på kommunen på&#xD;&#xA;fødselstidspunktet - hvis det er lagret, eller navnet på&#xD;&#xA;fødselsinstitusjonen&#xD;&#xA;- Personer som er født i utlandet: type steder kan variere fra land til land." />
       <alias value="fødested" />
       <max value="1" />
     </element>
