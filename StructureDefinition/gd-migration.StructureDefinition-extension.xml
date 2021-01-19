@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-migration" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-migration" />
-  <version value="2.2.0" />
+  <version value="2.3.4" />
   <name value="GdMigration" />
   <status value="draft" />
   <date value="2019-10-16" />
@@ -23,14 +23,8 @@
   <derivation value="constraint" />
   <differential>
     <element id="Extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Extension" />
-      <definition value="Migration information from FREG about a Person/Patient&#xD;&#xA;&#xD;&#xA;utflytting/emigration&#xD;&#xA;informasjon om hvilket land og sted i dette landet en utflyttet person bor eller bodde etter utflyttingen fra Norge&#xD;&#xA;Utflytting, enten som følge av at en person selv melder om utflytting fra Norge eller som følge av at det foreligger annen informasjon som tilsier at en person har flyttet ut fra Norge, for eksempel fra annet nordisk folkeregister eller fra UDI. Utenlandske statsborgere som ikke lenger har adgang til å oppholde seg i Norge regnes som utflyttet, jf. folkeregisterforskriften § 4-7 nr 1 annet ledd. UDI sender melding til Folkeregisteret når en person har utgått oppholdstillatelse, tilbakekalt oppholdstillatelse eller statsborgerskap, bortfalt oppholdstillatelse eller er utvist fra Norge. Se for øvrig dokumentasjon av status utflyttet 5.2.1&#xD;&#xA;&#xD;&#xA;innflytting/immigration&#xD;&#xA;informasjon om hvilket land og sted i dette landet en innflyttet person bodde før innflyttingen til Norge&#xD;&#xA;Innflytting omfatter registrering i Folkeregisteret av personer som enten skal tildeles fødselsnummer fordi de skal bosettes, eller d-nummer fordi de regnes for å ha en midlertidig tilknytning til Norge.&#xD;&#xA;Gyldighetsdatoen settes til vedtaksdato for godkjent innflytting fra Utlendingsmyndigheten." />
+      <definition value="Migration information from FREG about a Person/Patient&#xD;&#xA;&#xD;&#xA;utflytting/emigration&#xD;&#xA;informasjon om hvilket land og sted i dette landet en utflyttet person bor eller bodde etter utflyttingen fra Norge&#xD;&#xA;Utflytting, enten som følge av at en person selv melder om utflytting fra Norge eller som følge av at det foreligger annen informasjon som tilsier at en person har flyttet ut fra Norge, for eksempel fra annet nordisk folkeregister eller fra UDI. Utenlandske statsborgere som ikke lenger har adgang til å oppholde seg i Norge regnes som utflyttet, jf. folkeregisterforskriften § 4-7 nr 1 annet ledd. UDI sender melding til Folkeregisteret når en person har utgått oppholdstillatelse, tilbakekalt oppholdstillatelse eller statsborgerskap, bortfalt oppholdstillatelse eller er utvist fra Norge. Utflytting inkluderer også personer som utflytter uten å melde ifra og hvor utflyttingen vedtas etterskuddsvis (passitivitetsvedtak).&#xD;&#xA;Se for øvrig dokumentasjon av status utflyttet 5.2.3.&#xD;&#xA;&#xD;&#xA;innflytting/immigration&#xD;&#xA;informasjon om hvilket land og sted i dette landet en innflyttet person bodde før innflyttingen til Norge&#xD;&#xA;Innflytting omfatter registrering i Folkeregisteret av personer som enten skal tildeles fødselsnummer fordi de skal bosettes, eller d-nummer fordi de regnes for å ha en midlertidig tilknytning til Norge.&#xD;&#xA;Gyldighetsdatoen settes til vedtaksdato for godkjent innflytting fra Utlendingsmyndigheten." />
     </element>
     <element id="Extension.extension">
       <path value="Extension.extension" />
@@ -43,12 +37,6 @@
       </slicing>
     </element>
     <element id="Extension.extension:migrationPattern">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Extension.extension" />
       <sliceName value="migrationPattern" />
       <short value="emigration or immigration" />
@@ -79,12 +67,6 @@
       </type>
     </element>
     <element id="Extension.extension:migrationCountry">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Extension.extension" />
       <sliceName value="migrationCountry" />
       <short value="Country of migration" />
@@ -114,12 +96,6 @@
       </type>
     </element>
     <element id="Extension.extension:migrationCity">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Extension.extension" />
       <sliceName value="migrationCity" />
       <short value="The name of the city, town, village or other community or delivery center." />
@@ -145,12 +121,6 @@
       </type>
     </element>
     <element id="Extension.extension:fregMetadata">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Extension.extension" />
       <sliceName value="fregMetadata" />
       <max value="1" />
@@ -162,6 +132,33 @@
     <element id="Extension.extension:fregMetadata.url">
       <path value="Extension.extension.url" />
       <fixedUri value="fregMetadata" />
+    </element>
+    <element id="Extension.extension:migrationDate">
+      <path value="Extension.extension" />
+      <sliceName value="migrationDate" />
+      <short value="registered migration date" />
+      <definition value="registrert dato i Folkeregisteret for utflytting fra Norge&#xD;&#xA;registrert dato i Folkeregisteret for innflytting til Norge" />
+      <alias value="utflyttingsdato" />
+      <alias value="innflyttingsdato" />
+      <max value="1" />
+      <mapping>
+        <identity value="freg.InnflyttingTilNorge" />
+        <map value="innflyttingsdato" />
+      </mapping>
+      <mapping>
+        <identity value="freg.UtflyttingFraNorge" />
+        <map value="utflyttingsdato" />
+      </mapping>
+    </element>
+    <element id="Extension.extension:migrationDate.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="migrationDate" />
+    </element>
+    <element id="Extension.extension:migrationDate.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="date" />
+      </type>
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />

@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-marital-status" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-marital-status" />
-  <version value="2.0.2" />
+  <version value="2.3.4" />
   <name value="GdMaritalStatus" />
   <status value="draft" />
   <date value="2019-10-16" />
@@ -98,7 +98,7 @@
       <path value="Extension.extension" />
       <sliceName value="locationName" />
       <short value="registered name of the geographical location from FREG" />
-      <definition value="geografisk lokasjon angitt ved adresse eller mindre nøyaktig plassering&#xD;&#xA;Stedsnavn i inn- eller utland der sivilstanden ble endret.&#xD;&#xA;Feltet inneholder et stedsnavn i fri tekst." />
+      <definition value="(stedsnavn:) adresseegenskap som navngir en geografisk lokalitet&#xD;&#xA;Stedsnavn i inn- eller utland der sivilstanden ble endret.&#xD;&#xA;Feltet inneholder et stedsnavn i fri tekst." />
       <alias value="sted" />
       <max value="1" />
     </element>

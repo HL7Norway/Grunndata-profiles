@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Person" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Person" />
-  <version value="2.3.2" />
+  <version value="2.3.4" />
   <name value="GdPerson" />
   <status value="draft" />
   <date value="2019-12-11" />
@@ -15,7 +15,7 @@
   <baseDefinition value="http://hl7.no/fhir/StructureDefinition/no-basis-Person" />
   <derivation value="constraint" />
   <differential>
-  <element id="Person.meta">
+    <element id="Person.meta">
       <path value="Person.meta" />
       <definition value="THIS ELEMENT IS MANDATORY.&#xD;&#xA; The support of the Person.meta.security element is considered MANDATORY by all systems implementing access to the Person-API. &#xD;&#xA; The element is returned by default from the responder service. &#xD;&#xA; All requestor systems SHALL be able to display the information in the data element for human use meaning; any user given access to the information throug the system or subsystems should be able to interpret this information in a meaningfull way. Requestors SHALL be able to process and store the information. &#xD;&#xA; Some information made available by the service has special security and legal obligations and must be handled according to the relevant legislation. Any failure to support these requirements could lead to the harm or death of the Person whom the information concerns." />
       <mustSupport value="true" />
@@ -45,6 +45,19 @@
         <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-addressprotection" />
       </binding>
     </element>
+    <element id="Person.meta.security:addressConfidentiality.system">
+      <path value="Person.meta.security.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Person.meta.security:addressConfidentiality.code">
+      <path value="Person.meta.security.code" />
+      <short value="graderingsnivå from FREG" />
+      <definition value="nivå av beskyttelsesgrad på informasjon&#xD;&#xA;Gyldige kodeverdier er:&#xD;&#xA;• ugradert&#xD;&#xA;• fortrolig&#xD;&#xA;• strengtFortrolig (strengt fortrolig)" />
+      <alias value="graderingsnivå" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
     <element id="Person.meta.security:addressConfidentiality.extension">
       <path value="Person.meta.security.extension" />
       <slicing>
@@ -63,19 +76,6 @@
         <code value="Extension" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata" />
       </type>
-    </element>
-    <element id="Person.meta.security:addressConfidentiality.system">
-      <path value="Person.meta.security.system" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Person.meta.security:addressConfidentiality.code">
-      <path value="Person.meta.security.code" />
-      <short value="graderingsnivå from FREG" />
-      <definition value="nivå av beskyttelsesgrad på informasjon&#xD;&#xA;Gyldige kodeverdier er:&#xD;&#xA;• ugradert&#xD;&#xA;• fortrolig&#xD;&#xA;• strengtFortrolig (strengt fortrolig)" />
-      <alias value="graderingsnivå" />
-      <min value="1" />
-      <mustSupport value="true" />
     </element>
     <element id="Person.implicitRules">
       <path value="Person.implicitRules" />
@@ -226,7 +226,6 @@
       </type>
       <mustSupport value="true" />
     </element>
-    
     <element id="Person.identifier">
       <path value="Person.identifier" />
       <slicing>
@@ -266,6 +265,7 @@
     </element>
     <element id="Person.name">
       <path value="Person.name" />
+      <definition value="navn på person som består av fornavn og ett enkelt eller dobbelt etternavn og kan i tillegg bestå av mellomnavn&#xD;&#xA;&#xD;&#xA;gd-HumanName Contains information and metadata for human names defined in Norwegian Master Person Index and Norwegian Directorate of e-Health's health related Master Person Index.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Defines the format of norwegian human name according to norwegian regulation (lov om personnavn)." />
       <type>
         <code value="HumanName" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/gd-HumanName" />
@@ -307,7 +307,7 @@
     </element>
     <element id="Person.birthDate">
       <path value="Person.birthDate" />
-      <definition value="The birth date for the person registered in FREG. FREG always exposes a birthYear that can be found in the gd-birth extension: Person.extension:birthYear&#xD;&#xA;&#xD;&#xA;When the brithDate is known this information will exist in addition to the information about the birthYear found in the gd-birth extension.&#xD;&#xA;&#xD;&#xA;The metadata about the birtDate from FREG is always connected to the gd-birth extension: Person.extension:birth&#xD;&#xA;FREG can expose more than one birthDate of any given person but the FHIR model only allows one recorded birthDate&#xD;&#xA;&#xD;&#xA;datoen personen er født/antas å være født&#xD;&#xA;&#xD;&#xA;I dagens folkeregister har vi ikke eget felt for fødselsdato, fødselsdatoen fremkommer kun av fødselsnummer/d-nummer. Dette betyr at når vi ikke har tilgjengelige fødselsnumre/d-numre for en spesifikk fødselsdato så settes en fiktiv fødselsdato i fødselsnummeret/d-nummeret. Den reelle fødselsdatoen er dermed ikke tilgjengelig.&#xD;&#xA;&#xD;&#xA;Etter migrering av fødselsinformasjon fra DSF til Registeret og etter at Freg er master:&#xD;&#xA;I modernisert folkeregister vil vi tilgjengeliggjøre den faktiske eller den fastsatte fødselsdatoen fra norske myndigheter. Denne kan avvike fra den fødselsdatoen som inngår i fødselsnummeret/d-nummeret." />
+      <definition value="The birth date for the person registered in FREG. FREG always exposes a birthYear that can be found in the gd-birth extension: Person.extension:birthYear&#xD;&#xA;&#xD;&#xA;When the brithDate is known this information will exist in addition to the information about the birthYear found in the gd-birth extension.&#xD;&#xA;&#xD;&#xA;The metadata about the birtDate from FREG is always connected to the gd-birth extension: Person.extension:birth&#xD;&#xA;FREG can expose more than one birthDate of any given person but the FHIR model only allows one recorded birthDate&#xD;&#xA;&#xD;&#xA;datoen en person er født&#xD;&#xA;&#xD;&#xA;I det gamle DSF hadde vi ikke eget felt for fødselsdato. Fødselsdatoen (riktig, fastsatt eller fiktiv) fremkommer kun av fødselsnummer/d-nummer. Dette betyr at når vi ikke har ubrukte tilgjengelige fødselsnumre/d-numre for en spesifikk fødselsdato (&quot;presset dato&quot;) så settes en fiktiv fødselsdato i fødselsnummeret/d-nummeret. Den reelle fødselsdatoen er dermed ikke tilgjengelig i DSF." />
       <alias value="fødselsdato" />
       <mustSupport value="true" />
     </element>

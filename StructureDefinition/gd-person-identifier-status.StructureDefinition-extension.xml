@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-person-identifier-status" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-person-identifier-status" />
-  <version value="2.2.0" />
+  <version value="2.3.4" />
   <name value="GdPersonIdentifierStatus" />
   <status value="draft" />
   <date value="2019-10-16" />
@@ -19,15 +19,9 @@
   <derivation value="constraint" />
   <differential>
     <element id="Extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Extension" />
       <short value="The status of a person identifier from FREG" />
-      <definition value="The status of a person identifier from FREG" />
+      <definition value="The status of a person identifier from FREG&#xD;&#xA;&#xD;&#xA;(identifikatorstaus:) status for en folkeregisteridentifikator" />
       <alias value="Identifikatorstatuskode" />
       <alias value="status" />
       <max value="1" />
