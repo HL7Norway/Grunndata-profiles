@@ -35,7 +35,7 @@
       <path value="Person.meta.security" />
       <sliceName value="addressConfidentiality" />
       <short value="address confidentiality from FREG" />
-      <definition value="informasjon om gradering av adresseinformasjon for personer iht. Beskyttelsesinstruksen&#xD;&#xA;Informasjonen benyttes til å beskrive det overordnede felles beskyttelsesnivået en person har på alle sine adresser av typen bostedsadresse, oppholdsadresse og delt bosted. Adressebeskyttelsen gjelder ikke kontaktadressene." />
+      <definition value="informasjon om gradering av adresseinformasjon for personer iht. Beskyttelsesinstruksen eller Folkeregisterloven&#xD;&#xA;&#xD;&#xA;Informasjonen benyttes til å beskrive det overordnede felles beskyttelsesnivået en person har på alle sine adresser av typen bostedsadresse, oppholdsadresse og delt bosted. Adressebeskyttelsen gjelder ikke kontaktadressene." />
       <alias value="adressebeskyttelse" />
       <alias value="graderingsnivå" />
       <mustSupport value="true" />

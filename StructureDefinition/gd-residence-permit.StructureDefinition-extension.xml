@@ -47,7 +47,7 @@
       <path value="Extension.extension" />
       <sliceName value="residencePermitType" />
       <short value="Information about the kind of residence permit" />
-      <definition value="Information about the kind of residence permit as registered in FREG&#xD;&#xA;&#xD;&#xA;rett til å oppholde seg i Norge basert på godkjennelse av et eller flere grunnlag&#xD;&#xA;Kodeliste med typer av oppholdstillatelser:&#xD;&#xA;• midlertidig (kode i DSF: O)&#xD;&#xA;• permanent (kode i DSF: B)&#xD;&#xA;• opplysningMangler (opplysning mangler) (kode i DSF: M)&#xD;&#xA;Kode for oppholdstillatelse skal fylles ut for alle ikke-EØS borgere." />
+      <definition value="Information about the kind of residence permit as registered in FREG&#xD;&#xA;&#xD;&#xA;en generell betegnelse for det å ha tillatelse til lovlig opphold i Norge&#xD;&#xA;Kodeliste med typer av oppholdstillatelser:&#xD;&#xA;* midlertidig (kode i DSF: O)&#xD;&#xA;* permanent (kode i DSF: B)&#xD;&#xA;* opplysningMangler (opplysning mangler) (kode i DSF: M)&#xD;&#xA;Kode for oppholdstillatelse skal fylles ut for alle ikke-EØS borgere." />
       <alias value="oppholdstillatelse" />
       <min value="1" />
       <max value="1" />
