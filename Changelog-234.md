@@ -34,6 +34,7 @@ This is a service release to update the FHIR model according to the new FREG v3.
 |2021-01-20|gd-guardianship.StructureDefinition-extension.xml|Added element personalScope| La til element: Nytt flagg i sistnevntes vergeinformasjon: omfangetErInnenPersonligOmråde| 
 |2021-01-20|gd-Address.StructureDefinition-profile.xml|Updated definition of parishId|Tilleggsinformasjon om kretstyper.|
 |2021-01-20|gd-Address-street.StructureDefinition-profile.xml|Corrected writing error in mapping definition adresssenummer.husnummer-> adressenummer.husnummer||
+|2021-01-21|gd-Person.png and gd-RelatedPerson.png|Updated images according to FHIR model changes|Nye elementer nevnt over|
 
 # Changelog for 2.3.3
 
