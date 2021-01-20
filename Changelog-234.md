@@ -12,22 +12,22 @@ This is a service release to update the FHIR model according to the new FREG v3.
 |-
 |2021-01-20|gd-additional-humanname.StructureDefinition-extension.xml|Update description originalName according to FREG||
 |2021-01-20|gd-migration.StructureDefinition-extension.xml|Update definition|Litt tillegg i Utflytting ifm passivitetsvedtak.|
-|2021-01-20|StructureDefinition\gd-birth.StructureDefinition-extension.xml|gdBirth, added definition of birthYear, updated placeOfBirth, landOfBirth, placeOfBirthDistrict||
-|2021-01-20|StructureDefinition\gd-birth-in-norway.StructureDefinition-extension.xml|updated definition multipleBirthInteger|5.3 Noen endringer ifm f.eks. fødssel i Norge|
-|2021-01-20|StructureDefinition\gd-Person.StructureDefinition-profile.xml|Added FREG definition to GdPerson.name|5.4 Punktum er nå lovlig tegn i navn|
-|2021-01-20|StructureDefinition\gd-migration.StructureDefinition-extension.xml|handled by new element migrationDate|innflyttingsdato finnes ikke i XSD eller informasjonsmodell 5.18 Innflytting har fått ny egenskap, innflyttingsdato|
-|2021-01-20|StructureDefinition\gd-migration.StructureDefinition-extension.xml|Added migrationDate to GdMigration-extension|5.19 Utflytting har fått ny egenskap, utflyttingsdato|
-|2021-01-20|StructureDefinition\gd-person-identifier-status.StructureDefinition-extension.xml changed definition|5.2.4 Endret definisjon for identifikatortype|
-|2021-01-20|StructureDefinition\gd-Person.StructureDefinition-profile.xml|update birthDate definition|5.3 Endret definisjon for fødselsdato|
-|2021-01-20|StructureDefinition\gd-Person.StructureDefinition-profile.xml|GdPerson updated meta.addressConfidentiality slice definition|5.10 Endret definisjon for adressebeskyttelse|
-|2021-01-20|StructureDefinition\gd-marital-status.StructureDefinition-extension.xml|Updated locationName definition|5.6 Endret definisjon for sted (stedsnavn)|
-|2021-01-20|StructureDefinition\gd-address-metadata.StructureDefinition-extension.xml|updated description NB! koden eksisterer ikke i FREG xsd, har ikke oppdatert kodeverket eller valueset med den nye koden koden.|5.9.1 og flere innen adresse. Beskrivelse av klientadresseOgFortrolig|
-|2021-01-20|StructureDefinition\gd-Identifier-foreign.StructureDefinition-profile.xml|updated definitions|5.12 Endret definisjon for utlendingsmyndighetenesIdentifikasjonsnummer|
+|2021-01-20|gd-birth.StructureDefinition-extension.xml|gdBirth, added definition of birthYear, updated placeOfBirth, landOfBirth, placeOfBirthDistrict||
+|2021-01-20|gd-birth-in-norway.StructureDefinition-extension.xml|updated definition multipleBirthInteger|5.3 Noen endringer ifm f.eks. fødssel i Norge|
+|2021-01-20|gd-Person.StructureDefinition-profile.xml|Added FREG definition to GdPerson.name|5.4 Punktum er nå lovlig tegn i navn|
+|2021-01-20|gd-migration.StructureDefinition-extension.xml|handled by new element migrationDate|innflyttingsdato finnes ikke i XSD eller informasjonsmodell 5.18 Innflytting har fått ny egenskap, innflyttingsdato|
+|2021-01-20|gd-migration.StructureDefinition-extension.xml|Added migrationDate to GdMigration-extension|5.19 Utflytting har fått ny egenskap, utflyttingsdato|
+|2021-01-20|gd-person-identifier-status.StructureDefinition-extension.xml changed definition|5.2.4 Endret definisjon for identifikatortype|
+|2021-01-20|gd-Person.StructureDefinition-profile.xml|update birthDate definition|5.3 Endret definisjon for fødselsdato|
+|2021-01-20|gd-Person.StructureDefinition-profile.xml|GdPerson updated meta.addressConfidentiality slice definition|5.10 Endret definisjon for adressebeskyttelse|
+|2021-01-20|gd-marital-status.StructureDefinition-extension.xml|Updated locationName definition|5.6 Endret definisjon for sted (stedsnavn)|
+|2021-01-20|gd-address-metadata.StructureDefinition-extension.xml|updated description NB! koden eksisterer ikke i FREG xsd, har ikke oppdatert kodeverket eller valueset med den nye koden koden.|5.9.1 og flere innen adresse. Beskrivelse av klientadresseOgFortrolig|
+|2021-01-20|gd-Identifier-foreign.StructureDefinition-profile.xml|updated definitions|5.12 Endret definisjon for utlendingsmyndighetenesIdentifikasjonsnummer|
 |2021-01-20|gd-guardianship.StructureDefinition-extension.xml|updated definitions NB ny kode eksisterer ikke i FREG xsd, har ikke oppdatert kodeverket eller valueset med den nye koden.|5.20 Endret definisjon for representant for enslig mindreårig asylsøker. Nytt kodeinnslag: annenType for skjult informasjon|
-|2021-01-20|StructureDefinition\gd-residence-permit.StructureDefinition-extension.xml|Updated definition GdResidencePermit.residencePermitType|5.21 Endret definisjon for oppholdstillatelse. Opphold registreres på personer med enten fødselsnummer og d-nummer|
-|2021-01-20|StructureDefinition\gd-residence-permit.StructureDefinition-extension.xml|Se over|5.20 Endret definisjon for representant for enslig mindreårig asylsøker|
-|2021-01-20|StructureDefinition\gd-Address-box.StructureDefinition-profile.xml|Updated GdAddressBox.line.postBox definition|5.25.5 Beskrevet postboks med postboksanleggets navn|
-|2021-01-20|StructureDefinition\gd-birth.StructureDefinition-extension.xml|birthPlace|Dokumentasjon: Endring av beskrivelsen av fødested.|
+|2021-01-20|gd-residence-permit.StructureDefinition-extension.xml|Updated definition GdResidencePermit.residencePermitType|5.21 Endret definisjon for oppholdstillatelse. Opphold registreres på personer med enten fødselsnummer og d-nummer|
+|2021-01-20|gd-residence-permit.StructureDefinition-extension.xml|Se over|5.20 Endret definisjon for representant for enslig mindreårig asylsøker|
+|2021-01-20|gd-Address-box.StructureDefinition-profile.xml|Updated GdAddressBox.line.postBox definition|5.25.5 Beskrevet postboks med postboksanleggets navn|
+|2021-01-20|gd-birth.StructureDefinition-extension.xml|birthPlace|Dokumentasjon: Endring av beskrivelsen av fødested.|
 |2021-01-20|gd-residence-permit.StructureDefinition-extension.xml|Changed definition|Dokumentasjon: Endring av beskrivelse av begrepet/entiteten Opphold.|
 |2021-01-20|gd-residence-permit.StructureDefinition-extension.xml||Se over: Endring i beskrivelse av "opphold"|
 |2021-01-20|gd-guardianship.StructureDefinition-extension.xml|Already added, added mapping information|Dokumentasjon (gjort før): Endring av VergeEllerFremtidsfullmakt til VergemålEllerFremtidsfullmakt.|
