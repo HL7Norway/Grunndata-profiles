@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-guardianship" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-guardianship" />
-  <version value="2.3.4" />
+  <version value="2.3.5" />
   <name value="GdGuardianship" />
   <status value="draft" />
   <date value="2019-10-16" />
@@ -113,6 +113,7 @@
       <short value="Boolsk flagg som benyttes for enkel testing på om omfanget er innen det" />
       <definition value="Boolsk flagg som benyttes for enkel testing på om omfanget er innen det&#xD;&#xA;personlige området" />
       <alias value="omfangetErInnenPersonligOmraade" />
+      <min value="1" />
       <max value="1" />
       <mapping>
         <identity value="freg" />

@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-address-metadata" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-address-metadata" />
-  <version value="2.3.4" />
+  <version value="2.3.5" />
   <name value="GdAddressMetadata" />
   <status value="draft" />
   <date value="2019-09-25" />
@@ -37,7 +37,7 @@
       <path value="Extension.extension" />
       <sliceName value="confidentiality" />
       <short value="adressegradering" />
-      <definition value="kategori av beskyttelsesgrad på adresseinformasjon i Folkeregisteret&#xD;&#xA;Gyldige kodeverdier er:&#xD;&#xA;* ugradert&#xD;&#xA;* klientadresse&#xD;&#xA;* fortrolig&#xD;&#xA;* klientadresseOgFortrolig&#xD;&#xA;&#xD;&#xA;Bostedsadressen kan være beskyttet iht. Beskyttelsesinstruksen (fortrolig og strengtFortrolig) eller Folkeregisterloven (klientadresse). Adresse med gradering strengtFortrolig oppgis ikke av Folkeregisteret og er derfor ikke blant kodene.&#xD;&#xA;&#xD;&#xA;Koden klientadresseOgFortrolig benyttes når begge graderingene er gyldige for en adresse." />
+      <definition value="kategori av beskyttelsesgrad på adresseinformasjon i Folkeregisteret&#xD;&#xA;Gyldige kodeverdier er:&#xD;&#xA;* ugradert&#xD;&#xA;* klientadresse&#xD;&#xA;* fortrolig&#xD;&#xA;&#xD;&#xA;Bostedsadressen kan være beskyttet iht. Beskyttelsesinstruksen (fortrolig og strengtFortrolig) eller Folkeregisterloven (klientadresse). Adresse med gradering strengtFortrolig oppgis ikke av Folkeregisteret og er derfor ikke blant kodene." />
       <alias value="adressegradering" />
       <min value="1" />
       <max value="1" />
