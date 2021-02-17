@@ -122,6 +122,14 @@ GET http:%2F%2Fhapi.fhir.org%2FbaseR4%2FPerson%3Fname%3DEspen%26_elements%3Dname
 				<type value="string"/>
 				<documentation value="Search on Person.family name: GET [base]/Person?family=[string]"/>
 			</searchParam>
+			<operation>
+				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+					<valueCode value="SHALL"/>
+				</extension>
+				<name value=""/>
+				<definition value=""/>
+				<documentation value=""/>
+			</operation>
 		</resource>
 		<resource>
 			<type value="RelatedPerson"/>

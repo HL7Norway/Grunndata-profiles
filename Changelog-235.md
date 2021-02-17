@@ -13,6 +13,14 @@ This is a bugfix release to fix bugs introdused by Skatteetaten in in FREG infor
 |2021-02-02|gd-guardianship.StructureDefinition-extension.xml|omfangetErInnenPersonligOmråde er påkrevd - changed cardinality for personalScope|PBI 7291|
 |2021-02-02|gd-address-metadata.StructureDefinition-extension.xml|klientadresseOgFortrolig removed the description of klientadresseOgFortrolig|PBI 7291|
 
+## Documentation changes after the 2.3.5 release
+
+|Date|File|Change description|
+|-
+|2021-02-17|gd-Person-Server-Requirements.xml| |PBI 6621|
+|2021-02-17|gd-Person-Server-Requirements-v300.xml| |PBI 6621|
+|2021-02-17|Documentation changes| |PBI 6621|
+
 # Changelog for 2.3.4
 
 ## Documents the changes implemented from version 2.3.3 to 2.3.4
