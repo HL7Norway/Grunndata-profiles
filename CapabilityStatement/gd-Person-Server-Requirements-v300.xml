@@ -167,11 +167,6 @@
 				<documentation value="A state specified in an address"/>
 			 </searchParam>
 			 <searchParam>
-				<name value="gender"/>
-				<type value="token"/>
-				<documentation value="The gender of the person"/>
-			 </searchParam>
-			 <searchParam>
 				<name value="practitioner"/>
 				<type value="reference"/>
 				<documentation value="The Person links to this Practitioner"/>
@@ -220,11 +215,6 @@
 				<name value="telecom"/>
 				<type value="token"/>
 				<documentation value="The value in any kind of contact"/>
-			 </searchParam>
-			 <searchParam>
-				<name value="address-city"/>
-				<type value="string"/>
-				<documentation value="A city specified in an address"/>
 			 </searchParam>
 			 <searchParam>
 				<name value="email"/>
@@ -447,5 +437,13 @@
 				<documentation value="When the activity occurred"/>
 			</searchParam>
 		</resource>
+		<searchParam>
+			<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+				<valueCode value="SHALL"/>
+			</extension>
+			<name value="_total"/>
+			<type value="token"/>
+			<documentation value="This server have a default value of *none* set for the _total parameter. The default value reduce the server load for large search-sets. The default behaviour can be changed by setting the _total parameter in the search request, please consider not changing the _total parameter to *accurate* unless your client really needs this information."/>
+		</searchParam>
 	</rest>
 </CapabilityStatement>

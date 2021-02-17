@@ -17,8 +17,9 @@ This is a bugfix release to fix bugs introdused by Skatteetaten in in FREG infor
 
 |Date|File|Change description|
 |-
-|2021-02-17|gd-Person-Server-Requirements.xml| |PBI 6621|
-|2021-02-17|gd-Person-Server-Requirements-v300.xml| |PBI 6621|
+|2021-02-17|gd-Person-Server-Requirements.xml|Added description of the total parameter default value|PBI 6621|
+|2021-02-17|gd-Person-Server-Requirements-v300.xml|Added description of the total parameter default value|PBI 6621|
+|2021-02-17|gd-Person-Server-Requirements-v300.xml|Corrected validation errors for CapabilityStatement||
 |2021-02-17|Documentation changes| |PBI 6621|
 
 # Changelog for 2.3.4
