@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir" >
 	<url value="http://ehelse.no/fhir/CapabilityStatement/gd-Person-Server-Requirements/v220"/>
-	<version value="2.2.0"/>
+	<version value="2.3.5"/>
 	<name value="PersonServerRequirements"/>
 	<title value="Requirements for Grunndata Person Service Interface (server)"/>
 	<status value="draft"/>
@@ -175,6 +175,14 @@ GET http:%2F%2Fhapi.fhir.org%2FbaseR4%2FPerson%3Fname%3DEspen%26_elements%3Dname
 			<name value="_total"/>
 			<type value="token"/>
 			<documentation value="This server have a default value of *none* set for the _total parameter. The default value reduce the server load for large search-sets. The default behaviour can be changed by setting the _total parameter in the search request, please consider not changing the _total parameter to *accurate* unless your client really needs this information."/>
+		</searchParam>
+		<searchParam>
+			<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+				<valueCode value="SHALL"/>
+			</extension>
+			<name value="_elements"/>
+			<type value="string"/>
+			<documentation value="The server expects _elements parameter to be set. The server expects all read and search interactions to use the *_elements* operation specifying what elements should be included in the search result. In the case where the _elements operation is missing a resouce containing only the identifier element is returned."/>
 		</searchParam>
 	</rest>
 </CapabilityStatement>
