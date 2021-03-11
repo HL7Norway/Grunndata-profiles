@@ -21,6 +21,8 @@ This is a bugfix release to fix bugs introdused by Skatteetaten in in FREG infor
 |2021-02-17|gd-Person-Server-Requirements-v300.xml|Added description of the total parameter default value|PBI 6621|
 |2021-02-17|gd-Person-Server-Requirements-v300.xml|Corrected validation errors for CapabilityStatement (duplicate searchParams)||
 |2021-02-17|Documentation changes|Added description of total and element parameter to the IG FAQ|PBI 6621|
+|2021-03-11|gd-RelatedPerson.StructureDefinition-profile.xml documentation changes|Removed documentation of logical reference in RelatedPerson.patient reference|PBI 8563|
+|2021-03-11|gd-RelatedPerson.StructureDefinition-profile.xml|Removed must-support from RelatedPerson.patient.identifier element|PBI 8563|
 
 # Changelog for 2.3.4
 
