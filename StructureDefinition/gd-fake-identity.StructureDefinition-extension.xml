@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="gd-fake-identity" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/gd-fake-identity" />
+  <version value="3.0" />
+  <name value="GdFakeIdentity" />
+  <status value="draft" />
+  <description value="Information about a fake identity registration in FREG&#xD;&#xA;&#xD;&#xA;identitet som tilhører en annen enn den som benytter den, eller ikke tilhører noen i det hele tatt, men presenteres som om den er reell" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Person" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Information about a fake identity registration in FREG" />
+      <definition value="Information about a fake identity registration in FREG&#xD;&#xA;&#xD;&#xA;identitet som tilhører en annen enn den som benytter den, eller ikke tilhører noen i det hele tatt, men presenteres som om den er reell" />
+      <alias value="falskIdentitet" />
+      <mapping>
+        <identity value="freg" />
+        <map value="falskIdentitet" />
+      </mapping>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/gd-fake-identity" />
+    </element>
+  </differential>
+</StructureDefinition>
