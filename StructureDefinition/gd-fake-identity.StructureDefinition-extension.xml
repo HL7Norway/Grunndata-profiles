@@ -26,15 +26,73 @@
       <path value="Extension" />
       <short value="Information about a fake identity registration in FREG" />
       <definition value="Information about a fake identity registration in FREG&#xD;&#xA;&#xD;&#xA;identitet som tilhører en annen enn den som benytter den, eller ikke tilhører noen i det hele tatt, men presenteres som om den er reell" />
-      <alias value="falskIdentitet" />
+      <alias value="FalskIdentitet" />
       <mapping>
         <identity value="freg" />
-        <map value="falskIdentitet" />
+        <map value="FalskIdentitet" />
       </mapping>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:fregIsFake">
+      <path value="Extension.extension" />
+      <sliceName value="fregIsFake" />
+      <short value="Indicates whether the identity in this person resource is considered fake." />
+      <definition value="Indicates whether the identity in this person resource is considered fake.&#xD;&#xA;&#xD;&#xA;identitet som tilhører en annen enn den som benytter den, eller ikke tilhører noen i det hele tatt, men presenteres som om den er reell" />
+      <alias value="erFalsk" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="erFalsk" />
+      </mapping>
+    </element>
+    <element id="Extension.extension:fregIsFake.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="fregIsFake" />
+    </element>
+    <element id="Extension.extension:fregIsFake.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <alias value="erFalsk" />
+      <min value="1" />
+      <type>
+        <code value="boolean" />
+      </type>
+      <mapping>
+        <identity value="freg" />
+        <map value="erFalsk" />
+      </mapping>
+    </element>
+    <element id="Extension.extension:fregIdentityInfo">
+      <path value="Extension.extension" />
+      <sliceName value="fregIdentityInfo" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-Person" />
+      </type>
+    </element>
+    <element id="Extension.extension:fregIdentityInfo.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="fregIdentityInfo" />
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
       <fixedUri value="http://ehelse.no/fhir/StructureDefinition/gd-fake-identity" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
     </element>
   </differential>
 </StructureDefinition>
