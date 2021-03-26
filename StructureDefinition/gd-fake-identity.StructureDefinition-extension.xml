@@ -72,19 +72,48 @@
         <map value="erFalsk" />
       </mapping>
     </element>
-    <element id="Extension.extension:fregIdentityInfo">
+    <element id="Extension.extension:identityUnknown">
       <path value="Extension.extension" />
-      <sliceName value="fregIdentityInfo" />
-      <min value="1" />
+      <sliceName value="identityUnknown" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:identityUnknown.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="identityUnknown" />
+    </element>
+    <element id="Extension.extension:identityUnknown.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+    <element id="Extension.extension:identifier">
+      <path value="Extension.extension" />
+      <sliceName value="identifier" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:identifier.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="identifier" />
+    </element>
+    <element id="Extension.extension:identifier.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.extension:fregIdentifyingInformation">
+      <path value="Extension.extension" />
+      <sliceName value="fregIdentifyingInformation" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-Person" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-identifying-information" />
       </type>
     </element>
-    <element id="Extension.extension:fregIdentityInfo.url">
+    <element id="Extension.extension:fregIdentifyingInformation.url">
       <path value="Extension.extension.url" />
-      <fixedUri value="fregIdentityInfo" />
+      <fixedUri value="fregIdentifyingInformation" />
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
