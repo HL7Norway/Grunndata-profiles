@@ -27,6 +27,13 @@
       <short value="Information about a fake identity registration in FREG" />
       <definition value="Information about a fake identity registration in FREG&#xD;&#xA;&#xD;&#xA;identitet som tilhører en annen enn den som benytter den, eller ikke tilhører noen i det hele tatt, men presenteres som om den er reell" />
       <alias value="FalskIdentitet" />
+      <condition value="one-identity" />
+      <constraint>
+        <key value="one-identity" />
+        <severity value="error" />
+        <human value="Only on of identityUnknown, identifier or identifyingInformation should have value" />
+        <expression value="extension.extension.exists(url = 'identityUnknown') xor extension.extension.exists(url = 'identityUnknown') xor extension.extension.exists(url = 'identityUnknown')" />
+      </constraint>
       <mapping>
         <identity value="freg" />
         <map value="FalskIdentitet" />
@@ -76,6 +83,7 @@
       <path value="Extension.extension" />
       <sliceName value="identityUnknown" />
       <max value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Extension.extension:identityUnknown.url">
       <path value="Extension.extension.url" />
@@ -91,6 +99,7 @@
       <path value="Extension.extension" />
       <sliceName value="identifier" />
       <max value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Extension.extension:identifier.url">
       <path value="Extension.extension.url" />
@@ -105,6 +114,7 @@
     <element id="Extension.extension:fregmetadata">
       <path value="Extension.extension" />
       <sliceName value="fregmetadata" />
+      <mustSupport value="true" />
     </element>
     <element id="Extension.extension:fregmetadata.extension">
       <path value="Extension.extension.extension" />
@@ -140,6 +150,7 @@
       <path value="Extension.extension" />
       <sliceName value="identifyingInformation" />
       <max value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Extension.extension:identifyingInformation.extension">
       <path value="Extension.extension.extension" />
@@ -155,6 +166,7 @@
       <path value="Extension.extension.extension" />
       <sliceName value="name" />
       <max value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Extension.extension:identifyingInformation.extension:name.url">
       <path value="Extension.extension.extension.url" />
@@ -167,19 +179,74 @@
         <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-HumanName" />
       </type>
     </element>
+    <element id="Extension.extension:identifyingInformation.extension:name.value[x].extension">
+      <path value="Extension.extension.extension.value[x].extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:identifyingInformation.extension:name.value[x].extension:middlename">
+      <path value="Extension.extension.extension.value[x].extension" />
+      <sliceName value="middlename" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Extension.extension:identifyingInformation.extension:name.value[x].use">
+      <path value="Extension.extension.extension.value[x].use" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:identifyingInformation.extension:name.value[x].text">
+      <path value="Extension.extension.extension.value[x].text" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:identifyingInformation.extension:name.value[x].family">
+      <path value="Extension.extension.extension.value[x].family" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Extension.extension:identifyingInformation.extension:name.value[x].given">
+      <path value="Extension.extension.extension.value[x].given" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Extension.extension:identifyingInformation.extension:name.value[x].prefix">
+      <path value="Extension.extension.extension.value[x].prefix" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:identifyingInformation.extension:name.value[x].suffix">
+      <path value="Extension.extension.extension.value[x].suffix" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:identifyingInformation.extension:name.value[x].period">
+      <path value="Extension.extension.extension.value[x].period" />
+      <max value="0" />
+    </element>
     <element id="Extension.extension:identifyingInformation.extension:birthDate">
       <path value="Extension.extension.extension" />
       <sliceName value="birthDate" />
       <max value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Extension.extension:identifyingInformation.extension:birthDate.url">
       <path value="Extension.extension.extension.url" />
       <fixedUri value="birthDate" />
     </element>
+    <element id="Extension.extension:identifyingInformation.extension:birthDate.value[x]">
+      <path value="Extension.extension.extension.value[x]" />
+      <type>
+        <code value="date" />
+      </type>
+    </element>
     <element id="Extension.extension:identifyingInformation.extension:cititzenship">
       <path value="Extension.extension.extension" />
       <sliceName value="cititzenship" />
       <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-country-code-3166-1-3" />
+      </type>
+      <mustSupport value="true" />
     </element>
     <element id="Extension.extension:identifyingInformation.extension:cititzenship.url">
       <path value="Extension.extension.extension.url" />
@@ -189,10 +256,21 @@
       <path value="Extension.extension.extension" />
       <sliceName value="gender" />
       <max value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Extension.extension:identifyingInformation.extension:gender.url">
       <path value="Extension.extension.extension.url" />
       <fixedUri value="gender" />
+    </element>
+    <element id="Extension.extension:identifyingInformation.extension:gender.value[x]">
+      <path value="Extension.extension.extension.value[x]" />
+      <type>
+        <code value="code" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-gender" />
+      </binding>
     </element>
     <element id="Extension.extension:identifyingInformation.url">
       <path value="Extension.extension.url" />
@@ -348,9 +426,6 @@
       </type>
       <type>
         <code value="Dosage" />
-      </type>
-      <type>
-        <code value="Meta" />
       </type>
     </element>
     <element id="Extension.url">

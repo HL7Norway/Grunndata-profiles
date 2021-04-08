@@ -25,6 +25,9 @@
         <extension url="fregIsFake">
             <valueBoolean value="true"/>
         </extension>
+        <extension url="identityUnknown">
+            <valueBoolean value="false"/>
+        </extension>
         <extension url="identifyingInformation">
             <extension url="name">
                 <extension url="http://hl7.no/fhir/StructureDefinition/no-basis-middlename">
