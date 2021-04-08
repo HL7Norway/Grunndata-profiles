@@ -229,9 +229,7 @@
     <element id="Person.extension:fakeIdentity">
       <path value="Person.extension" />
       <sliceName value="fakeIdentity" />
-      <short value="Information about a fake identity registration in FREG" />
-      <definition value="Information about a fake identity registration in FREG&#xD;&#xA;&#xD;&#xA;identitet som tilhører en annen enn den som benytter den, eller ikke tilhører noen i det hele tatt, men presenteres som om den er reell" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <type>
         <code value="Extension" />
