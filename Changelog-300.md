@@ -10,5 +10,6 @@ This is a new release completing the information model according to FREG informa
 
 |Date|File|Change description|FREG description|
 |-
-|2021-04-08|gd-fake-identity.StructureDefinition-extension.xml|Added feature for fake identity in separate extension|PBI |
-|2021-04-08|gd-Person|Added fake identity to the gd-Person definition|PBI |
+|2021-04-08|gd-fake-identity.StructureDefinition-extension.xml|Added feature for fake identity in separate extension|Feature 3830|
+|2021-04-08|gd-Person|Added fake identity to the gd-Person definition|Feature 3830|
+||gdPerson|Person.active, added: In some special cases where a Person document is nullified because it was registered in error||
