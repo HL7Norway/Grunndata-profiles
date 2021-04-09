@@ -63,6 +63,9 @@
 					<valueDateTime value="2018-10-10"/>
 				</extension>
 			</extension>
+			<extension url="personalScope">
+				<valueBoolean value="false"/>
+			</extension>
 		</extension>
 		<coding>
 			<system value="http://ehelse.no/fhir/CodeSystem/gd-person-guardiantype"/>
