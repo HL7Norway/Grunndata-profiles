@@ -11,4 +11,4 @@ This is a new release completing the information model according to FREG informa
 |Date|File|Change description|FREG description|
 |-
 |2021-04-08|gd-fake-identity.StructureDefinition-extension.xml|Added feature for fake identity in separate extension|PBI |
-|2021-04-08|gd-Person|Added fake identity|PBI |
+|2021-04-08|gd-Person|Added fake identity to the gd-Person definition|PBI |
