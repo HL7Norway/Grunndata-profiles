@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-fake-identity" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-fake-identity" />
-  <version value="3.0" />
+  <version value="3.0.0" />
   <name value="GdFakeIdentity" />
   <status value="draft" />
   <description value="Information about a fake identity registration in FREG&#xD;&#xA;&#xD;&#xA;identitet som tilhører en annen enn den som benytter den, eller ikke tilhører noen i det hele tatt, men presenteres som om den er reell" />
@@ -122,9 +122,9 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Extension.extension:fregmetadata">
+    <element id="Extension.extension:fregMetadata">
       <path value="Extension.extension" />
-      <sliceName value="fregmetadata" />
+      <sliceName value="fregMetadata" />
       <short value="registermetadata fra folkeregisteret" />
       <mustSupport value="true" />
     </element>
@@ -138,7 +138,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Extension.extension:fregmetadata.extension:metadata">
+    <element id="Extension.extension:fregMetadata.extension:metadata">
       <path value="Extension.extension.extension" />
       <sliceName value="metadata" />
       <type>
@@ -146,15 +146,15 @@
         <profile value="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata" />
       </type>
     </element>
-    <element id="Extension.extension:fregmetadata.extension:metadata.url">
+    <element id="Extension.extension:fregMetadata.extension:metadata.url">
       <path value="Extension.extension.extension.url" />
       <fixedUri value="metadata" />
     </element>
-    <element id="Extension.extension:fregmetadata.url">
+    <element id="Extension.extension:fregMetadata.url">
       <path value="Extension.extension.url" />
-      <fixedUri value="fregmetadata" />
+      <fixedUri value="fregMetadata" />
     </element>
-    <element id="Extension.extension:fregmetadata.value[x]">
+    <element id="Extension.extension:fregMetadata.value[x]">
       <path value="Extension.extension.value[x]" />
       <max value="0" />
     </element>
