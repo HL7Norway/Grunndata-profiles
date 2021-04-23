@@ -32,8 +32,8 @@
       <constraint>
         <key value="one-identity" />
         <severity value="error" />
-        <human value="Only on of identityUnknown, identifier or identifyingInformation should have value" />
-        <expression value="extension.extension.exists(url = 'identityUnknown') xor extension.extension.exists(url = 'identityUnknown') xor extension.extension.exists(url = 'identityUnknown')" />
+        <human value="Only one of identityUnknown, identifier or identifyingInformation should have value" />
+        <expression value="extension.extension.exists(url = 'identityUnknown') xor extension.extension.exists(url = 'identifier') xor extension.extension.exists(url = 'identifyingInformation')" />
         <source value="http://ehelse.no/fhir/StructureDefinition/gd-fake-identity" />
       </constraint>
       <mapping>
@@ -128,7 +128,7 @@
       <short value="registermetadata fra folkeregisteret" />
       <mustSupport value="true" />
     </element>
-    <element id="Extension.extension:fregmetadata.extension">
+    <element id="Extension.extension:fregMetadata.extension">
       <path value="Extension.extension.extension" />
       <slicing>
         <discriminator>
@@ -272,9 +272,9 @@
         <code value="date" />
       </type>
     </element>
-    <element id="Extension.extension:identifyingInformation.extension:cititzenship">
+    <element id="Extension.extension:identifyingInformation.extension:citizenship">
       <path value="Extension.extension.extension" />
-      <sliceName value="cititzenship" />
+      <sliceName value="citizenship" />
       <alias value="statsborgerskap" />
       <min value="1" />
       <type>
@@ -287,9 +287,9 @@
         <map value="statsborgerskap" />
       </mapping>
     </element>
-    <element id="Extension.extension:identifyingInformation.extension:cititzenship.url">
+    <element id="Extension.extension:identifyingInformation.extension:citizenship.url">
       <path value="Extension.extension.extension.url" />
-      <fixedUri value="cititzenship" />
+      <fixedUri value="citizenship" />
     </element>
     <element id="Extension.extension:identifyingInformation.extension:gender">
       <path value="Extension.extension.extension" />
