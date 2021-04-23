@@ -40,6 +40,9 @@
             <extension url="birthDate">
                <valueDate value="2019-05-03" />
             </extension>
+			<extension url="citizenship">
+                <valueCode value="NOR" />
+            </extension>
         </extension>
     </extension>
 	<identifier> <!-- Fødselnummeret til brukeren -->
