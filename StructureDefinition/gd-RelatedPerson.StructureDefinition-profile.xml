@@ -85,8 +85,13 @@
     </element>
     <element id="RelatedPerson.active">
       <path value="RelatedPerson.active" />
-      <definition value="Gd-Person use this element to describe active and not active Person-resources.&#xD;&#xA;A person instances can become not-active in special cases where two person instances is appended into one. In this case one Person instance remains active (active=true) while the duplicate is considered not-active (active=false).&#xD;&#xA;Person instances with value active=false is not returned from the service unless a specific search is made for instances containing the active=false value.&#xD;&#xA;&#xD;&#xA;Whether this related person record is in active use." />
+      <definition value="Gd-RelatedPerson use this element to describe active and not active RelatedPerson-resources. The status should be the same value found for the Person referenced through RelatedPerson.patient reference. There are currently different cases that translates into active=false:&#xD;&#xA;&#xD;&#xA;* fregPersonStatus= opphørt&#xD;&#xA;* fregFakeIdentity = true&#xD;&#xA;* In some special cases where two Person documents are merged into one&#xD;&#xA;* In some special cases where a Person document is nullified because it was registered in error&#xD;&#xA;&#xD;&#xA;A person instances can become not-active in special cases where two person instances is appended into one. In this case one Person instance remains active (active=true) while the duplicate is considered not-active (active=false).&#xD;&#xA;&#xD;&#xA;Person instances with value active=false is not returned from the service unless a specific search is made for instances containing the active=false value.&#xD;&#xA;&#xD;&#xA;Whether this person's record is in active use." />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="n/a" />
+        <comment value="There are no direct mapping of this concept to FREG" />
+      </mapping>
     </element>
     <element id="RelatedPerson.patient">
       <path value="RelatedPerson.patient" />
