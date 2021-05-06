@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SearchParameter>
+	<id value="person-extension-fakeIdentity-identifier-Fhir4.0" />
+	<url value="http://ehelse.no/fhir/StructureDefinition/gd-fake-identity-identifier" />
+	<version value="3.0.0" />
+	<name value="FakeIdentityIdentifier" />
+	<status value="active" />
+	<description value="SearchParameter for the identifier extension of the Norwegian fake identity extension http://ehelse.no/fhir/StructureDefinition/gd-fake-identity" />
+	<code value="fakeIdentityIdentifier" />
+	<base value="Person" />
+	<type value="string" />
+	<expression value="Person.extension.extension.where(url='http://ehelse.no/fhir/StructureDefinition/gd-fake-identity').extension.where(url='identifier').value" />
+	<xpath value="f:Person/f:extension/f:extension[@url='http://ehelse.no/fhir/StructureDefinition/gd-fake-identity']/f:extension[@url='identifier']" />
+	<xpathUsage value="normal" />
+	<multipleOr value="true" />
+	<multipleAnd value="true" />
+	<modifier value="missing" />
+	<modifier value="exact" />
+	<modifier value="contains" />
+</SearchParameter>
