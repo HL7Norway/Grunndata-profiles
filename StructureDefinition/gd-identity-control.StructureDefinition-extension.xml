@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="gd-identity-control" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/gd-identity-control" />
+  <version value="3.0.0" />
+  <name value="GdIdentityControl" />
+  <status value="draft" />
+  <description value="Tells whether the identity of the person has been subject of control by the authorities.&#xD;&#xA;&#xD;&#xA;opplysninger som danner grunnlaget for, og tiltroen til, den identiteten som er registrert i Folkeregisteret" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Person" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Itentity controlled by the authorities" />
+      <definition value="Tells whether the identity of the person has been subject of control by the authorities.&#xD;&#xA;&#xD;&#xA;opplysninger som danner grunnlaget for, og tiltroen til, den identiteten som er registrert i Folkeregisteret" />
+      <alias value="Identitetsgrunnlag" />
+      <mapping>
+        <identity value="freg" />
+        <map value="Identitetsgrunnlag" />
+      </mapping>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:fregIdentityControlStatus">
+      <path value="Extension.extension" />
+      <sliceName value="fregIdentityControlStatus" />
+      <short value="Indicates whether the identity of the person has been subject to control by the authorities." />
+      <definition value="Indicates whether the identity of the person has been subject to control by the authorities.&#xD;&#xA;&#xD;&#xA;opplysninger som danner grunnlaget for, og tiltroen til, den identiteten som er registrert i Folkeregisteret" />
+      <min value="1" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-identitycontrolstatus" />
+      </binding>
+    </element>
+    <element id="Extension.extension:fregIdentityControlStatus.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="fregIdentityControlStatus" />
+    </element>
+    <element id="Extension.extension:fregMetadata">
+      <path value="Extension.extension" />
+      <sliceName value="fregMetadata" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata" />
+      </type>
+    </element>
+    <element id="Extension.extension:fregMetadata.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="fregMetadata" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/gd-identity-control" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
