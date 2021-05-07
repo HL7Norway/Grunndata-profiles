@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SearchParameter>
+<SearchParameter xmlns="http://hl7.org/fhir">
 	<id value="person-extension-fakeIdentity-identifyingInformationName-Fhir4.0" />
 	<url value="http://ehelse.no/fhir/StructureDefinition/gd-fake-identity-identifying-information-name" />
 	<version value="3.0.0" />
