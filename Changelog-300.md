@@ -18,3 +18,4 @@ This is a new release completing the information model according to FREG informa
 |2021-04-16|gd-identitycontrolstatus.ValueSet.xml||PBI 10357|
 |2021-04-16|gd-identitycontrolstatus.CodeSystem.xml||PBI 10357|
 |2021-04-16|gd-identity-control.StructureDefinition-extension.xml||PBI 10357|
+|2021-05-31|GdPerson|bugfix of Person.meta.security:addressConfidentiality.system, added fixed uri for system||
