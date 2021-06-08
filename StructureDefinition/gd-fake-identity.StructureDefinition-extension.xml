@@ -33,11 +33,11 @@
         <key value="one-identity" />
         <severity value="error" />
         <human value="Only one of identityUnknown, identifier or identifyingInformation should have value" />
-        <expression value="extension.extension.where(url = 'identityUnknown').exists() 
-xor extension.extension.where(url = 'identifier').exists() 
-xor extension.extension.where(url = 'identifyingInformation').exists()" />
+        <expression value="extension.extension.where(url = 'identityUnknown').exists()  xor extension.extension.where(url = 'identifier').exists()  xor extension.extension.where(url = 'identifyingInformation').exists()" />
         <source value="http://ehelse.no/fhir/StructureDefinition/gd-fake-identity" />
       </constraint>
+      <isModifier value="true" />
+      <isModifierReason value="Information about a fake identity registration in FREG" />
       <mapping>
         <identity value="freg" />
         <map value="FalskIdentitet" />
