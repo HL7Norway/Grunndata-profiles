@@ -20,6 +20,7 @@ java -jar "c:\users\Thomas\Downloads\org.hl7.fhir.validator-4-2-21.jar" e:\GitRe
 
 
 Schema validation XMLspy
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/FHIR/R4/fhir-all-xsd/fhir-single.xsd"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/FHIR/R4/fhir-all-xsd/fhir-single.xsd"
 
- FOR /R "E:\GitRepo\HL7-norway-basisprofiler-r4" %i IN (*.xml) DO COPY "%i" "E:\GitRepo\for-validation-no-basis"
+Alle filer i alle mapper til for-validation (for å validere og bruke som IG i HL7 validator)
+FOR /R "E:\GitRepo\HL7-norway-basisprofiler-r4" %i IN (*.xml) DO COPY "%i" "E:\GitRepo\for-validation-no-basis"

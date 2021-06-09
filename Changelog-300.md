@@ -21,3 +21,4 @@ This is a new release completing the information model according to FREG informa
 |2021-05-31|GdPerson|bugfix of Person.meta.security:addressConfidentiality.system, added fixed uri for system|BUG 11440|
 |2021-06-02|gd-Person|removed active documentation concerning fake-id persons (active not set on fakeid)|Feature 3830, PBI 10481|
 |2021-06-02|gd-Person, GdFakeIdentity|Added isModifier=true to GdFakeIdentity to signify the importance of the fake identity information if present|Feature 3830, PBI 10481|
+|2021-06-09|gd-Person-Fred-pajord-identity-control.xml|Added example of gd-identity-control use|PBI 10357|
