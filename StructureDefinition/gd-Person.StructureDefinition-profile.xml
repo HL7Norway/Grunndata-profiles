@@ -240,7 +240,11 @@
     <element id="Person.identifier">
       <path value="Person.identifier" />
       <slicing>
-        <description value="Slicing discriminator from no-basis-Person" />
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <description value="Sliced by value:system (FNR/DNR) or type.system (foreign Identifier)" />
         <rules value="closed" />
       </slicing>
       <min value="1" />

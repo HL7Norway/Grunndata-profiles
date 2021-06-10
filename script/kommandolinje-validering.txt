@@ -12,6 +12,7 @@ F�rst lage en katalog med alle conformance ressurser som benyttes for ig'en. S
 java -jar /home/thomas/Downloads/org.hl7.fhir.validator.jar /media/sf_GitRepo/for-validation-gd-r4/ -version 4.0.1
 java -jar c:\download\validator_cli.jar c:\GitRepo\Grunndata-R4\StructureDefinition\*.xml -version 4.0.0
 java -jar c:\users\Thomas\Downloads\validator_cli.jar E:\GitRepo\for-validation-no-basis\*.xml -version 4.0.1 -output validation.xml -ig e:\GitRepo\for-validation-no-basis
+java -jar C:\Users\Thomas\Downloads\validator_cli.jar E:\GitRepo\for-validation-gd-r4\*.xml -version 4.0.1 -output validation.xml
 
 Deretter validere eksempler med katalogen som "ig":
 java -jar /home/thomas/Downloads/org.hl7.fhir.validator.jar gd-RelatedPerson-example.xml -ig /media/sf_GitRepo/for-validation-gd-r4 -version 4.0.0
@@ -20,6 +21,8 @@ java -jar "c:\users\Thomas\Downloads\org.hl7.fhir.validator-4-2-21.jar" e:\GitRe
 
 
 Schema validation XMLspy
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/FHIR/R4/fhir-all-xsd/fhir-single.xsd"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/FHIR/R4/fhir-all-xsd/fhir-single.xsd"
 
- FOR /R "E:\GitRepo\HL7-norway-basisprofiler-r4" %i IN (*.xml) DO COPY "%i" "E:\GitRepo\for-validation-no-basis"
+Alle filer i alle mapper til for-validation (for å validere og bruke som IG i HL7 validator)
+FOR /R "E:\GitRepo\HL7-norway-basisprofiler-r4" %i IN (*.xml) DO COPY "%i" "E:\GitRepo\for-validation-no-basis"
+FOR /R "E:\GitRepo\Grunndata-R4" %i IN (*.xml) DO COPY "%i" "E:\GitRepo\for-validation-gd-r4"
