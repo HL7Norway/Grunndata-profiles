@@ -23,4 +23,4 @@ This is a new release completing the information model according to FREG informa
 |2021-06-02|gd-Person, GdFakeIdentity|Added isModifier=true to GdFakeIdentity to signify the importance of the fake identity information if present|Feature 3830, PBI 10481|
 |2021-06-09|gd-Person-Fred-pajord-identity-control.xml|Added example of gd-identity-control use|PBI 10357|
 |2021-06-10|gd-person-sametingelectorrelation.CodeSystem.xml|Fixed validation error||
-|2021-06-02|gd-Person|Added slice discriminator to identifier slice to handle validation error||
+|2021-06-02|gd-Person|Added fixed value of http://ehelse.no/fhir/CodeSystem/gd-person-identificationnumbertype to Identifier.system on foreign identifier slice definition||

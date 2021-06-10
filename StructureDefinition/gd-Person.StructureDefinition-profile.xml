@@ -240,10 +240,6 @@
     <element id="Person.identifier">
       <path value="Person.identifier" />
       <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
         <description value="Sliced by value:system (FNR/DNR) or type.system (foreign Identifier)" />
         <rules value="closed" />
       </slicing>
@@ -277,6 +273,10 @@
         <profile value="http://ehelse.no/fhir/StructureDefinition/gd-Identifier-foreign" />
       </type>
       <mustSupport value="true" />
+    </element>
+    <element id="Person.identifier:foreignIdentifier.system">
+      <path value="Person.identifier.system" />
+      <fixedUri value="http://ehelse.no/fhir/CodeSystem/gd-person-identificationnumbertype" />
     </element>
     <element id="Person.name">
       <path value="Person.name" />
