@@ -10,7 +10,7 @@
     <status value="draft" />
     <date value="2018-10-17T00:00:00.000+00:00" />
     <publisher value="Copy of Codes from forholdTilSametingetsValgmanntall defined by Skatteetaten" />
-	<desciption value="This CodeSystem does not yet exist in the published XSD from Skatteetaten, changes may occur"/>
+	<description value="This CodeSystem does not yet exist in the published XSD from Skatteetaten, changes may occur"/>
     <content value="complete" />
     <concept>
         <code value="innmeldt" />
