@@ -4,6 +4,7 @@
 		<security>
 				<system value="http://ehelse.no/fhir/CodeSystem/gd-address-confidentiality"/>
 				<code value="klientadresse"/>
+				<!-- This code "klientadresse" is not valid according to valueset -->
 		</security>
 	</meta>
 	<extension url="http://ehelse.no/fhir/StructureDefinition/gd-person-status">
