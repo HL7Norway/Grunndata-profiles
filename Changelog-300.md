@@ -26,3 +26,4 @@ This is a new release completing the information model according to FREG informa
 |2021-06-10|gd-Person|Added fixed value of http://ehelse.no/fhir/CodeSystem/gd-person-identificationnumbertype to Identifier.system on foreign identifier slice definition|validation|
 |2021-06-10|gd-address-metadata|Removed errondous source element from constraint in Extension.extension:addressIsUnknown|validation|
 |2021-06-11|gd-Person-Nabo-Eksempel-fakeid.xml|Validated example for fake-id use, two errors one-identity invariant and Valueset validation iso3166|Feature 3830|
+|2021-06-11|gd-fake-identity.StructureDefinition-extension.xml|Rewrite for validation purpose|Feature 3830|
