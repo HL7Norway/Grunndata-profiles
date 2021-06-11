@@ -274,25 +274,6 @@
         <code value="date" />
       </type>
     </element>
-    <element id="Extension.extension:identifyingInformation.extension:citizenship">
-      <path value="Extension.extension.extension" />
-      <sliceName value="citizenship" />
-      <alias value="statsborgerskap" />
-      <min value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-country-code-3166-1-3" />
-      </type>
-      <mustSupport value="true" />
-      <mapping>
-        <identity value="freg" />
-        <map value="statsborgerskap" />
-      </mapping>
-    </element>
-    <element id="Extension.extension:identifyingInformation.extension:citizenship.url">
-      <path value="Extension.extension.extension.url" />
-      <fixedUri value="citizenship" />
-    </element>
     <element id="Extension.extension:identifyingInformation.extension:gender">
       <path value="Extension.extension.extension" />
       <sliceName value="gender" />
@@ -322,6 +303,25 @@
       <binding>
         <strength value="required" />
         <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-gender" />
+      </binding>
+    </element>
+    <element id="Extension.extension:identifyingInformation.extension:citizenship">
+      <path value="Extension.extension.extension" />
+      <sliceName value="citizenship" />
+      <min value="1" />
+    </element>
+    <element id="Extension.extension:identifyingInformation.extension:citizenship.url">
+      <path value="Extension.extension.extension.url" />
+      <fixedUri value="citizenship" />
+    </element>
+    <element id="Extension.extension:identifyingInformation.extension:citizenship.value[x]">
+      <path value="Extension.extension.extension.value[x]" />
+      <type>
+        <code value="code" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/iso3166-1-3" />
       </binding>
     </element>
     <element id="Extension.extension:identifyingInformation.url">
