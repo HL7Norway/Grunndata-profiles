@@ -28,3 +28,4 @@ This is a new release completing the information model according to FREG informa
 |2021-06-11|gd-Person-Nabo-Eksempel-fakeid.xml|Validated example for fake-id use, two errors one-identity invariant and Valueset validation iso3166|Feature 3830|
 |2021-06-11|gd-fake-identity.StructureDefinition-extension.xml|Rewrite for validation purpose|Feature 3830|
 |2021-06-14|GdPerson|Added identityControl extension|PBI 10357|
+|2021-06-14|GdIdentifierStatus|removed "-05" from valueset reference|Bug|
