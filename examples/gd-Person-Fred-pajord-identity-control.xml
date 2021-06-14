@@ -2,6 +2,16 @@
 	<meta>
 		<profile value="http://ehelse.no/fhir/StructureDefinition/gd-Person"/>
 	</meta>
+	<extension url="http://ehelse.no/fhir/StructureDefinition/gd-person-citizenship">
+		<extension url="code">
+			<valueCodeableConcept>
+				<coding>
+					<system value="urn:iso:std:iso:3166" />
+                    <code value="NO" />
+				</coding>
+			</valueCodeableConcept>
+		</extension>
+	</extension>
 	<extension url="http://ehelse.no/fhir/StructureDefinition/gd-person-status">
 		<extension url="fregPersonStatus">
 			<valueCode value="bosatt"/>
@@ -38,16 +48,6 @@
 			<extension url="validFrom">
 				<valueDateTime value="2019-09-05T11:17:43.399+02:00"/>
 			</extension>
-		</extension>
-	</extension>
-	<extension url="http://ehelse.no/fhir/StructureDefinition/gd-person-citizenship">
-		<extension url="code">
-			<valueCodeableConcept>
-				<coding>
-					<system value="urn:iso:std:iso:3166" />
-                    <code value="NO" />
-				</coding>
-			</valueCodeableConcept>
 		</extension>
 	</extension>
 	<identifier><!-- Fødselnummeret til brukeren -->
