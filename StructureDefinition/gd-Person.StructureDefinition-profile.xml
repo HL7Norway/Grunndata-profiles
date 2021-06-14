@@ -237,6 +237,17 @@
       </type>
       <meaningWhenMissing value="When fakeIdentity is missing from the resource the Person resource, the information describes an actual person. Only a fregIsFake value of &quot;true&quot; means the Person information describes a known fake identity." />
     </element>
+    <element id="Person.extension:identityControlStatus">
+      <path value="Person.extension" />
+      <sliceName value="identityControlStatus" />
+      <alias value="Identitetsgrunnlag" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-identity-control" />
+      </type>
+    </element>
     <element id="Person.identifier">
       <path value="Person.identifier" />
       <slicing>

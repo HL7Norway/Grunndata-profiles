@@ -24,7 +24,7 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
-      <short value="Itentity controlled by the authorities" />
+      <short value="Identity controlled by the authorities" />
       <definition value="Tells whether the identity of the person has been subject of control by the authorities.&#xD;&#xA;&#xD;&#xA;opplysninger som danner grunnlaget for, og tiltroen til, den identiteten som er registrert i Folkeregisteret" />
       <alias value="Identitetsgrunnlag" />
       <mapping>
