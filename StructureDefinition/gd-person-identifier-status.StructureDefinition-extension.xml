@@ -45,7 +45,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-identifierstatus-v05" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-identifierstatus" />
       </binding>
     </element>
   </differential>
