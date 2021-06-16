@@ -21,7 +21,7 @@ This is a new release completing the information model according to FREG informa
 |2021-05-31|GdPerson|bugfix of Person.meta.security:addressConfidentiality.system, added fixed uri for system|BUG 11440|
 |2021-06-02|gd-Person|removed active documentation concerning fake-id persons (active not set on fakeid)|Feature 3830, PBI 10481|
 |2021-06-02|gd-Person, GdFakeIdentity|Added isModifier=true to GdFakeIdentity to signify the importance of the fake identity information if present|Feature 3830, PBI 10481|
-|2021-06-09|gd-Person-Fred-pajord-identity-control.xml|Added example of gd-identity-control use|PBI 10357|
+|2021-06-09|gd-Person-Fred-pajord-identity-control.xml|Added example of gd-identity-control use (.NET validert)|PBI 10357|
 |2021-06-10|gd-person-sametingelectorrelation.CodeSystem.xml|Fixed validation error||
 |2021-06-10|gd-Person|Added fixed value of http://ehelse.no/fhir/CodeSystem/gd-person-identificationnumbertype to Identifier.system on foreign identifier slice definition|validation|
 |2021-06-10|gd-address-metadata|Removed errondous source element from constraint in Extension.extension:addressIsUnknown|validation|
@@ -30,6 +30,9 @@ This is a new release completing the information model according to FREG informa
 |2021-06-14|GdPerson|Added identityControl extension|PBI 10357|
 |2021-06-14|GdIdentifierStatus|removed "-05" from valueset reference|Bug|
 |2021-06-16|FakeIdentityIdentifyingInformationBirthDate|Added hl7 namespace to  definition|Bug|
+|2021-06-16|gd-Person-Fred-pajord-identity-control.xml|.NET validert både positivt (riktig kode) og negativt (feil kode) (JAVA validerer ikke)|PBI 10357|
+|2021-06-16|gdIdentityDocument|Added extension for idenity document information from FREG|PBI 10361|
+|2021-06-16|gd-Person-Fred-pajord-identity-document.xml|Added example person with idenity document extension|PBI 10361|
 
 Ser ut til å være utfordring med snapshot generering av profiler på profiler (profiler utledet fra no-basis) når kildekoden genereres av Forge for de utlede profilene.
 
