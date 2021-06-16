@@ -17,7 +17,7 @@
 		<value value="13116900216"/>
 	</identifier>
 	<patient>
-		<reference value="http://hapi.fhir.org/baseR4/Person/1050170"/>
+		<reference value="Person/1050170"/>
 		<identifier>
 			<system value="urn:oid:2.16.578.1.12.4.1.4.1" />
 			<value value="25436000564" />
