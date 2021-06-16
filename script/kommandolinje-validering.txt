@@ -19,7 +19,7 @@ java -jar /home/thomas/Downloads/org.hl7.fhir.validator.jar gd-RelatedPerson-exa
 java -jar C:\download\org.hl7.fhir.validator.jar c:\GitRepo\Grunndata-r4\examples\gd-Person-04021950128-version-2.xml -ig C:\GitRepo\Grunndata-r4\for-validation-gd-r4 -version 4.0.1
 java -jar "c:\users\Thomas\Downloads\org.hl7.fhir.validator-4-2-21.jar" e:\GitRepo\Grunndata-R4\examples\gd-Provenance-Create.xml -ig e:\GitRepo\Grunndata-R4\for-validation-gd-221 -version 4.0.1
 java -jar C:\Users\Thomas\Downloads\validator_cli.jar E:\GitRepo\for-validation-gd-r4\gd-Person-Fred-pajord-identity-control.xml -version 4.0 -output Fred-validation.xml -ig E:\GitRepo\for-validation-gd-r4
-
+java -jar C:\Users\Thomas\Downloads\validator_cli.jar E:\GitRepo\for-validation-gd-r4\gd-Person-Nabo-Eksempel.xml -version 4.0 -output Nabo-validation.xml -ig E:\GitRepo\for-validation-gd-r4
 
 Schema validation XMLspy
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/FHIR/R4/fhir-all-xsd/fhir-single.xsd"
