@@ -45,6 +45,20 @@
         <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-addressprotection" />
       </binding>
     </element>
+    <element id="Person.meta.security:addressConfidentiality.system">
+      <path value="Person.meta.security.system" />
+      <min value="1" />
+      <fixedUri value="http://ehelse.no/fhir/CodeSystem/gd-address-confidentiality" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Person.meta.security:addressConfidentiality.code">
+      <path value="Person.meta.security.code" />
+      <short value="graderingsnivå from FREG" />
+      <definition value="nivå av beskyttelsesgrad på informasjon&#xD;&#xA;Gyldige kodeverdier er:&#xD;&#xA;• ugradert&#xD;&#xA;• fortrolig&#xD;&#xA;• strengtFortrolig (strengt fortrolig)" />
+      <alias value="graderingsnivå" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
     <element id="Person.meta.security:addressConfidentiality.extension">
       <path value="Person.meta.security.extension" />
       <slicing>
@@ -63,20 +77,6 @@
         <code value="Extension" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata" />
       </type>
-    </element>
-    <element id="Person.meta.security:addressConfidentiality.system">
-      <path value="Person.meta.security.system" />
-      <min value="1" />
-      <fixedUri value="http://ehelse.no/fhir/CodeSystem/gd-address-confidentiality" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Person.meta.security:addressConfidentiality.code">
-      <path value="Person.meta.security.code" />
-      <short value="graderingsnivå from FREG" />
-      <definition value="nivå av beskyttelsesgrad på informasjon&#xD;&#xA;Gyldige kodeverdier er:&#xD;&#xA;• ugradert&#xD;&#xA;• fortrolig&#xD;&#xA;• strengtFortrolig (strengt fortrolig)" />
-      <alias value="graderingsnivå" />
-      <min value="1" />
-      <mustSupport value="true" />
     </element>
     <element id="Person.implicitRules">
       <path value="Person.implicitRules" />
@@ -240,12 +240,19 @@
     <element id="Person.extension:identityControlStatus">
       <path value="Person.extension" />
       <sliceName value="identityControlStatus" />
-      <alias value="Identitetsgrunnlag" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-identity-control" />
+      </type>
+    </element>
+    <element id="Person.extension:identityDocument">
+      <path value="Person.extension" />
+      <sliceName value="identityDocument" />
       <min value="0" />
       <max value="*" />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-identity-control" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-identity-document" />
       </type>
     </element>
     <element id="Person.identifier">
