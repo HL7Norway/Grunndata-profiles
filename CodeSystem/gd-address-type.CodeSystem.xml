@@ -5,7 +5,7 @@
 		<lastUpdated value="2020-05-08T00:00:00.000+00:00" />
 	</meta>
 	<url value="http://ehelse.no/fhir/CodeSystem/gd-address-type" />
-	<version value="2.3.0" />
+	<version value="3.0.0" />
 	<name value="GdAddressTypeCodeSystem" />
 	<status value="draft" />
 	<date value="2019-09-25T00:00:00.000+00:00" />
@@ -34,5 +34,9 @@
 	<concept>
 		<code value="PreferertKontaktadresse" />
 		<display value="Preferert kontaktadresse" />
+	</concept>
+	<concept>
+		<code value="KontaktadresseForDødsbo" />
+		<display value="Kontaktadresse for dødsbo" />
 	</concept>
 </CodeSystem>
