@@ -25,6 +25,8 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
+      <short value="Information concerning a person or organization that handles the residue after the person is deceased." />
+      <definition value="Information concerning a person or organization that handles the residue after the person is deceased.&#xD;&#xA;&#xD;&#xA;informasjon om hvilken person eller organisasjon som ivaretar rollen som bobestyrer, testamentfullbyrder eller fullmektig samt kontaktinformasjonen til denne&#xD;&#xA;Det vil foreligge informasjon om enten en person, en advokat eller en organisasjon.Element - found in all resources." />
       <alias value="KontaktinformasjonForDoedsbo" />
       <mapping>
         <identity value="freg" />
@@ -62,6 +64,7 @@
     <element id="Extension.extension:contactLawyer">
       <path value="Extension.extension" />
       <sliceName value="contactLawyer" />
+      <definition value="Lawyer or atourney that handles the residue&#xD;&#xA;&#xD;&#xA;person som ervervsmessig yter rettshjelp, og som kan opptre i retten på vegne av sine klienter&#xD;&#xA;Det er et norsk eller utenlandsk advokatkontor som er bobestyrer" />
       <max value="1" />
       <type>
         <code value="Extension" />

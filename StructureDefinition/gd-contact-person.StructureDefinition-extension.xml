@@ -24,6 +24,8 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
+      <short value="An identified individual handles the residure" />
+      <definition value="An identified individual handles the residure&#xD;&#xA;&#xD;&#xA;individ, enkeltmenneske&#xD;&#xA;Det er en norsk eller utenlandsk privatperson som tar hånd om boet.&#xD;&#xA;En person kan enten identifiseres med sikkerhet ved fødsels- eller d-nummer, eller med mindre sikkerhet ved navn og/eller fødselsdato." />
       <alias value="PersonSomKontakt" />
       <mapping>
         <identity value="freg" />
@@ -80,9 +82,9 @@
         <code value="date" />
       </type>
     </element>
-    <element id="Extension.extension:name">
+    <element id="Extension.extension:personName">
       <path value="Extension.extension" />
-      <sliceName value="name" />
+      <sliceName value="personName" />
       <alias value="personnavn" />
       <max value="1" />
       <mapping>
@@ -90,11 +92,11 @@
         <map value="personnavn" />
       </mapping>
     </element>
-    <element id="Extension.extension:name.url">
+    <element id="Extension.extension:personName.url">
       <path value="Extension.extension.url" />
-      <fixedUri value="name" />
+      <fixedUri value="personName" />
     </element>
-    <element id="Extension.extension:name.value[x]">
+    <element id="Extension.extension:personName.value[x]">
       <path value="Extension.extension.value[x]" />
       <type>
         <code value="HumanName" />
@@ -111,36 +113,36 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Extension.extension:name.value[x].extension:middlename">
+    <element id="Extension.extension:personName.value[x].extension:middlename">
       <path value="Extension.extension.value[x].extension" />
       <sliceName value="middlename" />
       <mustSupport value="true" />
     </element>
-    <element id="Extension.extension:name.value[x].use">
+    <element id="Extension.extension:personName.value[x].use">
       <path value="Extension.extension.value[x].use" />
       <max value="0" />
     </element>
-    <element id="Extension.extension:name.value[x].text">
+    <element id="Extension.extension:personName.value[x].text">
       <path value="Extension.extension.value[x].text" />
       <max value="0" />
     </element>
-    <element id="Extension.extension:name.value[x].family">
+    <element id="Extension.extension:personName.value[x].family">
       <path value="Extension.extension.value[x].family" />
       <mustSupport value="true" />
     </element>
-    <element id="Extension.extension:name.value[x].given">
+    <element id="Extension.extension:personName.value[x].given">
       <path value="Extension.extension.value[x].given" />
       <mustSupport value="true" />
     </element>
-    <element id="Extension.extension:name.value[x].prefix">
+    <element id="Extension.extension:personName.value[x].prefix">
       <path value="Extension.extension.value[x].prefix" />
       <max value="0" />
     </element>
-    <element id="Extension.extension:name.value[x].suffix">
+    <element id="Extension.extension:personName.value[x].suffix">
       <path value="Extension.extension.value[x].suffix" />
       <max value="0" />
     </element>
-    <element id="Extension.extension:name.value[x].period">
+    <element id="Extension.extension:personName.value[x].period">
       <path value="Extension.extension.value[x].period" />
       <max value="0" />
     </element>

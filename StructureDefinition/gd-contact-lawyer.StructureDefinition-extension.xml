@@ -6,11 +6,16 @@
   <name value="GdContactLawyer" />
   <status value="draft" />
   <date value="2021-06-17" />
+  <description value="Det er en advokat som er kontaktperson og entiteten inneholder identifiserende informasjon om denne og advokatkontoret." />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="rim" />
     <uri value="http://hl7.org/v3" />
     <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="freg" />
+    <name value="AdvokatSomKontakt" />
   </mapping>
   <kind value="complex-type" />
   <abstract value="false" />
@@ -24,6 +29,8 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
+      <short value="Lawyer or atourney that handles the residue" />
+      <definition value="Lawyer or atourney that handles the residue&#xD;&#xA;&#xD;&#xA;person som ervervsmessig yter rettshjelp, og som kan opptre i retten på vegne av sine klienter&#xD;&#xA;Det er et norsk eller utenlandsk advokatkontor som er bobestyrer" />
       <alias value="AdvokatSomKontakt" />
       <mapping>
         <identity value="freg" />
@@ -43,6 +50,8 @@
     <element id="Extension.extension:organizationName">
       <path value="Extension.extension" />
       <sliceName value="organizationName" />
+      <short value="name of the law firm" />
+      <definition value="Name of the law firm&#xD;&#xA;&#xD;&#xA;navn på organisasjon&#xD;&#xA;Navnet til advokatkontoret. Det kan være en utenlandsk advokat." />
       <alias value="organisasjonsnavn" />
       <max value="1" />
       <mapping>
@@ -60,9 +69,11 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Extension.extension:name">
+    <element id="Extension.extension:personName">
       <path value="Extension.extension" />
-      <sliceName value="name" />
+      <sliceName value="personName" />
+      <short value="name of the lawyer" />
+      <definition value="name of the lawyer&#xD;&#xA;&#xD;&#xA;navn på person som består av fornavn og ett enkelt eller dobbelt etternavn og kan i tillegg bestå av mellomnavn&#xD;&#xA;Navnet til advokaten. Se 5.26.2" />
       <alias value="personnavn" />
       <min value="1" />
       <max value="1" />
@@ -71,11 +82,11 @@
         <map value="personnavn" />
       </mapping>
     </element>
-    <element id="Extension.extension:name.url">
+    <element id="Extension.extension:personName.url">
       <path value="Extension.extension.url" />
-      <fixedUri value="name" />
+      <fixedUri value="personName" />
     </element>
-    <element id="Extension.extension:name.value[x]">
+    <element id="Extension.extension:personName.value[x]">
       <path value="Extension.extension.value[x]" />
       <type>
         <code value="HumanName" />
@@ -92,43 +103,45 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Extension.extension:name.value[x].extension:middlename">
+    <element id="Extension.extension:personName.value[x].extension:middlename">
       <path value="Extension.extension.value[x].extension" />
       <sliceName value="middlename" />
       <mustSupport value="true" />
     </element>
-    <element id="Extension.extension:name.value[x].use">
+    <element id="Extension.extension:personName.value[x].use">
       <path value="Extension.extension.value[x].use" />
       <max value="0" />
     </element>
-    <element id="Extension.extension:name.value[x].text">
+    <element id="Extension.extension:personName.value[x].text">
       <path value="Extension.extension.value[x].text" />
       <max value="0" />
     </element>
-    <element id="Extension.extension:name.value[x].family">
+    <element id="Extension.extension:personName.value[x].family">
       <path value="Extension.extension.value[x].family" />
       <mustSupport value="true" />
     </element>
-    <element id="Extension.extension:name.value[x].given">
+    <element id="Extension.extension:personName.value[x].given">
       <path value="Extension.extension.value[x].given" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Extension.extension:name.value[x].prefix">
+    <element id="Extension.extension:personName.value[x].prefix">
       <path value="Extension.extension.value[x].prefix" />
       <max value="0" />
     </element>
-    <element id="Extension.extension:name.value[x].suffix">
+    <element id="Extension.extension:personName.value[x].suffix">
       <path value="Extension.extension.value[x].suffix" />
       <max value="0" />
     </element>
-    <element id="Extension.extension:name.value[x].period">
+    <element id="Extension.extension:personName.value[x].period">
       <path value="Extension.extension.value[x].period" />
       <max value="0" />
     </element>
     <element id="Extension.extension:organizationIdentifier">
       <path value="Extension.extension" />
       <sliceName value="organizationIdentifier" />
+      <short value="organisasjonsnummeret of a Norwegian law firm" />
+      <definition value="organisasjonsnummeret of a Norwegian law firm&#xD;&#xA;&#xD;&#xA;organisasjonsnummer brukes for å identifisere juridiske personer (enheter) i Norge, og tildeles ved registrering i Enhetsregisteret. Organisasjonsnummeret består av ni siffer og starter på tallet 8 eller 9&#xD;&#xA;Organisasjonsnummeret til det norske advokatkontoret." />
       <alias value="organisasjonsnummer" />
       <max value="1" />
       <mapping>
