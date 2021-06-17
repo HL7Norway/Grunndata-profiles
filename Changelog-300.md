@@ -33,9 +33,11 @@ This is a new release completing the information model according to FREG informa
 |2021-06-16|gd-Person-Fred-pajord-identity-control.xml|.NET validert både positivt (riktig kode) og negativt (feil kode) (JAVA validerer ikke)|PBI 10357|
 |2021-06-16|gdIdentityDocument|Added extension for idenity document information from FREG|PBI 10361|
 |2021-06-16|gd-Person-Fred-pajord-identity-document.xml|Added example person with idenity document extension (Validert mot profil .NET)|PBI 10361|
-|2021-06-16|Design decision for contact information deceased|Add another address type, and record everything else in the extension|PBI 10358|
-|2021-06-16|GdAddressTypeCodeSystem|Added code `KontaktadresseForDødsbo` to the CodeSystem|PBI 10358|
-contact-lawyer, contact organization and contact person extensions added
+|2021-06-16|Design decision for contact information deceased|Add the contact address as a no-basis-address|PBI 10358|
+|2021-06-17|GdResidueContact|Added (validated)|PBI 10358|
+|2021-06-17|GdContactLawyer|Added (validated)|PBI 10358|
+|2021-06-17|GdContactPerson|Added (validated)|PBI 10358|
+|2021-06-17|GdContactOrganization|Added (validated)|PBI 10358|
 
 Ser ut til å være utfordring med snapshot generering av profiler på profiler (profiler utledet fra no-basis) når kildekoden genereres av Forge for de utlede profilene.
 

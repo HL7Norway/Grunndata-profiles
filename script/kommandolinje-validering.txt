@@ -13,6 +13,7 @@ java -jar /home/thomas/Downloads/org.hl7.fhir.validator.jar /media/sf_GitRepo/fo
 java -jar c:\download\validator_cli.jar c:\GitRepo\Grunndata-R4\StructureDefinition\*.xml -version 4.0.0
 java -jar c:\users\Thomas\Downloads\validator_cli.jar E:\GitRepo\for-validation-no-basis\*.xml -version 4.0.1 -output validation.xml -ig e:\GitRepo\for-validation-no-basis
 java -jar C:\Users\Thomas\Downloads\validator_cli.jar E:\GitRepo\for-validation-gd-r400\*.xml -version 4.0.1 -output validation-400.xml
+java -jar C:\Users\Thomas\Downloads\validator_cli.jar E:\GitRepo\for-validation-gd-r401\*.xml -version 4.0.1 -output validation-401.xml
 
 Deretter validere eksempler med katalogen som "ig":
 java -jar /home/thomas/Downloads/org.hl7.fhir.validator.jar gd-RelatedPerson-example.xml -ig /media/sf_GitRepo/for-validation-gd-r4 -version 4.0.0

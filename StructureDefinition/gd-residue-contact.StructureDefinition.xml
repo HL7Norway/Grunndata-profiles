@@ -75,23 +75,95 @@
     <element id="Extension.extension:attestedDate">
       <path value="Extension.extension" />
       <sliceName value="attestedDate" />
+      <alias value="attestutstedelsesdato" />
+      <min value="1" />
+      <max value="1" />
+      <mapping>
+        <identity value="freg" />
+        <map value="attestutstedelsesdato" />
+      </mapping>
     </element>
     <element id="Extension.extension:attestedDate.url">
       <path value="Extension.extension.url" />
       <fixedUri value="attestedDate" />
     </element>
-    <element id="Extension.extension:skifteform">
+    <element id="Extension.extension:attestedDate.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="date" />
+      </type>
+    </element>
+    <element id="Extension.extension:formOfTransfer">
       <path value="Extension.extension" />
-      <sliceName value="skifteform" />
+      <sliceName value="formOfTransfer" />
       <alias value="skifteform" />
+      <min value="1" />
+      <max value="1" />
       <mapping>
         <identity value="freg" />
         <map value="skifteform" />
       </mapping>
     </element>
-    <element id="Extension.extension:skifteform.url">
+    <element id="Extension.extension:formOfTransfer.url">
       <path value="Extension.extension.url" />
-      <fixedUri value="skifteform" />
+      <fixedUri value="formOfTransfer" />
+    </element>
+    <element id="Extension.extension:address">
+      <path value="Extension.extension" />
+      <sliceName value="address" />
+      <alias value="adresse" />
+      <min value="1" />
+      <max value="1" />
+      <mapping>
+        <identity value="freg" />
+        <map value="adresse" />
+      </mapping>
+    </element>
+    <element id="Extension.extension:address.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="address" />
+    </element>
+    <element id="Extension.extension:address.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="Address" />
+      </type>
+    </element>
+    <element id="Extension.extension:address.value[x].use">
+      <path value="Extension.extension.value[x].use" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:address.value[x].type">
+      <path value="Extension.extension.value[x].type" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:address.value[x].text">
+      <path value="Extension.extension.value[x].text" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:address.value[x].line">
+      <path value="Extension.extension.value[x].line" />
+      <min value="1" />
+    </element>
+    <element id="Extension.extension:address.value[x].city">
+      <path value="Extension.extension.value[x].city" />
+      <min value="1" />
+    </element>
+    <element id="Extension.extension:address.value[x].district">
+      <path value="Extension.extension.value[x].district" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:address.value[x].state">
+      <path value="Extension.extension.value[x].state" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:address.value[x].postalCode">
+      <path value="Extension.extension.value[x].postalCode" />
+      <min value="1" />
+    </element>
+    <element id="Extension.extension:address.value[x].period">
+      <path value="Extension.extension.value[x].period" />
+      <max value="0" />
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />

@@ -35,8 +35,4 @@
 		<code value="PreferertKontaktadresse" />
 		<display value="Preferert kontaktadresse" />
 	</concept>
-	<concept>
-		<code value="KontaktadresseForDødsbo" />
-		<display value="Kontaktadresse for dødsbo" />
-	</concept>
 </CodeSystem>
