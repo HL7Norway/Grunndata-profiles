@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-contact-organization" />
-  <url value="http://example.org/fhir/StructureDefinition/gd-contact-organization" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/gd-contact-organization" />
+  <version value="3.0.0" />
   <name value="GdContactOrganization" />
   <status value="draft" />
+  <date value="2021-06-17" />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="rim" />
@@ -20,9 +22,59 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <alias value="OrganisasjonSomKontakt" />
+      <mapping>
+        <identity value="freg" />
+        <map value="OrganisasjonSomKontakt" />
+      </mapping>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:contactPerson">
+      <path value="Extension.extension" />
+      <sliceName value="contactPerson" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:contactPerson.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="contactPerson" />
+    </element>
+    <element id="Extension.extension:organizationName">
+      <path value="Extension.extension" />
+      <sliceName value="organizationName" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:organizationName.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="organizationName" />
+    </element>
+    <element id="Extension.extension:organizationIdentifier">
+      <path value="Extension.extension" />
+      <sliceName value="organizationIdentifier" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:organizationIdentifier.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="organizationIdentifier" />
+    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://example.org/fhir/StructureDefinition/gd-contact-organization" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/gd-contact-organization" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
     </element>
   </differential>
 </StructureDefinition>

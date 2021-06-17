@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="gd-residue-contact" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/gd-residue-contact" />
+  <version value="3.0.0" />
+  <name value="GdResidueContact" />
+  <status value="draft" />
+  <date value="2021-06-17" />
+  <description value="Information concerning a person or organization that handles the residue after the person is deceased.&#xD;&#xA;&#xD;&#xA;informasjon om hvilken person eller organisasjon som ivaretar rollen som bobestyrer, testamentfullbyrder eller fullmektig samt kontaktinformasjonen til denne&#xD;&#xA;Det vil foreligge informasjon om enten en person, en advokat eller en organisasjon." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Person" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <alias value="KontaktinformasjonForDoedsbo" />
+      <mapping>
+        <identity value="freg" />
+        <map value="KontaktinformasjonForDoedsbo" />
+      </mapping>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:contactOrganization">
+      <path value="Extension.extension" />
+      <sliceName value="contactOrganization" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:contactOrganization.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="contactOrganization" />
+    </element>
+    <element id="Extension.extension:contactPerson">
+      <path value="Extension.extension" />
+      <sliceName value="contactPerson" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:contactPerson.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="contactPerson" />
+    </element>
+    <element id="Extension.extension:contactLawyer">
+      <path value="Extension.extension" />
+      <sliceName value="contactLawyer" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-contact-lawyer" />
+      </type>
+    </element>
+    <element id="Extension.extension:contactLawyer.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="contactLawyer" />
+    </element>
+    <element id="Extension.extension:attestedDate">
+      <path value="Extension.extension" />
+      <sliceName value="attestedDate" />
+    </element>
+    <element id="Extension.extension:attestedDate.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="attestedDate" />
+    </element>
+    <element id="Extension.extension:skifteform">
+      <path value="Extension.extension" />
+      <sliceName value="skifteform" />
+      <alias value="skifteform" />
+      <mapping>
+        <identity value="freg" />
+        <map value="skifteform" />
+      </mapping>
+    </element>
+    <element id="Extension.extension:skifteform.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="skifteform" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/gd-residue-contact" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

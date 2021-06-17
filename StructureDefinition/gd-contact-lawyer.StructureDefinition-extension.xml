@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-contact-lawyer" />
-  <url value="http://example.org/fhir/StructureDefinition/gd-contact-lawyer" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/gd-contact-lawyer" />
+  <version value="3.0.0" />
   <name value="GdContactLawyer" />
   <status value="draft" />
+  <date value="2021-06-17" />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="rim" />
@@ -20,9 +22,137 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <alias value="AdvokatSomKontakt" />
+      <mapping>
+        <identity value="freg" />
+        <map value="AdvokatSomKontakt" />
+      </mapping>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:organizationName">
+      <path value="Extension.extension" />
+      <sliceName value="organizationName" />
+      <alias value="organisasjonsnavn" />
+      <max value="1" />
+      <mapping>
+        <identity value="freg" />
+        <map value="organisasjonsnavn" />
+      </mapping>
+    </element>
+    <element id="Extension.extension:organizationName.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="organizationName" />
+    </element>
+    <element id="Extension.extension:organizationName.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.extension:name">
+      <path value="Extension.extension" />
+      <sliceName value="name" />
+      <alias value="personnavn" />
+      <min value="1" />
+      <max value="1" />
+      <mapping>
+        <identity value="freg" />
+        <map value="personnavn" />
+      </mapping>
+    </element>
+    <element id="Extension.extension:name.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="name" />
+    </element>
+    <element id="Extension.extension:name.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="HumanName" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-HumanName" />
+      </type>
+    </element>
+    <element id="Extension.extension:name.value[x].extension">
+      <path value="Extension.extension.value[x].extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:name.value[x].extension:middlename">
+      <path value="Extension.extension.value[x].extension" />
+      <sliceName value="middlename" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Extension.extension:name.value[x].use">
+      <path value="Extension.extension.value[x].use" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:name.value[x].text">
+      <path value="Extension.extension.value[x].text" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:name.value[x].family">
+      <path value="Extension.extension.value[x].family" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Extension.extension:name.value[x].given">
+      <path value="Extension.extension.value[x].given" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Extension.extension:name.value[x].prefix">
+      <path value="Extension.extension.value[x].prefix" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:name.value[x].suffix">
+      <path value="Extension.extension.value[x].suffix" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:name.value[x].period">
+      <path value="Extension.extension.value[x].period" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:organizationIdentifier">
+      <path value="Extension.extension" />
+      <sliceName value="organizationIdentifier" />
+      <alias value="organisasjonsnummer" />
+      <max value="1" />
+      <mapping>
+        <identity value="freg" />
+        <map value="organisasjonsnummer" />
+      </mapping>
+    </element>
+    <element id="Extension.extension:organizationIdentifier.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="organizationIdentifier" />
+    </element>
+    <element id="Extension.extension:organizationIdentifier.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://example.org/fhir/StructureDefinition/gd-contact-lawyer" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/gd-contact-lawyer" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
     </element>
   </differential>
 </StructureDefinition>
