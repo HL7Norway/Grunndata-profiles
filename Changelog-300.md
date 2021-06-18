@@ -43,6 +43,7 @@ This is a new release completing the information model according to FREG informa
 |2021-06-18|gd-person-formoftransfer.ValueSet.xml|New Valueset|PBI 10358|
 |2021-06-18|gd-person-formoftransfer.CodeSystem.xml|New CodeSystem|PBI 10358|
 |2021-06-18|GdPerson|Added residueContact element|PBI 10358|
+|2021-06-18|gd-Person-Fred-pajord-residue-contact.xml|Added example (validated Java)|PBI 10358|
 
 Ser ut til å være utfordring med snapshot generering av profiler på profiler (profiler utledet fra no-basis) når kildekoden genereres av Forge for de utlede profilene.
 
