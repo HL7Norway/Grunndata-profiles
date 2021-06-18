@@ -31,7 +31,7 @@
 			</valueCodeableConcept>
 		</extension>
 	</extension>
-	<extension url="http://ehelse.no/fhir/StructureDefinition/gd-person-residue-contact">
+	<extension url="http://ehelse.no/fhir/StructureDefinition/gd-residue-contact">
 		<extension url="attestedDate">
 			<valueDate value="2019-05-03"/>
 		</extension>
@@ -50,6 +50,22 @@
 			</extension>
 			<extension url="country">
 				<valueCode value="NOR"/>
+			</extension>
+		</extension>
+		<extension url="http://ehelse.no/fhir/StructureDefinition/gd-contact-person">
+			<extension url="personIdentifier">
+				<valueString value="123456789"/>
+			</extension>
+			<extension url="birthDate">
+				<valueDate value="1985-05-03"/>
+			</extension>
+			<extension url="personName">
+				<extension url="family">
+					<valueString value="etternavn"/>
+				</extension>
+				<extension url="given">
+					<valueString value="fornavn"/>
+				</extension>
 			</extension>
 		</extension>
 	</extension>
