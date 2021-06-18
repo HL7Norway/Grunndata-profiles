@@ -6,7 +6,7 @@
   <name value="GdContactLawyer" />
   <status value="draft" />
   <date value="2021-06-17" />
-  <description value="Det er en advokat som er kontaktperson og entiteten inneholder identifiserende informasjon om denne og advokatkontoret." />
+  <description value="A lawyer is the contact, the resource contains identifying information about the lawyer and the law firm&#xD;&#xA;&#xD;&#xA;Det er en advokat som er kontaktperson og entiteten inneholder identifiserende informasjon om denne og advokatkontoret." />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="rim" />
@@ -54,6 +54,7 @@
       <definition value="Name of the law firm&#xD;&#xA;&#xD;&#xA;navn på organisasjon&#xD;&#xA;Navnet til advokatkontoret. Det kan være en utenlandsk advokat." />
       <alias value="organisasjonsnavn" />
       <max value="1" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="freg" />
         <map value="organisasjonsnavn" />
@@ -77,6 +78,7 @@
       <alias value="personnavn" />
       <min value="1" />
       <max value="1" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="freg" />
         <map value="personnavn" />
@@ -93,7 +95,7 @@
         <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-HumanName" />
       </type>
     </element>
-    <element id="Extension.extension:name.value[x].extension">
+    <element id="Extension.extension:personName.value[x].extension">
       <path value="Extension.extension.value[x].extension" />
       <slicing>
         <discriminator>
@@ -118,10 +120,12 @@
     </element>
     <element id="Extension.extension:personName.value[x].family">
       <path value="Extension.extension.value[x].family" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Extension.extension:personName.value[x].given">
       <path value="Extension.extension.value[x].given" />
+      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -144,6 +148,7 @@
       <definition value="organisasjonsnummeret of a Norwegian law firm&#xD;&#xA;&#xD;&#xA;organisasjonsnummer brukes for å identifisere juridiske personer (enheter) i Norge, og tildeles ved registrering i Enhetsregisteret. Organisasjonsnummeret består av ni siffer og starter på tallet 8 eller 9&#xD;&#xA;Organisasjonsnummeret til det norske advokatkontoret." />
       <alias value="organisasjonsnummer" />
       <max value="1" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="freg" />
         <map value="organisasjonsnummer" />

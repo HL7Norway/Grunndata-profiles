@@ -6,11 +6,16 @@
   <name value="GdContactOrganization" />
   <status value="draft" />
   <date value="2021-06-17" />
+  <description value="A person in an Organization is the contact, the resource contains identifying information regarding the person and organization" />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="rim" />
     <uri value="http://hl7.org/v3" />
     <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="freg" />
+    <name value="OrganisasjonSomKontakt" />
   </mapping>
   <kind value="complex-type" />
   <abstract value="false" />
@@ -24,6 +29,8 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
+      <short value="Organization that handles the residue" />
+      <definition value="Organization that handles the residue&#xD;&#xA;&#xD;&#xA;Det er en norsk eller utenlandsk organisasjon som tar hånd om boet.&#xD;&#xA;mennesker som arbeider sammen og utfører oppgaver for å oppnå et mer eller mindre klart definert mål" />
       <alias value="OrganisasjonSomKontakt" />
       <mapping>
         <identity value="freg" />
@@ -43,30 +50,119 @@
     <element id="Extension.extension:contactPerson">
       <path value="Extension.extension" />
       <sliceName value="contactPerson" />
+      <short value="Name of the contact in the organization" />
+      <definition value="Name of the contact in the organization&#xD;&#xA;&#xD;&#xA;navn på person som består av fornavn og ett enkelt eller dobbelt etternavn og kan i tillegg bestå av mellomnavn&#xD;&#xA;Navnet til kontaktpersonen i organisasjonen. Se 5.26.2" />
+      <alias value="kontaktpersonnavn" />
       <max value="1" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="kontaktpersonnavn" />
+      </mapping>
     </element>
     <element id="Extension.extension:contactPerson.url">
       <path value="Extension.extension.url" />
       <fixedUri value="contactPerson" />
     </element>
+    <element id="Extension.extension:contactPerson.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="HumanName" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-HumanName" />
+      </type>
+    </element>
+    <element id="Extension.extension:contactPerson.value[x].extension">
+      <path value="Extension.extension.value[x].extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:contactPerson.value[x].extension:middlename">
+      <path value="Extension.extension.value[x].extension" />
+      <sliceName value="middlename" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Extension.extension:contactPerson.value[x].use">
+      <path value="Extension.extension.value[x].use" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:contactPerson.value[x].text">
+      <path value="Extension.extension.value[x].text" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:contactPerson.value[x].family">
+      <path value="Extension.extension.value[x].family" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Extension.extension:contactPerson.value[x].given">
+      <path value="Extension.extension.value[x].given" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Extension.extension:contactPerson.value[x].prefix">
+      <path value="Extension.extension.value[x].prefix" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:contactPerson.value[x].suffix">
+      <path value="Extension.extension.value[x].suffix" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:contactPerson.value[x].period">
+      <path value="Extension.extension.value[x].period" />
+      <max value="0" />
+    </element>
     <element id="Extension.extension:organizationName">
       <path value="Extension.extension" />
       <sliceName value="organizationName" />
+      <short value="Name of organization" />
+      <definition value="Name of organization&#xD;&#xA;&#xD;&#xA;navn på organisasjon&#xD;&#xA;Navnet til organisasjonen. Det kan være en utenlandsk organisasjon." />
+      <alias value="organisasjonsnavn" />
       <min value="1" />
       <max value="1" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="organisasjonsnavn" />
+      </mapping>
     </element>
     <element id="Extension.extension:organizationName.url">
       <path value="Extension.extension.url" />
       <fixedUri value="organizationName" />
     </element>
+    <element id="Extension.extension:organizationName.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
     <element id="Extension.extension:organizationIdentifier">
       <path value="Extension.extension" />
       <sliceName value="organizationIdentifier" />
+      <short value="Organization identifier from Enhetsregisteret" />
+      <definition value="Organization identifier from Enhetsregisteret&#xD;&#xA;&#xD;&#xA;organisasjonsnummer brukes for å identifisere juridiske personer (enheter) i Norge, og tildeles ved registrering i Enhetsregisteret. Organisasjonsnummeret består av ni siffer og starter på tallet 8 eller 9" />
+      <alias value="organisasjonsnummer" />
       <max value="1" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="organisasjonsnummer" />
+      </mapping>
     </element>
     <element id="Extension.extension:organizationIdentifier.url">
       <path value="Extension.extension.url" />
       <fixedUri value="organizationIdentifier" />
+    </element>
+    <element id="Extension.extension:organizationIdentifier.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />

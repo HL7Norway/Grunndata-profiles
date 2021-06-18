@@ -6,6 +6,7 @@
   <name value="GdContactPerson" />
   <status value="draft" />
   <date value="2021-06-17" />
+  <description value="An identified individual is the contact, the resource contains identifying information regarding the person&#xD;&#xA;&#xD;&#xA;Det er en privatperson som er kontaktperson og entiteten inneholder enten en folkeregisteridentifikator eller identifiserende informasjon som fødselsdato og navn" />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="rim" />
@@ -25,7 +26,7 @@
     <element id="Extension">
       <path value="Extension" />
       <short value="An identified individual handles the residure" />
-      <definition value="An identified individual handles the residure&#xD;&#xA;&#xD;&#xA;individ, enkeltmenneske&#xD;&#xA;Det er en norsk eller utenlandsk privatperson som tar hånd om boet.&#xD;&#xA;En person kan enten identifiseres med sikkerhet ved fødsels- eller d-nummer, eller med mindre sikkerhet ved navn og/eller fødselsdato." />
+      <definition value="An identified individual handles the residure&#xD;&#xA;&#xD;&#xA;Det er en norsk eller utenlandsk privatperson som tar hånd om boet.&#xD;&#xA;individ, enkeltmenneske&#xD;&#xA;En person kan enten identifiseres med sikkerhet ved fødsels- eller d-nummer, eller med mindre sikkerhet ved navn og/eller fødselsdato." />
       <alias value="PersonSomKontakt" />
       <mapping>
         <identity value="freg" />
@@ -45,8 +46,11 @@
     <element id="Extension.extension:personIdentifier">
       <path value="Extension.extension" />
       <sliceName value="personIdentifier" />
+      <short value="Identifier for the person (fødselsnummer eller d-nummer)" />
+      <definition value="Identifier for the person (fødselsnummer eller d-nummer)&#xD;&#xA;&#xD;&#xA;Fødselsnummer: personidentifikasjonsnummer for de som er, eller har vært, bosatt i Norge, samt personer som er &quot;ikke bosatt&quot;&#xD;&#xA;d-nummer: identifikasjonsnummer som tildeles personer med midlertidig tilknytning til Norge, det vil si som ikke er bosatt i Norge&#xD;&#xA;Folkeregisteridentifikatoren til kontaktpersonen hvis denne finnes i Folkeregisteret." />
       <alias value="foedselsEllerDNummer" />
       <max value="1" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="freg" />
         <map value="foedselsEllerDNummer" />
@@ -65,8 +69,11 @@
     <element id="Extension.extension:birthDate">
       <path value="Extension.extension" />
       <sliceName value="birthDate" />
+      <short value="birth date of the person" />
+      <definition value="birth date of the person" />
       <alias value="foedselsdato" />
       <max value="1" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="freg" />
         <map value="foedselsdato" />
@@ -85,8 +92,11 @@
     <element id="Extension.extension:personName">
       <path value="Extension.extension" />
       <sliceName value="personName" />
+      <short value="Name of the person" />
+      <definition value="Name of the person&#xD;&#xA;&#xD;&#xA;Kontaktpersonenes navn. Se 5.26.2&#xD;&#xA;navn på person som består av fornavn og ett enkelt eller dobbelt etternavn og kan i tillegg bestå av mellomnavn" />
       <alias value="personnavn" />
       <max value="1" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="freg" />
         <map value="personnavn" />
@@ -103,7 +113,7 @@
         <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-HumanName" />
       </type>
     </element>
-    <element id="Extension.extension:name.value[x].extension">
+    <element id="Extension.extension:personName.value[x].extension">
       <path value="Extension.extension.value[x].extension" />
       <slicing>
         <discriminator>
@@ -128,10 +138,13 @@
     </element>
     <element id="Extension.extension:personName.value[x].family">
       <path value="Extension.extension.value[x].family" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Extension.extension:personName.value[x].given">
       <path value="Extension.extension.value[x].given" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Extension.extension:personName.value[x].prefix">
