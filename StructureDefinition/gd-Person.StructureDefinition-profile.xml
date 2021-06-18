@@ -255,6 +255,30 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="Person.extension:residueContact">
+      <path value="Person.extension" />
+      <sliceName value="residueContact" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-residue-contact" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Person.extension:residueContact.extension">
+      <path value="Person.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Person.extension:residueContact.extension:fregMetadata">
+      <path value="Person.extension.extension" />
+      <sliceName value="fregMetadata" />
+      <mustSupport value="true" />
+    </element>
     <element id="Person.identifier">
       <path value="Person.identifier" />
       <slicing>
