@@ -7,7 +7,7 @@
   <status value="draft" />
   <date value="2019-10-16" />
   <description value="Informasjon om Vergemaal eller fremtidsfullmakt fra FREG.&#xD;&#xA;&#xD;&#xA;vergemål: forpliktelse og myndighet som en verge har til å handle på vegne av en person som mangler evnen til selv å dra omsorg for seg og det vedkommende eier&#xD;&#xA;representant for enslig mindreårig asylsøker: voksen person som skal være i foreldrenes sted og ivareta et barn som kommer alene til Norge og søker om beskyttelse (asyl)&#xD;&#xA;stadfestet fremtidsfullmakt: en fremtidsfullmakt som er stadfestet til å trå i kraft fra et ikrafttredelsestidspunkt&#xD;&#xA;Folkeregisteret skal ha løsning for å motta opplysninger om omsorgsovertagelse og vergemål fra relevante offentlige virksomheter, samt videre distribuere til aktører med tillatelse.&#xD;&#xA;Folkeregisteret skal gjøre det enklere enn i dag å identifisere relasjoner mellom verge og person som har fått oppnevnt verge.&#xD;&#xA;Egenskapen gyldighetstidspunkt angir ikrafttredelsestidspunktet (vedtaksdato i meldingen fra Statens Sivilrettsforvaltning).&#xD;&#xA;Egenskapen opphørstidspunkt angir når vergemålet ble opphørt/skal opphøres. &#xD;&#xA;Folkeregisteret benytter verge og vergehaver som felles overordnet begrepsnavn ifm. vergemål, representasjon for enslig mindreårig flyktning og fremtidsfullmakt selv om begrepsnavnene i de to sistnevnte er representant – enslig mindreårig flyktning og fullmektig – fullmaktsgiver." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>

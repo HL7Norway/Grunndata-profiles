@@ -32,7 +32,18 @@ This is a new release completing the information model according to FREG informa
 |2021-06-16|FakeIdentityIdentifyingInformationBirthDate|Added hl7 namespace to  definition|Bug|
 |2021-06-16|gd-Person-Fred-pajord-identity-control.xml|.NET validert både positivt (riktig kode) og negativt (feil kode) (JAVA validerer ikke)|PBI 10357|
 |2021-06-16|gdIdentityDocument|Added extension for idenity document information from FREG|PBI 10361|
-|2021-06-16|gd-Person-Fred-pajord-identity-document.xml|Added example person with idenity document extension|PBI 10361|
+|2021-06-16|gd-Person-Fred-pajord-identity-document.xml|Added example person with idenity document extension (Validert mot profil .NET)|PBI 10361|
+|2021-06-16|Design decision for contact information deceased|Add the contact address as a no-basis-address|PBI 10358|
+|2021-06-17|GdResidueContact|Added (validated)|PBI 10358|
+|2021-06-17|GdContactLawyer|Added (validated), added documentation of elements|PBI 10358|
+|2021-06-17|GdContactPerson|Added (validated)|PBI 10358|
+|2021-06-17|GdContactOrganization|Added (validated)|PBI 10358|
+|2021-06-17|Updated all Conformance resources to FHIR 4.0.1|Validated Java 0 errors|Feature 6323|
+|2021-06-18|GdResidueContact|Updated documentation of all new extensions|PBI 10358|
+|2021-06-18|gd-person-formoftransfer.ValueSet.xml|New Valueset|PBI 10358|
+|2021-06-18|gd-person-formoftransfer.CodeSystem.xml|New CodeSystem|PBI 10358|
+|2021-06-18|GdPerson|Added residueContact element|PBI 10358|
+|2021-06-18|gd-Person-Fred-pajord-residue-contact.xml|Added example (validated Java)|PBI 10358|
 
 Ser ut til å være utfordring med snapshot generering av profiler på profiler (profiler utledet fra no-basis) når kildekoden genereres av Forge for de utlede profilene.
 

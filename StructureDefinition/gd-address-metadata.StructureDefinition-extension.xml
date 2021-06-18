@@ -7,7 +7,7 @@
   <status value="draft" />
   <date value="2019-09-25" />
   <description value="Describes address specific metadata  about the address resources available from the the central person index (folkeregisteret, freg), all address resources containing metadata from folkeregisteret will include gd-address-metadata" />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
@@ -277,6 +277,7 @@
         <severity value="error" />
         <human value="addressIsUnknown must have fregAddressType of AdressenErUkjent" />
         <expression value="addressIsUnknown.value() and (fregAddressContentType.Value()=AdressenErUkjent)" />
+        <source value="http://ehelse.no/fhir/StructureDefinition/gd-address-metadata" />
       </constraint>
       <mapping>
         <identity value="freg" />

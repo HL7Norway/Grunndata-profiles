@@ -9,7 +9,7 @@
   <date value="2019-10-16" />
   <description value="fregmetadata (registermetadata) describes metadata about resources available from the norwegian person index (folkeregisteret, freg), all resources containing metadata from folkeregisteret will include registermetadata" />
   <purpose value="registermetadata and registermetadataMedGyldighet from FREG" />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="freg" />
     <name value="registermetadata" />
