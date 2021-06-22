@@ -38,6 +38,10 @@
       <definition value="informasjon om gradering av adresseinformasjon for personer iht. Beskyttelsesinstruksen eller Folkeregisterloven&#xD;&#xA;&#xD;&#xA;Informasjonen benyttes til å beskrive det overordnede felles beskyttelsesnivået en person har på alle sine adresser av typen bostedsadresse, oppholdsadresse og delt bosted. Adressebeskyttelsen gjelder ikke kontaktadressene." />
       <alias value="adressebeskyttelse" />
       <alias value="graderingsnivå" />
+       <type>
+        <code value="Coding" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-security-coding" />
+      </type>
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
@@ -58,25 +62,6 @@
       <alias value="graderingsnivå" />
       <min value="1" />
       <mustSupport value="true" />
-    </element>
-    <element id="Person.meta.security:addressConfidentiality.extension">
-      <path value="Person.meta.security.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Person.meta.security:addressConfidentiality.extension:fregMetadata">
-      <path value="Person.meta.security.extension" />
-      <sliceName value="fregMetadata" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata" />
-      </type>
     </element>
     <element id="Person.implicitRules">
       <path value="Person.implicitRules" />
