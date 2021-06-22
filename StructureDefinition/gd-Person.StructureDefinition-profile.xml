@@ -40,7 +40,7 @@
       <alias value="graderingsnivå" />
        <type>
         <code value="Coding" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-security-coding" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-coding-security" />
       </type>
       <mustSupport value="true" />
       <binding>

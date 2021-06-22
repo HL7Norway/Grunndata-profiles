@@ -46,8 +46,9 @@ This is a new release completing the information model according to FREG informa
 |2021-06-18|gd-Person-Fred-pajord-residue-contact.xml|Added example (validated Java)|PBI 10358|
 |2021-06-18|gd-Person-Fred-pajord-residue-contact.xml|Added containing contact-person (validates .NET, don't validate in Java,)|PBI 10358|
 |2021-06-22|GdPerson|Validation error|BUG 24365|
-|2021-06-22|GdSecurityCoding|Validation error|BUG 24365|
+|2021-06-22|GdCodingSecurity|Validation error|BUG 24365|
 |2021-06-22|GdFregMetadata|Added Coding Context of extension|BUG 24365|
+|2021-06-22|gd-Person-Nabo-Eksempel-adressebeskyttelse-klientadresse.xml|Updated addressConfidentiality coding to working code value|BUG 24365|
 
 Ser ut til å være utfordring med snapshot generering av profiler på profiler (profiler utledet fra no-basis) når kildekoden genereres av Forge for de utlede profilene.
 

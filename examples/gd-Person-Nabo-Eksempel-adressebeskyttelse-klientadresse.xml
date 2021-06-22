@@ -17,7 +17,7 @@
 				</extension>
 			</extension>
 			<system value="http://ehelse.no/fhir/CodeSystem/gd-address-confidentiality" />
-			<code value="klientadresse" />
+			<code value="ugradert" />
 		</security>
 	</meta>
 	<extension url="http://ehelse.no/fhir/StructureDefinition/gd-person-status">
