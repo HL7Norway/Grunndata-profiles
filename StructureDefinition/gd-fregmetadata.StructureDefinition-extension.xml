@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-fregmetadata" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata" />
-  <version value="2.0.2" />
+  <version value="3.0.0" />
   <name value="FregMetadata" />
   <title value="FregMetadata" />
   <status value="draft" />
@@ -63,6 +63,10 @@
   <context>
     <type value="element" />
     <expression value="Patient.meta.security" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="Coding" />
   </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
