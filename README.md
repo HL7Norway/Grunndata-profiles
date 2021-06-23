@@ -20,7 +20,7 @@ Ferdige profiler publiseres også her sammen med en implementasjonsguide:
 
 ## DEPRECATION
 
-**for-validering-r4** katalogen er foreldet og fjernes i neste pull fra dev branch
+**for-validering-gd-r4** katalogen er foreldet og fjernes i neste pull fra dev branch
 
 ## Vi benytter Feature branch workflow
 ![Feature branch workflow](https://git.sarepta.ehelse.no/utvikling/FHIR/raw/92dff80b4b825be384908a90a3abfa7d6a8d6a46/Feature-branch-workflow.JPG)
