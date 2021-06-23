@@ -6,13 +6,13 @@
 	</meta>
 	<url value="http://ehelse.no/fhir/ValueSet/gd-person-sametingelectorrelation"/>
 	<version value="2.3.0"/>
-	<name value="GdPersonSametingElectorRelation"/>
+	<name value="GdPersonSametingElectorRelationValueSet"/>
 	<status value="draft"/>
 	<date value="2020-05-18T00:00:00.000+00:00"/>
 	<publisher value="Valueset containing all codes from forholdTilSametingetsValgmanntall defined by Skatteetaten"/>
 	<compose>
 		<include> 
-			<system value="http://ehelse.no/fhir/CodeSystem/gd-person-sametingelectorrelation.codesystem"/>
+			<system value="http://ehelse.no/fhir/CodeSystem/gd-person-sametingelectorrelation"/>
 		</include>
 	</compose>
 </ValueSet>
