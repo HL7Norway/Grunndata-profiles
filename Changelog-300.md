@@ -49,6 +49,12 @@ This is a new release completing the information model according to FREG informa
 |2021-06-22|GdCodingSecurity|Validation error|BUG 24365|
 |2021-06-22|GdFregMetadata|Added Coding Context of extension|BUG 24365|
 |2021-06-22|gd-Person-Nabo-Eksempel-adressebeskyttelse-klientadresse.xml|Updated addressConfidentiality coding to working code value|BUG 24365|
+|2021-06-23|GdCodingSecurity|File rename for consistency|BUG 24365|
+|2021-06-23|GdPersonSamiLanguageCodeSystem|Added codesystem containing codes from SamiskSpraakType|PBI 10363|
+|2021-06-23|GdPersonSamiLanguageValueSet|Added valueset containing codes from SamiskSpraakType|PBI 10363|
+|2021-06-23|GdSamiLanguage|Added extension for samilanguage|PBI 10363|
+|2021-06-23|GdPersonSametingElectorRelationCodeSystem|Rename|name consistency|
+|2021-06-23|GdPersonSametingElectorRelationValueSet|Rename|name consistency|
 
 Ser ut til å være utfordring med snapshot generering av profiler på profiler (profiler utledet fra no-basis) når kildekoden genereres av Forge for de utlede profilene.
 
