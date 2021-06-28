@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="gd-person-bibehold-av-norsk-statsborgerskap" />
-  <url value="http://ehelse.no/fhir/StructureDefinition/gd-person-bibehold-av-norsk-statborgerskap" />
+  <id value="gd-person-citizenship-retention" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/gd-person-citizenship-retention" />
   <version value="3.0.0" />
-  <name value="GdPersonBibeholdAvNorskStatsborgerskap" />
+  <name value="GdPersonCitizenshipRetention" />
   <status value="draft" />
   <date value="2021-06-16" />
   <description value="Status and date of Norwegian citizenship for persons with multiple citizenships. (harBibehold, harIkkeLengerBibehold, norskStatsborgerTrengerIkkeBibehold)" />
@@ -62,7 +62,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-bibehold-status" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-citizenship-retentionstatus" />
       </binding>
     </element>
     <element id="Extension.extension:fregMetadata">
@@ -80,7 +80,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/gd-person-bibehold-av-norsk-statborgerskap" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/gd-person-citizenship-retention" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
