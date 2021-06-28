@@ -4,7 +4,7 @@
 		<profile value="http://ehelse.no/fhir/StructureDefinition/gd-Provenance"/>
 	</meta>
 	<target>
-		<reference value="http://hapi.fhir.org/baseR4/Person/53098/_history/2"/>
+		<reference value="Person/53098/_history/2"/>
 	</target>
 	<recorded value="2019-11-01T13:28:00.658+00:00"/>
 	<reason>

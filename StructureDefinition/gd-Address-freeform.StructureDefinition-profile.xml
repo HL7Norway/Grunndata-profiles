@@ -8,7 +8,7 @@
   <date value="2019-12-19" />
   <description value="Contains information and metadata for addresses defined in Norwegian Master Person Index (FREG) and Norwegian Directorate of e-Health's health related Master Person Index.&#xD;&#xA;&#xD;&#xA;The profile defines information structure of unstructured norwegian or interntional street address (internasjonalAdresseFrittFormat, PostadresseFrittFormat), as defined by FREG.&#xD;&#xA;&#xD;&#xA;Also used for AddressType of PreferertKontaktadresse, to give information about the preferred contact adress of the person." />
   <purpose value="PostadresseIFrittFormat&#xD;&#xA;InternasjonalAdresseIFrittFormat&#xD;&#xA;PreferertKontaktadresse" />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="freg.KontaktadresseIUtlandet" />
     <name value="utenlandskAdresseIFrittFormat" />

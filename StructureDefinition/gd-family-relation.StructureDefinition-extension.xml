@@ -7,7 +7,7 @@
   <status value="draft" />
   <date value="2020-04-29" />
   <description value="Extension for representing information regarding family relations. Represents the same information awailable in the Norwegian Folkeregister." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
@@ -33,12 +33,6 @@
       </slicing>
     </element>
     <element id="Extension.extension:roleOfRelatedPersonInstance">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Extension.extension" />
       <sliceName value="roleOfRelatedPersonInstance" />
       <short value="Family relationship from Norwegian Person Index" />
@@ -67,12 +61,6 @@
       </type>
     </element>
     <element id="Extension.extension:fregMetadata">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Extension.extension" />
       <sliceName value="fregMetadata" />
       <max value="1" />
