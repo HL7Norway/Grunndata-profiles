@@ -8,6 +8,10 @@
   <date value="2021-06-16" />
   <description value="Status and date of Norwegian citizenship for persons with multiple citizenships. (harBibehold, harIkkeLengerBibehold, norskStatsborgerTrengerIkkeBibehold)" />
   <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="freg" />
+    <name value="bibeholdstatus" />
+  </mapping>
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
@@ -42,7 +46,7 @@
     <element id="Extension.extension:bibeholdStatus">
       <path value="Extension.extension" />
       <sliceName value="bibeholdStatus" />
-      <alias value="Bibeholdstatus" />
+      <alias value="bibeholdstatus" />
       <min value="1" />
       <max value="1" />
     </element>
