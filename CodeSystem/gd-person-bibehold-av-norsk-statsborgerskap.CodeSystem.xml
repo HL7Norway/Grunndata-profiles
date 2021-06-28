@@ -1,0 +1,26 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="gd-person-bibehold-av-norsk-statsborgerskap.codesystem" />
+    <meta>
+        <versionId value="1" />
+        <lastUpdated value="2021-06-17T00:00:00.000+00:00" />
+    </meta>
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-bibehold-av-norsk-statsborgerskap" />
+    <version value="5.0.0" />
+    <name value="GdPersonBibeholdAvNorskStatsborgerskapCodeSystem" />
+    <status value="draft" />
+    <date value="2021-06-17T00:00:00.000+00:00" />
+    <publisher value="Skatteetaten" />
+    <content value="complete" />
+    <concept>
+        <code value="harBibehold" />
+        <display value="Har bibehold" />
+    </concept>
+    <concept>
+        <code value="harIkkeLengerBibehold" />
+        <display value="Har ikke lenger bibehold" />
+    </concept>
+    <concept>
+        <code value="norskStatsborgerTrengerIkkeBibehold" />
+        <display value="Norsk statsborger trenger ikke bibehold" />
+    </concept>
+</CodeSystem>
