@@ -1,0 +1,18 @@
+<ValueSet  xmlns="http://hl7.org/fhir">
+	<id value="gd-person-bibehold-av-norsk-statsborgerskap.valueset"/>
+	<meta>
+		<versionId value="1"/>
+		<lastUpdated value="2021-06-17T00:00:00.000+00:00"/>
+	</meta>
+	<url value="http://ehelse.no/fhir/ValueSet/gd-person-bibehold-av-norsk-statsborgerskap"/>
+	<version value="3.0.0"/>
+	<name value="GdPersonStatusValueSet"/>
+	<status value="draft"/>
+	<date value="2021-06-17T00:00:00.000+00:00"/>
+	<publisher value="Skatteetaten"/>
+	<compose>
+		<include>
+			<system value="http://ehelse.no/fhir/CodeSystem/gd-person-bibehold-av-norsk-statsborgerskap"/>
+		</include>
+	</compose>
+</ValueSet>
