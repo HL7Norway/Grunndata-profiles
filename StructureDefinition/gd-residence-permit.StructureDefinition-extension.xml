@@ -7,7 +7,7 @@
   <status value="draft" />
   <date value="2019-10-16" />
   <description value="Information registered in FREG regarding the residence permit of the person.&#xD;&#xA;&#xD;&#xA;Informasjonen innen opphold beskriver opplysninger i Registeret som omfatter oppholdstillatelse, oppholdsrett og arbeidstillatelse." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
