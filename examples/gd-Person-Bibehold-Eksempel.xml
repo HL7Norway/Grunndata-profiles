@@ -5,7 +5,7 @@
 	<text>
 		<status value="additional"/>
 		<div xmlns="http://www.w3.org/1999/xhtml">
-		  <p>Example Person demonstrating BibeholdAvNorskStatsborgerskap</p>
+		  <p>Example Person demonstrating Citizenship Retention</p>
 		</div>
 	</text>
 	<identifier><!-- Fødselnummeret til brukeren -->
@@ -50,7 +50,7 @@
 			</extension>
 		</extension>
 	</gender>
-	<extension url="http://ehelse.no/fhir/StructureDefinition/gd-person-bibehold-av-norsk-statborgerskap">
+	<extension url="http://ehelse.no/fhir/StructureDefinition/gd-person-citizenship-retention">
 		<extension url="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata">
 			<extension url="registeredTimestamp">
 				<valueDateTime value="2019-12-03T09:50:27+01:00"/>

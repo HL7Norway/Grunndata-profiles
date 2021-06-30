@@ -1,12 +1,12 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="gd-person-bibehold-av-norsk-statsborgerskap.codesystem" />
+    <id value="gd-person-citizenship-retentionstatus.codesystem" />
     <meta>
         <versionId value="1" />
         <lastUpdated value="2021-06-17T00:00:00.000+00:00" />
     </meta>
-    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-bibehold-av-norsk-statsborgerskap" />
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-citizenship-retentionstatus" />
     <version value="3.0.0" />
-    <name value="GdPersonBibeholdAvNorskStatsborgerskapCodeSystem" />
+    <name value="GdPersonCitizenshipRetentionStatusCodeSystem" />
     <status value="draft" />
     <date value="2021-06-17T00:00:00.000+00:00" />
     <publisher value="Skatteetaten" />
