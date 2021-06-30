@@ -77,7 +77,7 @@
     <element id="Extension.extension:language.value[x].coding.system">
       <path value="Extension.extension.value[x].coding.system" />
       <min value="1" />
-      <fixedUri value="http://ehelse.no/fhir/CodeSystem/gd-person-samilanguage" />
+      <patternUri value="http://ehelse.no/fhir/CodeSystem/gd-person-samilanguage" />
     </element>
     <element id="Extension.extension:language.value[x].coding.code">
       <path value="Extension.extension.value[x].coding.code" />
