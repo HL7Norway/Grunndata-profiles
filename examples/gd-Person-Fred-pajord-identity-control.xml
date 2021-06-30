@@ -2,6 +2,12 @@
 	<meta>
 		<profile value="http://ehelse.no/fhir/StructureDefinition/gd-Person"/>
 	</meta>
+	<text>
+		<status value="additional"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+		  <p>Example Person demonstrating Identity Control</p>
+		</div>
+	</text>
 	<extension url="http://ehelse.no/fhir/StructureDefinition/gd-person-status">
 		<extension url="fregPersonStatus">
 			<valueCode value="bosatt"/>
