@@ -55,6 +55,10 @@ This is a new release completing the information model according to FREG informa
 |2021-06-23|GdSamiLanguage|Added extension for samilanguage|PBI 10363|
 |2021-06-23|GdPersonSametingElectorRelationCodeSystem|Rename|name consistency|
 |2021-06-23|GdPersonSametingElectorRelationValueSet|Rename|name consistency|
+|2021-06-23|GdPersonCitizenshipRetention|Added extension for bibehold|PBI 10359|
+|2021-06-23|GdPerson|Added extension for bibehold to GdPerson|PBI 10359|
+|2021-06-23|GdPersonCitizenshipRetentionCodeSystem|Added codesystem for bibehold|PBI 10359|
+|2021-06-23|GdPersonCitizenshipRetentionValueSet|Added valueset for bibehold|PBI 10359|
 
 Ser ut til å være utfordring med snapshot generering av profiler på profiler (profiler utledet fra no-basis) når kildekoden genereres av Forge for de utlede profilene.
 
