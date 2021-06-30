@@ -55,7 +55,13 @@ This is a new release completing the information model according to FREG informa
 |2021-06-23|GdSamiLanguage|Added extension for samilanguage|PBI 10363|
 |2021-06-23|GdPersonSametingElectorRelationCodeSystem|Rename|name consistency|
 |2021-06-23|GdPersonSametingElectorRelationValueSet|Rename|name consistency|
+|2021-06-23|GdPersonCitizenshipRetention|Added extension for bibehold|PBI 10359|
+|2021-06-30|GdPerson|Added extension for bibehold to GdPerson|PBI 10359|
+|2021-06-30|GdPersonCitizenshipRetentionCodeSystem|Added codesystem for bibehold|PBI 10359|
+|2021-06-30|GdPersonCitizenshipRetentionValueSet|Added valueset for bibehold|PBI 10359|
+|2021-06-30|GdPerson|Added extension for samilanguage to GdPerson|PBI 10363|
+|2021-06-30|gd-Person-Fred-pajord-sami-language.xml|Added samiLanguage example|PBI 10363|
 
 Ser ut til å være utfordring med snapshot generering av profiler på profiler (profiler utledet fra no-basis) når kildekoden genereres av Forge for de utlede profilene.
 
-* Fremdeles ingen løsning på his element does not match any known slice defined in the profile http://ehelse.no/fhir/StructureDefinition/gd-person-status (information)
+* Fremdeles ingen løsning på "this element does not match any known slice defined in the profile http://ehelse.no/fhir/StructureDefinition/gd-person-status (information)"
