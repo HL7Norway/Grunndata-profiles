@@ -214,7 +214,6 @@
       <path value="Person.extension" />
       <sliceName value="citizenshipRetention" />
       <definition value="Status and date of Norwegian citizenship for persons with multiple citizenships." />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/gd-person-citizenship-retention" />

@@ -8,10 +8,6 @@
   <date value="2021-06-16" />
   <description value="Status and date of Norwegian citizenship for persons with multiple citizenships. (harBibehold, harIkkeLengerBibehold, norskStatsborgerTrengerIkkeBibehold)" />
   <fhirVersion value="4.0.1" />
-  <mapping>
-    <identity value="freg" />
-    <name value="bibeholdstatus" />
-  </mapping>
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
@@ -31,6 +27,10 @@
       <short value="Status of Norwegian citizenship for persons with multiple citizenships" />
       <definition value="Status and date of Norwegian citizenship for persons with multiple citizenships. (harBibehold, harIkkeLengerBibehold, norskStatsborgerTrengerIkkeBibehold)" />
       <alias value="BibeholdAvNorskStatsborgerskap" />
+      <mapping>
+        <identity value="freg" />
+        <map value="BibeholdAvNorskStatsborgerskap" />
+      </mapping>
     </element>
     <element id="Extension.extension">
       <path value="Extension.extension" />
@@ -39,28 +39,31 @@
           <type value="value" />
           <path value="url" />
         </discriminator>
-        <description value="Extensions are always sliced by (at least) url" />
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Extension.extension:bibeholdStatus">
+    <element id="Extension.extension:retentionStatus">
       <path value="Extension.extension" />
-      <sliceName value="bibeholdStatus" />
+      <sliceName value="retentionStatus" />
       <alias value="bibeholdstatus" />
       <min value="1" />
       <max value="1" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="bibeholdstatus" />
+      </mapping>
     </element>
-        <element id="Extension.extension:bibeholdStatus.url">
+    <element id="Extension.extension:retentionStatus.url">
       <path value="Extension.extension.url" />
-      <fixedUri value="bibeholdStatus" />
+      <fixedUri value="retentionStatus" />
     </element>
-    <element id="Extension.extension:bibeholdStatus.value[x]">
+    <element id="Extension.extension:retentionStatus.value[x]">
       <path value="Extension.extension.value[x]" />
       <short value="Status of Norwegian citizenship for persons with multiple citizenships" />
       <definition value="Status of Norwegian citizenship for persons with multiple citizenships" />
       <alias value="Bibeholdstatus" />
       <min value="1" />
-      <max value="1" />
       <type>
         <code value="code" />
       </type>
@@ -81,6 +84,28 @@
     <element id="Extension.extension:fregMetadata.url">
       <path value="Extension.extension.url" />
       <fixedUri value="fregMetadata" />
+    </element>
+    <element id="Extension.extension:retentionDate">
+      <path value="Extension.extension" />
+      <sliceName value="retentionDate" />
+      <short value="The date of issue of the retention" />
+      <definition value="The date of issue of the retention&#xD;&#xA;&#xD;&#xA;Datoen for når bibehold ble vedtatt&#xD;&#xA;Datoen gjelder således for når bibeholdstatus ble satt og ikke datoen for når personen sist bibeholdt sitt norske statsborgerskap" />
+      <alias value="datoForBibehold" />
+      <max value="1" />
+      <mapping>
+        <identity value="freg" />
+        <map value="datoForBibehold" />
+      </mapping>
+    </element>
+    <element id="Extension.extension:retentionDate.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="retentionDate" />
+    </element>
+    <element id="Extension.extension:retentionDate.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="date" />
+      </type>
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />

@@ -13,7 +13,7 @@ java -jar /home/thomas/Downloads/org.hl7.fhir.validator.jar /media/sf_GitRepo/fo
 java -jar c:\download\validator_cli.jar c:\GitRepo\Grunndata-R4\StructureDefinition\*.xml -version 4.0.0
 java -jar c:\users\Thomas\Downloads\validator_cli.jar E:\GitRepo\for-validation-no-basis\*.xml -version 4.0.1 -output validation.xml -ig e:\GitRepo\for-validation-no-basis
 java -jar C:\Users\Thomas\Downloads\validator_cli.jar E:\GitRepo\for-validation-gd-r400\*.xml -version 4.0.1 -output validation-400.xml
-java -jar C:\Users\Thomas\Downloads\validator_cli.jar E:\GitRepo\for-validation-gd-r401\*.xml -version 4.0.1 -output validation-401-22.xml
+java -jar C:\Users\Thomas\Downloads\validator_cli.jar E:\GitRepo\for-validation-gd-r401\*.xml -version 4.0.1 -output validation-result\validation-401-juli.xml
 
 Deretter validere eksempler med katalogen som "ig":
 java -jar /home/thomas/Downloads/org.hl7.fhir.validator.jar gd-RelatedPerson-example.xml -ig /media/sf_GitRepo/for-validation-gd-r4 -version 4.0.0
@@ -21,7 +21,7 @@ java -jar C:\download\org.hl7.fhir.validator.jar c:\GitRepo\Grunndata-r4\example
 java -jar "c:\users\Thomas\Downloads\org.hl7.fhir.validator-4-2-21.jar" e:\GitRepo\Grunndata-R4\examples\gd-Provenance-Create.xml -ig e:\GitRepo\Grunndata-R4\for-validation-gd-221 -version 4.0.1
 java -jar C:\Users\Thomas\Downloads\validator_cli.jar E:\GitRepo\for-validation-gd-r4\gd-Person-Fred-pajord-identity-control.xml -version 4.0 -output Fred-validation.xml -ig E:\GitRepo\for-validation-gd-r4
 java -jar C:\Users\Thomas\Downloads\validator_cli.jar E:\GitRepo\for-validation-gd-r401\gd-Person-Nabo-Eksempel-adressebeskyttelse-klientadresse.xml -version 4.0.1 -output Nabo-validation-22.xml -ig E:\GitRepo\for-validation-gd-r401
-java -jar C:\Users\Thomas\Downloads\validator_cli.jar E:\GitRepo\for-validation-gd-r401\gd-Person-Fred-pajord-residue-contact.xml -version 4.0.1 -output Fred-residue-validation-22.xml -ig E:\GitRepo\for-validation-gd-r401
+java -jar C:\Users\Thomas\Downloads\validator_cli.jar E:\GitRepo\for-validation-gd-r401\gd-Person-Fred-pajord-sami-language.xml -version 4.0.1 -output validation-result\Fred-sami-result.xml -ig E:\GitRepo\for-validation-gd-r401
 
 Schema validation XMLspy
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/FHIR/R4/fhir-all-xsd/fhir-single.xsd"
