@@ -113,7 +113,6 @@
       <short value="Boolsk flagg som benyttes for enkel testing på om omfanget er innen det" />
       <definition value="Boolsk flagg som benyttes for enkel testing på om omfanget er innen det&#xD;&#xA;personlige området" />
       <alias value="omfangetErInnenPersonligOmraade" />
-      <min value="1" />
       <max value="1" />
       <mapping>
         <identity value="freg" />
