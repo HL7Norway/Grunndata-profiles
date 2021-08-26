@@ -7,12 +7,10 @@
   <status value="active" />
   <description value="SearchParameter for the streetName line extension in addresses" />
   <code value="streetName" />
-  <base value="Patient" />
   <base value="Person" />
-  <base value="RelatedPerson" />
   <type value="string" />
-  <expression value="Patient.address.line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName').value | Person.address.line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName').value | RelatedPerson.address.line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName').value"/>
-  <xpath value="f:Patient/f:address/f:line/f:extension[@url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName'] | f:Person/f:address/f:line/f:extension[@url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName'] | f:RelatedPerson/f:address/f:line/f:extension[@url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName']" />
+  <expression value="Person.address.line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName').value"/>
+  <xpath value="f:Person/f:address/f:line/f:extension[@url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName']" />
   <xpathUsage value="normal" />
   <multipleOr value="true" />
   <multipleAnd value="true" />
