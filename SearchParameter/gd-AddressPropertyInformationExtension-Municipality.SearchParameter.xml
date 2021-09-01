@@ -7,13 +7,11 @@
   <status value="active" />
   <description value="SearchParameter for the municipality for PropertyInformationExtension in addresses" />
   <code value="municipality" />
-  <base value="Patient" />
   <base value="Person" />
   <base value="RelatedPerson" />
-  <base value="Practitioner" />
   <type value="token" />
-  <expression value="Patient.address.extension.where(url='http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation').extension.where(url='municipality').value | Person.address.extension.where(url='http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation').extension.where(url='municipality').value | RelatedPerson.address.extension.where(url='http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation').extension.where(url='municipality').value | Practitioner.address.extension.where(url='http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation').extension.where(url='municipality').value"/>
-  <xpath value="f:Patient/f:address/f:extension[@url='http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation']/f:extension[@url='municipality'] | f:Person/f:address/f:extension[@url='http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation']/f:extension[@url='municipality'] | f:Practitioner/f:address/f:extension[@url='http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation']/f:extension[@url='municipality'] | f:RelatedPerson/f:address/f:extension[@url='http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation']/f:extension[@url='municipality']" />
+  <expression value="Person.address.extension.where(url='http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation').extension.where(url='municipality').value | RelatedPerson.address.extension.where(url='http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation').extension.where(url='municipality').value"/>
+  <xpath value="f:Person/f:address/f:extension[@url='http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation']/f:extension[@url='municipality'] | f:RelatedPerson/f:address/f:extension[@url='http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation']/f:extension[@url='municipality']" />
   <xpathUsage value="normal" />
   <multipleOr value="true" />
   <multipleAnd value="true" />
