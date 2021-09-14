@@ -8,7 +8,7 @@
 	<date value="2020-03-06"/>
 	<description value="Requirements for the Grunndata Person service provided by Direktoratet for e-helse. Requirements for the test deliverable (L1)."/>
 	<kind value="requirements"/>
-	<fhirVersion value="4.0.0"/>
+	<fhirVersion value="4.0.1"/>
 	<format value="json"/>
 	<format value="xml"/>
 	<rest>
@@ -167,11 +167,6 @@
 				<documentation value="A state specified in an address"/>
 			 </searchParam>
 			 <searchParam>
-				<name value="gender"/>
-				<type value="token"/>
-				<documentation value="The gender of the person"/>
-			 </searchParam>
-			 <searchParam>
 				<name value="practitioner"/>
 				<type value="reference"/>
 				<documentation value="The Person links to this Practitioner"/>
@@ -220,11 +215,6 @@
 				<name value="telecom"/>
 				<type value="token"/>
 				<documentation value="The value in any kind of contact"/>
-			 </searchParam>
-			 <searchParam>
-				<name value="address-city"/>
-				<type value="string"/>
-				<documentation value="A city specified in an address"/>
 			 </searchParam>
 			 <searchParam>
 				<name value="email"/>
@@ -447,5 +437,21 @@
 				<documentation value="When the activity occurred"/>
 			</searchParam>
 		</resource>
+		<searchParam>
+			<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+				<valueCode value="SHALL"/>
+			</extension>
+			<name value="_total"/>
+			<type value="token"/>
+			<documentation value="This server have a default value of *none* set for the _total parameter. The default value reduce the server load for large search-sets. The default behaviour can be changed by setting the _total parameter in the search request, please consider not changing the _total parameter to *accurate* unless your client really needs this information."/>
+		</searchParam>
+		<searchParam>
+			<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+				<valueCode value="SHALL"/>
+			</extension>
+			<name value="_elements"/>
+			<type value="string"/>
+			<documentation value="The server expects _elements parameter to be set. The server expects all read and search interactions to use the *_elements* operation specifying what elements should be included in the search result. In the case where the _elements operation is missing a resouce containing only the identifier element is returned."/>
+		</searchParam>
 	</rest>
 </CapabilityStatement>

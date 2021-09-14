@@ -2,13 +2,13 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Address-box" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Address-box" />
-  <version value="2.3.0" />
+  <version value="2.3.4" />
   <name value="GdAddressBox" />
   <status value="draft" />
   <date value="2019-10-17" />
   <description value="Contains information and metadata for addresses defined in Norwegian Master Person Index (FREG) and Norwegian Directorate of e-Health's health related Master Person Index.&#xD;&#xA;&#xD;&#xA;The profile defines information structure of a Norwegian post box address (postboksadresse), as defined by FREG.&#xD;&#xA;&#xD;&#xA;postadresse til en postboks" />
   <purpose value="postboksadresse" />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="freg" />
     <name value="postboksadresse" />
@@ -75,7 +75,7 @@
       <path value="Address.line.extension" />
       <sliceName value="postBox" />
       <short value="postboks fra FREG" />
-      <definition value="postboks fra FREG, identifikator på postboks som består av landets betegnelse for postboks samt den alfanumeriske identifikatoren til denne" />
+      <definition value="identifikator på postboks som består av landets betegnelse for postboks samt den alfanumeriske identifikatoren til denne&#xD;&#xA;I tillegg legges postboksanleggets navn i dette feltet i norske adresser" />
       <alias value="postboks" />
       <min value="1" />
       <max value="1" />

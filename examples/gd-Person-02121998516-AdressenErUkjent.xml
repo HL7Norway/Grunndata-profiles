@@ -83,6 +83,9 @@
 			<extension url="fregAddressType">
 				<valueCode value="Oppholdsadresse"/>
 			</extension>
+			<extension url="addressIsUnknown">
+				<valueBoolean value="true"/>
+			</extension>
 		</extension>
 	</address>
 </Person>

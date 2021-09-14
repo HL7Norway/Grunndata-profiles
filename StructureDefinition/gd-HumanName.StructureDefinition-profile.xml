@@ -7,7 +7,7 @@
   <status value="draft" />
   <date value="2019-10-18" />
   <description value="Grunndata personnavn. Contains information and metadata for human names defined in Norwegian Master Person Index and Norwegian Directorate of e-Health's health related Master Person Index." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <type value="HumanName" />
@@ -19,6 +19,16 @@
       <short value="Norwegian human name from FREG" />
       <definition value="gd-HumanName Contains information and metadata for human names defined in Norwegian Master Person Index and Norwegian Directorate of e-Health's health related Master Person Index.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Defines the format of norwegian human name according to norwegian regulation (lov om personnavn)." />
     </element>
+    <element id="HumanName.extension">
+      <path value="HumanName.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
     <element id="HumanName.extension:middlename">
       <path value="HumanName.extension" />
       <sliceName value="middlename" />
@@ -28,8 +38,6 @@
       <path value="HumanName.extension" />
       <sliceName value="fregMetadata" />
       <short value="Registermetadata" />
-      <definition value="Registermetadata describes metadata about resources available from the norwegian person index (folkeregisteret), all resources containing metadata from folkeregisteret will include registermetadata" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -43,7 +51,6 @@
       <definition value="additional metadata about human name defined by FREG (folkeregisterpersonnavn) describes metadata specific to the HumanName available from the norwegian person index (folkeregisteret, freg)" />
       <alias value="forkortetnavn" />
       <alias value="originaltnavn" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />

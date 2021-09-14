@@ -7,7 +7,7 @@
   <status value="draft" />
   <date value="2019-12-16" />
   <description value="The GdAddressUnknown is used for two kind of addresses from FREG&#xD;&#xA;For addresses with address-type of &quot;Bosted&quot; and &quot;DeltBosted&quot;, the uknown address can contain a municipality code. The content type of this addresses SHALL be &quot;UkjentBosted&quot;.&#xD;&#xA;For addresses with type &quot;Opphold&quot; this address can only contain the address metadata. The content type of this addresses SHALL be &quot;AdressenErUkjent&quot;." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="freg.bostedsadresse" />
     <name value="ukjentBosted" />

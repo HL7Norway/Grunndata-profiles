@@ -2,12 +2,12 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Identifier-foreign" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Identifier-foreign" />
-  <version value="2.3.3" />
+  <version value="2.3.4" />
   <name value="GdIdentifierForeign" />
   <status value="draft" />
   <date value="2019-10-16" />
-  <description value="Identification number from foreign authority or the identifier value from the Norwegian immigration administration.&#xD;&#xA;&#xD;&#xA;The GdIdentifierForeign profile describes the structure and coding of how to identify official Norwegian human identifiers used to identify foreign citizens registered in FREG. The profile establishes how the business identifiers used to identify foreign citizens should be coded using type.coding and value.&#xD;&#xA;&#xD;&#xA;utenlandsk personidentifikasjon: informasjon om et personidentifikasjonsnummer fra en utenlandsk myndighet&#xD;&#xA;&#xD;&#xA;utlendingsmyndighetenes identifikasjonsnummer: personidentifikasjonsnummer for person som blir førstegangsregistrert i landet av utlendingsmyndighetene. Dette nummeret går i dag ofte under navnet DUF-nummer" />
-  <fhirVersion value="4.0.0" />
+  <description value="Identification number from foreign authority or the identifier value from the Norwegian immigration administration.&#xD;&#xA;&#xD;&#xA;The GdIdentifierForeign profile describes the structure and coding of how to identify official Norwegian human identifiers used to identify foreign citizens registered in FREG. The profile establishes how the business identifiers used to identify foreign citizens should be coded using type.coding and value.&#xD;&#xA;&#xD;&#xA;utenlandsk personidentifikasjon: informasjon om et personidentifikasjonsnummer fra en utenlandsk myndighet&#xD;&#xA;&#xD;&#xA;utlendingsmyndighetenes identifikasjonsnummer: unikt personidentifikasjonsnummer for person som blir førstegangsregistrert i landet av utlendingsmyndighetene&#xD;&#xA;Dette nummeret går i dag under navnet DUF-nummer." />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <type value="Identifier" />
@@ -18,7 +18,7 @@
       <path value="Identifier" />
       <short value="foreign identification" />
       <definition value="Identification number from foreign authority or the identifier value from the Norwegian immigration administration." />
-      <comment value="utenlandsk personidentifikasjon: informasjon om et personidentifikasjonsnummer fra en utenlandsk myndighet&#xD;&#xA;&#xD;&#xA;utlendingsmyndighetenes identifikasjonsnummer: personidentifikasjonsnummer for person som blir førstegangsregistrert i landet av utlendingsmyndighetene. Dette nummeret går i dag ofte under navnet DUF-nummer" />
+      <comment value="utenlandsk personidentifikasjon: informasjon om et personidentifikasjonsnummer fra en utenlandsk myndighet&#xD;&#xA;&#xD;&#xA;utlendingsmyndighetenes identifikasjonsnummer: unikt personidentifikasjonsnummer for person som blir førstegangsregistrert i landet av utlendingsmyndighetene&#xD;&#xA;Dette nummeret går i dag under navnet DUF-nummer." />
       <alias value="utenlandsk personidentifikasjon" />
       <alias value="utlendingsmyndighetenes identifikasjonsnummer" />
       <alias value="DUF-nummer" />

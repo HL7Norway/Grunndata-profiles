@@ -2,13 +2,17 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Address" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Address" />
+<<<<<<< HEAD
   <version value="3.0.0" />
+=======
+  <version value="2.3.4" />
+>>>>>>> dev
   <name value="GdAddress" />
   <title value="GdAddress" />
   <status value="draft" />
   <date value="2019-12-20" />
   <description value="Grunndata adresse&#xD;&#xA;Contains information and metadata for addresses defined in Norwegian Master Person Index and Norwegian Directorate of e-Health's health related Master Person Index." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <type value="Address" />
@@ -35,9 +39,15 @@
       <sliceName value="urbanDistrict" />
       <short value="Urban district of this address" />
       <definition value="Simple extension containing information about what part of a norwegian city the patient is a resident. Administrative purpose. Five Norwegian cities have defined administrative districts called bydel. This is Oslo, Bergen, Trondheim, Stavanger og Drammen. &#xD;&#xA;&#xD;&#xA;There are still some uncertainty on what is the official source of bydel information. TBD" />
+      <mapping>
+        <identity value="freg" />
+        <map value="n/a" />
+        <comment value="FREG don't contain urban district information" />
+      </mapping>
     </element>
     <element id="Address.extension:urbanDistrict.value[x].code">
       <path value="Address.extension.value[x].code" />
+      <short value="bydelsnummer" />
       <alias value="bydelsnummer" />
       <mustSupport value="true" />
     </element>
@@ -100,6 +110,21 @@
         <profile value="http://ehelse.no/fhir/StructureDefinition/gd-address-metadata" />
       </type>
       <mustSupport value="true" />
+    </element>
+    <element id="Address.extension:addressMetadata.extension">
+      <path value="Address.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Address.extension:addressMetadata.extension:parishId">
+      <path value="Address.extension.extension" />
+      <sliceName value="parishId" />
+      <definition value="minste kirkelige administrative inndeling&#xD;&#xA;Entydig nummer på kirkesokn. Soknene er grunnenhetene i kirken og disse er organisert i kirkelig fellesråd. Kirkekretsene kan strekke seg over flere kommuner." />
     </element>
     <element id="Address.use">
       <path value="Address.use" />

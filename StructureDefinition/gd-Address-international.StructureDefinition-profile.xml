@@ -8,7 +8,7 @@
   <date value="2019-10-17" />
   <description value="Contains information and metadata for addresses defined in Norwegian Master Person Index (FREG) and Norwegian Directorate of e-Health's health related Master Person Index.&#xD;&#xA;&#xD;&#xA;The profile defines information structure of a structured interntional street address (utenlandskAdresse), as defined by FREG.&#xD;&#xA;&#xD;&#xA;noe en person eller virksomhet bruker for å identifisere og stedfeste et objekt på en geografisk lokasjon i et hvilket som helst land" />
   <purpose value="utenlandskAdresse&#xD;&#xA;&#xD;&#xA;noe en person eller virksomhet bruker for å identifisere og stedfeste et objekt på en geografisk lokasjon i et hvilket som helst land" />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="freg" />
     <name value="utenlandskAdresse" />

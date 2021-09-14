@@ -2,12 +2,12 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-address-metadata" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-address-metadata" />
-  <version value="2.3.0" />
+  <version value="2.3.5" />
   <name value="GdAddressMetadata" />
   <status value="draft" />
   <date value="2019-09-25" />
   <description value="Describes address specific metadata  about the address resources available from the the central person index (folkeregisteret, freg), all address resources containing metadata from folkeregisteret will include gd-address-metadata" />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
@@ -37,7 +37,7 @@
       <path value="Extension.extension" />
       <sliceName value="confidentiality" />
       <short value="adressegradering" />
-      <definition value="kategori av beskyttelsesgrad på adresseinformasjon i Folkeregisteret&#xD;&#xA;Gyldige kodeverdier er:&#xD;&#xA;• ugradert&#xD;&#xA;• klientadresse&#xD;&#xA;• fortrolig&#xD;&#xA;• strengtFortrolig (strengt fortrolig)&#xD;&#xA;Bostedsadressen kan være beskyttet iht. Beskyttelsesinstruksen (fortrolig og strengtFortrolig) eller Folkeregisterloven (klientadresse)" />
+      <definition value="kategori av beskyttelsesgrad på adresseinformasjon i Folkeregisteret&#xD;&#xA;Gyldige kodeverdier er:&#xD;&#xA;* ugradert&#xD;&#xA;* klientadresse&#xD;&#xA;* fortrolig&#xD;&#xA;&#xD;&#xA;Bostedsadressen kan være beskyttet iht. Beskyttelsesinstruksen (fortrolig og strengtFortrolig) eller Folkeregisterloven (klientadresse). Adresse med gradering strengtFortrolig oppgis ikke av Folkeregisteret og er derfor ikke blant kodene." />
       <alias value="adressegradering" />
       <min value="1" />
       <max value="1" />
@@ -277,7 +277,7 @@
         <severity value="error" />
         <human value="addressIsUnknown must have fregAddressType of AdressenErUkjent" />
         <expression value="addressIsUnknown.value() and (fregAddressContentType.Value()=AdressenErUkjent)" />
-        <source value="Extension" />
+        <source value="http://ehelse.no/fhir/StructureDefinition/gd-address-metadata" />
       </constraint>
       <mapping>
         <identity value="freg" />

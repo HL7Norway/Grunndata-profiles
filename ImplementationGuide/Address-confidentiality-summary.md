@@ -10,7 +10,6 @@ Gyldige kodeverdier er:
  fortrolig
  strengtFortrolig (strengt fortrolig)
 
-
 # Adressegradering oppsummering (address-confidentiality valueset)
 
 ## adressegradering

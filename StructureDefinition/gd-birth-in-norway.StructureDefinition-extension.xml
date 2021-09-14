@@ -2,12 +2,12 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-birth-in-norway" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-birth-in-norway" />
-  <version value="2.3.1" />
+  <version value="2.3.4" />
   <name value="GdBirthInNorway" />
   <status value="draft" />
   <date value="2020-01-22" />
   <description value="Fødsel i Norge gir tilleggsinformasjon om fødselen hvis den har skjedd i Norge og er ment for bruk av spesielt interesserte og er derfor skilt ut fra fødsel." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
@@ -27,9 +27,6 @@
   <derivation value="constraint" />
   <differential>
     <element id="Extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
       <path value="Extension" />
       <short value="Fødsel i Norge" />
       <definition value="Fødsel i Norge gir tilleggsinformasjon om fødselen hvis den har skjedd i Norge og er ment for bruk av spesielt interesserte og er derfor skilt ut fra fødsel." />
@@ -47,14 +44,10 @@
       </slicing>
     </element>
     <element id="Extension.extension:multipleBirthInteger">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      
       <path value="Extension.extension" />
       <sliceName value="multipleBirthInteger" />
       <short value="informasjon om nummer i rekken og antall barn i en flerfødsel" />
-      <definition value="informasjon om nummer i rekken og antall barn i en flerfødsel&#xD;&#xA;F.eks. om du er den førstefødte eller andrefødte tvillingen. &#xD;&#xA;&#xD;&#xA;Dette er ikke et felt som registreres i dagens folkeregister, men som fremkommer av fødselsmeldingen fra Helse og tilgjengeliggjøres i endringstransaksjonen. &#xD;&#xA;&#xD;&#xA;Vi vil registrere rekkefølgenummeret i Registeret når Registeret er master.&#xD;&#xA;Første siffer = antall barn i flerfødsel, andre siffer = nummer i rekken.&#xD;&#xA;Eksempel: 21 betyr førstefødte tvilling." />
+      <definition value="nummer som viser barnets nummer i rekken ved flerfødsel&#xD;&#xA;F.eks. om du er den førstefødte eller andrefødte tvillingen.&#xD;&#xA;&#xD;&#xA;Dette er ikke et felt som ble registrert i DSF, men som fremkom av fødselsmeldingen fra Helse.&#xD;&#xA;&#xD;&#xA;Rekkefølgenummeret ligger i Registeret fra Registeret ble master. Første siffer = antall barn i flerfødsel, andre siffer = nummer i rekken. Eksempel: 21 betyr førstefødte tvilling. (Det er, ved en feil, registret 11 i noen tilfelle uten at det er flerfødsel)" />
       <alias value="rekkefølgenummer" />
       <max value="1" />
     </element>
@@ -72,9 +65,6 @@
       </type>
     </element>
     <element id="Extension.extension:organizationName">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
       <path value="Extension.extension" />
       <sliceName value="organizationName" />
       <short value="navnet på helseinstitusjon i Norge hvor fødselen ble registrert" />
@@ -96,9 +86,6 @@
       </type>
     </element>
     <element id="Extension.extension:fregMetadata">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
       <path value="Extension.extension" />
       <sliceName value="fregMetadata" />
       <max value="1" />
@@ -114,9 +101,6 @@
       </slicing>
     </element>
     <element id="Extension.extension:fregMetadata.extension:metadata">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
       <path value="Extension.extension.extension" />
       <sliceName value="metadata" />
       <max value="1" />

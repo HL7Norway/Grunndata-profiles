@@ -6,6 +6,19 @@
 
 This is a service release to fix bugs in codesystem bindings and update documentation
 
+## Files change description
+
+|Date|File|Change description|
+|-
+|2020-09-23|gd-person-status.StructureDefinition-extension.xml|Bugfix of the valueset binding removed incorrect binding to http://ehelse.no/fhir/ValueSet/gd-person-status-v05||
+|2020-09-24|gd-Address-street.StructureDefinition-profile.xml|Bugfix to documentation, added kommunenummer mapping information, won't affect the package||
+|2020-09-24|gd-Person.StructureDefinition-profile.xml|Bugfix to the meta.security.addressConfidentiality element removed the valueset fixed value of system||
+|2020-09-30|gd-person-identificationnumbertype.CodeSystem.xml|Updated the codesystem name according to naming conventions||
+
+## Documentation changes after the release
+
+|Date|File|Change description|
+|-
 |2020-10-06|gd-Person-Nabo-Eksempel-klientadresse.xml|Endret eksempel for å inkludere klientadresse i metainformasjon||
 |2020-10-06|gd-Identifier-foreign.StructureDefinition-profile.xml|Oppdaterte type.coding.system til binding til CodeSystem||
 |2020-10-14|examples/gd-Person-04021950128-version-3.xml|Endret eksempel for å tydeliggjøre bruk av line extensions||
@@ -15,15 +28,6 @@ This is a service release to fix bugs in codesystem bindings and update document
 |2020-11-19|Documentation changes|Updated information on the GdPerson to include information about persons related to the kingdom of Norway in addition to citizens||
 |2020-12-04|gd-Person.StructureDefinition-profile.xml|Added must support to the active element, updated active documentation|PBI 5091|
 |2020-12-04|gd-RelatedPerson.StructureDefinition-profile.xml|Added must support to the active element, updated active documentation|PBI 5091|
-
-## Files change description
-
-|Date|File|Change description|
-|-
-|2020-09-23|gd-person-status.StructureDefinition-extension.xml|Bugfix of the valueset binding removed incorrect binding to http://ehelse.no/fhir/ValueSet/gd-person-status-v05||
-|2020-09-24|gd-Address-street.StructureDefinition-profile.xml|Bugfix to documentation, added kommunenummer mapping information, won't affect the package||
-|2020-09-24|gd-Person.StructureDefinition-profile.xml|Bugfix to the meta.security.addressConfidentiality element removed the valueset fixed value of system||
-|2020-09-30|gd-person-identificationnumbertype.CodeSystem.xml|Updated the codesystem name according to naming conventions||
 
 # Changelog for 2.3.1
 

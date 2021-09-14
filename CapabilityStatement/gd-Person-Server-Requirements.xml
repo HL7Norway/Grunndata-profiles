@@ -1,34 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir" >
 	<url value="http://ehelse.no/fhir/CapabilityStatement/gd-Person-Server-Requirements/v220"/>
-	<version value="2.2.0"/>
+	<version value="2.3.5"/>
 	<name value="PersonServerRequirements"/>
 	<title value="Requirements for Grunndata Person Service Interface (server)"/>
 	<status value="draft"/>
 	<date value="2020-03-25"/>
 	<description value="Requirements for the Grunndata Person service provided by Direktoratet for e-helse. Requirements for the test deliverable (L0)."/>
 	<kind value="requirements"/>
-	<fhirVersion value="4.0.0"/>
+	<fhirVersion value="4.0.1"/>
 	<format value="json"/>
 	<format value="xml"/>
 	<rest>
 		<mode value="server"/>
 		<documentation value="
-		The server must support a subset of the FHIR restful interactions described by HL7. Some special notes concerning the Capabilities offered by the server can be found in the ImplementationGuide for the service.
+		# Capabilitiy Statement PersonServerRequirements
+
+The server must support a subset of the FHIR restful interactions described by HL7. Some special notes concerning the Capabilities offered by the server can be found in the ImplementationGuide for the service.
+
 ## Limiting the search result
 
 ### The server expects _elements
 
-The server expects all read and search interactions to use the _elements operation specifying what elements should be included in the search result. In the case where the _elements operation is missing a resouce containing only the identifier element is returned.
+The server expects all read and search interactions to use the *_elements* operation specifying what elements should be included in the search result. In the case where the _elements operation is missing a resouce containing only the identifier element is returned.
 
-###
+### Example _elements operation
 
 To limit the returned resource instances the FHIR server supports the use of the _elements operation.
 
-The operation MUST be added to any search to limit the information returned in the search result like this 
-```
+The operation MUST be added to any search to limit the information returned in the search result like this:
+
+``` html
+
 GET http:%2F%2Fhapi.fhir.org%2FbaseR4%2FPerson%3Fname%3DEspen%26_elements%3Dname%2Caddress
-``` 
+```
 " />		
 	<resource>
 		<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
@@ -163,5 +168,21 @@ GET http:%2F%2Fhapi.fhir.org%2FbaseR4%2FPerson%3Fname%3DEspen%26_elements%3Dname
 				<documentation value="Search on relationshiptype RelatedPerson.relationship: GET [base]/RelatedPerson?relationship=[system]|[code]"/>
 			</searchParam>
 		</resource>
+		<searchParam>
+			<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+				<valueCode value="SHALL"/>
+			</extension>
+			<name value="_total"/>
+			<type value="token"/>
+			<documentation value="This server have a default value of *none* set for the _total parameter. The default value reduce the server load for large search-sets. The default behaviour can be changed by setting the _total parameter in the search request, please consider not changing the _total parameter to *accurate* unless your client really needs this information."/>
+		</searchParam>
+		<searchParam>
+			<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+				<valueCode value="SHALL"/>
+			</extension>
+			<name value="_elements"/>
+			<type value="string"/>
+			<documentation value="The server expects _elements parameter to be set. The server expects all read and search interactions to use the *_elements* operation specifying what elements should be included in the search result. In the case where the _elements operation is missing a resouce containing only the identifier element is returned."/>
+		</searchParam>
 	</rest>
 </CapabilityStatement>

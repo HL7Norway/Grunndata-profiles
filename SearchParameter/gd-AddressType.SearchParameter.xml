@@ -7,13 +7,11 @@
   <status value="active" />
   <description value="SearchParameter for the freg type of gd-Addresses" />
   <code value="gdaddresstype" />
-  <base value="Patient" />
   <base value="Person" />
   <base value="RelatedPerson" />
-  <base value="Practitioner" />
   <type value="token" />
-  <expression value="Patient.address.extension.where(url='http://ehelse.no/fhir/StructureDefinition/gd-address-metadata').extension.where(url='fregAddressType').value | Person.address.extension.where(url='http://ehelse.no/fhir/StructureDefinition/gd-address-metadata').extension.where(url='fregAddressType').value | RelatedPerson.address.extension.where(url='http://ehelse.no/fhir/StructureDefinition/gd-address-metadata').extension.where(url='fregAddressType').value | Practitioner.address.extension.where(url='http://ehelse.no/fhir/StructureDefinition/gd-address-metadata').extension.where(url='fregAddressType').value"/>
-  <xpath value="f:Patient/f:address/f:extension[@url='http://ehelse.no/fhir/StructureDefinition/gd-address-metadata']/f:extension[@url='fregAddressType'] | f:Person/f:address/f:extension[@url='http://ehelse.no/fhir/StructureDefinition/gd-address-metadata']/f:extension[@url='fregAddressType'] | f:Practitioner/f:address/f:extension[@url='http://ehelse.no/fhir/StructureDefinition/gd-address-metadata']/f:extension[@url='fregAddressType'] | f:RelatedPerson/f:address/f:extension[@url='http://ehelse.no/fhir/StructureDefinition/gd-address-metadata']/f:extension[@url='fregAddressType']" />
+  <expression value="Person.address.extension.where(url='http://ehelse.no/fhir/StructureDefinition/gd-address-metadata').extension.where(url='fregAddressType').value | RelatedPerson.address.extension.where(url='http://ehelse.no/fhir/StructureDefinition/gd-address-metadata').extension.where(url='fregAddressType').value" />
+  <xpath value="f:Person/f:address/f:extension[@url='http://ehelse.no/fhir/StructureDefinition/gd-address-metadata']/f:extension[@url='fregAddressType'] | f:RelatedPerson/f:address/f:extension[@url='http://ehelse.no/fhir/StructureDefinition/gd-address-metadata']/f:extension[@url='fregAddressType']" />
   <xpathUsage value="normal" />
   <multipleOr value="true" />
   <multipleAnd value="true" />

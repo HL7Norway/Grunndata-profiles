@@ -2,13 +2,17 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Address-street" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Address-street" />
+<<<<<<< HEAD
   <version value="3.0.0" />
+=======
+  <version value="2.3.4" />
+>>>>>>> dev
   <name value="GdAddressStreet" />
   <status value="draft" />
   <date value="2019-10-16" />
   <description value="The profile defines information structure of a Norwegian street address (vegadresse, vegadresseforpost), as defined by FREG.&#xD;&#xA;&#xD;&#xA;Contains information and metadata for addresses defined in Norwegian Master Person Index (FREG) and Norwegian Directorate of e-Health's health related Master Person Index.&#xD;&#xA;&#xD;&#xA;adresse for en bygning, bruksenhet, eiendom eller annet objekt som er registrert med adresse i matrikkelen&#xD;&#xA;Denne entitetstypen for norsk strukturert vegadresse er fullt kompatibel med strukturen i matrikkelen mht. egenskapsnavn." />
   <purpose value="vegadresse&#xD;&#xA;vegadresseforpost" />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="freg" />
     <name value="vegadresse" />
@@ -43,6 +47,10 @@
     <element id="Address.extension:urbanDistrict">
       <path value="Address.extension" />
       <sliceName value="urbanDistrict" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Address.extension:urbanDistrict.value[x]">
+      <path value="Address.extension.value[x]" />
       <mustSupport value="true" />
     </element>
     <element id="Address.extension:propertyInformation">
@@ -201,7 +209,7 @@
       <mapping>
         <identity value="freg" />
         <map value="husnummer" />
-        <comment value="adresssenummer.husnummer" />
+        <comment value="adressenummer.husnummer" />
       </mapping>
     </element>
     <element id="Address.line.extension:buildingNumberSuffix">

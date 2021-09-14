@@ -2,13 +2,17 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Address-cadastral" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Address-cadastral" />
+<<<<<<< HEAD
   <version value="3.0.0" />
+=======
+  <version value="2.3.3" />
+>>>>>>> dev
   <name value="GdAddressCadastral" />
   <status value="draft" />
   <date value="2019-10-17" />
   <description value="Contains information and metadata for addresses defined in Norwegian Master Person Index (FREG) and Norwegian Directorate of e-Health's health related Master Person Index.&#xD;&#xA;&#xD;&#xA;The profile defines information structure of a Norwegian cadastral address (matrikkeladresse), as defined by FREG." />
   <purpose value="Matrikkeladresse" />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="freg" />
     <name value="matrikkeladresse" />
@@ -36,6 +40,15 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+    </element>
+    <element id="Address.extension:urbanDistrict">
+      <path value="Address.extension" />
+      <sliceName value="urbanDistrict" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Address.extension:urbanDistrict.value[x]">
+      <path value="Address.extension.value[x]" />
+      <mustSupport value="true" />
     </element>
     <element id="Address.extension:propertyInformation">
       <path value="Address.extension" />

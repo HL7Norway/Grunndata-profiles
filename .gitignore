@@ -1,4 +1,5 @@
-StructureDefinition/package/*.*
+StructureDefinition/package-2016/*.*
+StructureDefinition/package-2017/*.*
 StructureDefinition/no-basis-2.0.13/*.*
 
 extension-iso21090*

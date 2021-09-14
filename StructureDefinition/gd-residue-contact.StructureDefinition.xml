@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="gd-residue-contact" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/gd-residue-contact" />
+  <version value="3.0.0" />
+  <name value="GdResidueContact" />
+  <status value="draft" />
+  <date value="2021-06-17" />
+  <description value="Information concerning a person or organization that handles the residue after the person is deceased.&#xD;&#xA;&#xD;&#xA;informasjon om hvilken person eller organisasjon som ivaretar rollen som bobestyrer, testamentfullbyrder eller fullmektig samt kontaktinformasjonen til denne&#xD;&#xA;Det vil foreligge informasjon om enten en person, en advokat eller en organisasjon." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Person" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Information concerning a person or organization that handles the residue after the person is deceased." />
+      <definition value="Information concerning a person or organization that handles the residue after the person is deceased.&#xD;&#xA;&#xD;&#xA;informasjon om hvilken person eller organisasjon som ivaretar rollen som bobestyrer, testamentfullbyrder eller fullmektig samt kontaktinformasjonen til denne&#xD;&#xA;Det vil foreligge informasjon om enten en person, en advokat eller en organisasjon.Element - found in all resources." />
+      <alias value="KontaktinformasjonForDoedsbo" />
+      <mapping>
+        <identity value="freg" />
+        <map value="KontaktinformasjonForDoedsbo" />
+      </mapping>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:attestedDate">
+      <path value="Extension.extension" />
+      <sliceName value="attestedDate" />
+      <short value="Date of issue for the residue contract" />
+      <definition value="Date of issue for the residue contract&#xD;&#xA;&#xD;&#xA;datoen en skifteattest er utstedt på" />
+      <alias value="attestutstedelsesdato" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="attestutstedelsesdato" />
+      </mapping>
+    </element>
+    <element id="Extension.extension:attestedDate.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="attestedDate" />
+    </element>
+    <element id="Extension.extension:attestedDate.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="date" />
+      </type>
+    </element>
+    <element id="Extension.extension:formOfTransfer">
+      <path value="Extension.extension" />
+      <sliceName value="formOfTransfer" />
+      <short value="private or public form of transfer" />
+      <definition value="private or public form of transfer&#xD;&#xA;&#xD;&#xA;informasjon om et skifte er privat eller offentlig&#xD;&#xA;Ved offentlig skifte kan ikke pårørende endre kontaktinformasjonen ved direkte henvendelse til folkeregistermyndigheten." />
+      <alias value="skifteform" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-formoftransfer" />
+      </binding>
+      <mapping>
+        <identity value="freg" />
+        <map value="skifteform" />
+      </mapping>
+    </element>
+    <element id="Extension.extension:formOfTransfer.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="formOfTransfer" />
+    </element>
+    <element id="Extension.extension:formOfTransfer.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="code" />
+      </type>
+    </element>
+    <element id="Extension.extension:address">
+      <path value="Extension.extension" />
+      <sliceName value="address" />
+      <short value="Contact address in Norway or abroad for the person, lawyer or organization" />
+      <definition value="Contact address in Norway or abroad for the person, lawyer or organization&#xD;&#xA;&#xD;&#xA;Kontaktadresse i Norge eller utlandet for person, advokat eller organisasjon.&#xD;&#xA;&#xD;&#xA;noe avsender bruker for å nå mottaker&#xD;&#xA;Formatet er slik det lagres hos Domstolsadministrasjonen.&#xD;&#xA;Adresselinjene inneholder fritekst fordelt på maksimum to linjer." />
+      <alias value="adresse" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="adresse" />
+      </mapping>
+    </element>
+    <element id="Extension.extension:address.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="address" />
+    </element>
+    <element id="Extension.extension:address.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="Address" />
+      </type>
+    </element>
+    <element id="Extension.extension:address.value[x].use">
+      <path value="Extension.extension.value[x].use" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:address.value[x].type">
+      <path value="Extension.extension.value[x].type" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:address.value[x].text">
+      <path value="Extension.extension.value[x].text" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:address.value[x].line">
+      <path value="Extension.extension.value[x].line" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Extension.extension:address.value[x].city">
+      <path value="Extension.extension.value[x].city" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Extension.extension:address.value[x].district">
+      <path value="Extension.extension.value[x].district" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:address.value[x].state">
+      <path value="Extension.extension.value[x].state" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:address.value[x].postalCode">
+      <path value="Extension.extension.value[x].postalCode" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Extension.extension:address.value[x].country">
+      <path value="Extension.extension.value[x].country" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Extension.extension:address.value[x].period">
+      <path value="Extension.extension.value[x].period" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:contactLawyer">
+      <path value="Extension.extension" />
+      <sliceName value="contactLawyer" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-contact-lawyer" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Extension.extension:contactLawyer.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="contactLawyer" />
+    </element>
+    <element id="Extension.extension:contactPerson">
+      <path value="Extension.extension" />
+      <sliceName value="contactPerson" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-contact-person" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Extension.extension:contactPerson.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="contactPerson" />
+    </element>
+    <element id="Extension.extension:contactOrganization">
+      <path value="Extension.extension" />
+      <sliceName value="contactOrganization" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-contact-organization" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Extension.extension:contactOrganization.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="contactOrganization" />
+    </element>
+    <element id="Extension.extension:fregMetadata">
+      <path value="Extension.extension" />
+      <sliceName value="fregMetadata" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata" />
+      </type>
+    </element>
+    <element id="Extension.extension:fregMetadata.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="fregMetadata" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/gd-residue-contact" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

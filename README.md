@@ -1,5 +1,6 @@
 # Område for profiler tilhørende Grunndata
-# FHIR version R4 4.0.0
+
+## FHIR version R4 4.0.1
 
 - Profiler av resources
 - Extensions
@@ -10,8 +11,16 @@
 - Figurer og illustrasjoner
 
 ## Publisering
-Ferdige profiler publiseres også her: 
-https://simplifier.net/grunndata-r4
+Ferdige profiler publiseres også her sammen med en implementasjonsguide:
+[SIMPLIFIER](https://simplifier.net/grunndata-r4)
+
+## Dependencies
+
+[HL7 Norge no-basis R4](https://github.com/HL7Norway/basisprofiler-r4)
+
+## DEPRECATION
+
+**for-validering-gd-r4** katalogen er foreldet og fjernes i neste pull fra dev branch
 
 ## Vi benytter Feature branch workflow
 ![Feature branch workflow](https://git.sarepta.ehelse.no/utvikling/FHIR/raw/92dff80b4b825be384908a90a3abfa7d6a8d6a46/Feature-branch-workflow.JPG)

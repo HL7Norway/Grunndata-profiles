@@ -2,13 +2,13 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-birth" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-birth" />
-  <version value="2.1.1" />
+  <version value="2.3.4" />
   <name value="GdBirth" />
   <title value="GdBirth" />
   <status value="draft" />
   <date value="2019-04-29" />
   <description value="Fødsel gir opplysninger om personens fødsel helt uavhengig av om denne er født i Norge eller ikke. Fødsel i Norge gir tilleggsinformasjon om fødselen hvis den har skjedd i Norge og er ment for bruk av spesielt interesserte og er derfor skilt ut fra fødsel.&#xD;&#xA;Det finnes ikke historiske data for disse informasjonselementene fordi det skal finnes maksimum en sannhet for hvert informasjonselement - selv om denne kan være korrigert flere ganger." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
@@ -40,6 +40,8 @@
     <element id="Extension.extension:birthYear">
       <path value="Extension.extension" />
       <sliceName value="birthYear" />
+      <short value="året en person er født" />
+      <definition value="året en person er født" />
       <alias value="fødselsår" />
       <min value="1" />
       <max value="1" />
@@ -60,7 +62,7 @@
       <path value="Extension.extension" />
       <sliceName value="landOfBirth" />
       <short value="land of Birth" />
-      <definition value="landet en person er født som landkode (ISO 3166-1 alfa 3)&#xD;&#xA;Innholdet er en tre-bokstavs kode i majuskel format (store bokstaver) iht. ISO 3166-1 alfa 3" />
+      <definition value="landet personen ble født i med kode og navn for personer som er født i utlandet&#xD;&#xA;Innholdet er en tre-bokstavs kode i majuskel format (store bokstaver) iht. ISO 3166-1 alfa 3" />
       <alias value="fødeland" />
       <max value="1" />
     </element>
@@ -78,7 +80,7 @@
       <path value="Extension.extension" />
       <sliceName value="placeOfBirth" />
       <short value="place of birth" />
-      <definition value="sted i et land hvor personen er født&#xD;&#xA;- Personer som er født i Norge: navnet på kommunen på fødselstidspunktet - hvis det er lagret&#xD;&#xA;- Personer som er født i utlandet: type steder kan variere fra land til land. Vi skal se på muligheten for å etablere rutiner/systemstøtte for hvilke typer steder som skal kunne registreres for ulike land." />
+      <definition value="fødekommunen eller fødelandet personen er født&#xD;&#xA;- Personer som er født i Norge: navnet på kommunen på fødselstidspunktet - hvis det er lagret, eller navnet på fødselsinstitusjonen&#xD;&#xA;- Personer som er født i utlandet: type steder kan variere fra land til land." />
       <alias value="fødested" />
       <max value="1" />
     </element>
@@ -96,7 +98,7 @@
       <path value="Extension.extension" />
       <sliceName value="placeOfBirthDistrict" />
       <short value="District in Norway where the person was born" />
-      <definition value="kommunen barnet faktisk ble født i&#xD;&#xA;Innholdet er kommunenummeret på fødselstidspunktet.&#xD;&#xA;Denne informasjonen ligger under fødsel og ikke fødselINorge fordi det da er lettere tilgjengelig i normale oppslag." />
+      <definition value="kommunen personen er fødselsregistrert i&#xD;&#xA;Innholdet er kommunenummeret på fødselstidspunktet.&#xD;&#xA;Denne informasjonen ligger under fødsel og ikke fødselINorge fordi det da er tilgjengelig i oppslag for alle rettighetspakker." />
       <alias value="fødekommuneINorge" />
       <max value="1" />
     </element>

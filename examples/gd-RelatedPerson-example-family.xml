@@ -1,5 +1,4 @@
 <RelatedPerson xmlns="http://hl7.org/fhir">
-	<RelatedPerson>
 		<id value="267eec30-5fbe-4e95-b310-57f9566fad96" />
 		<meta>
 			<versionId value="113f1423-1960-492f-a6e9-ad5a83332376" />
@@ -39,5 +38,4 @@
 			</coding>
 			<text value="Mor" />
 		</relationship>
-	</RelatedPerson>
 </RelatedPerson>

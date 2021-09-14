@@ -7,7 +7,7 @@
   <status value="draft" />
   <date value="2019-12-06" />
   <description value="Provenance profile to be used on Grunndata. Person, Practitioner, Organization etc.&#xD;&#xA;&#xD;&#xA;The GdProvenance profile describes the structure and coding of provenance information describing how FHIR resource instances (such as Person/RelatedPerson) change over time (activity) and what events (reason) caused these changes." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Provenance" />
@@ -18,7 +18,7 @@
       <path value="Provenance" />
       <alias value="Hendelse" />
     </element>
-        <element id="Provenance.id">
+    <element id="Provenance.id">
       <path value="Provenance.id" />
       <definition value="Grunndata: Provenance resources for the Grunndata-services should identify their provenance by a counter identifier that identifies the sequence that the Provenance resources where registered on the Grunndata-service. &#xD;&#xA;&#xD;&#xA;The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." />
       <alias value="Hendelseid" />
