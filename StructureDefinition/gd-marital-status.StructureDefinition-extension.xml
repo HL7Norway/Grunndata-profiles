@@ -7,7 +7,7 @@
   <status value="draft" />
   <date value="2019-10-16" />
   <description value="Extension for representing information regarding marital status. Represents the same information awailable in the Norwegian Folkeregister (FREG)" />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>

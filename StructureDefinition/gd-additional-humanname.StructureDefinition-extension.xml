@@ -7,7 +7,7 @@
   <status value="draft" />
   <date value="2019-06-12" />
   <description value="metadata about human name from FREG (folkeregisterpersonnavn) describes metadata about HumanName available from the norwegian person index (folkeregisteret, freg)" />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>

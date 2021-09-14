@@ -8,7 +8,7 @@
   <date value="2019-10-16" />
   <description value="Contains information and metadata for addresses defined in Norwegian Master Person Index (FREG) and Norwegian Directorate of e-Health's health related Master Person Index.&#xD;&#xA;&#xD;&#xA;The profile defines information structure of a Norwegian street address (vegadresse, vegadresseforpost), as defined by FREG.&#xD;&#xA;&#xD;&#xA;adresse for en bygning, bruksenhet, eiendom eller annet objekt som er registrert med adresse i matrikkelen&#xD;&#xA;Denne entitetstypen for norsk strukturert vegadresse er fullt kompatibel med strukturen i matrikkelen mht. egenskapsnavn." />
   <purpose value="vegadresse&#xD;&#xA;vegadresseforpost" />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="freg" />
     <name value="vegadresse" />
