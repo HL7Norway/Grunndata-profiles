@@ -2,11 +2,15 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="gd-Address-street" />
   <url value="http://ehelse.no/fhir/StructureDefinition/gd-Address-street" />
+<<<<<<< HEAD
+  <version value="3.0.0" />
+=======
   <version value="2.3.4" />
+>>>>>>> dev
   <name value="GdAddressStreet" />
   <status value="draft" />
   <date value="2019-10-16" />
-  <description value="Contains information and metadata for addresses defined in Norwegian Master Person Index (FREG) and Norwegian Directorate of e-Health's health related Master Person Index.&#xD;&#xA;&#xD;&#xA;The profile defines information structure of a Norwegian street address (vegadresse, vegadresseforpost), as defined by FREG.&#xD;&#xA;&#xD;&#xA;adresse for en bygning, bruksenhet, eiendom eller annet objekt som er registrert med adresse i matrikkelen&#xD;&#xA;Denne entitetstypen for norsk strukturert vegadresse er fullt kompatibel med strukturen i matrikkelen mht. egenskapsnavn." />
+  <description value="The profile defines information structure of a Norwegian street address (vegadresse, vegadresseforpost), as defined by FREG.&#xD;&#xA;&#xD;&#xA;Contains information and metadata for addresses defined in Norwegian Master Person Index (FREG) and Norwegian Directorate of e-Health's health related Master Person Index.&#xD;&#xA;&#xD;&#xA;adresse for en bygning, bruksenhet, eiendom eller annet objekt som er registrert med adresse i matrikkelen&#xD;&#xA;Denne entitetstypen for norsk strukturert vegadresse er fullt kompatibel med strukturen i matrikkelen mht. egenskapsnavn." />
   <purpose value="vegadresse&#xD;&#xA;vegadresseforpost" />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -22,6 +26,7 @@
   <differential>
     <element id="Address">
       <path value="Address" />
+      <definition value="The profile defines information structure of a Norwegian street address (vegadresse, vegadresseforpost), as defined by FREG.&#xD;&#xA;&#xD;&#xA;Grunndata adresse&#xD;&#xA;Contains information and metadata for addresses defined in Norwegian Master Person Index and Norwegian Directorate of e-Health's health related Master Person Index.&#xD;&#xA;&#xD;&#xA;An address expressed using postal conventions (as opposed to GPS or other location definition formats).  This data type may be used to convey addresses for use in delivering mail as well as for visiting locations which might not be valid for mail delivery.  There are a variety of postal address formats defined around the world." />
       <alias value="vegadresse" />
       <mapping>
         <identity value="freg" />
@@ -52,7 +57,7 @@
       <path value="Address.extension" />
       <sliceName value="propertyInformation" />
       <definition value="gd-Address-street uses property information to contain the municipality code from FREG. no other part of propertyinformation is used by this profile.&#xD;&#xA;&#xD;&#xA;Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer" />
-      <mustSupport value="true" />
+      <mustSupport value="false" />
     </element>
     <element id="Address.extension:propertyInformation.extension">
       <path value="Address.extension.extension" />
@@ -87,8 +92,7 @@
     <element id="Address.extension:propertyInformation.extension:municipality">
       <path value="Address.extension.extension" />
       <sliceName value="municipality" />
-      <alias value="kommunenummer" />
-      <mustSupport value="true" />
+      <mustSupport value="false" />
       <mapping>
         <identity value="freg" />
         <map value="kommunenummer" />
@@ -243,13 +247,37 @@
         <map value="coAdressenavn" />
       </mapping>
     </element>
-    <element id="Address.city">
-      <path value="Address.city" />
+    <element id="Address.district">
+      <path value="Address.district" />
       <mustSupport value="true" />
       <mapping>
         <identity value="freg" />
-        <map value="poststedsnavn" />
+        <map value="n/a" />
+        <comment value="FREG don't contain kommunenavn" />
       </mapping>
+    </element>
+    <element id="Address.district.extension">
+      <path value="Address.district.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Address.district.extension:municipalityCoded">
+      <path value="Address.district.extension" />
+      <sliceName value="municipalityCoded" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="kommunenummer" />
+      </mapping>
+    </element>
+    <element id="Address.district.extension:municipalityCoded.value[x]">
+      <path value="Address.district.extension.value[x]" />
+      <mustSupport value="true" />
     </element>
     <element id="Address.postalCode">
       <path value="Address.postalCode" />
