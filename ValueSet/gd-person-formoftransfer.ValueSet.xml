@@ -1,0 +1,14 @@
+<ValueSet  xmlns="http://hl7.org/fhir">
+	<id value="gd-person-formoftransfer.valueset"/>
+	<url value="http://ehelse.no/fhir/ValueSet/gd-person-formoftransfer"/>
+	<version value="3.0.0"/>
+	<name value="GdPersonFormoftransferValueSet"/>
+	<status value="draft"/>
+	<date value="2021-06-17T00:00:00.000+00:00"/>
+	<publisher value="Skatteetaten"/>
+	<compose>
+		<include>
+			<system value="http://ehelse.no/fhir/CodeSystem/gd-person-formoftransfer"/>
+		</include>
+	</compose>
+</ValueSet>

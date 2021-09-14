@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="gd-sami-language" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/gd-sami-language" />
+  <version value="3.0.0" />
+  <name value="GdSamiLanguage" />
+  <status value="draft" />
+  <date value="2021-06-23" />
+  <description value="Information regarding sami language uses by a person&#xD;&#xA;&#xD;&#xA;Inneholder informasjon om hvilke samiske språk en person bruker. Samiskspråklige personer skal ha adgang til, på frivillig basis, å registrere seg som bruker av et eller flere av de tre samiske språkene nordsamisk, lulesamisk og sørsamisk. Registreringen baseres på egeninnmelding." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Person" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Information regarding sami language used by a person" />
+      <definition value="Information regarding sami language uses by a person&#xD;&#xA;&#xD;&#xA;DEPRECATION: This extension will be deprecated when Grunndata is updated to support FHIR R5 (Person will contain communication.language element)&#xD;&#xA;&#xD;&#xA;Inneholder informasjon om hvilke samiske språk en person bruker. Samiskspråklige personer skal ha adgang til, på frivillig basis, å registrere seg som bruker av et eller flere av de tre samiske språkene nordsamisk, lulesamisk og sørsamisk. Registreringen baseres på egeninnmelding." />
+      <alias value="SamiskSpraak" />
+      <mapping>
+        <identity value="freg" />
+        <map value="SamiskSpraak" />
+      </mapping>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:language">
+      <path value="Extension.extension" />
+      <sliceName value="language" />
+      <short value="The actual sami languages the person speaks" />
+      <definition value="The actual sami languages the person speaks&#xD;&#xA;&#xD;&#xA;Egenskap med mulighet for å registrere ett til tre samiske språk (se kodeliste under)." />
+      <alias value="spraak" />
+      <min value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-samilanguage" />
+      </binding>
+      <mapping>
+        <identity value="freg" />
+        <map value="spraak" />
+      </mapping>
+    </element>
+    <element id="Extension.extension:language.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="language" />
+    </element>
+    <element id="Extension.extension:language.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+    </element>
+    <element id="Extension.extension:language.value[x].coding">
+      <path value="Extension.extension.value[x].coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:language.value[x].coding.system">
+      <path value="Extension.extension.value[x].coding.system" />
+      <min value="1" />
+      <patternUri value="http://ehelse.no/fhir/CodeSystem/gd-person-samilanguage" />
+    </element>
+    <element id="Extension.extension:language.value[x].coding.code">
+      <path value="Extension.extension.value[x].coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Extension.extension:fregMetadata">
+      <path value="Extension.extension" />
+      <sliceName value="fregMetadata" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-fregmetadata" />
+      </type>
+    </element>
+    <element id="Extension.extension:fregMetadata.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="fregMetadata" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/gd-sami-language" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

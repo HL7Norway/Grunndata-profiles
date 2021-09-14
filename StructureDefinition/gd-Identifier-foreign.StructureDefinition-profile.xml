@@ -7,7 +7,7 @@
   <status value="draft" />
   <date value="2019-10-16" />
   <description value="Identification number from foreign authority or the identifier value from the Norwegian immigration administration.&#xD;&#xA;&#xD;&#xA;The GdIdentifierForeign profile describes the structure and coding of how to identify official Norwegian human identifiers used to identify foreign citizens registered in FREG. The profile establishes how the business identifiers used to identify foreign citizens should be coded using type.coding and value.&#xD;&#xA;&#xD;&#xA;utenlandsk personidentifikasjon: informasjon om et personidentifikasjonsnummer fra en utenlandsk myndighet&#xD;&#xA;&#xD;&#xA;utlendingsmyndighetenes identifikasjonsnummer: unikt personidentifikasjonsnummer for person som blir førstegangsregistrert i landet av utlendingsmyndighetene&#xD;&#xA;Dette nummeret går i dag under navnet DUF-nummer." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <type value="Identifier" />

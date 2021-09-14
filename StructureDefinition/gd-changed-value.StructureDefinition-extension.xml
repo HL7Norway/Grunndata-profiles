@@ -7,7 +7,7 @@
   <status value="draft" />
   <date value="2019-10-16" />
   <description value="The values of a referenced elements that have changed. Contains both old and new values. The newValue will be empty if this is a create transaction. The oldValue will be empty if this is a delete transaction." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SearchParameter xmlns="http://hl7.org/fhir">
+	<id value="person-extension-fakeIdentity-identifyingInformationGender-Fhir4.0" />
+	<url value="http://ehelse.no/fhir/StructureDefinition/gd-fake-identity-identifying-information-gender" />
+	<version value="3.0.0" />
+	<name value="FakeIdentityIdentifyingInformationGender" />
+	<status value="active" />
+	<description value="SearchParameter for the gender extension in the identifyingInformation extension of the Norwegian fake identity extension http://ehelse.no/fhir/StructureDefinition/gd-fake-identity" />
+	<code value="identifyingInformationGender" />
+	<base value="Person" />
+	<type value="token" />
+	<expression value="Person.extension.extension.where(url='http://ehelse.no/fhir/StructureDefinition/gd-fake-identity').extension.where(url='identifyingInformation').extension.where(url='gender').value" />
+	<xpath value="f:Person/f:extension/f:extension[@url='http://ehelse.no/fhir/StructureDefinition/gd-fake-identity']/f:extension[@url='identifyingInformation']/f:extension[@url='gender']" />
+	<xpathUsage value="normal" />
+	<modifier value="missing" />
+	<modifier value="exact" />
+</SearchParameter>

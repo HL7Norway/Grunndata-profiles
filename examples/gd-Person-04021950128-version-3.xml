@@ -113,13 +113,13 @@
 				<valueInteger value="301"/> <!-- grunnkrets -->
 			</extension>
 			<extension url="parishId"> <!-- kirkekrets -->
-				<valueCode value="2"/>
+				<valueInteger value="2"/>
 			</extension>
 			<extension url="constituencyId"> <!-- stemmekrets -->
 				<valueInteger value="3"/>
 			</extension>
 			<extension url="schoolDistrict"> <!-- skolekrets -->
-				<valueCode value="3"/>
+				<valueInteger value="3"/>
 			</extension>
 			<extension url="fregAddressContentType"> 
 				<valueCode value="Vegadresse"/>

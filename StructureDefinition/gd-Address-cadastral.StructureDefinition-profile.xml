@@ -8,7 +8,7 @@
   <date value="2019-10-17" />
   <description value="Contains information and metadata for addresses defined in Norwegian Master Person Index (FREG) and Norwegian Directorate of e-Health's health related Master Person Index.&#xD;&#xA;&#xD;&#xA;The profile defines information structure of a Norwegian cadastral address (matrikkeladresse), as defined by FREG." />
   <purpose value="Matrikkeladresse" />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="freg" />
     <name value="matrikkeladresse" />

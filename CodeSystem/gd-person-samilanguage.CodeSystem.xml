@@ -1,0 +1,23 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="gd-person-samilanguage.codesystem" />
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-samilanguage" />
+    <version value="3.0.0" />
+    <name value="GdPersonSamiLanguageCodeSystem" />
+    <status value="draft" />
+    <date value="2020-06-23T00:00:00.000+00:00" />
+    <publisher value="Copy of Codes from SamiskSpraakType defined by Skatteetaten" />
+	<description value="Copy of Codes from SamiskSpraakType defined by Skatteetaten"/>
+    <content value="complete" />
+    <concept>
+        <code value="nordsamisk" />
+        <display value="Nordsamisk" />
+    </concept>
+    <concept>
+        <code value="soersamisk" />
+        <display value="Soersamisk" />
+    </concept>
+    <concept>
+        <code value="lulesamisk" />
+        <display value="Lulesamisk" />
+    </concept>
+</CodeSystem>
