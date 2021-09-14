@@ -7,12 +7,10 @@
   <status value="active" />
   <description value="SearchParameter for the buildingNumberSuffix line extension in addresses" />
   <code value="buildingNumberSuffix" />
-  <base value="Patient" />
   <base value="Person" />
-  <base value="RelatedPerson" />
   <type value="string" />
-  <expression value="Patient.address.line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix').value | Person.address.line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix').value | RelatedPerson.address.line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix').value"/>
-  <xpath value="f:Patient/f:address/f:line/f:extension[@url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix'] | f:Person/f:address/f:line/f:extension[@url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix'] | f:RelatedPerson/f:address/f:line/f:extension[@url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix']" />
+  <expression value="Person.address.line.extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix').value"/>
+  <xpath value="f:Person/f:address/f:line/f:extension[@url='http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix']" />
   <xpathUsage value="normal" />
   <multipleOr value="true" />
   <multipleAnd value="true" />
