@@ -64,3 +64,8 @@ This is a new release completing the information model according to FREG informa
 |2021-07-02|Documentation|Updated diagrams for documentation|Feature 3830|
 |2021-07-02|GdPersonCitizenshipRetention|Bugfix mapping and missing datoForBibehold element, changed norwegian element name to englishbibeholdStatus|Bugfix|
 |2021-07-02|GdPerson|Fixed wrong cardinality of citizenshipRetention|Bugfix|
+|2021-09-14|gd-municipalitycoded.StructureDefinition.xml|New extension to incorporate coded values for Norwegian county's (kommunenummer)|PBI 6787|
+|2021-09-14|gd-Address.StructureDefinition-profile.xml|Include the municipalitycoded extension, updated documentation for kommunenummer|PBI 6787|
+|2021-09-14|gd-Address-street.StructureDefinition-profile.xml|Documentation changes, Change must-support for propertyinformation.extension, added must support for Address.district, added mapping information|PBI 6787|
+|2021-09-14|gd-Address-unknown.StructureDefinition-profile.xml|Documentation changes, Change must-support for propertyinformation.extension, added must support for Address.district, added mapping information|PBI 6787|
+|2021-09-14|gd-Address-cadastral.StructureDefinition-profile.xml|Documentation changes, added must support for Address.district, added mapping information|PBI 6787|
