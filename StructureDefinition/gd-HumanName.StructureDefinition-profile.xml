@@ -32,7 +32,7 @@
     <element id="HumanName.extension:middlename">
       <path value="HumanName.extension" />
       <sliceName value="middlename" />
-      <mustSupport value="true" />
+      <mustSupport value="false" />
     </element>
     <element id="HumanName.extension:fregMetadata">
       <path value="HumanName.extension" />
