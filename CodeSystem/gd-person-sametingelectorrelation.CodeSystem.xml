@@ -20,4 +20,8 @@
         <code value="utmeldt" />
         <display value="Utmeldt" />
     </concept>
+    <concept>
+        <code value="aldriInnmeldt" />
+        <display value="Aldri innmeldt" />
+    </concept>
 </CodeSystem>
