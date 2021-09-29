@@ -167,28 +167,6 @@
         <map value="coAdressenavn" />
       </mapping>
     </element>
-    <element id="Address.district">
-      <path value="Address.district" />
-    </element>
-    <element id="Address.district.extension">
-      <path value="Address.district.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Address.district.extension:municipalityCoded">
-      <path value="Address.district.extension" />
-      <sliceName value="municipalityCoded" />
-      <definition value="In the cases where a cadastral address is provided the code for kommune is also provided as a part of the propertyInformation.extension.&#xD;&#xA;&#xD;&#xA;Norwegian kommune identified by a predefined number. The norwegian kommune identifies an administrative geographic unit in Norway called kommune." />
-      <mapping>
-        <identity value="freg" />
-        <map value="kommunenummer" />
-      </mapping>
-    </element>
     <element id="Address.period">
       <path value="Address.period" />
       <mustSupport value="true" />
