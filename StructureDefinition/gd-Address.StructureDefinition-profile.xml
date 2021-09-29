@@ -141,35 +141,6 @@
       <path value="Address.district" />
       <short value="name of &quot;kommune&quot; or district" />
       <definition value="gd-Address: Norwegian addresses uses district for the norwegian &quot;kommune&quot;, international addresses uses district for any other applicable district in that country. The provided extension provides the &quot;kommunenummer&quot; as a part of this element.&#xD;&#xA;&#xD;&#xA;When a norwegian street address is provided by the source (FREG) kommunenavn and kommunenummer is provided. In the cases where a cadastral address is provided the code for kommune is also provided as a part of the propertyInformation.extension.&#xD;&#xA;&#xD;&#xA;The name of the administrative area (county)." />
-      <alias value="kommunenavn" />
-    </element>
-    <element id="Address.district.extension">
-      <path value="Address.district.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Address.district.extension:municipalityCoded">
-      <path value="Address.district.extension" />
-      <sliceName value="municipalityCoded" />
-      <definition value="Norwegian kommune identified by a predefined number. The norwegian kommune identifies an administrative geographic unit in Norway called kommune." />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-municipalitycoded" />
-      </type>
-    </element>
-    <element id="Address.district.extension:municipalityCoded.value[x].system">
-      <path value="Address.district.extension.value[x].system" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Address.district.extension:municipalityCoded.value[x].code">
-      <path value="Address.district.extension.value[x].code" />
-      <mustSupport value="true" />
     </element>
     <element id="Address.period">
       <path value="Address.period" />
