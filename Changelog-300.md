@@ -69,3 +69,4 @@ This is a new release completing the information model according to FREG informa
 |2021-09-14|gd-Address-street.StructureDefinition-profile.xml|Documentation changes, Change must-support for propertyinformation.extension, added must support for Address.district, added mapping information|PBI 6787|
 |2021-09-14|gd-Address-unknown.StructureDefinition-profile.xml|Documentation changes, Change must-support for propertyinformation.extension, added must support for Address.district, added mapping information|PBI 6787|
 |2021-09-14|gd-Address-cadastral.StructureDefinition-profile.xml|Documentation changes, added must support for Address.district, added mapping information|PBI 6787|
+|2021-09-14|gd-person-sametingelectorrelation.codesystem|Added new code aldriInnmeldt|PBI 27915|
