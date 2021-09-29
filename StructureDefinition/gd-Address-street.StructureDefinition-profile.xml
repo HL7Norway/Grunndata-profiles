@@ -88,7 +88,7 @@
     <element id="Address.extension:propertyInformation.extension:municipality">
       <path value="Address.extension.extension" />
       <sliceName value="municipality" />
-      <mustSupport value="false" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="freg" />
         <map value="kommunenummer" />
@@ -242,38 +242,6 @@
         <identity value="freg" />
         <map value="coAdressenavn" />
       </mapping>
-    </element>
-    <element id="Address.district">
-      <path value="Address.district" />
-      <mustSupport value="true" />
-      <mapping>
-        <identity value="freg" />
-        <map value="n/a" />
-        <comment value="FREG don't contain kommunenavn" />
-      </mapping>
-    </element>
-    <element id="Address.district.extension">
-      <path value="Address.district.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Address.district.extension:municipalityCoded">
-      <path value="Address.district.extension" />
-      <sliceName value="municipalityCoded" />
-      <mustSupport value="true" />
-      <mapping>
-        <identity value="freg" />
-        <map value="kommunenummer" />
-      </mapping>
-    </element>
-    <element id="Address.district.extension:municipalityCoded.value[x]">
-      <path value="Address.district.extension.value[x]" />
-      <mustSupport value="true" />
     </element>
     <element id="Address.postalCode">
       <path value="Address.postalCode" />
