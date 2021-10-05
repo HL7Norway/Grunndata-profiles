@@ -243,6 +243,24 @@
         <map value="coAdressenavn" />
       </mapping>
     </element>
+    <element id="Address.district">
+      <path value="Address.district" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="freg" />
+        <map value="kommunenummer" />
+      </mapping>
+    </element>
+    <element id="Address.district.extension">
+      <path value="Address.district.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
     <element id="Address.postalCode">
       <path value="Address.postalCode" />
       <mustSupport value="true" />
