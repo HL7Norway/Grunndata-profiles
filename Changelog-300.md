@@ -1,6 +1,6 @@
 # Changelog for 3.0.0
 
-## Documents the changes implemented from version 2.x.x to 3.0.0
+## Documents the changes implemented from version 2.3.5 to 3.0.0
 
 ### Release date: 2021-xx-xx
 
@@ -17,8 +17,8 @@ This is a new release completing the information model according to FREG informa
 |2021-04-16|Why use different structure for fregMetadata in different extensions? See gdBirth and gdResidencepermit?||
 |2021-04-16|gd-identitycontrolstatus.ValueSet.xml||PBI 10357|
 |2021-04-16|gd-identitycontrolstatus.CodeSystem.xml||PBI 10357|
-|2021-04-16|gd-identity-control.StructureDefinition-extension.xml||PBI 10357|
-|2021-05-31|GdPerson|bugfix of Person.meta.security:addressConfidentiality.system, added fixed uri for system|BUG 11440|
+|2021-04-16|gd-identity-control.StructureDefinition-extension.xml|Added|PBI 10357|
+|2021-05-31|gdPerson|bugfix of Person.meta.security:addressConfidentiality.system, added fixed uri for system|BUG 11440|
 |2021-06-02|gd-Person|removed active documentation concerning fake-id persons (active not set on fakeid)|Feature 3830, PBI 10481|
 |2021-06-02|gd-Person, GdFakeIdentity|Added isModifier=true to GdFakeIdentity to signify the importance of the fake identity information if present|Feature 3830, PBI 10481|
 |2021-06-09|gd-Person-Fred-pajord-identity-control.xml|Added example of gd-identity-control use (.NET validert)|PBI 10357|
@@ -46,6 +46,7 @@ This is a new release completing the information model according to FREG informa
 |2021-06-18|gd-Person-Fred-pajord-residue-contact.xml|Added example (validated Java)|PBI 10358|
 |2021-06-18|gd-Person-Fred-pajord-residue-contact.xml|Added containing contact-person (validates .NET, don't validate in Java,)|PBI 10358|
 |2021-06-22|GdPerson|Validation error|BUG 24365|
+|2021-06-22|GdCodingSecurity.StructureDefinition-profile.xml|New security profiel for adressebeskyttelse|
 |2021-06-22|GdCodingSecurity|Validation error|BUG 24365|
 |2021-06-22|GdFregMetadata|Added Coding Context of extension|BUG 24365|
 |2021-06-22|gd-Person-Nabo-Eksempel-adressebeskyttelse-klientadresse.xml|Updated addressConfidentiality coding to working code value|BUG 24365|
@@ -65,8 +66,17 @@ This is a new release completing the information model according to FREG informa
 |2021-07-02|GdPersonCitizenshipRetention|Bugfix mapping and missing datoForBibehold element, changed norwegian element name to englishbibeholdStatus|Bugfix|
 |2021-07-02|GdPerson|Fixed wrong cardinality of citizenshipRetention|Bugfix|
 |2021-09-14|gd-municipalitycoded.StructureDefinition.xml|New extension to incorporate coded values for Norwegian county's (kommunenummer)|PBI 6787|
-|2021-09-14|gd-Address.StructureDefinition-profile.xml|Include the municipalitycoded extension, updated documentation for kommunenummer|PBI 6787|
-|2021-09-14|gd-Address-street.StructureDefinition-profile.xml|Documentation changes, Change must-support for propertyinformation.extension, added must support for Address.district, added mapping information|PBI 6787|
-|2021-09-14|gd-Address-unknown.StructureDefinition-profile.xml|Documentation changes, Change must-support for propertyinformation.extension, added must support for Address.district, added mapping information|PBI 6787|
-|2021-09-14|gd-Address-cadastral.StructureDefinition-profile.xml|Documentation changes, added must support for Address.district, added mapping information|PBI 6787|
+|2021-09-14|gd-Address.StructureDefinition-profile.xml|Include extension:propertyInformation, updated documentation for kommunenummer|PBI 6787|
+|2021-09-14|gd-Address-street.StructureDefinition-profile.xml|Documentation changes, Change must-support for propertyinformation.extension, added must support for Address.district, removed address.city|PBI 6787|
+|2021-09-14|gd-Address-unknown.StructureDefinition-profile.xml|Documentation changes, Change must-support for propertyinformation.extension, added must support for Address.district|PBI 6787|
+|2021-09-14|gd-Address-cadastral.StructureDefinition-profile.xml|Removed alias element, added definition element.|PBI 6787|
 |2021-09-14|gd-person-sametingelectorrelation.codesystem|Added new code aldriInnmeldt|PBI 27915|
+|2021-10-04|gd-AddressContentType.SearchParameter.xml|Clean up unused elements|
+|2021-10-04|gd-AddressType.SearchParameter.xml|Clean up unused elements|
+|2021-10-04|gd-AddressDistrictExtension-Municipality.SearchParameter.xml|New search paramter on municipality|
+|2021-10-04|gd-AddressLine-BuildingNumberSuffix.SearchParameter.xml|New search paramter on building number suffix|
+|2021-10-04|gd-AddressLine-HouseNumber.SearchParameter.xml|New search paramter on house number numeric|
+|2021-10-04|gd-AddressLine-StreetName.SearchParameter.xml|New search paramter on streetname|
+|2021-10-05|gd-HumanName.StructureDefinition-profile.xml|Added humanName.extension, changed must-support on middlename, removed min value and definition on HumanName.extension:fregMetadata|
+|2021-10-05|gd-family-relation.StructureDefinition-extension.xml|Removed extensions elements.|
+|2021-10-05|gd-guardianship.StructureDefinition-extension.xml|Removed min value because of skatt|
