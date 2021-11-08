@@ -65,23 +65,10 @@
     </element>
     <element id="Extension.extension:language.value[x]">
       <path value="Extension.extension.value[x]" />
+      <min value="1" />
       <type>
-        <code value="CodeableConcept" />
+        <code value="code" />
       </type>
-    </element>
-    <element id="Extension.extension:language.value[x].coding">
-      <path value="Extension.extension.value[x].coding" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Extension.extension:language.value[x].coding.system">
-      <path value="Extension.extension.value[x].coding.system" />
-      <min value="1" />
-      <patternUri value="http://ehelse.no/fhir/CodeSystem/gd-person-samilanguage" />
-    </element>
-    <element id="Extension.extension:language.value[x].coding.code">
-      <path value="Extension.extension.value[x].coding.code" />
-      <min value="1" />
     </element>
     <element id="Extension.extension:fregMetadata">
       <path value="Extension.extension" />
