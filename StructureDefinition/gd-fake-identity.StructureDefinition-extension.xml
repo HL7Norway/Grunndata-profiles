@@ -124,11 +124,26 @@
         <code value="string" />
       </type>
     </element>
+    <element id="Extension.extension:identifyingInformtaion">
+      <path value="Extenstion.extension" />
+      <sliceName value="identifyingInformation" />
+      <alias value="rettIdentitetVedOpplysninger" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-identifying-information" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Extension.extension:identifyingInformtaion.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="identifyingInformtaion" />
+    </element>
     <element id="Extension.extension:fregMetadata">
       <path value="Extension.extension" />
       <sliceName value="fregMetadata" />
       <short value="registermetadata fra folkeregisteret" />
       <mustSupport value="true" />
+      <max value="1" />
     </element>
     <element id="Extension.extension:fregMetadata.extension">
       <path value="Extension.extension.extension" />
@@ -159,20 +174,6 @@
     <element id="Extension.extension:fregMetadata.value[x]">
       <path value="Extension.extension.value[x]" />
       <max value="0" />
-    </element>
-    <element id="Extension.extension:identifyingInformtaion">
-      <path value="Extenstion.extension" />
-      <sliceName value="identifyingInformation" />
-      <alias value="rettIdentitetVedOpplysninger" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-identifying-information" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Extension.extension:identifyingInformtaion.url">
-      <path value="Extension.extension.url" />
-      <fixedUri value="identifyingInformtaion" />
     </element>
   </differential>
 </StructureDefinition>
