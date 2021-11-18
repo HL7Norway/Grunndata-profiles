@@ -28,7 +28,6 @@
       <definition value="The correct identity of a person described using other information (no identifier is known).&#xD;&#xA;&#xD;&#xA;INVARIANT: Only one of identityUnknown, identifier or identifyingInformation should have value.&#xD;&#xA;&#xD;&#xA;En persons rette identitet beskrevet med opplysninger som kan føre til sikker identifikasjon" />
       <alias value="rettIdentitetVedOpplysninger" />
       <max value="1" />
-      <mustSupport value="true" />
       <mapping>
         <identity value="freg" />
         <map value="rettIdentitetVedOpplysninger" />
