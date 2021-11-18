@@ -274,37 +274,6 @@
         <code value="date" />
       </type>
     </element>
-    <element id="Extension.extension:identifyingInformation.extension:gender">
-      <path value="Extension.extension.extension" />
-      <sliceName value="gender" />
-      <short value="Juridical gender of the person" />
-      <definition value="Juridical gender of the person male | female, to identify a person" />
-      <alias value="kjoenn" />
-      <max value="1" />
-      <mustSupport value="true" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-gender" />
-      </binding>
-      <mapping>
-        <identity value="freg" />
-        <map value="kjoenn" />
-      </mapping>
-    </element>
-    <element id="Extension.extension:identifyingInformation.extension:gender.url">
-      <path value="Extension.extension.extension.url" />
-      <fixedUri value="gender" />
-    </element>
-    <element id="Extension.extension:identifyingInformation.extension:gender.value[x]">
-      <path value="Extension.extension.extension.value[x]" />
-      <type>
-        <code value="code" />
-      </type>
-      <binding>
-        <strength value="required" />
-        <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-gender" />
-      </binding>
-    </element>
     <element id="Extension.extension:identifyingInformation.url">
       <path value="Extension.extension.url" />
       <fixedUri value="identifyingInformation" />
