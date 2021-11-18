@@ -251,29 +251,6 @@
       <path value="Extension.extension.extension.value[x].period" />
       <max value="0" />
     </element>
-    <element id="Extension.extension:identifyingInformation.extension:birthDate">
-      <path value="Extension.extension.extension" />
-      <sliceName value="birthDate" />
-      <short value="Birth date of the person" />
-      <definition value="Birth date of the person to identify a person" />
-      <alias value="foedselsdato" />
-      <max value="1" />
-      <mustSupport value="true" />
-      <mapping>
-        <identity value="freg" />
-        <map value="foedselsdato" />
-      </mapping>
-    </element>
-    <element id="Extension.extension:identifyingInformation.extension:birthDate.url">
-      <path value="Extension.extension.extension.url" />
-      <fixedUri value="birthDate" />
-    </element>
-    <element id="Extension.extension:identifyingInformation.extension:birthDate.value[x]">
-      <path value="Extension.extension.extension.value[x]" />
-      <type>
-        <code value="date" />
-      </type>
-    </element>
     <element id="Extension.extension:identifyingInformation.url">
       <path value="Extension.extension.url" />
       <fixedUri value="identifyingInformation" />
