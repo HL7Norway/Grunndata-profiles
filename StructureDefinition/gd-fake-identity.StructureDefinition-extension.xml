@@ -124,26 +124,11 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Extension.extension:identifyingInformtaion">
-      <path value="Extenstion.extension" />
-      <sliceName value="identifyingInformation" />
-      <alias value="rettIdentitetVedOpplysninger" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-identifying-information" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Extension.extension:identifyingInformtaion.url">
-      <path value="Extension.extension.url" />
-      <fixedUri value="identifyingInformtaion" />
-    </element>
     <element id="Extension.extension:fregMetadata">
       <path value="Extension.extension" />
       <sliceName value="fregMetadata" />
       <short value="registermetadata fra folkeregisteret" />
       <mustSupport value="true" />
-      <max value="1" />
     </element>
     <element id="Extension.extension:fregMetadata.extension">
       <path value="Extension.extension.extension" />
@@ -173,6 +158,180 @@
     </element>
     <element id="Extension.extension:fregMetadata.value[x]">
       <path value="Extension.extension.value[x]" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:identifyingInformtaion">
+      <path value="Extenstion.extension" />
+      <sliceName value="identifyingInformation" />
+      <alias value="rettIdentitetVedOpplysninger" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-identifying-information" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Extension.extension:identifyingInformation.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="identifyingInformation" />
+    </element>
+    <element id="Extension.extension:identifyingInformation.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <max value="0" />
+      <type>
+        <code value="base64Binary" />
+      </type>
+      <type>
+        <code value="boolean" />
+      </type>
+      <type>
+        <code value="canonical" />
+      </type>
+      <type>
+        <code value="code" />
+      </type>
+      <type>
+        <code value="date" />
+      </type>
+      <type>
+        <code value="dateTime" />
+      </type>
+      <type>
+        <code value="decimal" />
+      </type>
+      <type>
+        <code value="id" />
+      </type>
+      <type>
+        <code value="instant" />
+      </type>
+      <type>
+        <code value="integer" />
+      </type>
+      <type>
+        <code value="markdown" />
+      </type>
+      <type>
+        <code value="oid" />
+      </type>
+      <type>
+        <code value="positiveInt" />
+      </type>
+      <type>
+        <code value="string" />
+      </type>
+      <type>
+        <code value="time" />
+      </type>
+      <type>
+        <code value="unsignedInt" />
+      </type>
+      <type>
+        <code value="uri" />
+      </type>
+      <type>
+        <code value="url" />
+      </type>
+      <type>
+        <code value="uuid" />
+      </type>
+      <type>
+        <code value="Address" />
+      </type>
+      <type>
+        <code value="Age" />
+      </type>
+      <type>
+        <code value="Annotation" />
+      </type>
+      <type>
+        <code value="Attachment" />
+      </type>
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <type>
+        <code value="Coding" />
+      </type>
+      <type>
+        <code value="ContactPoint" />
+      </type>
+      <type>
+        <code value="Count" />
+      </type>
+      <type>
+        <code value="Distance" />
+      </type>
+      <type>
+        <code value="Duration" />
+      </type>
+      <type>
+        <code value="HumanName" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-HumanName" />
+      </type>
+      <type>
+        <code value="Identifier" />
+      </type>
+      <type>
+        <code value="Money" />
+      </type>
+      <type>
+        <code value="Period" />
+      </type>
+      <type>
+        <code value="Quantity" />
+      </type>
+      <type>
+        <code value="Range" />
+      </type>
+      <type>
+        <code value="Ratio" />
+      </type>
+      <type>
+        <code value="Reference" />
+      </type>
+      <type>
+        <code value="SampledData" />
+      </type>
+      <type>
+        <code value="Signature" />
+      </type>
+      <type>
+        <code value="Timing" />
+      </type>
+      <type>
+        <code value="ContactDetail" />
+      </type>
+      <type>
+        <code value="Contributor" />
+      </type>
+      <type>
+        <code value="DataRequirement" />
+      </type>
+      <type>
+        <code value="Expression" />
+      </type>
+      <type>
+        <code value="ParameterDefinition" />
+      </type>
+      <type>
+        <code value="RelatedArtifact" />
+      </type>
+      <type>
+        <code value="TriggerDefinition" />
+      </type>
+      <type>
+        <code value="UsageContext" />
+      </type>
+      <type>
+        <code value="Dosage" />
+      </type>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/gd-fake-identity" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
       <max value="0" />
     </element>
   </differential>
