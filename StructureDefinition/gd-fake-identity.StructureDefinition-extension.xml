@@ -305,38 +305,6 @@
         <valueSet value="http://ehelse.no/fhir/ValueSet/gd-person-gender" />
       </binding>
     </element>
-    <element id="Extension.extension:identifyingInformation.extension:citizenship">
-      <path value="Extension.extension.extension" />
-      <sliceName value="citizenship" />
-      <short value="statsborgerskap" />
-      <definition value="citizenship of the person to identify a person" />
-      <alias value="statsborgerskap" />
-      <min value="1" />
-      <mustSupport value="true" />
-      <isModifier value="false" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="http://hl7.org/fhir/ValueSet/iso3166-1-3" />
-      </binding>
-      <mapping>
-        <identity value="freg" />
-        <map value="statsborgerskap" />
-      </mapping>
-    </element>
-    <element id="Extension.extension:identifyingInformation.extension:citizenship.url">
-      <path value="Extension.extension.extension.url" />
-      <fixedUri value="citizenship" />
-    </element>
-    <element id="Extension.extension:identifyingInformation.extension:citizenship.value[x]">
-      <path value="Extension.extension.extension.value[x]" />
-      <type>
-        <code value="code" />
-      </type>
-      <binding>
-        <strength value="required" />
-        <valueSet value="http://hl7.org/fhir/ValueSet/iso3166-1-3" />
-      </binding>
-    </element>
     <element id="Extension.extension:identifyingInformation.url">
       <path value="Extension.extension.url" />
       <fixedUri value="identifyingInformation" />
