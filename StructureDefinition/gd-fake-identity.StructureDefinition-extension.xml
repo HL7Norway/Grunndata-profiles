@@ -172,16 +172,10 @@
         <identity value="freg" />
         <map value="rettIdentitetVedOpplysninger" />
       </mapping>
-    </element>
-    <element id="Extension.extension:identifyingInformation.extension">
-      <path value="Extension.extension.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-identifying-information" />
+      </type>
     </element>
     <element id="Extension.extension:identifyingInformation.url">
       <path value="Extension.extension.url" />
